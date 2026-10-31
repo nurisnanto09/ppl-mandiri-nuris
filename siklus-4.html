@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porto-pplm-nuris | Siklus 4: Sistem Komputer &amp; OS — PPG UNY</title>
+    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS (Support Utility Classes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', '"Outfit"', 'sans-serif'],
+                        outfit: ['"Outfit"', 'sans-serif'],
+                        bebas: ['"Bebas Neue"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        royal: {
+                            50: '#F4F6FF',
+                            100: '#E5EAFF',
+                            200: '#C7D2FE',
+                            500: '#2541FF',
+                            600: '#1C34DB',
+                            700: '#1527B0',
+                            900: '#0D1326'
+                        },
+                        neon: {
+                            DEFAULT: '#CCFF00',
+                            soft: '#DDFF4D',
+                            dark: '#A8D600'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- External Stylesheet CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- External JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+<body class="selection:bg-neon selection:text-royal-900">
+
+    <!-- ==========================================
+         TOP NAVBAR (FLOATING CAPSULE WITH DROPDOWN)
+         ========================================== -->
+    <header class="top-navbar">
+        <div class="site-container">
+            <div class="nav-wrapper">
+                <!-- Brand Identity -->
+                <a href="index.html" class="brand-link">
+                    <div class="brand-logo">
+                        <img src="img/Icon Logo Putih.png" alt="PORTOFOLIO-PPLM">
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-base sm:text-lg tracking-tight text-royal-500 dark:text-purple-300 block leading-none font-mono">
+                            PORTOFOLIO<span class="text-slate-900 dark:text-neon">-PPLM</span>
+                        </span>
+                        <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 block mt-0.5">
+                            Nur Isnanto Nugroho, S.Pd.
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="nav-menu-links">
+                    <a href="index.html" class="nav-item">Beranda</a>
+                    <a href="profil.html" class="nav-item">Profil</a>
+                    
+                    <!-- Dropdown Pilihan Artefak (Active) -->
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-btn active" aria-haspopup="true">
+                            <span>Pilihan Artefak</span>
+                            <i class="ph-bold ph-caret-down nav-caret"></i>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="profil.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge"><i class="ph-bold ph-user"></i></span>
+                                <div>
+                                    <strong>Profil Pendidik</strong>
+                                    <small>Biodata &amp; Rekam Jejak</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="siklus-1.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">01</span>
+                                <div>
+                                    <strong>Siklus 1</strong>
+                                    <small>Pengantar Informatika &amp; PPP</small>
+                                </div>
+                            </a>
+                            <a href="siklus-2.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">02</span>
+                                <div>
+                                    <strong>Siklus 2</strong>
+                                    <small>Algoritma &amp; Pemrograman</small>
+                                </div>
+                            </a>
+                            <a href="siklus-3.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">03</span>
+                                <div>
+                                    <strong>Siklus 3</strong>
+                                    <small>Analisis Data Excel</small>
+                                </div>
+                            </a>
+                            <a href="siklus-4.html" class="nav-dropdown-item active bg-royal-50 dark:bg-royal-950/40 text-royal-600 dark:text-neon">
+                                <span class="nav-cycle-badge bg-neon text-royal-900 font-extrabold">04</span>
+                                <div>
+                                    <strong>Siklus 4 (Aktif)</strong>
+                                    <small>Sistem Komputer &amp; OS</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="non-mengajar.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">05</span>
+                                <div>
+                                    <strong>Non-Mengajar</strong>
+                                    <small>SPACE-IN &amp; Revitalisasi Lab</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="analisis.html" class="nav-item">Analisis</a>
+                    <a href="refleksi.html" class="nav-item">Refleksi &amp; RTL</a>
+                </nav>
+
+                <!-- Actions: Theme Toggle Switch & Mobile Menu -->
+                <div class="nav-actions">
+                    <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-switch" aria-label="Toggle Light/Dark Mode" title="Ubah Tema Terang / Gelap">
+                        <span class="theme-toggle-track">
+                            <i class="ph-fill ph-sun theme-icon-sun"></i>
+                            <i class="ph-fill ph-moon theme-icon-moon"></i>
+                            <span class="theme-toggle-knob"></span>
+                        </span>
+                        <span class="theme-toggle-label" id="themeText">Light</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="mobile-menu-btn" title="Buka Menu">
+                        <i class="ph-bold ph-list text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobileMenu" class="mobile-dropdown">
+                <a href="index.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">1. Beranda</a>
+                <a href="profil.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">2. Profil Pendidik</a>
+                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1 (Informatika)</a>
+                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
+                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3 (Excel)</a>
+                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">✦ Siklus 4 (Sistem Operasi)</a>
+                <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (SPACE-IN)</a>
+                <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">3. Analisis</a>
+                <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         PAGE HEADER BANNER
+         ========================================== -->
+    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#110A24]">
+        <div class="site-container">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 mb-3">
+                    <span class="badge-primary">SIKLUS 4 &bull; KELAS X FASE E</span>
+                    <span class="badge-slate">SMAN 4 YOGYAKARTA</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                    Siklus 4: Sistem Komputer &amp; Sistem Operasi
+                </h1>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
+                    Membongkar cara kerja internal komputer melalui simulasi interaktif bus data Arsitektur Von Neumann, siklus Input-Process-Output (IPO), lapisan sistem operasi (*onion layer*), serta penerapan Pembelajaran Sosial Emosional (PSE).
+                </p>
+                <div class="flex flex-wrap items-center gap-4 mt-6 text-xs text-slate-500 dark:text-slate-400">
+                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-folders text-royal-500 dark:text-neon"></i> 5 Dokumen Artefak Lengkap</span>
+                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-trend-up text-emerald-500"></i> Ketuntasan Belajar: 94% (Rata-rata 92.8)</span>
+                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-cpu text-royal-500 dark:text-neon"></i> Simulasi Web Interaktif</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         MAIN CONTENT: 5 ARTEFAK SIKLUS 4
+         ========================================== -->
+    <main class="page-main site-container space-y-14">
+
+        <!-- Banner Siklus & Gambaran Umum -->
+        <div class="cycle-header-banner">
+            <div>
+                <span class="badge-blue">REPOSITORI LENGKAP SIKLUS 4</span>
+                <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Arsitektur Von Neumann, Siklus IPO, &amp; Onion Layer Sistem Operasi</h2>
+                <p class="text-xs text-slate-500 dark:text-slate-400">Membongkar cara kerja internal komputer melalui simulasi web interaktif CPU/RAM serta penguatan Pembelajaran Sosial Emosional (PSE).</p>
+            </div>
+            <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">5 Perangkat Teruji</span>
+        </div>
+
+        <!-- Grid 5 Artefak Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- 1. Modul Ajar -->
+            <article class="artifact-card artifact-card-highlight">
+                <div class="space-y-2.5">
+                    <div class="flex items-center justify-between">
+                        <span class="badge-blue">Siklus 4</span>
+                        <span class="font-mono text-xs font-extrabold text-slate-400">S4-MA</span>
+                    </div>
+                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">1. Modul Ajar</span>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Modul Ajar Siklus 4: Arsitektur Von Neumann &amp; Siklus IPO</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Modul ajar berbasis Deep Learning memadukan simulasi web interaktif komponen internal komputer dengan asesmen diagnostik sosial emosional (PSE).
+                    </p>
+                </div>
+                <details class="artifact-accordion">
+                    <summary class="artifact-summary">
+                        <span>Buka Pratinjau Dokumen</span>
+                        <i class="ph-bold ph-caret-down"></i>
+                    </summary>
+                    <div class="artifact-drawer">
+                        <ul class="space-y-1 text-xs">
+                            <li>✦ <strong>Von Neumann:</strong> CPU (CU, ALU, Register), Memory, Bus Data.</li>
+                            <li>✦ <strong>Onion Layer:</strong> Hardware &rarr; Kernel &rarr; Shell &rarr; Aplikasi &rarr; Pengguna.</li>
+                            <li>✦ <strong>Refleksi PSE:</strong> Survei kesiapan emosi dan fokus di awal dan akhir pelajaran.</li>
+                        </ul>
+                        <div class="code-preview-block">
+INFORMASI MODUL SIKLUS 4:
+Topik: Sistem Komputer & Sistem Operasi
+Inovasi: Web Simulasi Interaktif + Pembelajaran Sosial Emosional (PSE).
+Alokasi: 2 x 45 Menit di Lab Komputer.
+                        </div>
+                    </div>
+                </details>
+            </article>
+
+            <!-- 2. Asesmen -->
+            <article class="artifact-card">
+                <div class="space-y-2.5">
+                    <div class="flex items-center justify-between">
+                        <span class="badge-blue">Siklus 4</span>
+                        <span class="font-mono text-xs font-extrabold text-slate-400">S4-AS</span>
+                    </div>
+                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">2. Asesmen / Instrumen</span>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Asesmen Siklus 4: Asesmen Diagnostik Emosional PSE &amp; Evaluasi HOTS Sistem Operasi</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Perangkat asesmen memadukan instrumen pemetaan kesiapan emosional siswa (PSE) dengan tes kognitif HOTS alur instruksi data.
+                    </p>
+                </div>
+                <details class="artifact-accordion">
+                    <summary class="artifact-summary">
+                        <span>Buka Pratinjau Dokumen</span>
+                        <i class="ph-bold ph-caret-down"></i>
+                    </summary>
+                    <div class="artifact-drawer">
+                        <ul class="space-y-1 text-xs">
+                            <li>✦ <strong>Non-Kognitif:</strong> Survei kesiapan belajar &amp; evaluasi refleksi mandiri siswa.</li>
+                            <li>✦ <strong>HOTS:</strong> Analisis alur data Input &rarr; RAM &rarr; CPU &rarr; Output.</li>
+                        </ul>
+                        <div class="code-preview-block">
+INSTRUMEN ASESMEN DIAGNOSTIK PSE S4:
+- Mengeliminasi bias jawaban lisan saat apersepsi klasikal.
+- Menangkap siswa yang lelah/membutuhkan bimbingan privat.
+                        </div>
+                    </div>
+                </details>
+            </article>
+
+            <!-- 3. Materi Ajar -->
+            <article class="artifact-card">
+                <div class="space-y-2.5">
+                    <div class="flex items-center justify-between">
+                        <span class="badge-blue">Siklus 4</span>
+                        <span class="font-mono text-xs font-extrabold text-slate-400">S4-MT</span>
+                    </div>
+                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">3. Materi Ajar</span>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Materi Ajar Siklus 4: E-Handout Arsitektur Komputer &amp; Onion Layer OS</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Handout digital interaktif menyajikan diagram anatomi motherboard, hierarki memori, dan fungsi sistem operasi dalam mengelola prosesor.
+                    </p>
+                </div>
+                <details class="artifact-accordion">
+                    <summary class="artifact-summary">
+                        <span>Buka Pratinjau Dokumen</span>
+                        <i class="ph-bold ph-caret-down"></i>
+                    </summary>
+                    <div class="artifact-drawer">
+                        <ul class="space-y-1 text-xs">
+                            <li>✦ <strong>Analogi Bawang:</strong> Lapisan Kernel, Device Driver, GUI, dan Shell.</li>
+                            <li>✦ <strong>Siklus Fetch-Decode-Execute:</strong> Bagaimana prosesor memproses 1 baris kode.</li>
+                        </ul>
+                        <div class="code-preview-block">
+INTISARI MATERI SIKLUS 4:
+- Hardware tidak dapat beroperasi tanpa instruksi BIOS/UEFI.
+- OS berfungsi sebagai jembatan abstraksi antara hardware dan software pengguna.
+                        </div>
+                    </div>
+                </details>
+            </article>
+
+            <!-- 4. LKPD -->
+            <article class="artifact-card">
+                <div class="space-y-2.5">
+                    <div class="flex items-center justify-between">
+                        <span class="badge-blue">Siklus 4</span>
+                        <span class="font-mono text-xs font-extrabold text-slate-400">S4-LK</span>
+                    </div>
+                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">4. LKPD Terintegrasi</span>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">LKPD Siklus 4: LKPD Digital Terintegrasi Refleksi Emosional PSE &amp; OS</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Lembar kerja digital menyatukan survei kesiapan belajar PSE dengan aktivitas penelusuran alur instruksi pada Arsitektur Von Neumann.
+                    </p>
+                </div>
+                <details class="artifact-accordion">
+                    <summary class="artifact-summary">
+                        <span>Buka Pratinjau Dokumen</span>
+                        <i class="ph-bold ph-caret-down"></i>
+                    </summary>
+                    <div class="artifact-drawer">
+                        <ul class="space-y-1 text-xs">
+                            <li>✦ <strong>Apersepsi:</strong> Survei kondisi awal emosi dan kesiapan belajar siswa.</li>
+                            <li>✦ <strong>Aktivitas:</strong> Penelusuran alur data IPO dan bus CPU.</li>
+                            <li>✦ <strong>Refleksi:</strong> Evaluasi tingkat pemahaman mandiri di akhir pembelajaran.</li>
+                        </ul>
+                        <div class="code-preview-block">
+ALUR KERJA LKPD DIGITAL S4:
+1. Pengisian Survei Kesiapan Belajar Emosi (PSE)
+2. Eksplorasi Bus Data Von Neumann
+3. Evaluasi Refleksi Pemahaman Mandiri.
+                        </div>
+                    </div>
+                </details>
+            </article>
+
+            <!-- 5. Media Pembelajaran -->
+            <article class="artifact-card">
+                <div class="space-y-2.5">
+                    <div class="flex items-center justify-between">
+                        <span class="badge-blue">Siklus 4</span>
+                        <span class="font-mono text-xs font-extrabold text-slate-400">S4-MD</span>
+                    </div>
+                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">5. Media Interaktif</span>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Media Siklus 4: Web Simulasi Interaktif Arsitektur Von Neumann</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Aplikasi simulasi web native yang memungkinkan siswa mengklik komponen RAM, CPU, dan Bus Data untuk melihat aliran paket data secara real-time.
+                    </p>
+                </div>
+                <details class="artifact-accordion">
+                    <summary class="artifact-summary">
+                        <span>Buka Pratinjau Dokumen</span>
+                        <i class="ph-bold ph-caret-down"></i>
+                    </summary>
+                    <div class="artifact-drawer">
+                        <ul class="space-y-1 text-xs">
+                            <li>✦ <strong>Visual Bus Data:</strong> Paket data bergerak dari Input Device &rarr; RAM &rarr; ALU &rarr; Display.</li>
+                            <li>✦ <strong>Multi-device:</strong> Dapat diakses dari Chromebook, PC Lab, maupun smartphone siswa.</li>
+                        </ul>
+                        <div class="code-preview-block">
+SPESIFIKASI TEKNIS MEDIA S4:
+Teknologi: HTML5 Canvas, CSS Grid, Vanilla JS.
+Akses: Offline / Localhost Lab Komputer & Cloud Hosting.
+                        </div>
+                    </div>
+                </details>
+            </article>
+
+        </div>
+
+        <!-- Section Dokumentasi Lapangan -->
+        <section class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="badge-primary">DOKUMENTASI PEMBELAJARAN</span>
+                    <h3 class="text-lg font-extrabold text-slate-900 dark:text-white mt-1">Praktik Kelas Siklus 4 di Lab Komputer</h3>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="rounded-xl overflow-hidden aspect-video relative group">
+                    <img src="img/dokumentasi/dok-aktivitas2.jpg" alt="Eksplorasi Simulasi Komputer Siswa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+                        <span class="text-xs text-white font-bold">Eksplorasi Mandiri Siswa Membedah Simulasi CPU &amp; RAM</span>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden aspect-video relative group">
+                    <img src="img/dokumentasi/dok-presentasi2.jpg" alt="Refleksi Akhir Pembelajaran Siklus 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
+                        <span class="text-xs text-white font-bold">Refleksi Kesiapan Emosional dan Evaluasi Ketuntasan Belajar</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Next / Prev -->
+        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <a href="siklus-3.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
+                <i class="ph-bold ph-arrow-left"></i>
+                <span>Kembali ke Siklus 3</span>
+            </a>
+            <a href="non-mengajar.html" class="btn-primary-cta">
+                <span>Lanjut ke Proyek Non-Mengajar</span>
+                <i class="ph-bold ph-arrow-right"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FULL-WIDTH FOOTER
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="site-container">
+            <div class="footer-content">
+                <div class="flex items-center gap-3">
+                    <div class="brand-logo" style="width: 2.25rem; height: 2.25rem;">
+                        <img src="img/Icon Logo Putih.png" alt="PORTOFOLIO-PPLM">
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 dark:text-white font-mono text-sm">PORTOFOLIO-PPLM</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">Nur Isnanto Nugroho, S.Pd. &bull; PPL SMA Negeri 4 Yogyakarta &bull; PPG UNY</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-5 text-xs font-bold">
+                    <a href="index.html" class="hover:text-royal-500 dark:hover:text-neon">Beranda</a>
+                    <a href="profil.html" class="hover:text-royal-500 dark:hover:text-neon">Profil</a>
+                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
+                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
+                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 3</a>
+                    <a href="siklus-4.html" class="text-royal-500 dark:text-neon">Siklus 4</a>
+                    <a href="non-mengajar.html" class="hover:text-royal-500 dark:hover:text-neon">Non-Mengajar</a>
+                    <a href="analisis.html" class="hover:text-royal-500 dark:hover:text-neon">Analisis</a>
+                    <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Popup (Progressive Enhancement) -->
+    <div id="toastBox">
+        <i class="ph-fill ph-check-circle text-neon dark:text-royal-900 text-base"></i>
+        <span id="toastMessage">Berhasil!</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porto-pplm-nuris | Artefak Pembelajaran 4 Siklus — PPG UNY</title>
+    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS (Support Utility Classes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        royal: {
+                            50: '#F4F6FF',
+                            100: '#E5EAFF',
+                            200: '#C7D2FE',
+                            500: '#2541FF',
+                            600: '#1C34DB',
+                            700: '#1527B0',
+                            900: '#0D1326'
+                        },
+                        neon: {
+                            DEFAULT: '#CCFF00',
+                            soft: '#DDFF4D',
+                            dark: '#A8D600'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- External Stylesheet CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- External JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+<body class="selection:bg-neon selection:text-royal-900">
+
+    <!-- ==========================================
+         TOP NAVBAR (ATTACHED, FULL-WIDTH)
+         ========================================== -->
+    <header class="top-navbar">
+        <div class="site-container">
+            <div class="nav-wrapper">
+                <!-- Brand Identity -->
+                <a href="index.html" class="brand-link">
+                    <div class="brand-logo">
+                        <img src="img/Icon Logo Putih.png" alt="PORTOFOLIO-PPLM">
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-base sm:text-lg tracking-tight text-royal-500 dark:text-purple-300 block leading-none font-mono">
+                            PORTOFOLIO<span class="text-slate-900 dark:text-neon">-PPLM</span>
+                        </span>
+                        <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 block mt-0.5">
+                            Nur Isnanto Nugroho, S.Pd.
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="nav-menu-links">
+                    <a href="index.html" class="nav-item">Beranda</a>
+                    <a href="profil.html" class="nav-item">Profil</a>
+                    
+                    <!-- Dropdown Pilihan Artefak (Active) -->
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-btn active" aria-haspopup="true">
+                            <span>Pilihan Artefak</span>
+                            <i class="ph-bold ph-caret-down nav-caret"></i>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="profil.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge"><i class="ph-bold ph-user"></i></span>
+                                <div>
+                                    <strong>Profil Pendidik</strong>
+                                    <small>Biodata &amp; Rekam Jejak</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="siklus-1.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">01</span>
+                                <div>
+                                    <strong>Siklus 1</strong>
+                                    <small>Pengantar Informatika &amp; PPP</small>
+                                </div>
+                            </a>
+                            <a href="siklus-2.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">02</span>
+                                <div>
+                                    <strong>Siklus 2</strong>
+                                    <small>Algoritma &amp; Pemrograman</small>
+                                </div>
+                            </a>
+                            <a href="siklus-3.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">03</span>
+                                <div>
+                                    <strong>Siklus 3</strong>
+                                    <small>Analisis Data Excel</small>
+                                </div>
+                            </a>
+                            <a href="siklus-4.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">04</span>
+                                <div>
+                                    <strong>Siklus 4</strong>
+                                    <small>Sistem Komputer &amp; OS</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="non-mengajar.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">05</span>
+                                <div>
+                                    <strong>Non-Mengajar</strong>
+                                    <small>SPACE-IN &amp; Revitalisasi Lab</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="analisis.html" class="nav-item">Analisis</a>
+                    <a href="refleksi.html" class="nav-item">Refleksi &amp; RTL</a>
+                </nav>
+
+                <!-- Actions: Theme Toggle Switch & Mobile Menu -->
+                <div class="nav-actions">
+                    <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-switch" aria-label="Toggle Light/Dark Mode" title="Ubah Tema Terang / Gelap">
+                        <span class="theme-toggle-track">
+                            <i class="ph-fill ph-sun theme-icon-sun"></i>
+                            <i class="ph-fill ph-moon theme-icon-moon"></i>
+                            <span class="theme-toggle-knob"></span>
+                        </span>
+                        <span class="theme-toggle-label" id="themeText">Light</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="mobile-menu-btn" title="Buka Menu">
+                        <i class="ph-bold ph-list text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobileMenu" class="mobile-dropdown">
+                <a href="index.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">1. Beranda</a>
+                <a href="profil.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">2. Profil Pendidik</a>
+                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1 (Informatika)</a>
+                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
+                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3 (Excel)</a>
+                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4 (Sistem Operasi)</a>
+                <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (SPACE-IN)</a>
+                <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">3. Analisis</a>
+                <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         MAIN CONTENT: ARTEFAK REPOSITORY
+         ========================================== -->
+    <main class="page-main site-container">
+
+        <!-- Page Header Banner -->
+        <div class="section-header">
+            <span class="section-eyebrow">
+                <i class="ph-fill ph-folders"></i> REPOSITORI LENGKAP 4 SIKLUS PPL
+            </span>
+            <h1 class="section-title">Katalog 24 Artefak Pembelajaran &amp; Non-Mengajar</h1>
+            <p class="section-desc">
+                Halaman ini menyajikan seluruh dokumentasi perangkat pembelajaran <strong>Siklus 1 (Computational Thinking)</strong>, <strong>Siklus 2 (Algoritma Dasar)</strong>, <strong>Siklus 3 (Microsoft Excel)</strong>, dan <strong>Siklus 4 (Sistem Operasi)</strong>, yang masing-masing terdiri atas 5 komponen wajib: <em>Modul Ajar, Asesmen, Materi Ajar, LKPD, dan Media Pembelajaran</em>, serta 4 karya inovasi non-mengajar.
+            </p>
+        </div>
+
+        <!-- Quick Jump Navigation (Pilihan Artefak) -->
+        <div class="cycle-jump-menu">
+            <span class="text-xs font-bold text-slate-500 dark:text-slate-400 self-center px-2">Pilihan Artefak:</span>
+            <a href="#siklus-1" class="cycle-jump-btn"><i class="ph-fill ph-arrow-circle-right text-royal-500 dark:text-neon"></i> Siklus 1</a>
+            <a href="#siklus-2" class="cycle-jump-btn"><i class="ph-fill ph-arrow-circle-right text-royal-500 dark:text-neon"></i> Siklus 2</a>
+            <a href="#siklus-3" class="cycle-jump-btn"><i class="ph-fill ph-arrow-circle-right text-royal-500 dark:text-neon"></i> Siklus 3</a>
+            <a href="#siklus-4" class="cycle-jump-btn"><i class="ph-fill ph-arrow-circle-right text-royal-500 dark:text-neon"></i> Siklus 4</a>
+            <a href="#non-mengajar" class="cycle-jump-btn"><i class="ph-fill ph-buildings"></i> Non-Mengajar</a>
+        </div>
+
+        <!-- ====================================================
+             SUB-SECTION 1: SIKLUS 1 — COMPUTATIONAL THINKING (5 ITEM)
+             ==================================================== -->
+        <div id="siklus-1" class="scroll-mt-24 mb-14">
+            <div class="cycle-header-banner">
+                <div>
+                    <span class="badge-blue">SIKLUS 1 — COMPUTATIONAL THINKING</span>
+                    <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Fondasi Berpikir Komputasional (Dekomposisi, Pola, Abstraksi, Algoritma)</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Memfasilitasi siswa kelas X (XE3, XE5, XE7) memecahkan persoalan nyata sehari-hari menggunakan 4 fondasi CT.</p>
+                </div>
+                <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">5 Perangkat Lengkap</span>
+            </div>
+
+            <div class="grid-cards-3">
+                <!-- S1-MA: Modul Ajar -->
+                <article class="artifact-card artifact-card-highlight">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 1</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S1-MA</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">1. Modul Ajar</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Modul Ajar Siklus 1: Berpikir Komputasional (4 Fondasi CT)</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Modul ajar berbasis Experiential Learning (Siklus Kolb) yang menuntun siswa mengurai masalah nyata melalui 4 pilar CT.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Tujuan:</strong> Menerapkan 4 pilar CT pada studi kasus optimasi rute &amp; antrean.</li>
+                                <li>✦ <strong>Tahap Kolb:</strong> Concrete Experience, Reflective Observation, Abstract Conceptualization, Active Experimentation.</li>
+                                <li>✦ <strong>Diferensiasi:</strong> Pendampingan bertahap sesuai kesiapan belajar kelompok.</li>
+                            </ul>
+                            <div class="code-preview-block">
+INFORMASI MODUL SIKLUS 1:
+Mata Pelajaran: Informatika | Fase/Kelas: E / X (XE3, XE5, XE7)
+Materi: Computational Thinking (Dekomposisi, Pola, Abstraksi, Algoritma)
+Model: Experiential Learning (Siklus Kolb).
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S1-AS: Asesmen -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 1</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S1-AS</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">2. Asesmen / Instrumen</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Asesmen Siklus 1: Diagnostik, Rubrik CT &amp; Soal Bebras</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Instrumen penilaian diagnostik awal, rubrik observasi diskusi kelompok, serta soal evaluasi formatif setara tantangan Bebras.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Diagnostik:</strong> Memetakan penalaran awal dan gaya belajar siswa.</li>
+                                <li>✦ <strong>Rubrik 4 Skala:</strong> Menilai ketepatan Abstraksi dan Pengenalan Pola.</li>
+                                <li>✦ <strong>Soal HOTS:</strong> Kasus Bebras tingkat SMA.</li>
+                            </ul>
+                            <div class="code-preview-block">
+RUBRIK PENILAIAN CT (S1):
+1. Dekomposisi (25%): Memecah masalah besar menjadi sub-bagian.
+2. Pengenalan Pola (25%): Menemukan keteraturan pola data.
+3. Abstraksi (25%): Mengeliminasi detail tidak relevan.
+4. Desain Algoritmik (25%): Urutan instruksi logis & sistematis.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S1-MT: Materi Ajar -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 1</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S1-MT</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">3. Materi Ajar</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Materi Ajar Siklus 1: E-Handout Ilustratif 4 Pilar CT</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Bahan bacaan visual terstruktur yang menjelaskan konsep Dekomposisi, Pola, Abstraksi, dan Algoritma dengan analogi keseharian siswa.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Analogi Visual:</strong> Mengorganisasi acara sekolah menggunakan Dekomposisi.</li>
+                                <li>✦ <strong>Peta Konsep:</strong> Mind map 4 fondasi CT untuk review mandiri siswa.</li>
+                            </ul>
+                            <div class="code-preview-block">
+RINGKASAN MATERI CT:
+- Dekomposisi: Memecah masalah besar menjadi sub-masalah kecil.
+- Pola: Menemukan kesamaan atau tren data.
+- Abstraksi: Fokus pada aspek terpenting dan abaikan gangguan.
+- Algoritma: Menyusun langkah demi langkah secara teratur.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S1-LK: LKPD -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 1</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S1-LK</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">4. LKPD Kolaboratif</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">LKPD Siklus 1: Lembar Kerja Analisis Kasus 4 Pilar CT</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Lembar kerja kelompok yang memandu siswa membedah kasus antrean kantin &amp; optimasi jadwal ke dalam tabel 4 langkah CT.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Kanvas Kerja:</strong> Kolom Dekomposisi, Tabel Pola, Filter Abstraksi.</li>
+                                <li>✦ <strong>Pertanyaan Pemantik:</strong> Melatih penalaran kritis sebelum menyimpulkan.</li>
+                            </ul>
+                            <div class="code-preview-block">
+AKTIVITAS LKPD S1:
+Kasus: Optimasi Distribusi Ruang Ekstrakurikuler
+Tugas 1: Uraikan 4 sub-masalah utama (Dekomposisi)!
+Tugas 2: Informasi apa yang boleh diabaikan (Abstraksi)?
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S1-MD: Media Pembelajaran -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 1</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S1-MD</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">5. Media Pembelajaran</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Media Siklus 1: Mini-Game &amp; Puzzle Web CT</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Media interaktif berbasis web gamifikasi yang mengajak siswa menyelesaikan teka-teki logika pola visual secara klik-dan-seret (drag &amp; drop).
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Drag &amp; Drop:</strong> Simulasi penyusunan urutan instruksi komputasi.</li>
+                                <li>✦ <strong>Umpan Balik:</strong> Penilaian instan atas efisiensi langkah siswa.</li>
+                            </ul>
+                            <div class="code-preview-block">
+FITUR MEDIA WEB SIKLUS 1:
+- Mode Eksplorasi 4 Pilar Computational Thinking
+- Simulasi Puzzle Logika & Optimasi Langkah Penyelesaian.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </div>
+
+        <!-- ====================================================
+             SUB-SECTION 2: SIKLUS 2 — ALGORITMA DASAR (5 ITEM)
+             ==================================================== -->
+        <div id="siklus-2" class="scroll-mt-24 mb-14">
+            <div class="cycle-header-banner">
+                <div>
+                    <span class="badge-blue">SIKLUS 2 — ALGORITMA DASAR</span>
+                    <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Perancangan Flowchart &amp; Translasi Menuju Struktur Pseudocode</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Menuntun peserta didik memvisualisasikan logika menggunakan simbol Flowchart standar serta menjembatani penulisan Pseudocode.</p>
+                </div>
+                <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">5 Perangkat Lengkap</span>
+            </div>
+
+            <div class="grid-cards-3">
+                <!-- S2-MA: Modul Ajar -->
+                <article class="artifact-card artifact-card-highlight">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 2</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S2-MA</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">1. Modul Ajar</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Modul Ajar Siklus 2: Algoritma (Flowchart &amp; Pseudocode)</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Modul ajar terstruktur untuk merancang alur logika visual Flowchart dan translasi bertahap ke teks kode semu (Pseudocode).
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Visual-to-Text:</strong> Scaffolding translasi diagram alir ke teks semu.</li>
+                                <li>✦ <strong>Scaffolding:</strong> Pendampingan bimbingan khusus kelas XE5.</li>
+                                <li>✦ <strong>Struktur:</strong> Algoritma sekuensial dan percabangan (if-else).</li>
+                            </ul>
+                            <div class="code-preview-block">
+INFORMASI MODUL SIKLUS 2:
+Topik: Notasi Algoritma (Flowchart & Pseudocode)
+Fokus: Visual-to-Text Bridging & Scaffolding Percabangan.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S2-AS: Asesmen -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 2</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S2-AS</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">2. Asesmen / Instrumen</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Asesmen Siklus 2: Rubrik Ketepatan Flowchart &amp; Observasi</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Instrumen analitik yang menilai ketepatan simbol standar ANSI/ISO Flowchart, sintaks Pseudocode, serta lembar catatan bimbingan personal.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Simbol ANSI:</strong> Terminator, Input/Output, Process, Decision.</li>
+                                <li>✦ <strong>Konsistensi:</strong> Variabel, tipe data, dan alur percabangan.</li>
+                            </ul>
+                            <div class="code-preview-block">
+INDIKATOR PENILAIAN S2:
+1. Ketepatan Simbol & Arah Panah Flowchart (30%)
+2. Konsistensi Penamaan Variabel Pseudocode (35%)
+3. Kebenaran Output Tracing Tabel Logika (35%).
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S2-MT: Materi Ajar -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 2</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S2-MT</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">3. Materi Ajar</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Materi Ajar Siklus 2: Jembatan Visual Flowchart ke Pseudocode</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Bahan ajar berdampingan (Side-by-Side) yang menyandingkan simbol Flowchart dengan padanan sintaks Pseudocode (READ, SET, IF-THEN, PRINT).
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Side-by-Side:</strong> Mengurangi beban kognitif transisi visual ke teks.</li>
+                                <li>✦ <strong>Tracing Table:</strong> Tabel penelusuran status variabel bertahap.</li>
+                            </ul>
+                            <div class="code-preview-block">
+TABEL JEMBATAN KONVERSI SIKLUS 2:
+[Jajar Genjang: Input nilai]  <===> READ nilai
+[Belah Ketupat: nilai >= 75?] <===> IF nilai >= 75 THEN
+[Jajar Genjang: Cetak Lulus]  <===>     PRINT "Lulus"
+                                    ELSE PRINT "Remedial" ENDIF
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S2-LK: LKPD -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 2</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S2-LK</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">4. LKPD / Job Sheet</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">LKPD Siklus 2: Job Sheet Bertingkat Perancangan &amp; Translasi</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Job Sheet praktikum berjenjang (Level Dasar: Sekuensial, Level Menengah: Percabangan, Level Lanjut: Mandiri) dengan kolom kerja komparatif.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Kolom Kerja Berdampingan:</strong> Kiri menggambar diagram, kanan menulis kode semu.</li>
+                                <li>✦ <strong>Uji Mandiri:</strong> Pengujian logika dengan sampel input siswa.</li>
+                            </ul>
+                            <div class="code-preview-block">
+STRUKTUR JOB SHEET SIKLUS 2:
+- Tahap 1: Melengkapi Flowchart rumpang (Guided Practice)
+- Tahap 2: Merancang algoritma diskon dan percabangan
+- Tahap 3: Tracing table pengujian logika.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S2-MD: Media Pembelajaran -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 2</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S2-MD</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">5. Media Pembelajaran</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Media Siklus 2: Simulator Visual Alur Flowchart &amp; Kartu Simbol</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Media visual interaktif memperlihatkan bagaimana aliran data melewati blok Input, Proses, dan Decision (True/False) secara real-time.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Live Execution:</strong> Animasi penelusuran cabang True vs False.</li>
+                                <li>✦ <strong>Kuis Simbol:</strong> Pemantapan cepat nama &amp; standar simbol Flowchart.</li>
+                            </ul>
+                            <div class="code-preview-block">
+SIMULATOR ALUR SIKLUS 2:
+Input: [ 82 ] ---> Decision [ Nilai >= 75? ]
+---> Cabang TRUE Menyala ---> Output: "Tuntas".
+                            </div>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </div>
+
+        <!-- ====================================================
+             SUB-SECTION 3: SIKLUS 3 — MICROSOFT EXCEL (5 ITEM)
+             ==================================================== -->
+        <div id="siklus-3" class="scroll-mt-24 mb-14">
+            <div class="cycle-header-banner">
+                <div>
+                    <span class="badge-blue">SIKLUS 3 — MICROSOFT EXCEL</span>
+                    <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Analisis Data Tabel, Formula Statistik/Logika, &amp; Visualisasi Grafik</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Praktikum lab komputer mengolah dataset riil menggunakan formula spreadsheet dan menyajikannya ke dalam grafik.</p>
+                </div>
+                <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">5 Perangkat Lengkap</span>
+            </div>
+
+            <div class="grid-cards-3">
+                <!-- S3-MA: Modul Ajar -->
+                <article class="artifact-card artifact-card-highlight">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 3</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S3-MA</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">1. Modul Ajar</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Modul Ajar Siklus 3: Pengolahan Data &amp; Visualisasi Grafik</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Modul ajar praktikum lab komputer menuntun siswa mengolah data numerik dengan formula dan menyajikannya menjadi grafik informatif.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Fungsi:</strong> SUM, AVERAGE, MAX, MIN, IF, dan referensi sel absolut ($A$1).</li>
+                                <li>✦ <strong>Interpretasi:</strong> Membaca insight dan kesimpulan tren di balik grafik.</li>
+                            </ul>
+                            <div class="code-preview-block">
+INFORMASI MODUL SIKLUS 3:
+Topik: Analisis Data & Visualisasi Grafik (Microsoft Excel)
+Model: Praktikum Laboratorium & Eksplorasi Dataset.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S3-AS: Asesmen -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 3</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S3-AS</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">2. Asesmen / Instrumen</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Asesmen Siklus 3: Rubrik Kinerja Spreadsheet &amp; Ketepatan Chart</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Instrumen unjuk kerja laboratorium untuk menilai ketepatan rumus fungsi Excel, kerapian tabel, dan kesesuaian pemilihan jenis grafik.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Formula Dinamis:</strong> Penggunaan rumus benar (bukan ketik manual).</li>
+                                <li>✦ <strong>Elemen Grafik:</strong> Judul, Label Sumbu, Legenda, Data Labels.</li>
+                            </ul>
+                            <div class="code-preview-block">
+RUBRIK UNJUK KERJA EXCEL (S3):
+1. Ketepatan Formula & Fungsi Statistik/Logika (40%)
+2. Kesesuaian Jenis Grafik (Column/Line/Pie) (30%)
+3. Kerapian Tabel & Estetika Visualisasi (20%)
+4. Ketepatan Kesimpulan Analisis (10%).
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S3-MT: Materi Ajar -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 3</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S3-MT</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">3. Materi Ajar</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Materi Ajar Siklus 3: Panduan Formula Excel &amp; Katalog Grafik</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Bahan ajar beranotasi visual membedah anatomi penulisan formula Excel, sel relatif vs absolut, serta panduan memilih grafik yang tepat.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Panduan:</strong> Column (perbandingan), Line (tren), Pie (proporsi 100%).</li>
+                                <li>✦ <strong>Troubleshooting:</strong> Mengatasi error umum (#VALUE!, #DIV/0!, ###).</li>
+                            </ul>
+                            <div class="code-preview-block">
+PANDUAN PEMILIHAN GRAFIK EXCEL:
+- Column / Bar: Perbandingan nominal antar item.
+- Line: Tren fluktuasi waktu (mingguan/bulanan).
+- Pie: Proporsi persentase bagian terhadap total.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S3-LK: LKPD -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 3</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S3-LK</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">4. LKPD Praktikum</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">LKPD Siklus 3: Job Sheet Pengolahan Dataset &amp; Pembuatan Chart</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Lembar praktikum berbasis studi kasus pengolahan data koperasi sekolah mulai dari input formula hingga kustomisasi grafik.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Kalkulasi:</strong> Total, Rata-Rata, Nilai Tertinggi, Terendah.</li>
+                                <li>✦ <strong>Logika IF:</strong> Menentukan status kelulusan target nilai.</li>
+                            </ul>
+                            <div class="code-preview-block">
+TUGAS PRAKTIKUM LKPD S3:
+1. Hitung Total, Rata-Rata, MAX, MIN dengan fungsi Excel!
+2. Buatlah Column Chart perbandingan capaian!
+3. Tuliskan 2 kesimpulan analisis data!
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S3-MD: Media Pembelajaran -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 3</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S3-MD</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">5. Media Pembelajaran</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Media Siklus 3: Dashboard Simulasi Formula &amp; Live Chart</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Media tayang interaktif memperlihatkan secara langsung perubahan bentuk grafik saat nilai pada sel tabel sumber dimodifikasi.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Cell Highlighting:</strong> Penyorotan sel warna saat menyusun argumen fungsi.</li>
+                                <li>✦ <strong>Live Preview:</strong> Grafik otomatis berubah ukuran sesuai data baru.</li>
+                            </ul>
+                            <div class="code-preview-block">
+FITUR MEDIA EXCEL S3:
+- Formula Breakdown: =IF(D4>=75, "Tuntas", "Remedial")
+- Live Chart Update Real-Time.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </div>
+
+        <!-- ====================================================
+             SUB-SECTION 4: SIKLUS 4 — SISTEM OPERASI (5 ITEM)
+             ==================================================== -->
+        <div id="siklus-4" class="scroll-mt-24 mb-14">
+            <div class="cycle-header-banner">
+                <div>
+                    <span class="badge-blue">SIKLUS 4 — SISTEM OPERASI</span>
+                    <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Arsitektur Von Neumann, Siklus IPO, &amp; Onion Layer Sistem Operasi</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Membongkar cara kerja internal komputer melalui simulasi interaktif CPU/RAM serta penguatan Pembelajaran Sosial Emosional (PSE).</p>
+                </div>
+                <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">5 Perangkat Lengkap</span>
+            </div>
+
+            <div class="grid-cards-3">
+                <!-- S4-MA: Modul Ajar -->
+                <article class="artifact-card artifact-card-highlight">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 4</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S4-MA</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">1. Modul Ajar</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Modul Ajar Siklus 4: Arsitektur Von Neumann &amp; Siklus IPO</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Modul ajar berbasis Deep Learning memadukan simulasi web interaktif komponen internal komputer dengan asesmen diagnostik sosial emosional (PSE).
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Von Neumann:</strong> CPU (CU, ALU, Register), Memory, Bus Data.</li>
+                                <li>✦ <strong>Onion Layer:</strong> Hardware &rarr; Kernel &rarr; Shell &rarr; Aplikasi &rarr; Pengguna.</li>
+                                <li>✦ <strong>Refleksi PSE:</strong> Survei kesiapan emosi dan fokus di awal dan akhir pelajaran.</li>
+                            </ul>
+                            <div class="code-preview-block">
+INFORMASI MODUL SIKLUS 4:
+Topik: Sistem Komputer & Sistem Operasi
+Inovasi: Web Simulasi Interaktif + Pembelajaran Sosial Emosional (PSE).
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S4-AS: Asesmen -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 4</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S4-AS</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">2. Asesmen / Instrumen</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Asesmen Siklus 4: Asesmen Diagnostik Emosional PSE &amp; Evaluasi HOTS Sistem Operasi</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Perangkat asesmen memadukan instrumen pemetaan kesiapan emosional siswa (PSE) dengan tes kognitif HOTS alur instruksi data.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Non-Kognitif:</strong> Survei kesiapan belajar &amp; evaluasi refleksi mandiri siswa.</li>
+                                <li>✦ <strong>HOTS:</strong> Analisis alur data Input &rarr; RAM &rarr; CPU &rarr; Output.</li>
+                            </ul>
+                            <div class="code-preview-block">
+INSTRUMEN ASESMEN DIAGNOSTIK PSE S4:
+- Mengeliminasi bias jawaban lisan saat apersepsi klasikal.
+- Menangkap siswa yang mengantuk atau membutuhkan bimbingan privat.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S4-MT: Materi Ajar -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 4</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S4-MT</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">3. Materi Ajar</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Materi Ajar Siklus 4: Infografis Von Neumann &amp; Onion Layer OS</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Bahan ajar berilustrasi modern memvisualisasikan arsitektur internal komputer dan hierarki lapisan abstraksi Sistem Operasi.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>CPU Breakdown:</strong> Peran Control Unit, ALU, dan Register.</li>
+                                <li>✦ <strong>Hierarki:</strong> Hardware &rarr; Kernel &rarr; Shell &rarr; App &rarr; User.</li>
+                            </ul>
+                            <div class="code-preview-block">
+DIAGRAM ONION LAYER OS:
+[Hardware] &lt;--- dikelola ---&gt; [Kernel OS] &lt;--- dijembatani ---&gt; [Shell / GUI]
+&lt;--- mengeksekusi ---&gt; [Aplikasi] &lt;--- digunakan ---&gt; [Brainware / Siswa].
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S4-LK: LKPD -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 4</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S4-LK</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">4. LKPD Terintegrasi</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">LKPD Siklus 4: LKPD Digital Terintegrasi Refleksi Emosional PSE &amp; OS</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Lembar kerja digital menyatukan survei kesiapan belajar PSE dengan aktivitas penelusuran alur instruksi pada Arsitektur Von Neumann.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Apersepsi:</strong> Survei kondisi awal emosi dan kesiapan belajar siswa.</li>
+                                <li>✦ <strong>Aktivitas:</strong> Penelusuran alur data IPO dan bus CPU.</li>
+                                <li>✦ <strong>Refleksi:</strong> Evaluasi tingkat pemahaman mandiri di akhir pembelajaran.</li>
+                            </ul>
+                            <div class="code-preview-block">
+ALUR KERJA LKPD DIGITAL S4:
+1. Pengisian Survei Kesiapan Belajar Emosi (PSE)
+2. Eksplorasi Bus Data Von Neumann
+3. Evaluasi Refleksi Pemahaman Mandiri.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- S4-MD: Media Pembelajaran -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Siklus 4</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">S4-MD</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">5. Media Inovasi Unggulan</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Media Siklus 4: Web Simulasi Interaktif Von Neumann &amp; Lapisan OS</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Aplikasi web mandiri memvisualisasikan siklus Fetch-Decode-Execute dan lapisan interaksi Hardware-Kernel-User secara hidup.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Live CPU Bus:</strong> Animasi perpindahan instruksi RAM ke CU/ALU.</li>
+                                <li>✦ <strong>Onion Layer:</strong> Mengklik tiap lapisan melihat tugas Kernel/Shell.</li>
+                                <li>✦ <strong>Capaian:</strong> Berhasil mendongkrak ketuntasan belajar hingga 94%.</li>
+                            </ul>
+                            <div class="code-preview-block">
+FITUR WEB SIMULASI SIKLUS 4:
+- Tab 1: Simulator Siklus IPO & Arsitektur Von Neumann
+- Tab 2: Interactive Onion Layer (Hardware <-> Kernel <-> Shell <-> App)
+- Tab 3: Mini Quiz Pemahaman Real-Time.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </div>
+
+        <!-- ====================================================
+             SUB-SECTION 5: ARTEFAK NON-MENGAJAR (4 ITEM)
+             ==================================================== -->
+        <div id="non-mengajar" class="scroll-mt-24 mb-10">
+            <div class="cycle-header-banner">
+                <div>
+                    <span class="badge-neon">KATEGORI 2 — ARTEFAK NON-MENGAJAR</span>
+                    <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Inovasi Sistem "SPACE-IN PATBHE", Kajian PTK, &amp; Manajemen Kemitraan</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Kontribusi nyata di luar jam mengajar kelas untuk mendukung digitalisasi sarana dan kultur budaya sekolah di SMAN 4 Yogyakarta.</p>
+                </div>
+                <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">4 Karya Utama</span>
+            </div>
+
+            <div class="grid-cards-2">
+                <!-- NM-01 -->
+                <article class="artifact-card artifact-card-highlight">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-neon">Inovasi Sistem</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">NM-01</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">Aplikasi Web Sarpras</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Aplikasi Web "SPACE-IN PATBHE" — Peminjaman Sarpras Sekolah</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Aplikasi web terintegrasi mendigitalisasi peminjaman ruangan, inventaris barang, dan sarana operasional di SMAN 4 Yogyakarta tanpa bentrok jadwal.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Real-Time Schedule:</strong> Pengecekan ketersediaan ruang dan barang secara terbuka.</li>
+                                <li>✦ <strong>Cloud API:</strong> Web Frontend terhubung Google Sheets API &amp; Apps Script.</li>
+                                <li>✦ <strong>Admin Dashboard:</strong> Panel persetujuan terpusat bagi staf sarpras.</li>
+                            </ul>
+                            <div class="code-preview-block">
+ARSITEKTUR SPACE-IN PATBHE:
+[Siswa/Guru] ---> [Portal Web: Cek Ketersediaan & Form Peminjaman]
+---> [Google Apps Script API] ---> [Database Sheets & Panel Admin].
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- NM-02 -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-neon">Publikasi &amp; Sosialisasi</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">NM-02</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">Buku Panduan &amp; Banner</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Buku Panduan Pengguna &amp; Standing Banner Sosialisasi SPACE-IN</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Pedoman teknis langkah demi langkah berilustrasi dan desain standing banner ber-QR Code untuk sosialisasi kepada seluruh warga sekolah.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Buku Panduan:</strong> Panduan cetak &amp; PDF lengkap anotasi antarmuka.</li>
+                                <li>✦ <strong>Standing Banner:</strong> Media informasi 60x160 cm di area strategis sekolah.</li>
+                            </ul>
+                            <div class="code-preview-block">
+MEDIA SOSIALISASI SPACE-IN:
+1. Panduan Pengguna bagi Peminjam & Admin Pengelola
+2. Standing Banner dengan QR Code Akses Cepat.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- NM-03 -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-neon">Penelitian Ilmiah</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">NM-03</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">Laporan PTK</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Laporan Penelitian Tindakan Kelas (PTK) &amp; Kajian Reflektif</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Dokumentasi kajian ilmiah reflektif peningkatan pemahaman konsep algoritma dan sistem komputer melalui media simulasi web dan Job Sheet bertahap.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Lintasan Siklus:</strong> Analisis progres ketuntasan belajar dari 78% ke 94%.</li>
+                                <li>✦ <strong>Efektivitas Job Sheet:</strong> Membantu menurunkan beban kognitif translasi sintaks.</li>
+                            </ul>
+                            <div class="code-preview-block">
+ABSTRAK LAPORAN PTK:
+Kajian tindakan kelas untuk meningkatkan pemahaman siswa kelas X SMAN 4 Yogyakarta
+melalui media simulasi berbasis web dan Job Sheet bertingkat.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- NM-04 -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-neon">Kultur Sekolah</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">NM-04</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">Piket &amp; Bela Negara AAU</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Layanan Piket Akademik &amp; Pendampingan Bela Negara AAU</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Dokumentasi keterlibatan aktif dalam administrasi manajemen sekolah, piket layanan akademik, serta pendampingan pelatihan karakter Bela Negara bersama AAU.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Pratinjau Dokumen</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Piket Akademik:</strong> Presensi kehadiran siswa dan koordinasi penugasan kelas.</li>
+                                <li>✦ <strong>Bela Negara AAU:</strong> Pendampingan kedisiplinan dan kepemimpinan siswa.</li>
+                            </ul>
+                            <div class="code-preview-block">
+DOKUMENTASI KEGIATAN:
+- Layanan Piket Akademik & Kesiswaan Terjadwal
+- Pendampingan Latihan Baris-Berbaris & Wawasan Kebangsaan bersama AAU.
+                            </div>
+                        </div>
+                    </details>
+                </article>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ==========================================
+         FULL-WIDTH FOOTER
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="site-container">
+            <div class="footer-content">
+                <div class="flex items-center gap-3">
+                    <div class="brand-logo" style="width: 2.25rem; height: 2.25rem;">
+                        <img src="img/Icon Logo Putih.png" alt="porto-pplm-nuris">
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 dark:text-white font-mono text-sm">porto-pplm-nuris</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">Nur Isnanto Nugroho, S.Pd. &bull; PPL SMA Negeri 4 Yogyakarta &bull; PPG UNY</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 text-xs font-bold">
+                    <a href="index.html" class="hover:text-royal-500 dark:hover:text-neon">Beranda</a>
+                    <a href="profil.html" class="hover:text-royal-500 dark:hover:text-neon">Profil</a>
+                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
+                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
+                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 3</a>
+                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 4</a>
+                    <a href="non-mengajar.html" class="hover:text-royal-500 dark:hover:text-neon">Non-Mengajar</a>
+                    <a href="analisis.html" class="hover:text-royal-500 dark:hover:text-neon">Analisis</a>
+                    <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Popup (Progressive Enhancement) -->
+    <div id="toastBox">
+        <i class="ph-fill ph-check-circle text-neon dark:text-royal-900 text-base"></i>
+        <span id="toastMessage">Berhasil!</span>
+    </div>
+
+</body>
+</html>

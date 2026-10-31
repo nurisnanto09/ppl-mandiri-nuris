@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porto-pplm-nuris | Analisis &amp; Evaluasi Pembelajaran — PPG UNY</title>
+    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS (Support Utility Classes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        royal: {
+                            50: '#F4F6FF',
+                            100: '#E5EAFF',
+                            200: '#C7D2FE',
+                            500: '#2541FF',
+                            600: '#1C34DB',
+                            700: '#1527B0',
+                            900: '#0D1326'
+                        },
+                        neon: {
+                            DEFAULT: '#CCFF00',
+                            soft: '#DDFF4D',
+                            dark: '#A8D600'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- External Stylesheet CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- External JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+<body class="selection:bg-neon selection:text-royal-900">
+
+    <!-- ==========================================
+         TOP NAVBAR (ATTACHED, FULL-WIDTH)
+         ========================================== -->
+    <header class="top-navbar">
+        <div class="site-container">
+            <div class="nav-wrapper">
+                <!-- Brand Identity -->
+                <a href="index.html" class="brand-link">
+                    <div class="brand-logo">
+                        <img src="img/Icon Logo Putih.png" alt="PORTOFOLIO-PPLM">
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-base sm:text-lg tracking-tight text-royal-500 dark:text-purple-300 block leading-none font-mono">
+                            PORTOFOLIO<span class="text-slate-900 dark:text-neon">-PPLM</span>
+                        </span>
+                        <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 block mt-0.5">
+                            Nur Isnanto Nugroho, S.Pd.
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="nav-menu-links">
+                    <a href="index.html" class="nav-item">Beranda</a>
+                    <a href="profil.html" class="nav-item">Profil</a>
+                    
+                    <!-- Dropdown Pilihan Artefak -->
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-btn" aria-haspopup="true">
+                            <span>Pilihan Artefak</span>
+                            <i class="ph-bold ph-caret-down nav-caret"></i>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="profil.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge"><i class="ph-bold ph-user"></i></span>
+                                <div>
+                                    <strong>Profil Pendidik</strong>
+                                    <small>Biodata &amp; Rekam Jejak</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="siklus-1.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">01</span>
+                                <div>
+                                    <strong>Siklus 1</strong>
+                                    <small>Pengantar Informatika &amp; PPP</small>
+                                </div>
+                            </a>
+                            <a href="siklus-2.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">02</span>
+                                <div>
+                                    <strong>Siklus 2</strong>
+                                    <small>Algoritma &amp; Pemrograman</small>
+                                </div>
+                            </a>
+                            <a href="siklus-3.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">03</span>
+                                <div>
+                                    <strong>Siklus 3</strong>
+                                    <small>Analisis Data Excel</small>
+                                </div>
+                            </a>
+                            <a href="siklus-4.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">04</span>
+                                <div>
+                                    <strong>Siklus 4</strong>
+                                    <small>Sistem Komputer &amp; OS</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="non-mengajar.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">05</span>
+                                <div>
+                                    <strong>Non-Mengajar</strong>
+                                    <small>SPACE-IN &amp; Revitalisasi Lab</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="analisis.html" class="nav-item active">Analisis</a>
+                    <a href="refleksi.html" class="nav-item">Refleksi &amp; RTL</a>
+                </nav>
+
+                <!-- Actions: Theme Toggle Switch & Mobile Menu -->
+                <div class="nav-actions">
+                    <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-switch" aria-label="Toggle Light/Dark Mode" title="Ubah Tema Terang / Gelap">
+                        <span class="theme-toggle-track">
+                            <i class="ph-fill ph-sun theme-icon-sun"></i>
+                            <i class="ph-fill ph-moon theme-icon-moon"></i>
+                            <span class="theme-toggle-knob"></span>
+                        </span>
+                        <span class="theme-toggle-label" id="themeText">Light</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="mobile-menu-btn" title="Buka Menu">
+                        <i class="ph-bold ph-list text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobileMenu" class="mobile-dropdown">
+                <a href="index.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">1. Beranda</a>
+                <a href="profil.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">2. Profil Pendidik</a>
+                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1 (Informatika)</a>
+                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
+                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3 (Excel)</a>
+                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4 (Sistem Operasi)</a>
+                <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (SPACE-IN)</a>
+                <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">3. Analisis</a>
+                <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         PAGE HEADER BANNER
+         ========================================== -->
+    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#110A24]">
+        <div class="site-container">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 mb-3">
+                    <span class="badge-primary">EVALUASI PEMBELAJARAN &amp; PSE</span>
+                    <span class="badge-slate">SMAN 4 YOGYAKARTA</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                    Analisis Komparatif 4 Siklus &amp; Pembelajaran Sosial Emosional
+                </h1>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
+                    Evaluasi kuantitatif ketuntasan belajar dari Siklus 1 hingga Siklus 4, analisis kualitatif dinamika kelas X Fase E (XE3, XE5, XE7), serta penerapan <em>Pembelajaran Sosial Emosional (PSE)</em> untuk menghapus bias apersepsi klasikal.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 mt-6 text-xs text-slate-500 dark:text-slate-400">
+                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-trend-up text-emerald-500"></i> Progres Ketuntasan: 78% &rarr; 94%</span>
+                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-users-three text-royal-500 dark:text-neon"></i> Sampel: 108 Peserta Didik</span>
+                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-heart-straight text-rose-500"></i> Integrasi PSE Mandiri</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         MAIN CONTENT CONTAINER
+         ========================================== -->
+    <main class="site-container py-12 space-y-16">
+
+        <!-- ==========================================
+             SECTION 1: DATA KUANTITATIF 4 SIKLUS
+             ========================================== -->
+        <section class="space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
+                        01. KAJIAN DATA EMPIRIS
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                        Perkembangan Ketuntasan Belajar Kognitif &amp; Praktik
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                        Data agregat hasil asesmen formatif dan sumatif lintas 4 siklus mengajar di SMA Negeri 4 Yogyakarta.
+                    </p>
+                </div>
+                <div class="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 px-3.5 py-1.5 rounded-full text-xs font-bold">
+                    <i class="ph-bold ph-arrow-circle-up text-base"></i>
+                    <span>Pertumbuhan Positif +16%</span>
+                </div>
+            </div>
+
+            <!-- Summary KPI Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800">
+                    <div class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-1">Ketuntasan Siklus 1</div>
+                    <div class="text-3xl font-extrabold text-slate-900 dark:text-white font-mono">78%</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Kategori: Cukup / Baik</div>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800">
+                    <div class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-1">Ketuntasan Siklus 2</div>
+                    <div class="text-3xl font-extrabold text-royal-600 dark:text-purple-300 font-mono">84%</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Kategori: Baik (+6%)</div>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800">
+                    <div class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-1">Ketuntasan Siklus 3</div>
+                    <div class="text-3xl font-extrabold text-royal-600 dark:text-purple-300 font-mono">89%</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Kategori: Sangat Baik (+5%)</div>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#160E30] border border-royal-500/30 dark:border-neon/30 bg-royal-50/20 dark:bg-neon/5">
+                    <div class="text-xs font-bold text-royal-600 dark:text-neon mb-1">Ketuntasan Siklus 4</div>
+                    <div class="text-3xl font-extrabold text-royal-600 dark:text-neon font-mono">94%</div>
+                    <div class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold mt-1">Puncak Optimal (+5%)</div>
+                </div>
+            </div>
+
+            <!-- Detailed Visual Progression Bars -->
+            <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-6">
+                
+                <!-- Siklus 1 -->
+                <div class="space-y-2">
+                    <div class="flex flex-wrap items-center justify-between text-xs sm:text-sm font-bold gap-2">
+                        <span class="text-slate-900 dark:text-white flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-md bg-slate-100 dark:bg-slate-800 flex items-center justify-center font-mono text-xs">1</span>
+                            Siklus 1: Pengantar Informatika &amp; Profil Pelajar Pancasila
+                        </span>
+                        <span class="font-mono text-royal-600 dark:text-purple-300 font-extrabold">78% Ketuntasan (Rata-rata 79.2)</span>
+                    </div>
+                    <div class="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-slate-400 dark:bg-slate-600 rounded-full transition-all duration-1000" style="width: 78%;"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Fase adaptasi transisi cara belajar dari jenjang SMP menuju SMA. Siswa masih menata kebiasaan eksplorasi mandiri dan literasi digital dasar.
+                    </p>
+                </div>
+
+                <!-- Siklus 2 -->
+                <div class="space-y-2">
+                    <div class="flex flex-wrap items-center justify-between text-xs sm:text-sm font-bold gap-2">
+                        <span class="text-slate-900 dark:text-white flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-md bg-royal-100 dark:bg-royal-900/60 text-royal-600 dark:text-purple-300 flex items-center justify-center font-mono text-xs">2</span>
+                            Siklus 2: Algoritma &amp; Pemrograman (Flowchart &amp; Pseudocode)
+                        </span>
+                        <span class="font-mono text-royal-600 dark:text-purple-300 font-extrabold">84% Ketuntasan (Rata-rata 83.5)</span>
+                    </div>
+                    <div class="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-royal-500 dark:bg-purple-500 rounded-full transition-all duration-1000" style="width: 84%;"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Penguatan penalaran logika sekuensial dan percabangan. Peningkatan terjadi berkat pemisahan peran visual (diagram alir) sebelum masuk sintaks pseudocode.
+                    </p>
+                </div>
+
+                <!-- Siklus 3 -->
+                <div class="space-y-2">
+                    <div class="flex flex-wrap items-center justify-between text-xs sm:text-sm font-bold gap-2">
+                        <span class="text-slate-900 dark:text-white flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-md bg-royal-100 dark:bg-royal-900/60 text-royal-600 dark:text-purple-300 flex items-center justify-center font-mono text-xs">3</span>
+                            Siklus 3: Analisis Data &amp; Visualisasi Grafik (Microsoft Excel)
+                        </span>
+                        <span class="font-mono text-royal-600 dark:text-purple-300 font-extrabold">89% Ketuntasan (Rata-rata 88.4)</span>
+                    </div>
+                    <div class="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-royal-600 dark:bg-purple-400 rounded-full transition-all duration-1000" style="width: 89%;"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Praktikum laboratorium komputer berbasis dataset kontekstual. Siswa menunjukkan antusiasme tinggi dalam menyajikan perbandingan chart dan formula statistik.
+                    </p>
+                </div>
+
+                <!-- Siklus 4 -->
+                <div class="space-y-2">
+                    <div class="flex flex-wrap items-center justify-between text-xs sm:text-sm font-bold gap-2">
+                        <span class="text-slate-900 dark:text-white flex items-center gap-2">
+                            <span class="w-6 h-6 rounded-md bg-neon text-royal-900 flex items-center justify-center font-mono text-xs font-extrabold">4</span>
+                            Siklus 4: Sistem Komputer &amp; Sistem Operasi (Arsitektur Von Neumann &amp; PSE)
+                        </span>
+                        <span class="font-mono text-emerald-600 dark:text-neon font-extrabold">94% Ketuntasan (Rata-rata 92.8)</span>
+                    </div>
+                    <div class="w-full h-3 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-emerald-500 dark:bg-neon rounded-full transition-all duration-1000" style="width: 94%;"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Capaian tertinggi diraih melalui penerapan simultan antara simulasi web interaktif mandiri dan pemetaan kondisi emosional awal peserta didik.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 2: ANALISIS KUALITATIF & URGENSI PSE
+             ========================================== -->
+        <section class="space-y-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
+                    02. ANALISIS PEDAGOGIS KUALITATIF
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                    Mengapa Perlu Integrasi Pembelajaran Sosial Emosional (PSE)?
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
+                    Refleksi atas fenomena apersepsi konvensional di kelas SMA Negeri 4 Yogyakarta dan bagaimana pendekatan emosional membuka hambatan belajar kognitif siswa.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Sisi Masalah: Bias Apersepsi Klasikal -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-rose-200 dark:border-rose-900/40 space-y-4">
+                    <div class="inline-flex items-center gap-2 text-rose-600 dark:text-rose-400 text-xs font-bold uppercase">
+                        <i class="ph-bold ph-warning-circle text-base"></i>
+                        <span>Tantangan Nyata di Kelas</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">
+                        Fenomena &ldquo;Bias Menjawab Kompak&rdquo;
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Ketika guru menanyakan pertanyaan apersepsi umum seperti <em>&ldquo;Apakah kalian sudah siap belajar hari ini?&rdquo;</em>, mayoritas kelas cenderung menjawab serentak: <strong>&ldquo;Siap pak!&rdquo;</strong>.
+                    </p>
+                    <div class="p-4 rounded-xl bg-rose-50 dark:bg-rose-950/30 border border-rose-100 dark:border-rose-900/30 text-xs text-rose-800 dark:text-rose-200 space-y-2">
+                        <div class="font-bold flex items-center gap-1.5">
+                            <i class="ph-bold ph-x-circle"></i>
+                            Dampak Negatif Bias Klasikal:
+                        </div>
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>Menyamarkan kondisi peserta didik yang lelah fisik setelah jam olahraga (kasus kelas XE5).</li>
+                            <li>Siswa yang belum menguasai materi prasyarat merasa malu untuk mengangkat tangan di depan teman-temannya.</li>
+                            <li>Guru mengasumsikan seluruh kelas berada pada baseline kesiapan yang sama, sehingga ritme mengajar menjadi terlalu cepat bagi kelompok rentan.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sisi Solusi: Pembelajaran Sosial Emosional -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-royal-200 dark:border-purple-800/40 space-y-4">
+                    <div class="inline-flex items-center gap-2 text-royal-600 dark:text-neon text-xs font-bold uppercase">
+                        <i class="ph-bold ph-check-circle text-base"></i>
+                        <span>Solusi Pedagogis Teruji</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">
+                        Refleksi Emosional Awal &amp; Akhir (PSE)
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Instrumen asesmen diri singkat yang disematkan pada lembar kerja/platform digital yang memberikan ruang privat dan aman bagi siswa untuk jujur sebelum dan sesudah instruksi berlangsung.
+                    </p>
+                    <div class="p-4 rounded-xl bg-royal-50 dark:bg-royal-950/30 border border-royal-100 dark:border-purple-900/30 text-xs text-royal-800 dark:text-purple-200 space-y-2">
+                        <div class="font-bold flex items-center gap-1.5">
+                            <i class="ph-bold ph-sparkle"></i>
+                            Manfaat Utama Penerapan PSE:
+                        </div>
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li><strong>Refleksi Awal (5 menit awal):</strong> Memetakan tingkat energi (fisik) dan kesiapan fokus (mental) tanpa penghakiman.</li>
+                            <li><strong>Respons Cepat Guru:</strong> Guru dapat langsung menyesuaikan ice-breaking, mengatur formasi berpasangan (peer-scaffolding), atau memberikan penguatan ekstra.</li>
+                            <li><strong>Refleksi Akhir (5 menit akhir):</strong> Menilai secara obyektif apakah beban kognitif hari itu seimbang dan mengidentifikasi konsep yang masih memerlukan klarifikasi lanjutan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 3: MATRIKS 4 SKENARIO RESPON PSE
+             ========================================== -->
+        <section class="space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
+                        03. PANDUAN DIFERENSIASI RESPON GURU
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                        Matriks 4 Skenario Emosional Siswa &amp; Tindakan Guru
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
+                        Kombinasi antara kondisi emosional peserta didik hasil pengisian refleksi awal dengan strategi instruksional responsif yang dipraktikkan mahasiswa selama PPL.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 4 Grid Bento Scenario Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- Skenario 1: Siap & Bersemangat -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-emerald-200 dark:border-emerald-800/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🚀</span>
+                            <div>
+                                <span class="badge-slate font-mono text-[10px]">SKENARIO 01</span>
+                                <h3 class="font-extrabold text-base text-slate-900 dark:text-white">
+                                    Siap &amp; Bersemangat Tinggi
+                                </h3>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                            High Energy &bull; High Focus
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <span class="font-bold text-slate-700 dark:text-slate-300 block mb-1">Karakteristik Siswa:</span>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Fisik prima, memiliki minat awal tinggi pada topik komputer/algoritma, cepat menyelesaikan instruksi panduan dasar.
+                            </p>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/30">
+                            <span class="font-bold text-emerald-800 dark:text-emerald-300 block mb-1">
+                                <i class="ph-bold ph-lightbulb"></i> Tindakan Instruksional Guru:
+                            </span>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-300">
+                                <li>Memberikan tantangan pengayaan (*stretch goal*) seperti modifikasi logika nested loop atau analisis error logic.</li>
+                                <li>Menugaskan sebagai <strong>Tutor Sebaya (*Peer Scaffolder*)</strong> untuk mendampingi rekan satu meja.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skenario 2: Lelah Fisik / Mengantuk -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-amber-200 dark:border-amber-800/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">😴</span>
+                            <div>
+                                <span class="badge-slate font-mono text-[10px]">SKENARIO 02</span>
+                                <h3 class="font-extrabold text-base text-slate-900 dark:text-white">
+                                    Lelah Fisik &amp; Daya Tahan Menurun
+                                </h3>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">
+                            Low Energy &bull; Neutral Focus
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <span class="font-bold text-slate-700 dark:text-slate-300 block mb-1">Karakteristik Siswa:</span>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Kerap dijumpai pada jam pelajaran siang setelah olahraga (XE5) atau setelah ujian blok. Motivasi kognitif ada, namun konsentrasi mata dan tubuh menurun.
+                            </p>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-900/30">
+                            <span class="font-bold text-amber-800 dark:text-amber-300 block mb-1">
+                                <i class="ph-bold ph-lightbulb"></i> Tindakan Instruksional Guru:
+                            </span>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-300">
+                                <li>Mengadakan <em>Kinesthetic Ice-Breaking</em> atau <em>Brain Gym</em> singkat selama 2 menit.</li>
+                                <li>Memecah instruksi praktikum menjadi potongan kecil (*micro-milestones*) dengan jeda istirahat peregangan mata dari layar monitor.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skenario 3: Bingung / Ragu Logika -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-sky-200 dark:border-sky-800/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🧩</span>
+                            <div>
+                                <span class="badge-slate font-mono text-[10px]">SKENARIO 03</span>
+                                <h3 class="font-extrabold text-base text-slate-900 dark:text-white">
+                                    Bingung Konsep / Ragu Berpendapat
+                                </h3>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-300">
+                            Moderate Energy &bull; Low Confidence
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <span class="font-bold text-slate-700 dark:text-slate-300 block mb-1">Karakteristik Siswa:</span>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Menghadapi kesulitan membedakan percabangan tunggal vs bertingkat, atau bingung membaca pesan error sintaksis namun enggan bertanya secara terbuka.
+                            </p>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-sky-50/60 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/30">
+                            <span class="font-bold text-sky-800 dark:text-sky-300 block mb-1">
+                                <i class="ph-bold ph-lightbulb"></i> Tindakan Instruksional Guru:
+                            </span>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-300">
+                                <li>Menghadirkan analogi kehidupan nyata (misal: gerbang tol otomatis atau seleksi lampu lalu lintas).</li>
+                                <li>Menyediakan lembar kerja dengan <em>starter code</em> terarah atau bantuan diagram alir visual sebelum meminta menuliskan kode utuh.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skenario 4: Butuh Bantuan Intensif -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-rose-200 dark:border-rose-900/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-2xl">🤝</span>
+                            <div>
+                                <span class="badge-slate font-mono text-[10px]">SKENARIO 04</span>
+                                <h3 class="font-extrabold text-base text-slate-900 dark:text-white">
+                                    Kecemasan Tinggi / Butuh Bantuan
+                                </h3>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300">
+                            Low Energy &bull; Low Confidence
+                        </span>
+                    </div>
+                    <div class="space-y-3 text-xs">
+                        <div>
+                            <span class="font-bold text-slate-700 dark:text-slate-300 block mb-1">Karakteristik Siswa:</span>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Mengalami hambatan ganda: kelelahan emosional dipadukan dengan kecemasan tidak mampu mengejar target praktikum komputer.
+                            </p>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-rose-50/60 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/30">
+                            <span class="font-bold text-rose-800 dark:text-rose-300 block mb-1">
+                                <i class="ph-bold ph-lightbulb"></i> Tindakan Instruksional Guru:
+                            </span>
+                            <ul class="list-disc pl-4 space-y-1 text-slate-600 dark:text-slate-300">
+                                <li>Pendampingan privat meja-ke-meja tanpa nada menyalahkan, diawali validasi emosi (<em>&ldquo;Tidak apa-apa, mari kita coba run baris pertama dulu&rdquo;</em>).</li>
+                                <li>Menempatkan peserta didik berdampingan dengan rekan sebaya yang sabar dan empatik untuk mengurangi ketegangan psikologis.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 4: DAMPAK TERHADAP IKLIM BELAJAR KELAS
+             ========================================== -->
+        <section class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-6">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
+                    04. HASIL REFLEKTIF PSE
+                </span>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                    Transformasi Suasana Laboratorium Komputer SMAN 4 Yogyakarta
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                    Pengalaman mengajar di kelas XE3, XE5, dan XE7 membuktikan bahwa pencapaian kognitif informatika berbanding lurus dengan rasa aman psikologis (*psychological safety*). Ketika peserta didik menyadari bahwa guru peduli terhadap kondisi mereka sebelum instruksi dimulai, kecemasan terhadap materi abstrak menurun drastis dan kemauan bereksplorasi meningkat secara mandiri.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50">
+                    <div class="font-mono text-2xl font-extrabold text-royal-600 dark:text-neon">96.5%</div>
+                    <div class="text-xs font-bold text-slate-900 dark:text-white mt-1">Partisipasi Aktif Praktikum</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Seluruh siswa menyelesaikan lembar kerja tanpa ada yang pasif menunggu jawaban.</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50">
+                    <div class="font-mono text-2xl font-extrabold text-royal-600 dark:text-neon">0 Insiden</div>
+                    <div class="text-xs font-bold text-slate-900 dark:text-white mt-1">Kecemasan Berlebihan / Menyerah</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Siswa berani mencoba ulang logika coding meskipun menemui sintaks error.</div>
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50">
+                    <div class="font-mono text-2xl font-extrabold text-royal-600 dark:text-neon">100%</div>
+                    <div class="text-xs font-bold text-slate-900 dark:text-white mt-1">Keterisian Refleksi PSE</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Umpan balik emosional terekam utuh pada setiap akhir siklus mengajar.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             BOTTOM NAVIGATION TO NEXT CHAPTER
+             ========================================== -->
+        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <a href="artefak.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
+                <i class="ph-bold ph-arrow-left"></i>
+                <span>Kembali ke Pilihan Artefak</span>
+            </a>
+            <a href="refleksi.html" class="btn-primary-cta">
+                <span>Lanjut ke Refleksi &amp; RTL</span>
+                <i class="ph-bold ph-arrow-right"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FULL-WIDTH FOOTER
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="site-container">
+            <div class="footer-content">
+                <div class="flex items-center gap-3">
+                    <div class="brand-logo" style="width: 2.25rem; height: 2.25rem;">
+                        <img src="img/Icon Logo Putih.png" alt="porto-pplm-nuris">
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 dark:text-white font-mono text-sm">porto-pplm-nuris</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">Nur Isnanto Nugroho, S.Pd. &bull; PPL SMA Negeri 4 Yogyakarta &bull; PPG UNY</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 text-xs font-bold">
+                    <a href="index.html" class="hover:text-royal-500 dark:hover:text-neon">Beranda</a>
+                    <a href="profil.html" class="hover:text-royal-500 dark:hover:text-neon">Profil</a>
+                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
+                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
+                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 3</a>
+                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 4</a>
+                    <a href="non-mengajar.html" class="hover:text-royal-500 dark:hover:text-neon">Non-Mengajar</a>
+                    <a href="analisis.html" class="text-royal-500 dark:text-neon">Analisis</a>
+                    <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Popup (Progressive Enhancement) -->
+    <div id="toastBox">
+        <i class="ph-fill ph-check-circle text-neon dark:text-royal-900 text-base"></i>
+        <span id="toastMessage">Berhasil!</span>
+    </div>
+
+</body>
+</html>

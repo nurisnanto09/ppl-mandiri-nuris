@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porto-pplm-nuris | Beranda — PPG UNY</title>
+    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    
+    <!-- Google Fonts: Bebas Neue, Outfit, Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS (Support Utility Classes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', '"Outfit"', 'sans-serif'],
+                        outfit: ['"Outfit"', 'sans-serif'],
+                        bebas: ['"Bebas Neue"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        royal: {
+                            50: '#F4F6FF',
+                            100: '#E5EAFF',
+                            200: '#C7D2FE',
+                            500: '#2541FF',
+                            600: '#1C34DB',
+                            700: '#1527B0',
+                            900: '#0D1326'
+                        },
+                        neon: {
+                            DEFAULT: '#CCFF00',
+                            soft: '#DDFF4D',
+                            dark: '#A8D600'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- External Stylesheet CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- External JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+<body class="selection:bg-neon selection:text-royal-900">
+
+    <!-- ============ LOADING SCREEN (3D ROTATING RING & BOUNCING BOX) ============ -->
+    <div class="loader" id="loader">
+        <div class="loader__ring-wrap"> 
+            <div class="loader__ring-spin" id="loaderRing"></div>
+        </div>
+        <div class="loader__box-bounce">
+            <img src="img/Icon Logo.png" alt="PPG Icon">
+        </div>
+    </div>
+
+    <!-- ==========================================
+         TOP NAVBAR (ATTACHED, FULL-WIDTH)
+         ========================================== -->
+    <header class="top-navbar">
+        <div class="site-container">
+            <div class="nav-wrapper">
+                <!-- Brand Identity -->
+                <a href="index.html" class="brand-link">
+                    <div class="brand-logo">
+                        <img src="img/Icon Logo Putih.png" alt="PORTOFOLIO-PPLM">
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-base sm:text-lg tracking-tight text-royal-500 dark:text-purple-300 block leading-none font-mono">
+                            PORTOFOLIO<span class="text-slate-900 dark:text-neon">-PPLM</span>
+                        </span>
+                        <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 block mt-0.5">
+                            Nur Isnanto Nugroho, S.Pd.
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="nav-menu-links">
+                    <a href="index.html" class="nav-item active">Beranda</a>
+                    <a href="profil.html" class="nav-item">Profil</a>
+                    
+                    <!-- Dropdown Pilihan Artefak -->
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-btn" aria-haspopup="true">
+                            <span>Pilihan Artefak</span>
+                            <i class="ph-bold ph-caret-down nav-caret"></i>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="profil.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge"><i class="ph-bold ph-user"></i></span>
+                                <div>
+                                    <strong>Profil Pendidik</strong>
+                                    <small>Biodata &amp; Rekam Jejak</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="siklus-1.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">01</span>
+                                <div>
+                                    <strong>Siklus 1</strong>
+                                    <small>Pengantar Informatika &amp; PPP</small>
+                                </div>
+                            </a>
+                            <a href="siklus-2.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">02</span>
+                                <div>
+                                    <strong>Siklus 2</strong>
+                                    <small>Algoritma &amp; Pemrograman</small>
+                                </div>
+                            </a>
+                            <a href="siklus-3.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">03</span>
+                                <div>
+                                    <strong>Siklus 3</strong>
+                                    <small>Analisis Data Excel</small>
+                                </div>
+                            </a>
+                            <a href="siklus-4.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">04</span>
+                                <div>
+                                    <strong>Siklus 4</strong>
+                                    <small>Sistem Komputer &amp; OS</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="non-mengajar.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">05</span>
+                                <div>
+                                    <strong>Non-Mengajar</strong>
+                                    <small>SPACE-IN &amp; Revitalisasi Lab</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="analisis.html" class="nav-item">Analisis</a>
+                    <a href="refleksi.html" class="nav-item">Refleksi &amp; RTL</a>
+                </nav>
+
+                <!-- Actions: Theme Toggle Switch & Mobile Menu -->
+                <div class="nav-actions">
+                    <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-switch" aria-label="Toggle Light/Dark Mode" title="Ubah Tema Terang / Gelap">
+                        <span class="theme-toggle-track">
+                            <i class="ph-fill ph-sun theme-icon-sun"></i>
+                            <i class="ph-fill ph-moon theme-icon-moon"></i>
+                            <span class="theme-toggle-knob"></span>
+                        </span>
+                        <span class="theme-toggle-label" id="themeText">Light</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="mobile-menu-btn" title="Buka Menu">
+                        <i class="ph-bold ph-list text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobileMenu" class="mobile-dropdown">
+                <a href="index.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">1. Beranda</a>
+                <a href="profil.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">2. Profil Pendidik</a>
+                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1 (Informatika)</a>
+                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
+                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3 (Excel)</a>
+                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4 (Sistem Operasi)</a>
+                <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (SPACE-IN)</a>
+                <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">3. Analisis</a>
+                <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         SIGNATURE HERO SECTION (IMAGE 1 REPLICA)
+         ========================================== -->
+    <section class="hero-signature">
+        <!-- Top Subtitle -->
+        <p class="hero-sub-title">Dokumentasi Praktik Pengalaman Lapangan Mandiri</p>
+        
+        <!-- Big Typography Behind Photo -->
+        <h1 class="hero-huge-title">PORTOFOLIO</h1>
+
+        <!-- Central Photo Wrapper (Nur Isnanto Nugroho in PPG UNY Jacket) -->
+        <div class="hero-photo-wrapper">
+            <img src="img/nuris.png" alt="Nur Isnanto Nugroho, S.Pd. - PPG Informatika UNY" class="hero-photo-img">
+        </div>
+
+        <!-- Floating Tag: 🎓 Mas Guru -->
+        <div class="hero-tag-guru">
+            <span class="text-base">🎓</span>
+            <span>Mas Guru</span>
+        </div>
+
+        <!-- Floating Tag: 📚 Guru Informatika -->
+        <div class="hero-tag-role">
+            <span class="text-base">📚</span>
+            <span>Guru Informatika</span>
+        </div>
+
+        <!-- Glassmorphism Profile Card (Bottom Left) -->
+        <div class="hero-profile-card-glass">
+            <h3>Saya Nur Isnanto Nugroho</h3>
+            <p>Mahasiswa Pendidikan Profesi Guru (PPG) Informatika di Universitas Negeri Yogyakarta. Portofolio ini disusun sebagai dokumentasi perjalanan belajar dan refleksi praktik kependidikan di SMA Negeri 4 Yogyakarta.</p>
+        </div>
+
+        <!-- Circular Seal Badge (Bottom Right) -->
+        <div class="hero-exp-seal" title="PPG Universitas Negeri Yogyakarta 2026">
+            <svg class="hero-exp-seal-svg" viewBox="0 0 200 200">
+                <defs>
+                    <path id="circlePathSeal" d="M 100,100 m -74,0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0"/>
+                </defs>
+                <text>
+                    <textPath href="#circlePathSeal" startOffset="0%" textLength="465" lengthAdjust="spacing">
+                        UNIVERSITAS NEGERI YOGYAKARTA • 2026 •
+                    </textPath>
+                </text>
+            </svg>
+            <span class="hero-exp-seal-text">PPG</span>
+        </div>
+
+        <!-- Doodle Star Top Left -->
+        <svg class="absolute top-8 left-8 sm:top-12 sm:left-12 w-8 h-8 opacity-80 pointer-events-none hidden sm:block" viewBox="0 0 40 40" fill="none" stroke="#CCFF00" stroke-width="2.5">
+            <path d="M20 2 l4 12 12 0-10 8 4 12-10-8-10 8 4-12L4 14l12 0z"/>
+        </svg>
+
+        <!-- CTA Launch Group: Arrow + Button Daftar Isi Siklus -->
+        <div class="hero-cta-launch">
+            <svg class="w-12 h-8 hidden sm:block" viewBox="0 0 60 30" fill="none" stroke="#CCFF00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 25 Q30 0 55 15"/>
+                <path d="M48 10 l7 5-8 4"/>
+            </svg>
+            <a href="#menu-siklus" class="hero-btn-open">
+                <i class="ph-bold ph-plus"></i>
+                <span>Daftar Isi</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TICKER ROLLING BANNER (INFINITE CONTINUOUS MARQUEE)
+         ========================================== -->
+    <div class="ticker-marquee-wrapper" title="Sorot untuk menjeda gerakan">
+        <div class="ticker-marquee-track">
+            <div class="ticker-marquee-group">
+                <span class="ticker-item"><span class="ticker-star">✦</span> PRAKTIK PENGALAMAN LAPANGAN MANDIRI</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> SMA NEGERI 4 YOGYAKARTA</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> PPG UNIVERSITAS NEGERI YOGYAKARTA</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> PRAKTIK PENGALAMAN LAPANGAN MANDIRI</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> SMA NEGERI 4 YOGYAKARTA</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> PPG UNIVERSITAS NEGERI YOGYAKARTA</span>
+            </div>
+            <div class="ticker-marquee-group" aria-hidden="true">
+                <span class="ticker-item"><span class="ticker-star">✦</span> PRAKTIK PENGALAMAN LAPANGAN MANDIRI</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> SMA NEGERI 4 YOGYAKARTA</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> PPG UNIVERSITAS NEGERI YOGYAKARTA</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> PRAKTIK PENGALAMAN LAPANGAN MANDIRI</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> SMA NEGERI 4 YOGYAKARTA</span>
+                <span class="ticker-item"><span class="ticker-star">✦</span> PPG UNIVERSITAS NEGERI YOGYAKARTA</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MAIN CONTENT WRAPPER
+         ========================================== -->
+    <main class="site-container py-12 space-y-20">
+
+        <!-- ==========================================
+             SECTION: SIKLUS CATEGORY MENU (IMAGE 2 REPLICA)
+             "Browse Our Categories To Find Exactly Courses" -> "Pilih Siklus Pembelajaran & Artefak"
+             ========================================== -->
+        <section id="menu-siklus" class="scroll-mt-24">
+            <div class="siklus-browse-section">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    
+                    <!-- Left Column (7 cols): Menu Siklus 1 - 4 + Non-Mengajar -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div>
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-neon font-mono text-[11px] font-extrabold tracking-wider uppercase mb-3 border border-white/15">
+                                ✦ REPOSITORI PRAKTIK
+                            </div>
+                            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight text-white font-outfit">
+                                Pilihan <span class="text-neon italic">Artefak</span>
+                            </h2>
+                            <p class="text-xs sm:text-sm text-white/80 mt-2 max-w-xl leading-relaxed">
+                                Telusuri perangkat pembelajaran komprehensif dan karya inovasi PPL di SMA Negeri 4 Yogyakarta:
+                            </p>
+                        </div>
+
+                        <!-- Menu Category List (Disederhanakan Sesuai Referensi) -->
+                        <div class="space-y-2.5 pt-2">
+                            
+                            <!-- Siklus 1 -->
+                            <a href="siklus-1.html" class="siklus-item-row group">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-10 h-10 rounded-xl bg-white/10 text-neon flex items-center justify-center font-mono font-extrabold text-sm shrink-0 group-hover:bg-neon group-hover:text-royal-900 transition-colors">
+                                        01
+                                    </span>
+                                    <div>
+                                        <div class="font-extrabold text-base sm:text-lg text-white group-hover:text-neon transition-colors">
+                                            Siklus 1
+                                        </div>
+                                        <div class="text-xs text-white/70 mt-0.5">
+                                            5 Dokumen Artefak Pembelajaran
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="siklus-arrow-circle">
+                                    <i class="ph-bold ph-arrow-right text-sm"></i>
+                                </div>
+                            </a>
+
+                            <!-- Siklus 2 -->
+                            <a href="siklus-2.html" class="siklus-item-row group">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-10 h-10 rounded-xl bg-white/10 text-neon flex items-center justify-center font-mono font-extrabold text-sm shrink-0 group-hover:bg-neon group-hover:text-royal-900 transition-colors">
+                                        02
+                                    </span>
+                                    <div>
+                                        <div class="font-extrabold text-base sm:text-lg text-white group-hover:text-neon transition-colors">
+                                            Siklus 2
+                                        </div>
+                                        <div class="text-xs text-white/70 mt-0.5">
+                                            5 Dokumen Artefak Pembelajaran
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="siklus-arrow-circle">
+                                    <i class="ph-bold ph-arrow-right text-sm"></i>
+                                </div>
+                            </a>
+
+                            <!-- Siklus 3 -->
+                            <a href="siklus-3.html" class="siklus-item-row group">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-10 h-10 rounded-xl bg-white/10 text-neon flex items-center justify-center font-mono font-extrabold text-sm shrink-0 group-hover:bg-neon group-hover:text-royal-900 transition-colors">
+                                        03
+                                    </span>
+                                    <div>
+                                        <div class="font-extrabold text-base sm:text-lg text-white group-hover:text-neon transition-colors">
+                                            Siklus 3
+                                        </div>
+                                        <div class="text-xs text-white/70 mt-0.5">
+                                            5 Dokumen Artefak Pembelajaran
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="siklus-arrow-circle">
+                                    <i class="ph-bold ph-arrow-right text-sm"></i>
+                                </div>
+                            </a>
+
+                            <!-- Siklus 4 -->
+                            <a href="siklus-4.html" class="siklus-item-row group">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-10 h-10 rounded-xl bg-neon text-royal-900 flex items-center justify-center font-mono font-extrabold text-sm shrink-0">
+                                        04
+                                    </span>
+                                    <div>
+                                        <div class="font-extrabold text-base sm:text-lg text-white group-hover:text-neon transition-colors">
+                                            Siklus 4
+                                        </div>
+                                        <div class="text-xs text-white/70 mt-0.5">
+                                            5 Dokumen Artefak Pembelajaran
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="siklus-arrow-circle">
+                                    <i class="ph-bold ph-arrow-right text-sm"></i>
+                                </div>
+                            </a>
+
+                            <!-- Non-Mengajar -->
+                            <a href="non-mengajar.html" class="siklus-item-row group">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-10 h-10 rounded-xl bg-white/10 text-neon flex items-center justify-center font-mono font-extrabold text-sm shrink-0 group-hover:bg-neon group-hover:text-royal-900 transition-colors">
+                                        05
+                                    </span>
+                                    <div>
+                                        <div class="font-extrabold text-base sm:text-lg text-white group-hover:text-neon transition-colors">
+                                            Non-Mengajar
+                                        </div>
+                                        <div class="text-xs text-white/70 mt-0.5">
+                                            4 Dokumen Inovasi &amp; Pengabdian
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="siklus-arrow-circle">
+                                    <i class="ph-bold ph-arrow-right text-sm"></i>
+                                </div>
+                            </a>
+                                <div class="siklus-arrow-circle">
+                                    <i class="ph-bold ph-arrow-right text-sm"></i>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Column (5 cols): Organic Photo Frame of Real Teaching -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="organic-photo-frame w-full max-w-md aspect-[4/3] sm:aspect-[4/3] relative">
+                            <img src="img/dokumentasi/dok-kelas1.jpg" alt="Praktik Pembelajaran di Lab Komputer SMAN 4 Yogyakarta" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-royal-900/90 via-transparent to-transparent"></div>
+                            
+                            <!-- Inset Badge on Photo -->
+                            <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white space-y-1">
+                                <div class="flex items-center justify-between text-xs font-extrabold text-neon">
+                                    <span>SMA Negeri 4 Yogyakarta</span>
+                                    <span>108 Siswa</span>
+                                </div>
+                                <p class="text-[11px] text-white/90 leading-tight">
+                                    Pembelajaran Informatika Fase E di Laboratorium Komputer bersama Guru Pamong Titis Widowati, S.T.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Quick Action Link -->
+                        <div class="mt-4 flex items-center gap-3">
+                            <a href="artefak.html" class="inline-flex items-center gap-2 text-xs font-bold text-neon hover:underline">
+                                <span>Lihat Semua 24 Artefak Dokumen Lengkap</span>
+                                <i class="ph-bold ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION: BENTO NAVIGASI ANTAR HALAMAN
+             ========================================== -->
+        <section class="space-y-8 pt-8 border-t border-slate-200 dark:border-slate-800">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
+                    NAVIGASI E-PORTOFOLIO
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                    Jelajahi Seluruh Bagian Portofolio
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                    Kunjungi halaman spesifik untuk membaca artefak mengajar, evaluasi data kelas, atau refleksi kritis pendidik:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Pilihan Artefak -->
+                <a href="artefak.html" class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 group hover:border-royal-500 dark:hover:border-neon transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="badge-primary text-[10px]">HALAMAN 02</span>
+                            <i class="ph-bold ph-arrow-up-right text-royal-500 dark:text-neon"></i>
+                        </div>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white group-hover:text-royal-500 dark:group-hover:text-neon transition-colors">
+                            Pilihan Artefak
+                        </h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                            Katalog lengkap 24 dokumen artefak: Modul Ajar, Asesmen, Materi Ajar, LKPD, Media dari Siklus 1 s.d. 4 dan Proyek Non-Mengajar.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-extrabold text-royal-500 dark:text-neon">
+                        Buka Pilihan Artefak &rarr;
+                    </div>
+                </a>
+
+                <!-- Card 2: Analisis -->
+                <a href="analisis.html" class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 group hover:border-royal-500 dark:hover:border-neon transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="badge-primary text-[10px]">HALAMAN 03</span>
+                            <i class="ph-bold ph-arrow-up-right text-royal-500 dark:text-neon"></i>
+                        </div>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white group-hover:text-royal-500 dark:group-hover:text-neon transition-colors">
+                            Analisis Pembelajaran
+                        </h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                            Kajian data kuantitatif ketuntasan belajar (78% ke 94%), analisis kualitatif dinamika kelas, dan evaluasi pembelajaran sosial emosional.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-extrabold text-royal-500 dark:text-neon">
+                        Buka Analisis Kelas &rarr;
+                    </div>
+                </a>
+
+                <!-- Card 3: Refleksi & RTL -->
+                <a href="refleksi.html" class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 group hover:border-royal-500 dark:hover:border-neon transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="badge-primary text-[10px]">HALAMAN 04</span>
+                            <i class="ph-bold ph-arrow-up-right text-royal-500 dark:text-neon"></i>
+                        </div>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white group-hover:text-royal-500 dark:group-hover:text-neon transition-colors">
+                            Refleksi &amp; RTL
+                        </h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+                            Refleksi model guru masa depan, filosofi Ki Hadjar Dewantara, evaluasi 3 kekuatan &amp; 3 kelemahan, serta RTL 3 fase.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 text-xs font-extrabold text-royal-500 dark:text-neon">
+                        Buka Refleksi &amp; RTL &rarr;
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FULL-WIDTH FOOTER
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="site-container">
+            <div class="footer-content">
+                <div class="flex items-center gap-3">
+                    <div class="brand-logo" style="width: 2.25rem; height: 2.25rem;">
+                        <img src="img/Icon Logo Putih.png" alt="porto-pplm-nuris">
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 dark:text-white font-mono text-sm">porto-pplm-nuris</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">Nur Isnanto Nugroho, S.Pd. &bull; PPL SMA Negeri 4 Yogyakarta &bull; PPG UNY</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 text-xs font-bold">
+                    <a href="index.html" class="text-royal-500 dark:text-neon">Beranda</a>
+                    <a href="profil.html" class="hover:text-royal-500 dark:hover:text-neon">Profil</a>
+                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
+                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
+                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 3</a>
+                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 4</a>
+                    <a href="non-mengajar.html" class="hover:text-royal-500 dark:hover:text-neon">Non-Mengajar</a>
+                    <a href="analisis.html" class="hover:text-royal-500 dark:hover:text-neon">Analisis</a>
+                    <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Popup (Progressive Enhancement) -->
+    <div id="toastBox">
+        <i class="ph-fill ph-check-circle text-neon dark:text-royal-900 text-base"></i>
+        <span id="toastMessage">Berhasil!</span>
+    </div>
+
+</body>
+</html>

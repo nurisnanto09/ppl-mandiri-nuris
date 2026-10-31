@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porto-pplm-nuris | Profil Pendidik — Nur Isnanto Nugroho, S.Pd.</title>
+    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700;800&family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind CSS (Support Utility Classes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', '"Outfit"', 'sans-serif'],
+                        outfit: ['"Outfit"', 'sans-serif'],
+                        bebas: ['"Bebas Neue"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        royal: {
+                            50: '#F4F6FF',
+                            100: '#E5EAFF',
+                            200: '#C7D2FE',
+                            500: '#2541FF',
+                            600: '#1C34DB',
+                            700: '#1527B0',
+                            900: '#0D1326'
+                        },
+                        neon: {
+                            DEFAULT: '#CCFF00',
+                            soft: '#DDFF4D',
+                            dark: '#A8D600'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- External Stylesheet CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- External JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+<body class="selection:bg-neon selection:text-royal-900">
+
+    <!-- ==========================================
+         TOP NAVBAR (FLOATING CAPSULE WITH DROPDOWN)
+         ========================================== -->
+    <header class="top-navbar">
+        <div class="site-container">
+            <div class="nav-wrapper">
+                <!-- Brand Identity -->
+                <a href="index.html" class="brand-link">
+                    <div class="brand-logo">
+                        <img src="img/Icon Logo Putih.png" alt="PORTOFOLIO-PPLM">
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-base sm:text-lg tracking-tight text-royal-500 dark:text-purple-300 block leading-none font-mono">
+                            PORTOFOLIO<span class="text-slate-900 dark:text-neon">-PPLM</span>
+                        </span>
+                        <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 block mt-0.5">
+                            Nur Isnanto Nugroho, S.Pd.
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="nav-menu-links">
+                    <a href="index.html" class="nav-item">Beranda</a>
+                    <a href="profil.html" class="nav-item active">Profil</a>
+                    
+                    <!-- Dropdown Pilihan Artefak -->
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-btn" aria-haspopup="true">
+                            <span>Pilihan Artefak</span>
+                            <i class="ph-bold ph-caret-down nav-caret"></i>
+                        </button>
+                        <div class="nav-dropdown-menu">
+                            <a href="profil.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge"><i class="ph-bold ph-user"></i></span>
+                                <div>
+                                    <strong>Profil Pendidik</strong>
+                                    <small>Biodata &amp; Rekam Jejak</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="siklus-1.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">01</span>
+                                <div>
+                                    <strong>Siklus 1</strong>
+                                    <small>Pengantar Informatika &amp; PPP</small>
+                                </div>
+                            </a>
+                            <a href="siklus-2.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">02</span>
+                                <div>
+                                    <strong>Siklus 2</strong>
+                                    <small>Algoritma &amp; Pemrograman</small>
+                                </div>
+                            </a>
+                            <a href="siklus-3.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">03</span>
+                                <div>
+                                    <strong>Siklus 3</strong>
+                                    <small>Analisis Data Excel</small>
+                                </div>
+                            </a>
+                            <a href="siklus-4.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">04</span>
+                                <div>
+                                    <strong>Siklus 4</strong>
+                                    <small>Sistem Komputer &amp; OS</small>
+                                </div>
+                            </a>
+                            <div class="nav-dropdown-divider"></div>
+                            <a href="non-mengajar.html" class="nav-dropdown-item">
+                                <span class="nav-cycle-badge">05</span>
+                                <div>
+                                    <strong>Non-Mengajar</strong>
+                                    <small>SPACE-IN &amp; Revitalisasi Lab</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="analisis.html" class="nav-item">Analisis</a>
+                    <a href="refleksi.html" class="nav-item">Refleksi &amp; RTL</a>
+                </nav>
+
+                <!-- Actions: Theme Toggle Switch & Mobile Menu -->
+                <div class="nav-actions">
+                    <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-switch" aria-label="Toggle Light/Dark Mode" title="Ubah Tema Terang / Gelap">
+                        <span class="theme-toggle-track">
+                            <i class="ph-fill ph-sun theme-icon-sun"></i>
+                            <i class="ph-fill ph-moon theme-icon-moon"></i>
+                            <span class="theme-toggle-knob"></span>
+                        </span>
+                        <span class="theme-toggle-label" id="themeText">Light</span>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="mobile-menu-btn" title="Buka Menu">
+                        <i class="ph-bold ph-list text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobileMenu" class="mobile-dropdown">
+                <a href="index.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">1. Beranda</a>
+                <a href="profil.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">2. Profil Pendidik</a>
+                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1 (Informatika)</a>
+                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
+                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3 (Excel)</a>
+                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4 (Sistem Operasi)</a>
+                <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (SPACE-IN)</a>
+                <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">3. Analisis</a>
+                <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         PAGE HEADER BANNER
+         ========================================== -->
+    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#110A24]">
+        <div class="site-container">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 mb-3">
+                    <span class="badge-primary">BIODATA &amp; JEJAK LANGKAH</span>
+                    <span class="badge-slate">PPG PRAJABATAN UNY 2026</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                    Profil &amp; Jejak Langkah Pendidik
+                </h1>
+                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
+                    Mengenal lebih dekat sosok calon guru informatika di balik portofolio Praktik Pengalaman Lapangan Mandiri (PPLM) di SMA Negeri 4 Yogyakarta.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 mt-6 text-xs text-slate-500 dark:text-slate-400">
+                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-map-pin text-royal-500 dark:text-neon"></i> Sleman, D.I. Yogyakarta</span>
+                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-buildings text-royal-500 dark:text-neon"></i> SMAN 4 Yogyakarta (Patbhe)</span>
+                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-graduation-cap text-royal-500 dark:text-neon"></i> LPTK Universitas Negeri Yogyakarta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         MAIN CONTENT: PROFIL DETAIL
+         ========================================== -->
+    <main class="page-main site-container space-y-16">
+
+        <!-- 1. KARTU PROFIL UTAMA (HERO STYLE FROM PPL 1) -->
+        <section class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-royal-500 via-royal-600 to-royal-700 text-white relative overflow-hidden shadow-2xl">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(204,255,0,0.18),transparent_50%)] pointer-events-none"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                <!-- Sisi Kiri: Foto Cutout dengan Floating Badges -->
+                <div class="lg:col-span-5 flex flex-col items-center relative">
+                    <div class="w-64 sm:w-72 aspect-[4/5] rounded-3xl overflow-hidden bg-white/10 backdrop-blur-md border-2 border-white/20 p-2 shadow-2xl relative">
+                        <img src="img/nuris.png" alt="Nur Isnanto Nugroho, S.Pd." class="w-full h-full object-cover rounded-2xl">
+                    </div>
+                    <!-- Badges -->
+                    <div class="absolute -bottom-3 left-4 bg-neon text-royal-900 px-3.5 py-1.5 rounded-full font-bold text-xs shadow-lg flex items-center gap-1.5">
+                        <span>🎓</span>
+                        <span>Mas Guru</span>
+                    </div>
+                    <div class="absolute top-4 -right-2 bg-royal-900/80 backdrop-blur-md text-white border border-white/20 px-3 py-1 rounded-full font-bold text-xs shadow-lg">
+                        <span>📚 Guru Informatika</span>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Teks & Biodata Singkat -->
+                <div class="lg:col-span-7 space-y-5">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-neon font-mono text-xs font-bold border border-white/20">
+                        <span class="w-2 h-2 rounded-full bg-neon animate-pulse"></span>
+                        Mahasiswa PPG Prajabatan Informatika
+                    </div>
+                    <div>
+                        <span class="text-sm sm:text-base font-semibold text-white/80 block">Halo, Saya</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white font-outfit uppercase mt-0.5">
+                            Nur Isnanto Nugroho, S.Pd.
+                        </h2>
+                        <h3 class="text-base sm:text-lg font-bold text-neon mt-1 font-mono">
+                            Calon Guru Informatika &amp; Desainer Media Pembelajaran
+                        </h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-white/90 leading-relaxed max-w-xl">
+                        Merancang pengalaman belajar digital interaktif berbasis TPACK. Memadukan keahlian desain visual dan kode untuk menciptakan media ajar inovatif, kontekstual, dan bermakna bagi peserta didik di era Kurikulum Merdeka.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <button onclick="copyToClipboard('nurisnanto.2025@student.uny.ac.id')" class="px-5 py-2.5 rounded-xl bg-neon text-royal-900 font-extrabold text-xs inline-flex items-center gap-2 shadow-lg hover:bg-yellow-300 transition-colors">
+                            <i class="ph-bold ph-envelope"></i>
+                            <span>Salin Email Akademik</span>
+                        </button>
+                        <a href="index.html#menu-siklus" class="px-5 py-2.5 rounded-xl bg-white/15 text-white border border-white/25 font-bold text-xs inline-flex items-center gap-2 hover:bg-white/25 transition-colors">
+                            <i class="ph-bold ph-folder"></i>
+                            <span>Jelajahi Artefak</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MENGENAL LEBIH DEKAT (ADAPTASI DARI PPL 1) -->
+        <section class="space-y-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
+                    01. LATAR BELAKANG &amp; FILOSOFI
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                    Mengenal Lebih Dekat
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                    Nilai-nilai luhur dan pandangan kependidikan yang menjadi kompas dalam praktik mengajar.
+                </p>
+            </div>
+
+            <!-- Narasi Asal & Identitas -->
+            <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 leading-relaxed text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3">
+                <div class="flex items-center gap-2 text-royal-500 dark:text-neon font-bold text-xs uppercase tracking-wider">
+                    <i class="ph-bold ph-compass"></i> Asal Usul &amp; Tempaan Karakter
+                </div>
+                <p>
+                    Saya lahir dan bertumbuh di <strong>Kabupaten Sleman, Daerah Istimewa Yogyakarta</strong>. Sebuah daerah berslogan <em>&ldquo;Sembada&rdquo;</em> yang bernaung di bawah gagahnya Gunung Merapi. Seperti tanah lereng Merapi yang dikenal subur dan tangguh, lingkungan inilah yang menempa karakter saya untuk terus bertumbuh, tekun, dan memberikan manfaat nyata bagi sesama melalui pengabdian di dunia pendidikan.
+                </p>
+            </div>
+
+            <!-- 2 Bento Box: Inspirasi & Tujuan Profesional -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Box Inspirasi -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-royal-100 dark:bg-royal-900/60 text-royal-500 dark:text-neon flex items-center justify-center text-xl">
+                        <i class="ph-fill ph-lightbulb"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-slate-900 dark:text-white">Inspirasi Menjadi Pendidik</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Ketertarikan saya pada dunia pendidikan teruji saat mendampingi siswa dalam ajang lomba video kreatif dan pemrograman. Melihat binar antusiasme, rasa ingin tahu, dan kerja keras mereka memberikan kebahagiaan batin yang tak ternilai &mdash; sebuah momen penting yang memantapkan langkah saya untuk mendedikasikan diri menjadi pendidik seutuhnya.
+                    </p>
+                </div>
+
+                <!-- Box Tujuan Profesional -->
+                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-neon flex items-center justify-center text-xl">
+                        <i class="ph-fill ph-target"></i>
+                    </div>
+                    <h3 class="font-extrabold text-lg text-slate-900 dark:text-white">Tujuan Profesional</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Menjadi jembatan ilmu yang memastikan setiap murid benar-benar terhubung secara bermakna dengan apa yang mereka pelajari. Saya meyakini filosofi Ki Hadjar Dewantara bahwa <strong>murid bukanlah gelas kosong yang pasif</strong>, melainkan bibit unggul berpribadi utuh yang siap kita tuntun segala kodrat alam dan zamannya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Motto Pita / Quote Banner -->
+            <div class="p-6 sm:p-8 rounded-2xl bg-royal-50 dark:bg-royal-950/40 border border-royal-200 dark:border-royal-900/60 text-center space-y-3">
+                <i class="ph-fill ph-quotes text-3xl text-royal-500 dark:text-neon opacity-75"></i>
+                <blockquote class="text-base sm:text-xl font-extrabold text-slate-900 dark:text-white font-outfit max-w-2xl mx-auto leading-relaxed">
+                    &ldquo;Pikiran bukanlah ruang kosong yang perlu diisi, melainkan api yang perlu dinyalakan.&rdquo;
+                </blockquote>
+                <div class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+                    &mdash; Mestrius Plutarchus (Filsuf Yunani Kuno)
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. JEJAK PENDIDIKAN (TIMELINE LENGKAP) -->
+        <section class="space-y-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
+                    02. REKAM JEJAK AKADEMIS
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                    Jejak Pendidikan
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                    Perjalanan belajar formal yang menempa kompetensi pedagogik, keahlian teknologi, dan karakter integritas.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Timeline 1: PPG -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border-l-4 border-l-neon border-y border-r border-slate-200 dark:border-slate-800 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <span class="badge-primary">2026 &ndash; SEKARANG</span>
+                        <span class="text-xs font-mono font-bold text-royal-600 dark:text-neon">LPTK Penyelenggara</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">
+                            Pendidikan Profesi Guru (PPG) Prajabatan &mdash; Bidang Studi Informatika
+                        </h3>
+                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-0.5">
+                            Universitas Negeri Yogyakarta (UNY)
+                        </p>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Fokus mengasah 4 kompetensi guru profesional (pedagogik, kepribadian, sosial, profesional), melaksanakan Praktik Pengalaman Lapangan Mandiri (PPLM) di SMA Negeri 4 Yogyakarta di bawah bimbingan Guru Pamong Titis Widowati, S.T., serta mengembangkan inovasi media pembelajaran berbasis web app interaktif.
+                    </p>
+                </div>
+
+                <!-- Timeline 2: S1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border-l-4 border-l-royal-500 border-y border-r border-slate-200 dark:border-slate-800 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <span class="badge-slate font-mono">2020 &ndash; 2025</span>
+                        <span class="text-xs font-mono font-bold text-emerald-600 dark:text-neon">Gelar Sarjana Pendidikan (S.Pd.)</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">
+                            S1 Pendidikan
+                        </h3>
+                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-0.5">
+                            Universitas Negeri Yogyakarta (UNY)
+                        </p>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Mendalami pemrograman komputer, desain antarmuka, psikologi pendidikan, dan metodologi pembelajaran. Aktif dalam pembimbingan ekstrakurikuler serta tim multimedia kreatif.
+                    </p>
+                </div>
+
+                <!-- Timeline 3: SMA -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border-l-4 border-l-slate-300 dark:border-l-slate-700 border-y border-r border-slate-200 dark:border-slate-800 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <span class="badge-slate font-mono">2017 &ndash; 2020</span>
+                        <span class="text-xs font-mono font-bold text-slate-500">Kabupaten Sleman, DIY</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">
+                            Pendidikan Menengah Atas
+                        </h3>
+                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-0.5">
+                            SMA Negeri 1 Godean
+                        </p>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Titik awal penjelajahan minat di bidang sains, logika algoritma, dan eksplorasi desain grafis komputer.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. KOMPETENSI & KEAHLIAN (3 BIDANG UNGGULAN) -->
+        <section class="space-y-8">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
+                    03. KOMPETENSI INTI
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                    Kompetensi &amp; Keahlian
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                    Kombinasi antara kepekaan pedagogik humanis dan penguasaan teknologi digital terapan.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Skill 1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3 hover:border-royal-500 dark:hover:border-neon transition-colors">
+                    <div class="w-12 h-12 rounded-2xl bg-royal-100 dark:bg-royal-900/60 text-royal-500 dark:text-neon flex items-center justify-center text-2xl">
+                        <i class="ph-duotone ph-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Pedagogik Interaktif (TPACK)</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Manajemen kelas laboratorium komputer, diferensiasi proses belajar, scaffolding instruksional, dan penerapan Pembelajaran Sosial Emosional (PSE).
+                    </p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3 hover:border-royal-500 dark:hover:border-neon transition-colors">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-neon flex items-center justify-center text-2xl">
+                        <i class="ph-duotone ph-bezier-curve"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Desain Visual &amp; Infografis</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pembuatan materi ajar visual, infografis LKPD, pop art, dan aset vektor menggunakan Adobe Illustrator, Corel Draw, dan Canva Education.
+                    </p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3 hover:border-royal-500 dark:hover:border-neon transition-colors">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-950/60 text-purple-600 dark:text-neon flex items-center justify-center text-2xl">
+                        <i class="ph-duotone ph-code"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Web &amp; Media Interaktif</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pengembangan media pembelajaran interaktif berbasis web native (HTML5/CSS3/JavaScript), analisis data Microsoft Excel, dan sistem aplikasi sekolah.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. KONTEKS PENUGASAN PPL SMA NEGERI 4 YOGYAKARTA -->
+        <section class="p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-4">
+            <h3 class="font-extrabold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+                <i class="ph-bold ph-buildings text-royal-500 dark:text-neon text-xl"></i>
+                Konteks Praktik Lapangan Mandiri (PPLM)
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Praktik Pengalaman Lapangan Mandiri dilaksanakan di <strong>SMA Negeri 4 Yogyakarta</strong> (Jl. Magelang, Karangwaru, Tegalrejo, Kota Yogyakarta) di bawah bimbingan Guru Pamong <strong>Titis Widowati, S.T.</strong> (NIP 19780313 202221 2 006) dan Kepala Sekolah <strong>Dra. Jumiati, M.Pd.</strong>
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
+                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                    <span class="text-slate-500 dark:text-slate-400 block text-[11px]">Rombel Sasaran:</span>
+                    <strong class="text-slate-900 dark:text-white text-sm">X-E3, X-E5, &amp; X-E7</strong>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                    <span class="text-slate-500 dark:text-slate-400 block text-[11px]">Total Peserta Didik:</span>
+                    <strong class="text-royal-600 dark:text-neon text-sm">108 Siswa</strong>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                    <span class="text-slate-500 dark:text-slate-400 block text-[11px]">Fasilitas Praktik:</span>
+                    <strong class="text-slate-900 dark:text-white text-sm">Lab Komputer Terpadu</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Next -->
+        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <a href="index.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
+                <i class="ph-bold ph-arrow-left"></i>
+                <span>Kembali ke Beranda</span>
+            </a>
+            <a href="siklus-1.html" class="btn-primary-cta">
+                <span>Lanjut ke Siklus 1 (Informatika)</span>
+                <i class="ph-bold ph-arrow-right"></i>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FULL-WIDTH FOOTER
+         ========================================== -->
+    <footer class="site-footer">
+        <div class="site-container">
+            <div class="footer-content">
+                <div class="flex items-center gap-3">
+                    <div class="brand-logo" style="width: 2.25rem; height: 2.25rem;">
+                        <img src="img/Icon Logo Putih.png" alt="PORTOFOLIO-PPLM">
+                    </div>
+                    <div>
+                        <div class="font-extrabold text-slate-900 dark:text-white font-mono text-sm">PORTOFOLIO-PPLM</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400">Nur Isnanto Nugroho, S.Pd. &bull; PPL SMA Negeri 4 Yogyakarta &bull; PPG UNY</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-5 text-xs font-bold">
+                    <a href="index.html" class="hover:text-royal-500 dark:hover:text-neon">Beranda</a>
+                    <a href="profil.html" class="text-royal-500 dark:text-neon">Profil</a>
+                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
+                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
+                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 3</a>
+                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 4</a>
+                    <a href="non-mengajar.html" class="hover:text-royal-500 dark:hover:text-neon">Non-Mengajar</a>
+                    <a href="analisis.html" class="hover:text-royal-500 dark:hover:text-neon">Analisis</a>
+                    <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Popup (Progressive Enhancement) -->
+    <div id="toastBox">
+        <i class="ph-fill ph-check-circle text-neon dark:text-royal-900 text-base"></i>
+        <span id="toastMessage">Berhasil!</span>
+    </div>
+
+</body>
+</html>
