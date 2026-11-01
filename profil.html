@@ -29,18 +29,29 @@
                     },
                     colors: {
                         royal: {
-                            50: '#F4F6FF',
-                            100: '#E5EAFF',
-                            200: '#C7D2FE',
-                            500: '#2541FF',
-                            600: '#1C34DB',
-                            700: '#1527B0',
-                            900: '#0D1326'
+                            50: '#FAF5FF',
+                            100: '#F3E8FF',
+                            200: '#E9D5FF',
+                            300: '#D8B4FE',
+                            400: '#A855F7',
+                            500: '#7E3BED',
+                            600: '#6B21A8',
+                            700: '#581C87',
+                            800: '#3B0764',
+                            900: '#120B22',
+                            950: '#000000'
                         },
                         neon: {
-                            DEFAULT: '#CCFF00',
-                            soft: '#DDFF4D',
-                            dark: '#A8D600'
+                            DEFAULT: '#C6FF34',
+                            soft: '#D6FF66',
+                            dark: '#9FE61A'
+                        },
+                        violet: {
+                            DEFAULT: '#7E3BED',
+                            500: '#7E3BED'
+                        },
+                        lime: {
+                            DEFAULT: '#C6FF34'
                         }
                     }
                 }
@@ -176,7 +187,7 @@
     <!-- ==========================================
          PAGE HEADER BANNER
          ========================================== -->
-    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#110A24]">
+    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0A0517]">
         <div class="site-container">
             <div class="max-w-3xl">
                 <div class="inline-flex items-center gap-2 mb-3">
@@ -204,9 +215,7 @@
     <main class="page-main site-container space-y-16">
 
         <!-- 1. KARTU PROFIL UTAMA (HERO STYLE FROM PPL 1) -->
-        <section class="p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-royal-500 via-royal-600 to-royal-700 text-white relative overflow-hidden shadow-2xl">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(204,255,0,0.18),transparent_50%)] pointer-events-none"></div>
-            
+        <section class="p-8 sm:p-12 rounded-3xl bg-royal-500 dark:bg-[#120B22] border border-transparent dark:border-[#2B184A] text-white relative overflow-hidden shadow-2xl">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
                 <!-- Sisi Kiri: Foto Cutout dengan Floating Badges -->
                 <div class="lg:col-span-5 flex flex-col items-center relative">
@@ -270,7 +279,7 @@
             </div>
 
             <!-- Narasi Asal & Identitas -->
-            <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 leading-relaxed text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3">
+            <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 leading-relaxed text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3">
                 <div class="flex items-center gap-2 text-royal-500 dark:text-neon font-bold text-xs uppercase tracking-wider">
                     <i class="ph-bold ph-compass"></i> Asal Usul &amp; Tempaan Karakter
                 </div>
@@ -282,7 +291,7 @@
             <!-- 2 Bento Box: Inspirasi & Tujuan Profesional -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Box Inspirasi -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3">
+                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-3">
                     <div class="w-10 h-10 rounded-xl bg-royal-100 dark:bg-royal-900/60 text-royal-500 dark:text-neon flex items-center justify-center text-xl">
                         <i class="ph-fill ph-lightbulb"></i>
                     </div>
@@ -293,7 +302,7 @@
                 </div>
 
                 <!-- Box Tujuan Profesional -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3">
+                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-3">
                     <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-neon flex items-center justify-center text-xl">
                         <i class="ph-fill ph-target"></i>
                     </div>
@@ -332,7 +341,7 @@
 
             <div class="space-y-4">
                 <!-- Timeline 1: PPG -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border-l-4 border-l-neon border-y border-r border-slate-200 dark:border-slate-800 space-y-3">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border-l-4 border-l-neon border-y border-r border-slate-200 dark:border-slate-800 space-y-3">
                     <div class="flex flex-wrap items-center justify-between gap-2">
                         <span class="badge-primary">2026 &ndash; SEKARANG</span>
                         <span class="text-xs font-mono font-bold text-royal-600 dark:text-neon">LPTK Penyelenggara</span>
@@ -351,7 +360,7 @@
                 </div>
 
                 <!-- Timeline 2: S1 -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border-l-4 border-l-royal-500 border-y border-r border-slate-200 dark:border-slate-800 space-y-3">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border-l-4 border-l-royal-500 border-y border-r border-slate-200 dark:border-slate-800 space-y-3">
                     <div class="flex flex-wrap items-center justify-between gap-2">
                         <span class="badge-slate font-mono">2020 &ndash; 2025</span>
                         <span class="text-xs font-mono font-bold text-emerald-600 dark:text-neon">Gelar Sarjana Pendidikan (S.Pd.)</span>
@@ -370,7 +379,7 @@
                 </div>
 
                 <!-- Timeline 3: SMA -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border-l-4 border-l-slate-300 dark:border-l-slate-700 border-y border-r border-slate-200 dark:border-slate-800 space-y-3">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border-l-4 border-l-slate-300 dark:border-l-slate-700 border-y border-r border-slate-200 dark:border-slate-800 space-y-3">
                     <div class="flex flex-wrap items-center justify-between gap-2">
                         <span class="badge-slate font-mono">2017 &ndash; 2020</span>
                         <span class="text-xs font-mono font-bold text-slate-500">Kabupaten Sleman, DIY</span>
@@ -406,7 +415,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Skill 1 -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3 hover:border-royal-500 dark:hover:border-neon transition-colors">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-3 hover:border-royal-500 dark:hover:border-neon transition-colors">
                     <div class="w-12 h-12 rounded-2xl bg-royal-100 dark:bg-royal-900/60 text-royal-500 dark:text-neon flex items-center justify-center text-2xl">
                         <i class="ph-duotone ph-chalkboard-teacher"></i>
                     </div>
@@ -417,7 +426,7 @@
                 </div>
 
                 <!-- Skill 2 -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3 hover:border-royal-500 dark:hover:border-neon transition-colors">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-3 hover:border-royal-500 dark:hover:border-neon transition-colors">
                     <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-neon flex items-center justify-center text-2xl">
                         <i class="ph-duotone ph-bezier-curve"></i>
                     </div>
@@ -428,7 +437,7 @@
                 </div>
 
                 <!-- Skill 3 -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-3 hover:border-royal-500 dark:hover:border-neon transition-colors">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-3 hover:border-royal-500 dark:hover:border-neon transition-colors">
                     <div class="w-12 h-12 rounded-2xl bg-purple-100 dark:bg-purple-950/60 text-purple-600 dark:text-neon flex items-center justify-center text-2xl">
                         <i class="ph-duotone ph-code"></i>
                     </div>
@@ -441,7 +450,7 @@
         </section>
 
         <!-- 5. KONTEKS PENUGASAN PPL SMA NEGERI 4 YOGYAKARTA -->
-        <section class="p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-4">
+        <section class="p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-4">
             <h3 class="font-extrabold text-lg text-slate-900 dark:text-white flex items-center gap-2">
                 <i class="ph-bold ph-buildings text-royal-500 dark:text-neon text-xl"></i>
                 Konteks Praktik Lapangan Mandiri (PPLM)

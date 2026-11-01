@@ -27,18 +27,29 @@
                     },
                     colors: {
                         royal: {
-                            50: '#F4F6FF',
-                            100: '#E5EAFF',
-                            200: '#C7D2FE',
-                            500: '#2541FF',
-                            600: '#1C34DB',
-                            700: '#1527B0',
-                            900: '#0D1326'
+                            50: '#FAF5FF',
+                            100: '#F3E8FF',
+                            200: '#E9D5FF',
+                            300: '#D8B4FE',
+                            400: '#A855F7',
+                            500: '#7E3BED',
+                            600: '#6B21A8',
+                            700: '#581C87',
+                            800: '#3B0764',
+                            900: '#120B22',
+                            950: '#000000'
                         },
                         neon: {
-                            DEFAULT: '#CCFF00',
-                            soft: '#DDFF4D',
-                            dark: '#A8D600'
+                            DEFAULT: '#C6FF34',
+                            soft: '#D6FF66',
+                            dark: '#9FE61A'
+                        },
+                        violet: {
+                            DEFAULT: '#7E3BED',
+                            500: '#7E3BED'
+                        },
+                        lime: {
+                            DEFAULT: '#C6FF34'
                         }
                     }
                 }
@@ -174,7 +185,7 @@
     <!-- ==========================================
          PAGE HEADER BANNER
          ========================================== -->
-    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#110A24]">
+    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0A0517]">
         <div class="site-container">
             <div class="max-w-3xl">
                 <div class="inline-flex items-center gap-2 mb-3">
@@ -225,22 +236,22 @@
 
             <!-- Summary KPI Cards -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
                     <div class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-1">Ketuntasan Siklus 1</div>
                     <div class="text-3xl font-extrabold text-slate-900 dark:text-white font-mono">78%</div>
                     <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Kategori: Cukup / Baik</div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
                     <div class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-1">Ketuntasan Siklus 2</div>
                     <div class="text-3xl font-extrabold text-royal-600 dark:text-purple-300 font-mono">84%</div>
                     <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Kategori: Baik (+6%)</div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
                     <div class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-1">Ketuntasan Siklus 3</div>
                     <div class="text-3xl font-extrabold text-royal-600 dark:text-purple-300 font-mono">89%</div>
                     <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1">Kategori: Sangat Baik (+5%)</div>
                 </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#160E30] border border-royal-500/30 dark:border-neon/30 bg-royal-50/20 dark:bg-neon/5">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-500/30 dark:border-neon/30 bg-royal-50/20 dark:bg-neon/5">
                     <div class="text-xs font-bold text-royal-600 dark:text-neon mb-1">Ketuntasan Siklus 4</div>
                     <div class="text-3xl font-extrabold text-royal-600 dark:text-neon font-mono">94%</div>
                     <div class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold mt-1">Puncak Optimal (+5%)</div>
@@ -248,7 +259,7 @@
             </div>
 
             <!-- Detailed Visual Progression Bars -->
-            <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-6">
+            <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6">
                 
                 <!-- Siklus 1 -->
                 <div class="space-y-2">
@@ -339,7 +350,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <!-- Sisi Masalah: Bias Apersepsi Klasikal -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-rose-200 dark:border-rose-900/40 space-y-4">
+                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#120B22] border border-rose-200 dark:border-rose-900/40 space-y-4">
                     <div class="inline-flex items-center gap-2 text-rose-600 dark:text-rose-400 text-xs font-bold uppercase">
                         <i class="ph-bold ph-warning-circle text-base"></i>
                         <span>Tantangan Nyata di Kelas</span>
@@ -364,7 +375,7 @@
                 </div>
 
                 <!-- Sisi Solusi: Pembelajaran Sosial Emosional -->
-                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-royal-200 dark:border-purple-800/40 space-y-4">
+                <div class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-200 dark:border-purple-800/40 space-y-4">
                     <div class="inline-flex items-center gap-2 text-royal-600 dark:text-neon text-xs font-bold uppercase">
                         <i class="ph-bold ph-check-circle text-base"></i>
                         <span>Solusi Pedagogis Teruji</span>
@@ -412,7 +423,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <!-- Skenario 1: Siap & Bersemangat -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-emerald-200 dark:border-emerald-800/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-emerald-200 dark:border-emerald-800/40 relative overflow-hidden group hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center gap-2">
                             <span class="text-2xl">🚀</span>
@@ -447,7 +458,7 @@
                 </div>
 
                 <!-- Skenario 2: Lelah Fisik / Mengantuk -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-amber-200 dark:border-amber-800/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-amber-200 dark:border-amber-800/40 relative overflow-hidden group hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center gap-2">
                             <span class="text-2xl">😴</span>
@@ -482,7 +493,7 @@
                 </div>
 
                 <!-- Skenario 3: Bingung / Ragu Logika -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-sky-200 dark:border-sky-800/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-sky-200 dark:border-sky-800/40 relative overflow-hidden group hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center gap-2">
                             <span class="text-2xl">🧩</span>
@@ -517,7 +528,7 @@
                 </div>
 
                 <!-- Skenario 4: Butuh Bantuan Intensif -->
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#160E30] border border-rose-200 dark:border-rose-900/40 relative overflow-hidden group hover:shadow-md transition-shadow">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-rose-200 dark:border-rose-900/40 relative overflow-hidden group hover:shadow-md transition-shadow">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center gap-2">
                             <span class="text-2xl">🤝</span>
@@ -557,7 +568,7 @@
         <!-- ==========================================
              SECTION 4: DAMPAK TERHADAP IKLIM BELAJAR KELAS
              ========================================== -->
-        <section class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-6">
+        <section class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6">
             <div class="max-w-3xl">
                 <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
                     04. HASIL REFLEKTIF PSE

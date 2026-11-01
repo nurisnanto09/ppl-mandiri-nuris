@@ -81,16 +81,52 @@ function toggleMobileMenu() {
     }
 }
 
-// Support click toggle for dropdown on touch devices
-document.addEventListener('click', (e) => {
-    const dropdown = document.querySelector('.nav-dropdown');
-    const btn = e.target.closest('.nav-dropdown-btn');
-    if (btn && dropdown) {
-        dropdown.classList.toggle('is-open');
-    } else if (dropdown && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('is-open');
-    }
-});
+// 4.1 INTERAKSI DROPDOWN MENU (HOVER OTOMATIS & TOUCH FRIENDLY)
+function initNavDropdowns() {
+    const dropdowns = document.querySelectorAll('.nav-dropdown');
+    if (!dropdowns.length) return;
+
+    dropdowns.forEach(dropdown => {
+        let closeTimeout;
+
+        // Buka otomatis saat kursor mouse mendekat / masuk (tanpa perlu klik)
+        dropdown.addEventListener('mouseenter', () => {
+            if (closeTimeout) clearTimeout(closeTimeout);
+            dropdown.classList.add('is-open');
+        });
+
+        // Tutup halus dengan jeda toleransi gerakan kursor
+        dropdown.addEventListener('mouseleave', () => {
+            closeTimeout = setTimeout(() => {
+                dropdown.classList.remove('is-open');
+            }, 250);
+        });
+
+        // Dukungan perangkat layar sentuh (mobile/tablet) saat tombol ditekan
+        const btn = dropdown.querySelector('.nav-dropdown-btn');
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                // Cegah lonjakan halaman jika berupa button biasa
+                e.stopPropagation();
+                const isOpen = dropdown.classList.contains('is-open');
+                // Tutup dropdown lain jika ada
+                dropdowns.forEach(d => d.classList.remove('is-open'));
+                if (!isOpen) {
+                    dropdown.classList.add('is-open');
+                }
+            });
+        }
+    });
+
+    // Tutup dropdown jika mengklik di luar area menu
+    document.addEventListener('click', (e) => {
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('is-open');
+            }
+        });
+    });
+}
 
 // 5. LOADING SCREEN (ROTATING 3D TEXT RING & BOUNCING BOX)
 function initLoader() {
@@ -142,4 +178,53 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (e) {}
 
     initLoader();
+    initNavDropdowns();
 });
+
+// Jalankan juga segera jika DOM sudah siap
+if (document.readyState !== 'loading') {
+    initNavDropdowns();
+}
+
+// 7. SIKLUS TAB SWITCHER
+function switchCycleTab(tabId) {
+    const tabBtns = document.querySelectorAll('.cycle-tab-btn');
+    const tabPanels = document.querySelectorAll('.cycle-tab-pane');
+
+    tabBtns.forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabId) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+        } else {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+        }
+    });
+
+    tabPanels.forEach(panel => {
+        if (panel.id === tabId) {
+            panel.classList.remove('hidden');
+            panel.classList.add('block');
+        } else {
+            panel.classList.add('hidden');
+            panel.classList.remove('block');
+        }
+    });
+}
+
+// 8. VIDEO INTERACTIVE PLAY
+function playCycleVideo(boxId, videoTitle) {
+    const box = document.getElementById(boxId);
+    if (!box) return;
+    const overlay = box.querySelector('.video-overlay');
+    const iframe = box.querySelector('.video-iframe');
+    
+    if (overlay) {
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        setTimeout(() => overlay.classList.add('hidden'), 300);
+    }
+    if (iframe) {
+        iframe.classList.remove('hidden');
+    }
+    showToast('Memutar: ' + (videoTitle || 'Video Praktik Pembelajaran'));
+}

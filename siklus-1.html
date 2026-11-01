@@ -29,18 +29,29 @@
                     },
                     colors: {
                         royal: {
-                            50: '#F4F6FF',
-                            100: '#E5EAFF',
-                            200: '#C7D2FE',
-                            500: '#2541FF',
-                            600: '#1C34DB',
-                            700: '#1527B0',
-                            900: '#0D1326'
+                            50: '#FAF5FF',
+                            100: '#F3E8FF',
+                            200: '#E9D5FF',
+                            300: '#D8B4FE',
+                            400: '#A855F7',
+                            500: '#7E3BED',
+                            600: '#6B21A8',
+                            700: '#581C87',
+                            800: '#3B0764',
+                            900: '#120B22',
+                            950: '#000000'
                         },
                         neon: {
-                            DEFAULT: '#CCFF00',
-                            soft: '#DDFF4D',
-                            dark: '#A8D600'
+                            DEFAULT: '#C6FF34',
+                            soft: '#D6FF66',
+                            dark: '#9FE61A'
+                        },
+                        violet: {
+                            DEFAULT: '#7E3BED',
+                            500: '#7E3BED'
+                        },
+                        lime: {
+                            DEFAULT: '#C6FF34'
                         }
                     }
                 }
@@ -174,239 +185,711 @@
     </header>
 
     <!-- ==========================================
-         PAGE HEADER BANNER
+         MAIN CONTENT: SIKLUS 1
          ========================================== -->
-    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#110A24]">
-        <div class="site-container">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 mb-3">
-                    <span class="badge-primary">SIKLUS 1 &bull; KELAS X FASE E</span>
-                    <span class="badge-slate">SMAN 4 YOGYAKARTA</span>
+    <main class="page-main site-container space-y-16">
+
+        <!-- 1. BANNER SIKLUS 1 -->
+        <section class="cycle-hero-banner">
+            <div class="relative z-10 max-w-4xl space-y-4">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
+                        <i class="ph-bold ph-seal-check"></i> SIKLUS 1 • PRAKTIK PEMBELAJARAN
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                        <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                        <i class="ph-bold ph-calendar"></i> Fase E / Kelas X
+                    </span>
                 </div>
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-                    Siklus 1: Pengantar Informatika &amp; Profil Pelajar Pancasila
+
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                    Siklus 1: Fondasi Berpikir Komputasional &amp; Profil Pelajar Pancasila
                 </h1>
-                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
-                    Dokumentasi perangkat ajar lengkap untuk memfasilitasi masa transisi belajar SMP ke SMA, menanamkan 4 fondasi Berpikir Komputasional (Dekomposisi, Pola, Abstraksi, Algoritma), serta internalisasi dimensi Profil Pelajar Pancasila.
+
+                <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
+                    Perangkat pembelajaran lengkap untuk memfasilitasi masa transisi belajar SMP ke SMA, menanamkan 4 fondasi Berpikir Komputasional (Dekomposisi, Pengenalan Pola, Abstraksi, Algoritma) melalui studi kasus kontekstual serta internalisasi dimensi Profil Pelajar Pancasila (Mandiri &amp; Bernalar Kritis).
                 </p>
-                <div class="flex flex-wrap items-center gap-4 mt-6 text-xs text-slate-500 dark:text-slate-400">
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-folders text-royal-500 dark:text-neon"></i> 5 Dokumen Artefak Lengkap</span>
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-users-three text-royal-500 dark:text-neon"></i> Rombel XE3, XE5, XE7 (108 Siswa)</span>
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-lightbulb text-royal-500 dark:text-neon"></i> Model Experiential Learning (Kolb)</span>
+
+                <div class="flex flex-wrap items-center gap-3 pt-2 text-xs text-white/90">
+                    <div class="flex items-center gap-1.5 bg-black/25 px-3 py-1.5 rounded-lg border border-white/10">
+                        <i class="ph-bold ph-users-three text-neon text-sm"></i>
+                        <span><strong>108 Siswa</strong> (Rombel XE3, XE5, XE7)</span>
+                    </div>
+                    <div class="flex items-center gap-1.5 bg-black/25 px-3 py-1.5 rounded-lg border border-white/10">
+                        <i class="ph-bold ph-clock text-neon text-sm"></i>
+                        <span><strong>2 x 45 Menit</strong> (2 JP Terbimbing)</span>
+                    </div>
+                    <div class="flex items-center gap-1.5 bg-black/25 px-3 py-1.5 rounded-lg border border-white/10">
+                        <i class="ph-bold ph-lightbulb text-neon text-sm"></i>
+                        <span><strong>Experiential Learning</strong> (Siklus Kolb)</span>
+                    </div>
+                    <div class="flex items-center gap-1.5 bg-black/25 px-3 py-1.5 rounded-lg border border-white/10">
+                        <i class="ph-bold ph-user-circle-gear text-neon text-sm"></i>
+                        <span><strong>Pamong:</strong> Titis Widowati, S.T.</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ==========================================
-         MAIN CONTENT: 5 ARTEFAK SIKLUS 1
-         ========================================== -->
-    <main class="page-main site-container space-y-14">
-
-        <!-- Banner Siklus & Gambaran Umum -->
-        <div class="cycle-header-banner">
-            <div>
-                <span class="badge-blue">REPOSITORI LENGKAP SIKLUS 1</span>
-                <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Fondasi Berpikir Komputasional &amp; Pengenalan Informatika</h2>
-                <p class="text-xs text-slate-500 dark:text-slate-400">Memfasilitasi siswa memecahkan persoalan nyata sehari-hari menggunakan 4 fondasi CT melalui kerja kelompok kolaboratif.</p>
-            </div>
-            <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">5 Perangkat Teruji</span>
-        </div>
-
-        <!-- Grid 5 Artefak Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- 1. Modul Ajar -->
-            <article class="artifact-card artifact-card-highlight">
-                <div class="space-y-2.5">
-                    <div class="flex items-center justify-between">
-                        <span class="badge-blue">Siklus 1</span>
-                        <span class="font-mono text-xs font-extrabold text-slate-400">S1-MA</span>
-                    </div>
-                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">1. Modul Ajar</span>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Modul Ajar Siklus 1: Berpikir Komputasional (4 Fondasi CT)</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Modul ajar berbasis Experiential Learning (Siklus Kolb) yang menuntun siswa mengurai masalah nyata melalui 4 pilar CT.
-                    </p>
-                </div>
-                <details class="artifact-accordion">
-                    <summary class="artifact-summary">
-                        <span>Buka Pratinjau Dokumen</span>
-                        <i class="ph-bold ph-caret-down"></i>
-                    </summary>
-                    <div class="artifact-drawer">
-                        <ul class="space-y-1 text-xs">
-                            <li>✦ <strong>Tujuan:</strong> Menerapkan 4 pilar CT pada studi kasus optimasi rute &amp; antrean.</li>
-                            <li>✦ <strong>Tahap Kolb:</strong> Concrete Experience, Reflective Observation, Abstract Conceptualization, Active Experimentation.</li>
-                            <li>✦ <strong>Diferensiasi:</strong> Pendampingan bertahap sesuai kesiapan belajar kelompok.</li>
-                        </ul>
-                        <div class="code-preview-block">
-INFORMASI MODUL SIKLUS 1:
-Mata Pelajaran: Informatika | Fase/Kelas: E / X (XE3, XE5, XE7)
-Materi: Computational Thinking (Dekomposisi, Pola, Abstraksi, Algoritma)
-Model: Experiential Learning (Siklus Kolb)
-Alokasi Waktu: 2 x 45 Menit.
-                        </div>
-                    </div>
-                </details>
-            </article>
-
-            <!-- 2. Asesmen -->
-            <article class="artifact-card">
-                <div class="space-y-2.5">
-                    <div class="flex items-center justify-between">
-                        <span class="badge-blue">Siklus 1</span>
-                        <span class="font-mono text-xs font-extrabold text-slate-400">S1-AS</span>
-                    </div>
-                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">2. Asesmen / Instrumen</span>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Asesmen Siklus 1: Diagnostik, Rubrik CT &amp; Soal Bebras</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Instrumen penilaian diagnostik awal, rubrik observasi diskusi kelompok, serta soal evaluasi formatif setara tantangan Bebras.
-                    </p>
-                </div>
-                <details class="artifact-accordion">
-                    <summary class="artifact-summary">
-                        <span>Buka Pratinjau Dokumen</span>
-                        <i class="ph-bold ph-caret-down"></i>
-                    </summary>
-                    <div class="artifact-drawer">
-                        <ul class="space-y-1 text-xs">
-                            <li>✦ <strong>Diagnostik:</strong> Memetakan penalaran awal dan gaya belajar siswa.</li>
-                            <li>✦ <strong>Rubrik 4 Skala:</strong> Menilai ketepatan Abstraksi dan Pengenalan Pola.</li>
-                            <li>✦ <strong>Soal HOTS:</strong> Kasus tantangan Bebras tingkat SMA.</li>
-                        </ul>
-                        <div class="code-preview-block">
-RUBRIK PENILAIAN CT (S1):
-1. Dekomposisi (25%): Memecah masalah besar menjadi sub-bagian.
-2. Pengenalan Pola (25%): Menemukan keteraturan pola data.
-3. Abstraksi (25%): Mengeliminasi detail tidak relevan.
-4. Desain Algoritmik (25%): Urutan instruksi logis & sistematis.
-                        </div>
-                    </div>
-                </details>
-            </article>
-
-            <!-- 3. Materi Ajar -->
-            <article class="artifact-card">
-                <div class="space-y-2.5">
-                    <div class="flex items-center justify-between">
-                        <span class="badge-blue">Siklus 1</span>
-                        <span class="font-mono text-xs font-extrabold text-slate-400">S1-MT</span>
-                    </div>
-                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">3. Materi Ajar</span>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Materi Ajar Siklus 1: E-Handout Ilustratif 4 Pilar CT</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Bahan bacaan visual terstruktur yang menjelaskan konsep Dekomposisi, Pola, Abstraksi, dan Algoritma dengan analogi keseharian siswa.
-                    </p>
-                </div>
-                <details class="artifact-accordion">
-                    <summary class="artifact-summary">
-                        <span>Buka Pratinjau Dokumen</span>
-                        <i class="ph-bold ph-caret-down"></i>
-                    </summary>
-                    <div class="artifact-drawer">
-                        <ul class="space-y-1 text-xs">
-                            <li>✦ <strong>Analogi Visual:</strong> Mengorganisasi acara sekolah menggunakan Dekomposisi.</li>
-                            <li>✦ <strong>Peta Konsep:</strong> Mind map 4 fondasi CT untuk review mandiri siswa.</li>
-                        </ul>
-                        <div class="code-preview-block">
-RINGKASAN MATERI CT:
-- Dekomposisi: Memecah masalah besar menjadi sub-masalah kecil.
-- Pola: Menemukan kesamaan atau tren data.
-- Abstraksi: Fokus pada aspek terpenting dan abaikan gangguan.
-- Algoritma: Menyusun langkah demi langkah secara teratur.
-                        </div>
-                    </div>
-                </details>
-            </article>
-
-            <!-- 4. LKPD Kolaboratif -->
-            <article class="artifact-card">
-                <div class="space-y-2.5">
-                    <div class="flex items-center justify-between">
-                        <span class="badge-blue">Siklus 1</span>
-                        <span class="font-mono text-xs font-extrabold text-slate-400">S1-LK</span>
-                    </div>
-                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">4. LKPD Kolaboratif</span>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">LKPD Siklus 1: Lembar Kerja Analisis Kasus 4 Pilar CT</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Lembar kerja kelompok yang memandu siswa membedah kasus antrean kantin &amp; optimasi jadwal ke dalam tabel 4 langkah CT.
-                    </p>
-                </div>
-                <details class="artifact-accordion">
-                    <summary class="artifact-summary">
-                        <span>Buka Pratinjau Dokumen</span>
-                        <i class="ph-bold ph-caret-down"></i>
-                    </summary>
-                    <div class="artifact-drawer">
-                        <ul class="space-y-1 text-xs">
-                            <li>✦ <strong>Kanvas Kerja:</strong> Kolom Dekomposisi, Tabel Pola, Filter Abstraksi.</li>
-                            <li>✦ <strong>Pertanyaan Pemantik:</strong> Melatih penalaran kritis sebelum menyimpulkan.</li>
-                        </ul>
-                        <div class="code-preview-block">
-STUDI KASUS LKPD S1:
-"Optimasi Penjadwalan Lab Komputer & Antrean Kantin Sekolah"
-Siswa bekerja dalam tim 4 orang membedah solusi menggunakan 4 pilar CT.
-                        </div>
-                    </div>
-                </details>
-            </article>
-
-            <!-- 5. Media Pembelajaran -->
-            <article class="artifact-card">
-                <div class="space-y-2.5">
-                    <div class="flex items-center justify-between">
-                        <span class="badge-blue">Siklus 1</span>
-                        <span class="font-mono text-xs font-extrabold text-slate-400">S1-MD</span>
-                    </div>
-                    <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">5. Media Interaktif</span>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Media Siklus 1: Slide Interaktif Canva &amp; Kuis Mentimeter</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Slide presentasi interaktif dengan animasi visual dan jajak pendapat langsung via Mentimeter untuk pemanasan berpikir kritis.
-                    </p>
-                </div>
-                <details class="artifact-accordion">
-                    <summary class="artifact-summary">
-                        <span>Buka Pratinjau Dokumen</span>
-                        <i class="ph-bold ph-caret-down"></i>
-                    </summary>
-                    <div class="artifact-drawer">
-                        <ul class="space-y-1 text-xs">
-                            <li>✦ <strong>Visual Pop Art:</strong> Tipografi dan diagram alur berpikir bersih.</li>
-                            <li>✦ <strong>Polling Mentimeter:</strong> 3 kuis pemantik logika pada awal apersepsi.</li>
-                        </ul>
-                        <div class="code-preview-block">
-SPESIFIKASI MEDIA SIKLUS 1:
-Format: Canva Interactive Presentation & Mentimeter Live Polling.
-Fokus: Visualisasi logika dekomposisi masalah sehari-hari.
-                        </div>
-                    </div>
-                </details>
-            </article>
-
-        </div>
-
-        <!-- Section Dokumentasi Lapangan -->
-        <section class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#160E30] border border-slate-200 dark:border-slate-800 space-y-4">
-            <div class="flex items-center justify-between">
+        <!-- 2. TAB PILIHAN ARTEFAK SIKLUS 1 (MODUL, ASESMEN, MEDIA, HANDBOOK, LKPD) -->
+        <section class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div>
-                    <span class="badge-primary">DOKUMENTASI PEMBELAJARAN</span>
-                    <h3 class="text-lg font-extrabold text-slate-900 dark:text-white mt-1">Praktik Kelas Siklus 1 di Lab Komputer</h3>
+                    <span class="badge-primary">REPOSITORI PERANGKAT AJAR</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+                        Pilihan Artefak Pembelajaran
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                        Klik tab di bawah untuk meninjau secara mendalam dokumen kurikulum yang telah diimplementasikan di kelas:
+                    </p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs font-mono font-bold text-royal-500 dark:text-neon">5 Dokumen Teruji</span>
                 </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div class="rounded-xl overflow-hidden aspect-video relative group">
-                    <img src="img/dokumentasi/dok-kelas1.jpg" alt="Suasana Kelas Siklus 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
-                        <span class="text-xs text-white font-bold">Kolaborasi Diskusi 4 Pilar CT Siswa Kelas X</span>
+
+            <!-- TAB BAR NAVIGATION -->
+            <div class="cycle-tabs-nav" role="tablist" aria-label="Tab Artefak Siklus 1">
+                <button type="button" class="cycle-tab-btn active" data-tab="tab-modul" onclick="switchCycleTab('tab-modul')" role="tab" aria-selected="true">
+                    <i class="ph-bold ph-book-open"></i>
+                    <span>Modul Ajar</span>
+                </button>
+                <button type="button" class="cycle-tab-btn" data-tab="tab-asesmen" onclick="switchCycleTab('tab-asesmen')" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-clipboard-text"></i>
+                    <span>Asesmen</span>
+                </button>
+                <button type="button" class="cycle-tab-btn" data-tab="tab-media" onclick="switchCycleTab('tab-media')" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-presentation"></i>
+                    <span>Media</span>
+                </button>
+                <button type="button" class="cycle-tab-btn" data-tab="tab-handbook" onclick="switchCycleTab('tab-handbook')" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-book-bookmark"></i>
+                    <span>Handbook</span>
+                </button>
+                <button type="button" class="cycle-tab-btn" data-tab="tab-lkpd" onclick="switchCycleTab('tab-lkpd')" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-file-text"></i>
+                    <span>LKPD</span>
+                </button>
+            </div>
+
+            <!-- TAB PANELS CONTAINER -->
+            <div class="cycle-tab-content-area">
+
+                <!-- TAB 1: MODUL AJAR -->
+                <div id="tab-modul" class="cycle-tab-pane block">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S1-MA</span>
+                                    <span class="badge-slate font-mono text-[11px]">Kurikulum Merdeka</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    Modul Ajar Siklus 1: Berpikir Komputasional (4 Pilar CT)
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Desain rencana pembelajaran mendalam berbasis <em>Experiential Learning</em> (Siklus Kolb) untuk mengasah nalar kritis transisi fase E.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 shrink-0">
+                                <button type="button" onclick="copyToClipboard('Modul Ajar Siklus 1: Berpikir Komputasional - PPG UNY 2026')" class="btn-secondary text-xs">
+                                    <i class="ph-bold ph-copy"></i> Salin Info
+                                </button>
+                                <a href="artefak.html#modul1" class="btn-primary-cta text-xs">
+                                    <i class="ph-bold ph-file-pdf"></i> Dokumen Lengkap
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Highlights Specs -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Model Belajar</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Experiential Learning (Kolb)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Alokasi Waktu</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">2 JP (2 x 45 Menit)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Sasaran Belajar</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">108 Siswa (XE3, XE5, XE7)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Dimensi P5</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Bernalar Kritis &amp; Mandiri</strong>
+                            </div>
+                        </div>
+
+                        <!-- Document Preview Box -->
+                        <div class="space-y-3">
+                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                <i class="ph-bold ph-article text-royal-500 dark:text-neon"></i>
+                                Pratinjau Struktur Sintaks Modul (Siklus Kolb):
+                            </h4>
+                            <div class="code-preview-block text-xs leading-relaxed">
+1. PENGALAMAN KONKRET (Concrete Experience - 15 Menit):
+   - Guru menayangkan video antrean kantin sekolah & rute lab komputer yang padat saat jam istirahat.
+   - Siswa merefleksikan kebingungan alur dan waktu tunggu yang tidak efisien.
+
+2. OBSERVASI REFLEKTIF (Reflective Observation - 25 Menit):
+   - Siswa berdiskusi dalam kelompok 4 orang mengidentifikasi titik macet masalah (Dekomposisi).
+   - Menemukan pola jam sibuk dan kecenderungan pilihan makanan siswa (Pengenalan Pola).
+
+3. KONSEPTUALISASI ABSTRAK (Abstract Conceptualization - 25 Menit):
+   - Siswa mengeliminasi informasi yang tidak relevan (Abstraksi).
+   - Merumuskan aturan prioritas dan formula alur pemesanan efisien.
+
+4. EKSPERIMENTASI AKTIF (Active Experimentation - 25 Menit):
+   - Menyusun diagram langkah demi langkah solusi (Algoritma).
+   - Presentasi silang antar-kelompok dan konfirmasi logika komputasional oleh guru model.
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="rounded-xl overflow-hidden aspect-video relative group">
-                    <img src="img/dokumentasi/dok-diskusi1.jpg" alt="Presentasi Kelompok Siklus 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
-                        <span class="text-xs text-white font-bold">Presentasi Pemecahan Masalah Komputasional</span>
+
+                <!-- TAB 2: ASESMEN -->
+                <div id="tab-asesmen" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S1-AS</span>
+                                    <span class="badge-slate font-mono text-[11px]">Asesmen Komprehensif</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Berstandar Bebras
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    Instrumen Asesmen Siklus 1: Diagnostik, Rubrik CT &amp; Formatif Bebras
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Perangkat instrumen evaluasi tiga ranah: diagnostik non-kognitif, rubrik observasi proses diskusi, dan tes formatif berpikir komputasional.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 shrink-0">
+                                <button type="button" onclick="copyToClipboard('Instrumen Asesmen Siklus 1 - PPG UNY 2026')" class="btn-secondary text-xs">
+                                    <i class="ph-bold ph-copy"></i> Salin Info
+                                </button>
+                                <a href="artefak.html#asesmen1" class="btn-primary-cta text-xs">
+                                    <i class="ph-bold ph-file-pdf"></i> Dokumen Lengkap
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Highlights Specs -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Bentuk Asesmen</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Diagnostik, Formatif &amp; Rubrik</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Jumlah Butir Tes</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">10 Butir Soal HOTS Bebras</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Skala Rubrik</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Skor 1 - 4 (4 Pilar CT)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">KKTP Fase E</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Skor Minimal 75.0</strong>
+                            </div>
+                        </div>
+
+                        <!-- Preview -->
+                        <div class="space-y-3">
+                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                <i class="ph-bold ph-scales text-royal-500 dark:text-neon"></i>
+                                Rubrik Observasi Penilaian Unjuk Kerja (4 Pilar CT):
+                            </h4>
+                            <div class="code-preview-block text-xs leading-relaxed">
+SKALA PENILAIAN OBSERVASI KELOMPOK (1 - 4):
+1. Dekomposisi (Bobot 25%):
+   - Skor 4: Memecah masalah kompleks menjadi >3 sub-komponen terdefinisi dengan tepat.
+   - Skor 3: Memecah masalah menjadi 2-3 sub-komponen relevan.
+   - Skor 2: Hanya menemukan 1 sub-komponen masalah.
+   - Skor 1: Belum mampu memecah masalah besar.
+
+2. Pengenalan Pola (Bobot 25%):
+   - Skor 4: Mampu menemukan keteraturan tersembunyi dan analogi antrean dengan sempurna.
+   - Skor 3: Menemukan pola dasar dengan arahan pemantik guru.
+
+3. Abstraksi (Bobot 25%):
+   - Skor 4: Mampu membuang detail yang mendistraksi dan fokus pada inti data numerik.
+   - Skor 2: Masih memasukkan variabel non-esensial dalam diagram penyelesaian.
+
+4. Algoritma (Bobot 25%):
+   - Skor 4: Langkah instruksi berurutan logis, tidak ambigu, dan menghasilkan output tuntas.
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- TAB 3: MEDIA -->
+                <div id="tab-media" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S1-MD</span>
+                                    <span class="badge-slate font-mono text-[11px]">Media Presentasi</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Interaktif Real-Time
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    Media Pembelajaran Siklus 1: Canva Visual &amp; Live Mentimeter
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Presentasi digital interaktif dengan visualisasi diagram alur komputasional serta integrasi jajak pendapat langsung melalui Mentimeter.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 shrink-0">
+                                <button type="button" onclick="copyToClipboard('Media Pembelajaran Siklus 1 - PPG UNY 2026')" class="btn-secondary text-xs">
+                                    <i class="ph-bold ph-copy"></i> Salin Link
+                                </button>
+                                <a href="artefak.html#media1" class="btn-primary-cta text-xs">
+                                    <i class="ph-bold ph-presentation"></i> Buka Slide Media
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Highlights Specs -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Platform Utama</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Canva Education &amp; Mentimeter</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Jumlah Slide</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">24 Slide Presentasi Terstruktur</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Interaktivitas</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">3 Pertanyaan Polling Langsung</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aksesibilitas</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Proyektor Lab &amp; HP Siswa</strong>
+                            </div>
+                        </div>
+
+                        <!-- Preview -->
+                        <div class="space-y-3">
+                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                <i class="ph-bold ph-film-strip text-royal-500 dark:text-neon"></i>
+                                Alur Penyajian Media Pembelajaran:
+                            </h4>
+                            <div class="code-preview-block text-xs leading-relaxed">
+SLIDE OUTLINE & MENTIMETER INTEGRATION:
+- Slide 01-04: Judul, Tujuan Pembelajaran Fase E, & Pemicu Rasa Ingin Tahu.
+- Slide 05: Integrasi Polling Mentimeter: "Apa yang kamu lakukan saat melihat antrean kantin 50 meter?"
+- Slide 06-12: Ilustrasi Kartun 4 Pilar CT (Dekomposisi, Pola, Abstraksi, Algoritma).
+- Slide 13-18: Studi Kasus Interaktif: Rute Tercepat Menuju Lab Komputer Lantai 2 SMAN 4 Yogyakarta.
+- Slide 19-21: Panduan Kerja LKPD Kelompok & Barcode Akses Handout Digital.
+- Slide 22-24: Refleksi Akhir Kelas & Kuis Kilat Logika (Wordcloud Respon Siswa).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: HANDBOOK (BAHAN AJAR) -->
+                <div id="tab-handbook" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S1-HB</span>
+                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / E-Handout</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> E-Booklet Siswa
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    Handbook Siswa: Buku Saku Cepat 4 Pilar Berpikir Komputasional
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Buku pegangan belajar ringkas dengan infografis berwarna yang dirancang khusus bagi peserta didik kelas X untuk referensi mandiri.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 shrink-0">
+                                <button type="button" onclick="copyToClipboard('Handbook Siswa Siklus 1 - PPG UNY 2026')" class="btn-secondary text-xs">
+                                    <i class="ph-bold ph-copy"></i> Salin Info
+                                </button>
+                                <a href="artefak.html#materi1" class="btn-primary-cta text-xs">
+                                    <i class="ph-bold ph-book-open"></i> Baca Handbook
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Highlights Specs -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Dokumen</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">E-Booklet PDF &amp; Flipbook Web</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Ketebalan Buku</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">14 Halaman Full Color</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Penyajian</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Infografis &amp; Studi Kasus Riil</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Bahasa</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Bahasa Indonesia Populer Remaja</strong>
+                            </div>
+                        </div>
+
+                        <!-- Preview -->
+                        <div class="space-y-3">
+                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                <i class="ph-bold ph-bookmarks text-royal-500 dark:text-neon"></i>
+                                Ringkasan Isi Bab Utama Handbook:
+                            </h4>
+                            <div class="code-preview-block text-xs leading-relaxed">
+DAFTAR ISI HANDBOOK SIKLUS 1:
+- BAB 1: Mengapa Harus Berpikir Seperti Komputer? (Mindset Abad 21).
+- BAB 2: Membedah Masalah Rumit dengan "Dekomposisi" (Analogi Merakit Komputer).
+- BAB 3: Menemukan Pola Tersembunyi (Bagaimana Algoritma Medsos Bekerja).
+- BAB 4: Seni Memilih yang Penting: "Abstraksi" (Peta Jalur TransJogja vs Peta Satelit).
+- BAB 5: Resep Masak Logis: "Algoritma" (Langkah Pasti Menghasilkan Solusi).
+- BAB 6: Latihan Mandiri Tantangan Berpikir Komputasional & Kunci Jawaban Diskusi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 5: LKPD -->
+                <div id="tab-lkpd" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S1-LK</span>
+                                    <span class="badge-slate font-mono text-[11px]">Lembar Kerja Peserta Didik</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Kolaboratif 4 Siswa
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    LKPD Kolaboratif: Lembar Kerja Analisis Kasus 4 Pilar CT
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Lembar kerja kelompok terstruktur yang memandu siswa membedah persoalan nyata menggunakan kanvas 4 kolom Berpikir Komputasional.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-2 shrink-0">
+                                <button type="button" onclick="copyToClipboard('LKPD Siklus 1 - PPG UNY 2026')" class="btn-secondary text-xs">
+                                    <i class="ph-bold ph-copy"></i> Salin Info
+                                </button>
+                                <a href="artefak.html#lkpd1" class="btn-primary-cta text-xs">
+                                    <i class="ph-bold ph-file-text"></i> Unduh Lembar Kerja
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Highlights Specs -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Kerja</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Kelompok (4 Orang per Tim)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Metode Pengerjaan</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Kanvas Cetak &amp; Google Docs</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Waktu Diskusi</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">35 Menit Terbimbing</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Output Siswa</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Tabel 4 Pilar &amp; Diagram Alur</strong>
+                            </div>
+                        </div>
+
+                        <!-- Preview -->
+                        <div class="space-y-3">
+                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                <i class="ph-bold ph-kanban text-royal-500 dark:text-neon"></i>
+                                Studi Kasus &amp; Lembar Penugasan LKPD:
+                            </h4>
+                            <div class="code-preview-block text-xs leading-relaxed">
+STUDI KASUS LKPD S1: "Optimasi Jalur Antrean & Pemesanan Kantin Sehat SMAN 4 Yogyakarta"
+TUGAS KELOMPOK:
+1. DEKOMPOSISI:
+   - Identifikasi faktor pemicu antrean panjang (kapasitas loket, jenis makanan, cara bayar).
+2. PENGENALAN POLA:
+   - Amati kecenderungan menu yang paling banyak dipesan pada 10 menit awal istirahat.
+3. ABSTRAKSI:
+   - Buang variabel warna pakaian atau obrolan siswa. Fokuskan variabel waktu layanan dan jumlah kasir.
+4. ALGORITMA:
+   - Tuliskan 6 langkah instruksi operasional agar antrean berkurang hingga 50%!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 3. VIDEO PRAKTIK PEMBELAJARAN SIKLUS 1 -->
+        <section class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                    <span class="badge-primary">REKAMAN PEMBELAJARAN NYATA</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+                        Video Praktik Pembelajaran Siklus 1
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                        Dokumentasi audio-visual pelaksanaan pembelajaran terbimbing berdurasi penuh di Lab Komputer SMAN 4 Yogyakarta:
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <a href="https://drive.google.com/file/d/1LETFl_wMfQK2xCVfk766oU60ceAXXY0k/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-1.5 px-3">
+                        <i class="ph-bold ph-google-drive-logo text-emerald-500"></i>
+                        <span>Buka di Google Drive</span>
+                        <i class="ph-bold ph-arrow-square-out text-[11px]"></i>
+                    </a>
+                    <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-royal-950 text-xs font-mono font-bold text-slate-700 dark:text-neon border border-slate-200 dark:border-slate-800">
+                        <i class="ph-bold ph-video-camera"></i> Durasi 15:42 • Google Drive HD
+                    </span>
+                </div>
+            </div>
+
+            <!-- VIDEO CONTAINER BOX -->
+            <div id="videoBoxS1" class="cycle-video-card group">
+                <!-- Video Poster Overlay (Interactive) -->
+                <div class="video-overlay absolute inset-0 z-10 flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
+                    <img src="img/dokumentasi/dok-kelas1.jpg" alt="Video Cover Praktik Siklus 1" class="absolute inset-0 w-full h-full object-cover brightness-[0.45] group-hover:brightness-[0.35] transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    
+                    <div class="relative z-20 flex flex-col items-center space-y-4 max-w-lg">
+                        <button type="button" onclick="playCycleVideo('videoBoxS1', 'Praktik Siklus 1 - Lab Komputer')" class="video-play-btn" aria-label="Putar Video Siklus 1">
+                            <i class="ph-fill ph-play"></i>
+                        </button>
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-neon text-black font-extrabold text-xs mb-2">
+                                REKAMAN RESMI PPL PPG
+                            </span>
+                            <h3 class="text-lg sm:text-2xl font-black text-white leading-tight">
+                                Praktik Pembelajaran Berpikir Komputasional di Laboratorium Komputer
+                            </h3>
+                            <p class="text-xs sm:text-sm text-white/80 mt-1">
+                                Guru Model: <strong>Nur Isnanto Nugroho, S.Pd.</strong> &bull; Dosen: <strong>Drs. Djoko Arisworo, M.T.</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Bar Badges -->
+                    <div class="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between text-xs text-white/90">
+                        <span class="flex items-center gap-1.5"><i class="ph-bold ph-map-pin text-neon"></i> Lab Komputer SMA Negeri 4 Yogyakarta</span>
+                        <span class="font-mono bg-white/20 px-2.5 py-1 rounded-md backdrop-blur-sm">Google Drive Video</span>
+                    </div>
+                </div>
+
+                <!-- Video Iframe / Google Drive Player -->
+                <div class="video-iframe hidden absolute inset-0 w-full h-full bg-black flex items-center justify-center">
+                    <iframe class="w-full h-full" src="https://drive.google.com/file/d/1LETFl_wMfQK2xCVfk766oU60ceAXXY0k/preview" title="Video Pembelajaran Siklus 1" allow="autoplay" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Video Timeline Chapters Breakdown -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
+                    <span class="font-mono font-bold text-royal-500 dark:text-neon">00:00 - 02:45</span>
+                    <strong class="block text-slate-800 dark:text-white mt-1">Apersepsi &amp; Polling</strong>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Doa, presensi, dan jajak pendapat logika via Mentimeter.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
+                    <span class="font-mono font-bold text-royal-500 dark:text-neon">02:45 - 08:30</span>
+                    <strong class="block text-slate-800 dark:text-white mt-1">Stimulasi 4 Fondasi CT</strong>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Orientasi masalah antrean kantin menggunakan slide Canva.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
+                    <span class="font-mono font-bold text-royal-500 dark:text-neon">08:30 - 12:10</span>
+                    <strong class="block text-slate-800 dark:text-white mt-1">Diskusi LKPD Kelompok</strong>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Siswa berkolaborasi 4 orang membedah tabel kanvas CT.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
+                    <span class="font-mono font-bold text-royal-500 dark:text-neon">12:10 - 15:42</span>
+                    <strong class="block text-slate-800 dark:text-white mt-1">Presentasi &amp; Refleksi</strong>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Verifikasi hasil, penguatan guru, dan kuis formatif.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DOKUMENTASI KEGIATAN KELAS SIKLUS 1 -->
+        <section class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                    <span class="badge-primary">GALERI PRAKTIK LAPANGAN</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+                        Dokumentasi Kegiatan Siklus 1
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                        Rekaman visual suasana pembelajaran, interaksi peserta didik, dan pendampingan di Lab Komputer SMAN 4 Yogyakarta:
+                    </p>
+                </div>
+                <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">4 Foto Dokumentasi</span>
+            </div>
+
+            <!-- 4-PHOTO GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+                <!-- Foto 1 -->
+                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="img/dokumentasi/dok-kelas1.jpg" alt="Apersepsi Interaktif di Depan Kelas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">
+                            Kegiatan Awal
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Apersepsi &amp; Polling Kelas</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Guru memandu jajak pendapat logika komputasional Mentimeter di depan laboratorium komputer.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="img/dokumentasi/dok-diskusi1.jpg" alt="Diskusi Kelompok Kolaboratif 4 Pilar CT" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 bg-royal-600 text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">
+                            Kegiatan Inti
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Kolaborasi LKPD 4 Pilar</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Siswa Fase E berdiskusi memecahkan skenario antrean kantin dengan kanvas Dekomposisi &amp; Pola.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="img/dokumentasi/dok-presentasi1.jpg" alt="Presentasi Pemecahan Masalah Siswa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 bg-neon text-black text-[10px] font-mono font-extrabold px-2.5 py-1 rounded-full">
+                            Unjuk Kerja
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Presentasi Solusi Logika</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Perwakilan kelompok mempresentasikan rumusan algoritma alur prioritas di hadapan rekan sekelas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="img/dokumentasi/dok-evaluasi1.jpg" alt="Asesmen Formatif & Refleksi Mandiri" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">
+                            Evaluasi Akhir
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Asesmen Mandiri &amp; Refleksi</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Pengerjaan tes formatif berbasis soal tantangan Bebras untuk mengukur ketercapaian nalar kritis.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. ANALISIS & EVALUASI SIKLUS 1 -->
+        <section class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                    <span class="badge-primary">EVALUASI HASIL BELAJAR</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+                        Analisis &amp; Refleksi Siklus 1
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                        Kajian data kuantitatif dan kualitatif terhadap ketercapaian tujuan pembelajaran di 3 kelas rombel (108 siswa):
+                    </p>
+                </div>
+                <a href="analisis.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-royal-500 dark:text-neon hover:underline">
+                    <span>Lihat Analisis Menyeluruh</span>
+                    <i class="ph-bold ph-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- METRIC STATS 4 CARDS -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">88.9%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">96 dari 108 Siswa Tuntas KKTP</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">84.5</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Formatif</strong>
+                    <span class="text-[11px] text-emerald-600 dark:text-neon block">Melampaui Target (75.0)</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">92%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Keaktifan Kolaboratif</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Observasi Diskusi 4 Pilar</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">100%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Model Experiential Learning</span>
+                </div>
+            </div>
+
+            <!-- 3 EVALUATION CARDS: KEKUATAN, TANTANGAN, TINDAK LANJUT -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- 1. Kekuatan -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-emerald-200 dark:border-emerald-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-thumbs-up"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">1. Kekuatan Pembelajaran</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pemberian analogi nyata antrean kantin sekolah terbukti sangat efektif memecah keengganan siswa kelas X yang sedang dalam fase transisi. Interaksi polling Mentimeter memicu 100% siswa merespon secara aktif pada 10 menit pertama.
+                    </p>
+                </div>
+
+                <!-- 2. Tantangan -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-amber-200 dark:border-amber-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-warning"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">2. Kendala / Tantangan</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pada pilar <strong>Abstraksi</strong>, 12 siswa (11.1%) masih kesulitan membedakan antara informasi esensial dan data pengganggu. Akibatnya, alur algoritma awal yang disusun sempat terlalu panjang dan kurang efisien.
+                    </p>
+                </div>
+
+                <!-- 3. Tindak Lanjut -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-200 dark:border-royal-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-royal-100 dark:bg-royal-950/80 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-arrow-circle-right"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">3. Rencana Tindak Lanjut</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pada <strong>Siklus 2 (Algoritma &amp; Flowchart)</strong>, guru merancang <em>guided scaffolding</em> berupa lembar pemandu kata kunci logika untuk menyeleksi variabel sebelum siswa menuangkan ide ke diagram alir resmi ISO.
+                    </p>
+                </div>
+
             </div>
         </section>
 
