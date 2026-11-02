@@ -379,7 +379,7 @@
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-handbook-s2" onclick="switchCycleTab('tab-handbook-s2')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-book-bookmark"></i>
-                    <span>Handbook</span>
+                    <span>Handbook (Buku Pegangan 3)</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-lkpd-s2" onclick="switchCycleTab('tab-lkpd-s2')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-file-text"></i>
@@ -692,67 +692,92 @@ KONTEN MEDIA PRESENTASI:
                     </div>
                 </div>
 
-                <!-- TAB 4: HANDBOOK SIKLUS 2 -->
+                <!-- TAB 4: HANDBOOK (BUKU PEGANGAN 3) -->
                 <div id="tab-handbook-s2" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="badge-blue">KODE: S2-HB</span>
-                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Modul Baca</span>
+                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Handbook</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Referensi Mandiri
+                                        <i class="ph-bold ph-check-circle"></i> Dokumen Resmi PDF
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Buku Pedoman Siswa: Kamus Simbol Diagram Alir &amp; Algoritma Dasar
+                                    Buku Pegangan 3: Notasi Algoritma
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Modul bacaan komprehensif berisi contoh perbandingan nyata antara bahasa natural, pseudocode, dan diagram alir.
+                                    Buku pegangan belajar peserta didik Fase E / Kelas X untuk penguasaan notasi deskriptif, perancangan diagram alir terstandar ISO 5807, dan sintaks kode semu (Pseudocode).
                                 </p>
                             </div>
                             <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <a href="artefak.html#materi2" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
-                                    <i class="ph-bold ph-book-open"></i>
-                                    <span>Baca Handbook</span>
-                                </a>
-                                <button type="button" onclick="copyToClipboard('Handbook Siswa Siklus 2 - Flowchart PPG UNY')" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-copy"></i>
-                                    <span>Salin Info</span>
+                                <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf', 'Buku Pegangan 3: Notasi Algoritma - Siklus 2')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>View PDF Modal</span>
                                 </button>
+                                <button type="button" onclick="togglePdfEmbed('embed-hb-s2', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-eye"></i>
+                                    <span>Pratinjau Tersemat</span>
+                                </button>
+                                <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Buka Tab Baru</span>
+                                </a>
+                                <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
+                                </a>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Bahan</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Saku Digital PDF</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Nama Dokumen</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Pegangan 3 Siswa</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Jumlah Halaman</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">18 Halaman Bergambar</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Ukuran File</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">20.9 MB (Buku Lengkap)</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Fokus Studi</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Translasi Logika Grafis &rarr; Kode</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Materi Pokok</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Notasi Algoritma &amp; Flowchart</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Fitur Spesial</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Tabel Pemetaan Bahasa Pemrograman</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Pembelajaran</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Siklus 2 Algoritma Pemrograman</strong>
                             </div>
+                        </div>
+
+                        <!-- INLINE PDF EMBED VIEWER SIKLUS 2 -->
+                        <div id="embed-hb-s2" class="pdf-embed-box hidden">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-book-open text-royal-500 dark:text-neon"></i>
+                                    Pratinjau Dokumen: Buku Pegangan-3. Notasi Algoritma.pdf
+                                </span>
+                                <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                    <span>Layar Penuh</span>
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                </a>
+                            </div>
+                            <iframe src="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 3 Siswa"></iframe>
                         </div>
 
                         <div class="space-y-3">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
                                 <i class="ph-bold ph-book-bookmark text-royal-500 dark:text-neon"></i>
-                                Rangkuman Materi Utama Handbook:
+                                Rangkuman Materi Pokok Buku Pegangan 3:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
-BAB UTAMA HANDBOOK SIKLUS 2:
-1. KAMUS SIMBOL FLOWCHART: Fungsi terminator (Start/End), proses kalkulasi, input/output, keputusan decision, dan konektor halaman.
-2. POLA SEKUANSIAL: Instruksi lurus dari atas ke bawah tanpa cabang.
-3. POLA PERCABANGAN (IF-THEN, IF-THEN-ELSE): Memeriksa kebenaran kondisi Boolean.
-4. CARA MENGUJI DIAGRAM ALIR DENGAN TRACE TABLE: Kolom variabel, ekspresi kondisi, dan layar keluaran.
+RINGKASAN BUKU PEGANGAN 3 (NOTASI ALGORITMA):
+- Bab 1: Definisi dan Urgensi Notasi Algoritma Baku dalam Rekayasa Perangkat Lunak.
+- Bab 2: Tiga Bentuk Notasi Algoritma: Kalimat Deskriptif, Bagan Alir (Flowchart), dan Pseudocode.
+- Bab 3: Standarisasi Simbol Flowchart ISO 5807: Terminal, Input/Output, Proses, Decision, dan Konektor.
+- Bab 4: Konstruksi Dasar Algoritma: Runtunan (Sequence), Pemilihan/Percabangan (Selection IF-ELSE), dan Pengulangan (Iteration/Looping).
+- Bab 5: Pedoman Penulisan Pseudocode Baku (Indents, Keyword Kapital, Variabel, Ekspresi Logika).
+- Bab 6: Teknik Verifikasi Logika Menggunakan Tabel Jejak (Trace Table / Dry Run).
                             </div>
                         </div>
                     </div>

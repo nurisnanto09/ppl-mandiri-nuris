@@ -382,7 +382,7 @@
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-handbook" onclick="switchCycleTab('tab-handbook')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-book-bookmark"></i>
-                    <span>Handbook</span>
+                    <span>Handbook (Buku Pegangan 2)</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-lkpd" onclick="switchCycleTab('tab-lkpd')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-file-text"></i>
@@ -621,71 +621,93 @@ SLIDE OUTLINE & MENTIMETER INTEGRATION:
                     </div>
                 </div>
 
-                <!-- TAB 4: HANDBOOK (BAHAN AJAR) -->
+                <!-- TAB 4: HANDBOOK (BUKU PEGANGAN 2) -->
                 <div id="tab-handbook" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="badge-blue">KODE: S1-HB</span>
-                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / E-Handout</span>
+                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Handbook</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> E-Booklet Siswa
+                                        <i class="ph-bold ph-check-circle"></i> Dokumen Resmi PDF
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Handbook Siswa: Buku Saku Cepat 4 Pilar Berpikir Komputasional
+                                    Buku Pegangan 2: Struktur Data &amp; Algoritma Dasar
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Buku pegangan belajar ringkas dengan infografis berwarna yang dirancang khusus bagi peserta didik kelas X untuk referensi mandiri.
+                                    Buku pegangan belajar peserta didik Fase E / Kelas X untuk penguatan konsep representasi data, struktur data linier (Array, List, Stack, Queue), dan algoritma dasar.
                                 </p>
                             </div>
                             <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <a href="artefak.html#materi1" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
-                                    <i class="ph-bold ph-book-open"></i>
-                                    <span>Baca Handbook</span>
-                                </a>
-                                <button type="button" onclick="copyToClipboard('Handbook Siswa Siklus 1 - PPG UNY 2026')" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-copy"></i>
-                                    <span>Salin Info</span>
+                                <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-2.%20Stuktur%20Data%20%26%20Algoritma%20Dasar.pdf', 'Buku Pegangan 2: Struktur Data & Algoritma Dasar - Siklus 1')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>View PDF Modal</span>
                                 </button>
+                                <button type="button" onclick="togglePdfEmbed('embed-hb-s1', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-eye"></i>
+                                    <span>Pratinjau Tersemat</span>
+                                </button>
+                                <a href="pdf/Handbook/Buku%20Pegangan-2.%20Stuktur%20Data%20%26%20Algoritma%20Dasar.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Buka Tab Baru</span>
+                                </a>
+                                <a href="pdf/Handbook/Buku%20Pegangan-2.%20Stuktur%20Data%20%26%20Algoritma%20Dasar.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
+                                </a>
                             </div>
                         </div>
 
                         <!-- Highlights Specs -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Dokumen</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">E-Booklet PDF &amp; Flipbook Web</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Nama Dokumen</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Pegangan 2 Siswa</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Ketebalan Buku</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">14 Halaman Full Color</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Ukuran File</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">5.07 MB (PDF Resmi)</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Penyajian</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Infografis &amp; Studi Kasus Riil</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Ruang Lingkup</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Struktur Data &amp; Algoritma</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Bahasa</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Bahasa Indonesia Populer Remaja</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Pembelajaran</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Siklus 1 Informatika Fase E</strong>
                             </div>
+                        </div>
+
+                        <!-- INLINE PDF EMBED VIEWER SIKLUS 1 -->
+                        <div id="embed-hb-s1" class="pdf-embed-box hidden">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-book-open text-royal-500 dark:text-neon"></i>
+                                    Pratinjau Dokumen: Buku Pegangan-2. Stuktur Data &amp; Algoritma Dasar.pdf
+                                </span>
+                                <a href="pdf/Handbook/Buku%20Pegangan-2.%20Stuktur%20Data%20%26%20Algoritma%20Dasar.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                    <span>Layar Penuh</span>
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                </a>
+                            </div>
+                            <iframe src="pdf/Handbook/Buku%20Pegangan-2.%20Stuktur%20Data%20%26%20Algoritma%20Dasar.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 2 Siswa"></iframe>
                         </div>
 
                         <!-- Preview -->
                         <div class="space-y-3">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
                                 <i class="ph-bold ph-bookmarks text-royal-500 dark:text-neon"></i>
-                                Ringkasan Isi Bab Utama Handbook:
+                                Rangkuman Cakupan Materi Buku Pegangan 2:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
-DAFTAR ISI HANDBOOK SIKLUS 1:
-- BAB 1: Mengapa Harus Berpikir Seperti Komputer? (Mindset Abad 21).
-- BAB 2: Membedah Masalah Rumit dengan "Dekomposisi" (Analogi Merakit Komputer).
-- BAB 3: Menemukan Pola Tersembunyi (Bagaimana Algoritma Medsos Bekerja).
-- BAB 4: Seni Memilih yang Penting: "Abstraksi" (Peta Jalur TransJogja vs Peta Satelit).
-- BAB 5: Resep Masak Logis: "Algoritma" (Langkah Pasti Menghasilkan Solusi).
-- BAB 6: Latihan Mandiri Tantangan Berpikir Komputasional & Kunci Jawaban Diskusi.
+RINGKASAN BUKU PEGANGAN 2 (STRUKTUR DATA & ALGORITMA DASAR):
+- Bagian 1: Pengantar Logika Komputasi dan Representasi Data di Komputer.
+- Bagian 2: Karakteristik Data Primitif vs Data Terstruktur (Koleksi & Indeks).
+- Bagian 3: Operasi Dasar Struktur Data Linier (Pencarian/Searching & Pengurutan/Sorting).
+- Bagian 4: Penerapan Konsep Antrean (Queue - FIFO) dan Tumpukan (Stack - LIFO) dalam Pemecahan Masalah Sehari-hari.
+- Bagian 5: Efisiensi Langkah Algoritmik dan Penyederhanaan Kompleksitas Masalah.
                             </div>
                         </div>
                     </div>
