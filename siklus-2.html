@@ -186,6 +186,12 @@
 
     <!-- ==========================================
          MAIN CONTENT: SIKLUS 2
+         SUSUNAN:
+         1. BANNER
+         2. VIDEO PRAKTIK PEMBELAJARAN
+         3. ARTEFAK PENDUKUNG (VIEW PDF)
+         4. EVALUASI (LK 4.2 RESMI)
+         5. DOKUMENTASI KEGIATAN KELAS
          ========================================== -->
     <main class="page-main site-container space-y-16">
 
@@ -233,20 +239,127 @@
             </div>
         </section>
 
-        <!-- 2. TAB PILIHAN ARTEFAK SIKLUS 2 -->
-        <section class="space-y-6">
+        <!-- SUB-NAV / QUICK JUMP MENU SIKLUS -->
+        <nav class="cycle-section-nav" aria-label="Navigasi Bagian Siklus 2">
+            <a href="#section-video" class="cycle-section-nav-link">
+                <i class="ph-bold ph-video-camera text-royal-500 dark:text-neon"></i>
+                <span>1. Video Praktik</span>
+            </a>
+            <a href="#section-artefak" class="cycle-section-nav-link">
+                <i class="ph-bold ph-files text-royal-500 dark:text-neon"></i>
+                <span>2. Artefak Pendukung</span>
+            </a>
+            <a href="#section-evaluasi" class="cycle-section-nav-link">
+                <i class="ph-bold ph-clipboard-text text-royal-500 dark:text-neon"></i>
+                <span>3. Evaluasi &amp; LK 4.2</span>
+            </a>
+            <a href="#section-dokumentasi" class="cycle-section-nav-link">
+                <i class="ph-bold ph-images text-royal-500 dark:text-neon"></i>
+                <span>4. Dokumentasi Kelas</span>
+            </a>
+        </nav>
+
+        <!-- ==========================================
+             2. VIDEO PRAKTIK PEMBELAJARAN SIKLUS 2
+             ========================================== -->
+        <section id="section-video" class="space-y-6 scroll-mt-24">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                    <span class="badge-primary">REKAMAN PEMBELAJARAN NYATA</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+                        Video Praktik Pembelajaran Siklus 2
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                        Rekaman video pembelajaran model PBL berdurasi 15:18 di Laboratorium Komputer SMA Negeri 4 Yogyakarta:
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <a href="https://drive.google.com/file/d/13WZcE4aBwsbqw1d06_rNlHTB-TR9f2nA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-1.5 px-3">
+                        <i class="ph-bold ph-google-drive-logo text-emerald-500"></i>
+                        <span>Buka di Google Drive</span>
+                        <i class="ph-bold ph-arrow-square-out text-[11px]"></i>
+                    </a>
+                    <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-royal-950 text-xs font-mono font-bold text-slate-700 dark:text-neon border border-slate-200 dark:border-slate-800">
+                        <i class="ph-bold ph-video-camera"></i> Durasi 15:18 • Google Drive HD
+                    </span>
+                </div>
+            </div>
+
+            <!-- VIDEO CONTAINER BOX -->
+            <div id="videoBoxS2" class="cycle-video-card group">
+                <div class="video-overlay absolute inset-0 z-10 flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
+                    <img src="img/dokumentasi/dok-aktivitas1.jpg" alt="Video Cover Praktik Siklus 2" class="absolute inset-0 w-full h-full object-cover brightness-[0.45] group-hover:brightness-[0.35] transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                    
+                    <div class="relative z-20 flex flex-col items-center space-y-4 max-w-lg">
+                        <button type="button" onclick="playCycleVideo('videoBoxS2', 'Praktik Siklus 2 - Flowchart & PBL')" class="video-play-btn" aria-label="Putar Video Siklus 2">
+                            <i class="ph-fill ph-play"></i>
+                        </button>
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-neon text-black font-extrabold text-xs mb-2">
+                                PRAKTIK PEMBELAJARAN PPG INFORMATIKA
+                            </span>
+                            <h3 class="text-lg sm:text-2xl font-black text-white leading-tight">
+                                Logika Pemrograman &amp; Perancangan Diagram Alir Interaktif
+                            </h3>
+                            <p class="text-xs sm:text-sm text-white/80 mt-1">
+                                Guru Model: <strong>Nur Isnanto Nugroho, S.Pd.</strong> &bull; Dosen: <strong>Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong> &bull; Pamong: <strong>Titis Widowati, S.T.</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between text-xs text-white/90">
+                        <span class="flex items-center gap-1.5"><i class="ph-bold ph-map-pin text-neon"></i> Lab Komputer SMA Negeri 4 Yogyakarta</span>
+                        <span class="font-mono bg-white/20 px-2.5 py-1 rounded-md backdrop-blur-sm">Google Drive Video</span>
+                    </div>
+                </div>
+
+                <div class="video-iframe hidden absolute inset-0 w-full h-full bg-black flex items-center justify-center">
+                    <iframe class="w-full h-full" src="https://drive.google.com/file/d/13WZcE4aBwsbqw1d06_rNlHTB-TR9f2nA/preview" title="Video Pembelajaran Siklus 2" allow="autoplay" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Chapters -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
+                    <span class="font-mono font-bold text-royal-500 dark:text-neon">00:00 - 02:30</span>
+                    <strong class="block text-slate-800 dark:text-white mt-1">Apersepsi Masalah Nyata</strong>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Penayangan skenario sistem kasir toko dan diskusi urutan langkah logis.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
+                    <span class="font-mono font-bold text-royal-500 dark:text-neon">02:30 - 07:45</span>
+                    <strong class="block text-slate-800 dark:text-white mt-1">Paparan Simbol ISO</strong>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Visualisasi diagram alir dan logika percabangan IF-ELSE.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
+                    <span class="font-mono font-bold text-royal-500 dark:text-neon">07:45 - 12:10</span>
+                    <strong class="block text-slate-800 dark:text-white mt-1">Praktikum Mandiri &amp; Tim</strong>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Penyusunan flowchart dan uji jejak dry run table di komputer.</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
+                    <span class="font-mono font-bold text-royal-500 dark:text-neon">12:10 - 15:18</span>
+                    <strong class="block text-slate-800 dark:text-white mt-1">Presentasi &amp; Uji Silang</strong>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Uji coba kasus ekstrem antar kelompok dan penguatan guru model.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             3. ARTEFAK PENDUKUNG (VIEW PDF TERSEDIA)
+             ========================================== -->
+        <section id="section-artefak" class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
             <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                 <div>
                     <span class="badge-primary">REPOSITORI PERANGKAT AJAR</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-                        Pilihan Artefak Pembelajaran
+                        Artefak Pendukung Pembelajaran
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
                         Klik tab di bawah untuk meninjau secara mendalam perangkat kurikulum Siklus 2 yang telah diujikan:
                     </p>
                 </div>
                 <div class="flex items-center gap-2">
-                    <span class="text-xs font-mono font-bold text-royal-500 dark:text-neon">5 Dokumen Teruji</span>
+                    <span class="text-xs font-mono font-bold text-royal-500 dark:text-neon">5 Dokumen Teruji • Fitur View PDF</span>
                 </div>
             </div>
 
@@ -296,12 +409,14 @@
                                     Penerapan model Problem-Based Learning (PBL) untuk memecahkan kasus percabangan multi-kondisi melalui representasi grafis dan tekstual.
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 shrink-0">
-                                <button type="button" onclick="copyToClipboard('Modul Ajar Siklus 2: Algoritma - PPG UNY 2026')" class="btn-secondary text-xs">
-                                    <i class="ph-bold ph-copy"></i> Salin Info
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'Dokumen Pembelajaran Siklus 2 - Modul & Refleksi')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>View PDF</span>
                                 </button>
-                                <a href="artefak.html#modul2" class="btn-primary-cta text-xs">
-                                    <i class="ph-bold ph-file-pdf"></i> Dokumen Lengkap
+                                <a href="artefak.html#modul2" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Detail Modul</span>
                                 </a>
                             </div>
                         </div>
@@ -320,34 +435,24 @@
                                 <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Sequential &amp; Branching (IF-ELSE)</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Metode Verifikasi</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Uji Jejak Kering (Dry Run Table)</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Metode Pengujian</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Dry Run Trace Table Testing</strong>
                             </div>
                         </div>
 
                         <div class="space-y-3">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-article text-royal-500 dark:text-neon"></i>
-                                Sintaks Pembelajaran Problem-Based Learning:
+                                <i class="ph-bold ph-tree-structure text-royal-500 dark:text-neon"></i>
+                                Tahapan Sintaks PBL Siklus 2:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
-1. ORIENTASI MASALAH (15 Menit):
-   - Guru menyajikan kasus sistem kasir minimarket: "Kapan pembeli mendapat diskon 15%?"
-   - Siswa menganalisis kondisi: Total belanja > Rp 100.000 DAN memiliki kartu member.
-
-2. MENGORGANISASI SISWA (15 Menit):
-   - Pembagian kelompok heterogen 4 siswa untuk memetakan simbol flowchart (Terminator, Input, Decision, Output).
-
-3. MEMBIMBING PENYELIDIKAN (30 Menit):
+1. ORIENTASI MASALAH (15 Menit): Skenario penghitungan diskon bertingkat pada sistem kasir sekolah.
+2. ORGANISASI BELAJAR (15 Menit): Pembagian peran kelompok (Perancang Logika & Penguji Kasus Ekstrem).
+3. PENYELIDIKAN MANDIRI & KELOMPOK (30 Menit):
    - Siswa mendesain flowchart dan menulis pseudocode terstruktur di LKPD.
-   - Guru melakukan scaffolding pada kelompok yang mengalami kebuntuan percabangan ganda.
-
-4. MENGEMBANGKAN & MENYAJIKAN HASIL (20 Menit):
-   - Pengujian alur menggunakan Trace Table (Dry Run) dengan variasi nilai input acak.
-   - Perwakilan kelompok mempresentasikan ke depan kelas.
-
-5. EVALUASI PROSES PEMECAHAN MASALAH (10 Menit):
-   - Konfirmasi validitas algoritma dan kuis formatif penelusuran error logika (bug trace).
+   - Mengisi tabel trace untuk nilai input normal, batas, dan invalid.
+4. PENGEMBANGAN & PENYAJIAN KARYA (20 Menit): Presentasi diagram alir di proyektor lab & simulasi interaktif.
+5. ANALISIS & EVALUASI PEMECAHAN MASALAH (10 Menit): Penguatan sintaks dan konfirmasi alur logika baku.
                             </div>
                         </div>
                     </div>
@@ -360,62 +465,60 @@
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="badge-blue">KODE: S2-AS</span>
-                                    <span class="badge-slate font-mono text-[11px]">Asesmen &amp; Rubrik</span>
+                                    <span class="badge-slate font-mono text-[11px]">Asesmen Praktik</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Rubrik Kinerja Teruji
+                                        <i class="ph-bold ph-check-circle"></i> Rubrik ISO 5807
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Instrumen Asesmen Siklus 2: Rubrik Diagram Alir &amp; Tes Trace Table
+                                    Instrumen Asesmen Siklus 2: Rubrik Validitas Diagram &amp; Trace Table
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Penilaian komprehensif mengukur ketepatan simbol ISO, konsistensi notasi pseudocode, dan ketelitian uji jejak variabel (dry run).
+                                    Alat ukur presisi untuk menilai kesesuaian simbol, alur logika tidak berulang, dan konsistensi tabel jejak eksekusi.
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 shrink-0">
-                                <button type="button" onclick="copyToClipboard('Instrumen Asesmen Siklus 2 - PPG UNY 2026')" class="btn-secondary text-xs">
-                                    <i class="ph-bold ph-copy"></i> Salin Info
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'Instrumen & Evaluasi Siklus 2')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>View PDF</span>
                                 </button>
-                                <a href="artefak.html#asesmen2" class="btn-primary-cta text-xs">
-                                    <i class="ph-bold ph-file-pdf"></i> Dokumen Lengkap
+                                <a href="artefak.html#asesmen2" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Detail Asesmen</span>
                                 </a>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Instrumen Utama</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Rubrik Kinerja Diagram Alir</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 1: Sintaks Simbol</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Terminator, Decision, I/O</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Teknik Pengujian</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Dry Run Simulation (Trace Table)</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 2: Logika Alur</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Arah Panah &amp; Titik Temu</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">KKTP Kelulusan</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Nilai Minimum 75.0</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 3: Ketepatan Notasi</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Pseudocode Keyword Baku</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Tingkat Capaian</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">91.7% Tuntas (99 Siswa)</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 4: Verifikasi Hasil</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Hasil Trace Table 100% Cocok</strong>
                             </div>
                         </div>
 
                         <div class="space-y-3">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-scales text-royal-500 dark:text-neon"></i>
-                                Rubrik Penilaian Kinerja Algoritma (4 Aspek):
+                                <i class="ph-bold ph-check-square-offset text-royal-500 dark:text-neon"></i>
+                                Deskriptor Ketercapaian Rubrik Flowchart:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
-INDIKATOR PENILAIAN ALGORITMA (TOTAL 100 POIN):
-1. Ketepatan Simbol ISO (Bobot 25%):
-   - Menggunakan Oval (Terminator), Jajar Genjang (I/O), Persegi Panjang (Proses), Belah Ketupat (Kondisi Decision).
-2. Kelogisan Alur Percabangan (Bobot 30%):
-   - Memiliki cabang YA dan TIDAK yang terdefinisi tuntas tanpa loop tak hingga (infinite loop).
-3. Struktur Notasi Pseudocode (Bobot 25%):
-   - Menggunakan kata kunci terstandar: INPUT, IF...THEN...ELSE, ENDIF, OUTPUT.
-4. Validitas Hasil Uji Jejak (Bobot 20%):
-   - Tabel simulasi dry run menghasilkan output yang 100% konsisten dengan skenario uji kasus.
+KRITERIA KEBERHASILAN FLOWCHART SIKLUS 2:
+- Sangat Baik (4): Simbol ISO tepat 100%, cabang YES/NO berlabel jelas, tidak ada panah buntu atau ambigu.
+- Baik (3): Simbol tepat, label cabang lengkap, ada sedikit redundansi instruksi yang tidak memengaruhi hasil.
+- Cukup (2): Tertukar antara jajar genjang (I/O) dan persegi panjang (proses), namun alur umum masih terbaca.
+- Perlu Bimbingan (1): Alur panah melompat tanpa pengkondisian logika yang logis.
                             </div>
                         </div>
                     </div>
@@ -428,60 +531,162 @@ INDIKATOR PENILAIAN ALGORITMA (TOTAL 100 POIN):
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="badge-blue">KODE: S2-MD</span>
-                                    <span class="badge-slate font-mono text-[11px]">Media Grafis Digital</span>
+                                    <span class="badge-slate font-mono text-[11px]">Media Digital</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Interaktif Flowchart
+                                        <i class="ph-bold ph-check-circle"></i> Simulasi Visual
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Media Pembelajaran Siklus 2: Slide Animasi Canva &amp; Diagram Live
+                                    Media Simulasi Flowchart &amp; Slide Interaktif Canva
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Media visual interaktif yang mendemonstrasikan transisi alur eksekusi logika percabangan bercabang langkah demi langkah.
+                                    Alat peraga visual berbasis web animasi alur eksekusi baris kode secara sekuensial yang memudahkan abstraksi percabangan.
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 shrink-0">
-                                <button type="button" onclick="copyToClipboard('Media Pembelajaran Siklus 2 - PPG UNY 2026')" class="btn-secondary text-xs">
-                                    <i class="ph-bold ph-copy"></i> Salin Link
-                                </button>
-                                <a href="artefak.html#media2" class="btn-primary-cta text-xs">
-                                    <i class="ph-bold ph-presentation"></i> Buka Slide Media
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <a href="https://www.canva.com/design/DAHYCug9iQc/uNIZL8jboD39yzsACNRYXw/view" target="_blank" rel="noopener" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-presentation"></i>
+                                    <span>Buka Canva Flowchart</span>
+                                </a>
+                                <a href="https://www.canva.com/design/DAHWjTwXt9o/uaV45DvJ3wtUBeoC3qFK8A/view" target="_blank" rel="noopener" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-presentation"></i>
+                                    <span>Buka Canva Pseudocode</span>
                                 </a>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Presentasi</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Canva Interactive Animated Deck</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Media</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">2 Canva Viewer + Web Animasi</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Visualisasi</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Animasi Alur Data Bergerak</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
                                 <span class="text-slate-400 block font-mono text-[10px] uppercase">Total Slide</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">26 Slide Full HD</strong>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">28 Halaman Slide Beranimasi</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Fitur Kunci</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Animasi Alur Panah Dinamis</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Tools Simulasi</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Live Draw.io Demo</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Dukungan Siswa</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Tampilan Komputer Lab &amp; Mobile</strong>
                             </div>
                         </div>
 
-                        <div class="space-y-3">
+                        <!-- 2 INTERACTIVE CANVA VIEWERS SIKLUS 2 -->
+                        <div class="space-y-6 pt-2">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-slate-200/80 dark:border-slate-800">
+                                <div>
+                                    <h4 class="font-extrabold text-base text-slate-900 dark:text-white flex items-center gap-2">
+                                        <i class="ph-bold ph-slideshow text-royal-500 dark:text-neon text-lg"></i>
+                                        Interactive Canva Slide Viewers (2 Presentasi Interaktif)
+                                    </h4>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                                        Eksplorasi slide presentasi Canva interaktif langsung dari antarmuka ini atau gunakan mode layar penuh:
+                                    </p>
+                                </div>
+                                <span class="badge-blue font-mono text-[11px] self-start sm:self-auto shrink-0">
+                                    <i class="ph-bold ph-eye"></i> 2 Canva Embed Aktif
+                                </span>
+                            </div>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                <!-- CANVA 1: PPT PSEUDOCODE -->
+                                <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-royal-950/50 border border-slate-200/90 dark:border-slate-800 flex flex-col justify-between shadow-sm">
+                                    <div class="space-y-2">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-bold bg-royal-100 text-royal-700 dark:bg-royal-900/60 dark:text-neon">
+                                                <i class="ph-bold ph-brackets-curly"></i> Media 1: PPT Pseudocode
+                                            </span>
+                                            <a href="https://www.canva.com/design/DAHWjTwXt9o/uaV45DvJ3wtUBeoC3qFK8A/view" target="_blank" rel="noopener" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                                <span>Layar Penuh</span>
+                                                <i class="ph-bold ph-arrow-square-out"></i>
+                                            </a>
+                                        </div>
+                                        <h5 class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">
+                                            PPT Pseudocode
+                                        </h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                            Slide interaktif panduan perancangan sintaks kode semu terstruktur, kata kunci standar (READ, SET, IF-ELSE, PRINT), serta teknik identasi logika.
+                                        </p>
+                                    </div>
+
+                                    <!-- CANVA IFRAME CONTAINER 1 -->
+                                    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.2em; margin-bottom: 0.8em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+                                        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                                            src="https://www.canva.com/design/DAHWjTwXt9o/uaV45DvJ3wtUBeoC3qFK8A/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200/60 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
+                                        <span>
+                                            <a href="https://www.canva.com/design/DAHWjTwXt9o/uaV45DvJ3wtUBeoC3qFK8A/view?utm_content=DAHWjTwXt9o&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="font-bold text-royal-600 dark:text-neon hover:underline">PPT Pseuudocode</a> oleh <strong>Nur Isnanto Nugroho</strong>
+                                        </span>
+                                        <a href="https://www.canva.com/design/DAHWjTwXt9o/uaV45DvJ3wtUBeoC3qFK8A/view" target="_blank" rel="noopener" class="btn-secondary text-xs py-1 px-2.5 self-start sm:self-auto inline-flex items-center gap-1">
+                                            <i class="ph-bold ph-arrow-square-out"></i>
+                                            <span>Buka Canva</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- CANVA 2: PRESENTASI ALGORITMA FLOWCHART -->
+                                <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-royal-950/50 border border-slate-200/90 dark:border-slate-800 flex flex-col justify-between shadow-sm">
+                                    <div class="space-y-2">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-bold bg-cyan-100 text-cyan-800 dark:bg-cyan-900/60 dark:text-cyan-300">
+                                                <i class="ph-bold ph-git-branch"></i> Media 2: Flowchart
+                                            </span>
+                                            <a href="https://www.canva.com/design/DAHYCug9iQc/uNIZL8jboD39yzsACNRYXw/view" target="_blank" rel="noopener" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                                <span>Layar Penuh</span>
+                                                <i class="ph-bold ph-arrow-square-out"></i>
+                                            </a>
+                                        </div>
+                                        <h5 class="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">
+                                            Presentasi Algoritma Flowchart
+                                        </h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                            Koleksi simbol standar ISO 5807, prinsip percabangan kondisi (IF-ELSE), dan studi kasus algoritma sistem kasir toko dengan diskon bertingkat.
+                                        </p>
+                                    </div>
+
+                                    <!-- CANVA IFRAME CONTAINER 2 -->
+                                    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.2em; margin-bottom: 0.8em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+                                        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                                            src="https://www.canva.com/design/DAHYCug9iQc/uNIZL8jboD39yzsACNRYXw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                                        </iframe>
+                                    </div>
+
+                                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 border-t border-slate-200/60 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
+                                        <span>
+                                            <a href="https://www.canva.com/design/DAHYCug9iQc/uNIZL8jboD39yzsACNRYXw/view?utm_content=DAHYCug9iQc&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="font-bold text-royal-600 dark:text-neon hover:underline">Presentasi Algoritma FLowcart</a> oleh <strong>Nur Isnanto Nugroho</strong>
+                                        </span>
+                                        <a href="https://www.canva.com/design/DAHYCug9iQc/uNIZL8jboD39yzsACNRYXw/view" target="_blank" rel="noopener" class="btn-secondary text-xs py-1 px-2.5 self-start sm:self-auto inline-flex items-center gap-1">
+                                            <i class="ph-bold ph-arrow-square-out"></i>
+                                            <span>Buka Canva</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-film-strip text-royal-500 dark:text-neon"></i>
-                                Garis Besar Slide Presentasi Siklus 2:
+                                <i class="ph-bold ph-slideshow text-royal-500 dark:text-neon"></i>
+                                Struktur Paparan Media Siklus 2:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
-RINGKASAN SLIDE PRESENTASI SIKLUS 2:
-- Slide 01-05: Dari Resep Kue ke Logika Komputer (Pengantar Algoritma Prosedural).
-- Slide 06-11: Mengapa Flowchart Penting? Bedah 5 Simbol Utama Standar ISO 5807.
-- Slide 12-16: Studi Kasus 1: Algoritma Menentukan Kelulusan Siswa (Nilai >= 75: LULUS).
-- Slide 17-21: Studi Kasus 2: Sistem Diskon Bertingkat Belanja Toko (Percabangan IF-ELSE Ganda).
-- Slide 22-24: Teknik Dry Run: Cara Memeriksa Bug Logika Sebelum Menulis Kode Bahasa Pemrograman.
+KONTEN MEDIA PRESENTASI:
+- Slide 01-05: Review 4 Fondasi CT Siklus 1 & Mengapa Kita Butuh Simbol Baku.
+- Slide 06-14: Galeri Simbol ISO 5807 (Kapan Menggunakan Persegi, Jajar Genjang, atau Belah Ketupat).
+- Slide 15-20: Animasi Bergerak: Bola Logika Melintasi Percabangan IF Nilai Belanja >= 100.000.
+- Slide 21-24: Memadankan Gambar Diagram Menjadi Baris Pseudocode Rapi Ber-indentasi.
 - Slide 25-26: Instruksi Pengerjaan LKPD Kolaboratif & QR Code Bahan Ajar Digital.
+- Slide 27-28: Kuis Interaktif Uji Simbol Kilat.
                             </div>
                         </div>
                     </div>
@@ -494,58 +699,60 @@ RINGKASAN SLIDE PRESENTASI SIKLUS 2:
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="badge-blue">KODE: S2-HB</span>
-                                    <span class="badge-slate font-mono text-[11px]">Buku Pegangan Siswa</span>
+                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Modul Baca</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Modul Saku
+                                        <i class="ph-bold ph-check-circle"></i> Referensi Mandiri
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Handbook Siswa: Buku Saku Cepat Algoritma &amp; Diagram Alir
+                                    Buku Pedoman Siswa: Kamus Simbol Diagram Alir &amp; Algoritma Dasar
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Referensi saku lengkap memuat tabel simbol baku ISO, kamus notasi pseudocode, dan contoh studi kasus pemrograman nyata.
+                                    Modul bacaan komprehensif berisi contoh perbandingan nyata antara bahasa natural, pseudocode, dan diagram alir.
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 shrink-0">
-                                <button type="button" onclick="copyToClipboard('Handbook Siswa Siklus 2 - PPG UNY 2026')" class="btn-secondary text-xs">
-                                    <i class="ph-bold ph-copy"></i> Salin Info
-                                </button>
-                                <a href="artefak.html#materi2" class="btn-primary-cta text-xs">
-                                    <i class="ph-bold ph-book-open"></i> Baca Handbook
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <a href="artefak.html#materi2" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-book-open"></i>
+                                    <span>Baca Handbook</span>
                                 </a>
+                                <button type="button" onclick="copyToClipboard('Handbook Siswa Siklus 2 - Flowchart PPG UNY')" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-copy"></i>
+                                    <span>Salin Info</span>
+                                </button>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Saku Digital (E-Pocketbook)</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Bahan</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Saku Digital PDF</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
                                 <span class="text-slate-400 block font-mono text-[10px] uppercase">Jumlah Halaman</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">16 Halaman Terstruktur</strong>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">18 Halaman Bergambar</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Fokus Studi</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Translasi Logika Grafis &rarr; Kode</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
                                 <span class="text-slate-400 block font-mono text-[10px] uppercase">Fitur Spesial</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Cheat Sheet Simbol &amp; Trace Table</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Tingkat Kesulitan</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Pemula ke Menengah (Fase E)</strong>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Tabel Pemetaan Bahasa Pemrograman</strong>
                             </div>
                         </div>
 
                         <div class="space-y-3">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-bookmarks text-royal-500 dark:text-neon"></i>
-                                Isi Inti Handbook Siswa Siklus 2:
+                                <i class="ph-bold ph-book-bookmark text-royal-500 dark:text-neon"></i>
+                                Rangkuman Materi Utama Handbook:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
-KONTEN POKOK HANDBOOK:
+BAB UTAMA HANDBOOK SIKLUS 2:
 1. KAMUS SIMBOL FLOWCHART: Fungsi terminator (Start/End), proses kalkulasi, input/output, keputusan decision, dan konektor halaman.
-2. ATURAN PENULISAN PSEUDOCODE: Penataan indentasi blok, deklarasi tipe data (integer, string, boolean), dan penamaan variabel bermakna.
-3. KASUS PERCABANGAN: IF Tunggal, IF-ELSE Ganda, dan IF Bersarang (Nested IF).
-4. LEMBAR CHEAT SHEET DRY RUN: Template tabel uji jejak nilai variabel (Kolom: Baris Instruksi, Input, Nilai Variabel, Kondisi True/False, Output).
+2. POLA SEKUANSIAL: Instruksi lurus dari atas ke bawah tanpa cabang.
+3. POLA PERCABANGAN (IF-THEN, IF-THEN-ELSE): Memeriksa kebenaran kondisi Boolean.
+4. CARA MENGUJI DIAGRAM ALIR DENGAN TRACE TABLE: Kolom variabel, ekspresi kondisi, dan layar keluaran.
                             </div>
                         </div>
                     </div>
@@ -558,44 +765,46 @@ KONTEN POKOK HANDBOOK:
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="badge-blue">KODE: S2-LK</span>
-                                    <span class="badge-slate font-mono text-[11px]">Lembar Kerja Siswa</span>
+                                    <span class="badge-slate font-mono text-[11px]">Lembar Kerja Peserta Didik</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Praktikum Mandiri &amp; Tim
+                                        <i class="ph-bold ph-check-circle"></i> Berbasis Penyelidikan
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
                                     LKPD Praktik: Perancangan Flowchart &amp; Uji Trace Table
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Panduan praktikum terarah merancang diagram alir sistem diskon belanja dan penentuan grade nilai siswa di SMA Negeri 4 Yogyakarta.
+                                    Lembar tugas kolaboratif yang menuntun kelompok siswa membedah skenario aturan kasir koperasi siswa dan membuktikannya lewat pengujian jejak.
                                 </p>
                             </div>
-                            <div class="flex items-center gap-2 shrink-0">
-                                <button type="button" onclick="copyToClipboard('LKPD Siklus 2 - PPG UNY 2026')" class="btn-secondary text-xs">
-                                    <i class="ph-bold ph-copy"></i> Salin Info
-                                </button>
-                                <a href="artefak.html#lkpd2" class="btn-primary-cta text-xs">
-                                    <i class="ph-bold ph-file-text"></i> Unduh Lembar Kerja
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <a href="artefak.html#lkpd2" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-text"></i>
+                                    <span>Detail LKPD</span>
                                 </a>
+                                <button type="button" onclick="copyToClipboard('LKPD Siklus 2 - PPG UNY 2026')" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-copy"></i>
+                                    <span>Salin Info</span>
+                                </button>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Penugasan</span>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Pengerjaan</span>
                                 <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Kelompok (4 Siswa)</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Perangkat Lunak</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Draw.io / Kertas Plano Milimeter</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Durasi Kerja</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">30 Menit Praktikum Lab</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Waktu Praktik</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">40 Menit Terfokus</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Tools Digunakan</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Flowchart Maker &amp; Lembar Cetak</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Target Output</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Flowchart Valid &amp; Trace Selesai</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Keluaran Tugas</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Diagram ISO + Tabel Uji 3 Kasus</strong>
                             </div>
                         </div>
 
@@ -606,17 +815,14 @@ KONTEN POKOK HANDBOOK:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
 STUDI KASUS LKPD S2: "Sistem Logika Kasir Otomatis Koperasi Siswa SMAN 4 Yogyakarta"
-SKENARIO LOGIKA:
-1. Input: Nama Pembeli, Total Belanja, Status Kartu Anggota (YA/TIDAK).
-2. Ketentuan:
-   - Jika Total Belanja >= Rp 100.000 DAN Anggota = YA, Diskon = 15%.
-   - Jika Total Belanja >= Rp 100.000 DAN Anggota = TIDAK, Diskon = 5%.
-   - Selain itu, Diskon = 0%.
-3. Output: Total Akhir yang Harus Dibayar.
-4. TUGAS:
-   - Buat Flowchart lengkap dengan simbol ISO!
-   - Tuliskan notasi pseudocode-nya!
-   - Uji dengan 3 set data acak pada Tabel Dry Run yang telah disediakan.
+SKENARIO:
+- Belanja total < 50.000: Diskon 0%, tidak dapat kupon.
+- Belanja total 50.000 s.d 99.999: Diskon 5%, dapat 1 kupon.
+- Belanja total >= 100.000: Diskon 10% + Bonus Buku Tulis, dapat 2 kupon.
+TUGAS KELOMPOK:
+1. Susun diagram alir yang memuat Decision Percabangan bertingkat.
+2. Tuliskan pseudocode dengan keyword: INPUT, IF, ELSE IF, ELSE, OUTPUT.
+3. Lakukan Trace Table untuk 3 nilai uji: 35.000, 75.000, dan 150.000.
                             </div>
                         </div>
                     </div>
@@ -625,183 +831,194 @@ SKENARIO LOGIKA:
             </div>
         </section>
 
-        <!-- 3. VIDEO PRAKTIK PEMBELAJARAN SIKLUS 2 -->
-        <section class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
+        <!-- ==========================================
+             4. EVALUASI HASIL BELAJAR & LK 4.2 RESMI
+             ========================================== -->
+        <section id="section-evaluasi" class="space-y-8 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
             <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
-                    <span class="badge-primary">REKAMAN PEMBELAJARAN NYATA</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-                        Video Praktik Pembelajaran Siklus 2
+                    <div class="inline-flex items-center gap-2 mb-1.5">
+                        <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                            <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
+                        </span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                        Evaluasi &amp; Refleksi Siklus 2 (LK 4.2)
                     </h2>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                        Rekaman video pembelajaran model PBL berdurasi 15:18 di Laboratorium Komputer SMA Negeri 4 Yogyakarta:
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
+                        Dokumentasi utuh evaluasi mandiri dan refleksi pelaksanaan pembelajaran algoritma, diagram alir, dan pseudocode di SMA Negeri 4 Yogyakarta.
                     </p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2">
-                    <a href="https://drive.google.com/file/d/13WZcE4aBwsbqw1d06_rNlHTB-TR9f2nA/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-1.5 px-3">
-                        <i class="ph-bold ph-google-drive-logo text-emerald-500"></i>
-                        <span>Buka di Google Drive</span>
-                        <i class="ph-bold ph-arrow-square-out text-[11px]"></i>
+                    <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.2 Refleksi Praktik Pembelajaran Mandiri - Siklus 2')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                        <i class="ph-bold ph-file-pdf"></i>
+                        <span>View PDF LK 4.2</span>
+                    </button>
+                    <button type="button" onclick="togglePdfEmbed('embedPdfS2', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                        <i class="ph-bold ph-eye"></i>
+                        <span>Pratinjau di Halaman</span>
+                    </button>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF Resmi">
+                        <i class="ph-bold ph-download-simple"></i>
+                        <span>Unduh File</span>
                     </a>
-                    <span class="px-3 py-1 rounded-full bg-slate-100 dark:bg-royal-950 text-xs font-mono font-bold text-slate-700 dark:text-neon border border-slate-200 dark:border-slate-800">
-                        <i class="ph-bold ph-video-camera"></i> Durasi 15:18 • Google Drive HD
-                    </span>
                 </div>
             </div>
 
-            <!-- VIDEO CONTAINER BOX -->
-            <div id="videoBoxS2" class="cycle-video-card group">
-                <div class="video-overlay absolute inset-0 z-10 flex flex-col items-center justify-center p-6 text-center transition-all duration-300">
-                    <img src="img/dokumentasi/dok-aktivitas1.jpg" alt="Video Cover Praktik Siklus 2" class="absolute inset-0 w-full h-full object-cover brightness-[0.45] group-hover:brightness-[0.35] transition-all duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                    
-                    <div class="relative z-20 flex flex-col items-center space-y-4 max-w-lg">
-                        <button type="button" onclick="playCycleVideo('videoBoxS2', 'Praktik Siklus 2 - Flowchart & PBL')" class="video-play-btn" aria-label="Putar Video Siklus 2">
-                            <i class="ph-fill ph-play"></i>
-                        </button>
-                        <div>
-                            <span class="inline-block px-3 py-1 rounded-full bg-neon text-black font-extrabold text-xs mb-2">
-                                PRAKTIK PEMBELAJARAN PPG INFORMATIKA
+            <!-- INLINE PDF VIEWER (TOGGLEABLE) -->
+            <div id="embedPdfS2" class="pdf-embed-card hidden">
+                <div class="p-3 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold">
+                    <span class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
+                        <span>Nur Isnanto Nugroho_25105260411_LK4.2 Refleksi Praktek Mengajar Mandiri PPLM.pdf</span>
+                    </span>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" class="text-royal-500 dark:text-neon hover:underline inline-flex items-center gap-1">
+                        <span>Layar Penuh</span>
+                        <i class="ph-bold ph-arrow-square-out"></i>
+                    </a>
+                </div>
+                <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.2"></iframe>
+            </div>
+
+            <!-- OFFICIAL LK 4.2 TRANSCRIPT DOCUMENT CARD -->
+            <div class="lk-official-card space-y-8">
+                <!-- Header Dokumen Resmi -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="px-2.5 py-0.5 rounded-full bg-royal-100 dark:bg-royal-950 text-royal-700 dark:text-purple-300 font-mono text-[11px] font-extrabold uppercase">
+                                LEMBAR KERJA (LK) 4
                             </span>
-                            <h3 class="text-lg sm:text-2xl font-black text-white leading-tight">
-                                Logika Pemrograman &amp; Perancangan Diagram Alir Interaktif
-                            </h3>
-                            <p class="text-xs sm:text-sm text-white/80 mt-1">
-                                Guru Model: <strong>Nur Isnanto Nugroho, S.Pd.</strong> &bull; Dosen: <strong>Drs. Djoko Arisworo, M.T.</strong>
+                            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Refleksi Praktik Pembelajaran Mandiri</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                            Refleksi Ke : Dua (Siklus 2)
+                        </h3>
+                    </div>
+                    <div class="p-3 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                        <div><strong>Mahasiswa:</strong> Nur Isnanto Nugroho (NIM 25105260411)</div>
+                        <div><strong>Bidang Studi:</strong> Informatika &bull; <strong>Sekolah:</strong> SMA Negeri 4 Yogyakarta</div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Refleksi Kegiatan Pembelajaran Mandiri -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-chats-circle text-lg"></i>
+                        <span>A. Refleksi Kegiatan Praktik Pembelajaran Mandiri</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">1.</span>
+                                <span>Bagaimana kegiatan apersepsi dapat membantu murid memahami tujuan pembelajaran yang akan dicapai?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada siklus kedua, apersepsi dilakukan dengan menghubungkan materi algoritma dengan kegiatan yang sering dijumpai dalam kehidupan sehari-hari. Melalui pendekatan ini, peserta didik diajak memahami bahwa suatu kegiatan memiliki urutan langkah yang dapat disusun secara sistematis. Cara ini membantu peserta didik memperoleh gambaran awal mengenai materi flowchart dan pseudocode sebelum masuk ke penjelasan yang lebih mendalam.
+                            </p>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">2.</span>
+                                <span>Kegiatan apa saja yang berhasil dan belum berhasil dilaksanakan dalam kegiatan inti?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada siklus kedua, pembelajaran menggunakan model Problem Based Learning (PBL) dengan materi algoritma, khususnya flowchart dan pseudocode. Pada pertemuan pertama, kegiatan pembelajaran berjalan cukup baik. Peserta didik dapat memahami materi flowchart, menyelesaikan LKPD, dan melakukan pengujian terhadap hasil pekerjaan mereka. Namun, ketika memasuki materi pseudocode, peserta didik mulai mengalami kebingungan. Waktu pembelajaran juga banyak digunakan untuk memberikan penjelasan lebih lanjut mengenai pengerjaan LKPD, sehingga kegiatan pada materi pseudocode belum dapat diselesaikan sesuai rencana. Dari pengalaman ini, saya menyadari bahwa alokasi waktu dan tingkat kesulitan materi perlu lebih diperhatikan agar seluruh tahapan pembelajaran dapat terlaksana dengan baik.
+                            </p>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">3.</span>
+                                <span>Seberapa efektif penggunaan media pembelajaran untuk melibatkan partisipasi aktif di kelas?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Penggunaan media pembelajaran pada siklus kedua cukup membantu proses pembelajaran. Saya menggabungkan LKPD konvensional dengan simulasi melalui website agar peserta didik mendapatkan gambaran yang lebih jelas mengenai aktivitas yang harus dilakukan. Penggunaan media ini membantu peserta didik memahami materi flowchart dan mendorong mereka untuk terlibat dalam kegiatan praktik. Hal tersebut terlihat dari antusiasme beberapa peserta didik yang ingin maju ke depan untuk mencoba praktik. Namun, pada materi pseudocode, peserta didik masih mengalami kesulitan sehingga diperlukan penjelasan dan pendampingan lebih lanjut agar media yang digunakan dapat membantu pemahaman mereka secara optimal.
+                            </p>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">4.</span>
+                                <span>Bagaimana reaksi/respon murid dalam setiap kegiatan dari pembukaan hingga penutupan pembelajaran?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Peserta didik menunjukkan respons yang cukup positif, terutama ketika mempelajari flowchart. Mereka terlihat aktif dan antusias untuk mencoba praktik di depan kelas. Penggunaan contoh dari kehidupan sehari-hari serta simulasi website juga membantu memberikan gambaran mengenai materi yang dipelajari. Namun, ketika memasuki materi pseudocode, beberapa peserta didik mulai mengalami kebingungan dan membutuhkan penjelasan tambahan. Kondisi ini menjadi bahan refleksi bagi saya bahwa peserta didik dapat memberikan respons yang berbeda terhadap setiap materi, sehingga cara penyampaian dan pendampingan perlu disesuaikan dengan tingkat pemahaman mereka.
                             </p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between text-xs text-white/90">
-                        <span class="flex items-center gap-1.5"><i class="ph-bold ph-map-pin text-neon"></i> Lab Komputer SMA Negeri 4 Yogyakarta</span>
-                        <span class="font-mono bg-white/20 px-2.5 py-1 rounded-md backdrop-blur-sm">Google Drive Video</span>
+                <!-- Bagian B: Refleksi Pengalaman Belajar -->
+                <div class="space-y-5 pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center gap-2 text-emerald-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-graduation-cap text-lg"></i>
+                        <span>B. Refleksi Pengalaman Belajar</span>
                     </div>
-                </div>
 
-                <div class="video-iframe hidden absolute inset-0 w-full h-full bg-black flex items-center justify-center">
-                    <iframe class="w-full h-full" src="https://drive.google.com/file/d/13WZcE4aBwsbqw1d06_rNlHTB-TR9f2nA/preview" title="Video Pembelajaran Siklus 2" allow="autoplay" allowfullscreen></iframe>
-                </div>
-            </div>
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">1.</span>
+                                <span>Apakah umpan balik dari Guru Pamong untuk praktik pembelajaran mandiri yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Umpan balik dari guru pamong sudah cukup membantu pelaksanaan pembelajaran. Salah satu hal yang menjadi pengalaman positif adalah media pembelajaran yang saya gunakan juga dimanfaatkan oleh guru pamong untuk mencoba pembelajaran berbasis PBL. Hal ini memberikan pengalaman bagi saya bahwa media yang dikembangkan dapat digunakan sebagai alternatif pendukung pembelajaran. Selain itu, saya menyadari pentingnya terus mengevaluasi penggunaan media dan LKPD agar keduanya sesuai dengan kebutuhan serta kemampuan peserta didik.
+                            </p>
+                        </div>
 
-            <!-- Chapters -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
-                    <span class="font-mono font-bold text-royal-500 dark:text-neon">00:00 - 02:30</span>
-                    <strong class="block text-slate-800 dark:text-white mt-1">Apersepsi Masalah Nyata</strong>
-                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Penayangan skenario sistem kasir toko dan diskusi awal.</p>
-                </div>
-                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
-                    <span class="font-mono font-bold text-royal-500 dark:text-neon">02:30 - 07:45</span>
-                    <strong class="block text-slate-800 dark:text-white mt-1">Paparan Simbol ISO</strong>
-                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Visualisasi diagram alir dan logika percabangan IF-ELSE.</p>
-                </div>
-                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
-                    <span class="font-mono font-bold text-royal-500 dark:text-neon">07:45 - 12:10</span>
-                    <strong class="block text-slate-800 dark:text-white mt-1">Praktikum Mandiri &amp; Tim</strong>
-                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Penyusunan flowchart dan uji jejak dry run di komputer.</p>
-                </div>
-                <div class="p-3.5 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800">
-                    <span class="font-mono font-bold text-royal-500 dark:text-neon">12:10 - 15:18</span>
-                    <strong class="block text-slate-800 dark:text-white mt-1">Presentasi &amp; Uji Silang</strong>
-                    <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Uji coba kasus ekstrem antar kelompok dan penguatan guru.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. DOKUMENTASI KEGIATAN KELAS SIKLUS 2 -->
-        <section class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                    <span class="badge-primary">GALERI PRAKTIK LAPANGAN</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-                        Dokumentasi Kegiatan Siklus 2
-                    </h2>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                        Rekaman aktivitas peserta didik saat merancang dan menguji diagram alir di SMA Negeri 4 Yogyakarta:
-                    </p>
-                </div>
-                <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">4 Foto Dokumentasi</span>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
-                    <div class="aspect-[4/3] overflow-hidden relative">
-                        <img src="img/dokumentasi/dok-aktivitas1.jpg" alt="Praktikum Mandiri Penyusunan Flowchart" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">
-                            Praktikum Komputer
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">2.</span>
+                                <span>Apabila Anda akan melakukan perubahan terhadap metode pembelajaran, unsur apa yang akan Anda ubah untuk metode pembelajaran yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Apabila melakukan perbaikan pada pembelajaran berikutnya, saya akan lebih memperhatikan tingkat kesulitan LKPD yang diberikan kepada peserta didik. Instruksi dan tahapan pengerjaan perlu disusun secara lebih jelas, bertahap, dan disesuaikan dengan kemampuan peserta didik. Saya juga akan memperhitungkan waktu yang dibutuhkan untuk menjelaskan LKPD, memberikan kesempatan bertanya, dan melakukan praktik. Khusus untuk materi yang masih sulit dipahami, seperti pseudocode, saya akan menambahkan contoh sederhana dan memberikan pendampingan secara bertahap. Dengan demikian, peserta didik diharapkan dapat memahami materi dengan lebih baik dan menyelesaikan kegiatan pembelajaran sesuai dengan waktu yang tersedia.
+                            </p>
                         </div>
                     </div>
-                    <div class="p-4 space-y-1">
-                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Perancangan Diagram</h4>
-                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                            Siswa aktif mendesain struktur logika percabangan menggunakan aplikasi pembuat diagram alir.
-                        </p>
-                    </div>
                 </div>
 
-                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
-                    <div class="aspect-[4/3] overflow-hidden relative">
-                        <img src="img/dokumentasi/dok-presentasi1.jpg" alt="Presentasi Logika Algoritma di Depan Kelas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 left-3 bg-royal-600 text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">
-                            Uji Silang
+                <!-- Tanda Tangan & Pengesahan Resmi -->
+                <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Status Pengesahan Dokumen</span>
+                            <div class="text-xs font-bold text-slate-800 dark:text-slate-200">
+                                Ditetapkan pada: <span class="font-mono text-royal-600 dark:text-neon">Tanggal, 12 Oktober 2026</span>
+                            </div>
+                            <div class="text-[11px] text-slate-500 dark:text-slate-400">
+                                Terverifikasi dalam sistem e-Portofolio PPL PPG Prajabatan Universitas Negeri Yogyakarta
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[140px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Guru Pamong</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Titis Widowati, S.T.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[160px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Dosen Pembimbing Lapangan</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-4 space-y-1">
-                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Uji Silang Trace Table</h4>
-                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                            Kelompok menyajikan tabel uji jejak untuk membuktikan tidak ada loop tak terhingga pada programnya.
-                        </p>
-                    </div>
                 </div>
-
-                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
-                    <div class="aspect-[4/3] overflow-hidden relative">
-                        <img src="img/dokumentasi/dok-kolaborasi1.jpg" alt="Pendampingan Guru pada Siswa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 left-3 bg-neon text-black text-[10px] font-mono font-extrabold px-2.5 py-1 rounded-full">
-                            Scaffolding
-                        </div>
-                    </div>
-                    <div class="p-4 space-y-1">
-                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Bimbingan Terfokus</h4>
-                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                            Guru model mendampingi kelompok yang membutuhkan bantuan pada percabangan bertingkat (nested IF).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
-                    <div class="aspect-[4/3] overflow-hidden relative">
-                        <img src="img/dokumentasi/dok-evaluasi1.jpg" alt="Evaluasi Akhir Siklus 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">
-                            Evaluasi Formatif
-                        </div>
-                    </div>
-                    <div class="p-4 space-y-1">
-                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Refleksi &amp; Kuis</h4>
-                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                            Pengukuran ketercapaian pemahaman logika algoritma melalui tes penelusuran keluaran pseudocode.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. ANALISIS & EVALUASI SIKLUS 2 -->
-        <section class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                    <span class="badge-primary">EVALUASI HASIL BELAJAR</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-                        Analisis &amp; Refleksi Siklus 2
-                    </h2>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                        Data ketercapaian kompetensi logika pemrograman pada 108 siswa di SMA Negeri 4 Yogyakarta:
-                    </p>
-                </div>
-                <a href="analisis.html" class="inline-flex items-center gap-1.5 text-xs font-extrabold text-royal-500 dark:text-neon hover:underline">
-                    <span>Lihat Analisis Menyeluruh</span>
-                    <i class="ph-bold ph-arrow-right"></i>
-                </a>
             </div>
 
             <!-- METRIC STATS 4 CARDS -->
@@ -819,12 +1036,12 @@ SKENARIO LOGIKA:
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">94%</span>
                     <strong class="block text-xs text-slate-800 dark:text-white">Kemandirian Praktikum</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Siswa Menyelesaikan Trace</span>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Siswa Menyelesaikan Trace Table</span>
                 </div>
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">100%</span>
                     <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Problem-Based Learning</span>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Model Problem-Based Learning</span>
                 </div>
             </div>
 
@@ -846,7 +1063,7 @@ SKENARIO LOGIKA:
                     </div>
                     <h3 class="font-extrabold text-base text-slate-900 dark:text-white">2. Kendala / Tantangan</h3>
                     <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Beberapa siswa masih tertukar antara simbol <strong>Proses (Persegi Panjang)</strong> dan <strong>Input/Output (Jajar Genjang)</strong> ketika menulis instruksi pembacaan data diskon dari kasir.
+                        Beberapa siswa masih tertukar antara simbol <strong>Proses (Persegi Panjang)</strong> dan <strong>Input/Output (Jajar Genjang)</strong> serta mengalami kebingungan aturan sintaks saat memasuki notasi pseudocode.
                     </p>
                 </div>
 
@@ -858,6 +1075,90 @@ SKENARIO LOGIKA:
                     <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                         Melanjutkan ke <strong>Siklus 3 (Analisis Data &amp; Excel)</strong> dengan memanfaatkan logika formula IF dan LOOKUP langsung ke tabel spreadsheet riil agar pemahaman logika komputasional siswa terimplementasikan secara praktis.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             5. DOKUMENTASI KEGIATAN KELAS SIKLUS 2
+             ========================================== -->
+        <section id="section-dokumentasi" class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                    <span class="badge-primary">GALERI PRAKTIK LAPANGAN</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+                        Dokumentasi Kegiatan Siklus 2
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                        Rekaman aktivitas peserta didik saat merancang dan menguji diagram alir di SMA Negeri 4 Yogyakarta:
+                    </p>
+                </div>
+                <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400">4 Foto Dokumentasi</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Foto 1 -->
+                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="img/dokumentasi/dok-aktivitas1.jpg" alt="Praktikum Mandiri Penyusunan Flowchart" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 bg-black/60 backdrop-blur-md text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">
+                            Praktikum Komputer
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Perancangan Diagram</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Siswa aktif mendesain struktur logika percabangan menggunakan aplikasi pembuat diagram alir.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="img/dokumentasi/dok-diskusi1.jpg" alt="Diskusi Kolaboratif Kelompok" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 bg-royal-600 text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">
+                            Diskusi Kelompok
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Kolaborasi Tim Kasir</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Kelompok membedah aturan diskon koperasi dan menerjemahkannya ke baris pseudocode.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="img/dokumentasi/dok-presentasi2.jpg" alt="Presentasi Logika Algoritma di Depan Kelas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 bg-neon text-black text-[10px] font-mono font-extrabold px-2.5 py-1 rounded-full">
+                            Uji Silang
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Uji Silang Trace Table</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Perwakilan siswa menguji diagram alirnya di hadapan kelompok lain menggunakan data uji acak.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm group">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="img/dokumentasi/dok-evaluasi1.jpg" alt="Evaluasi Akhir & Refleksi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-mono font-bold px-2.5 py-1 rounded-full">
+                            Refleksi Akhir
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-1">
+                        <h4 class="font-extrabold text-xs text-slate-900 dark:text-white">Penguatan Guru Pamong</h4>
+                        <p class="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Guru memberikan umpan balik langsung terhadap akurasi simbol dan kesimpulan pembelajaran.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

@@ -228,3 +228,113 @@ function playCycleVideo(boxId, videoTitle) {
     }
     showToast('Memutar: ' + (videoTitle || 'Video Praktik Pembelajaran'));
 }
+
+// 9. PDF MODAL VIEWER SYSTEM
+function openPdfModal(pdfUrl, pdfTitle) {
+    let modal = document.getElementById('globalPdfModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'globalPdfModal';
+        modal.className = 'pdf-modal';
+        modal.innerHTML = `
+            <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="pdfModalTitle">
+                <div class="pdf-modal-header">
+                    <div class="flex items-center gap-2.5 overflow-hidden">
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-black uppercase font-mono bg-royal-500 text-white dark:bg-neon dark:text-black">
+                            <i class="ph-bold ph-file-pdf"></i> DOKUMEN RESMI PDF
+                        </span>
+                        <h3 id="pdfModalTitle" class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white truncate">
+                            Dokumen PDF
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <a id="pdfModalOpenTab" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs py-1.5 px-3 inline-flex items-center gap-1" title="Buka di Tab Baru">
+                            <i class="ph-bold ph-arrow-square-out"></i>
+                            <span class="hidden sm:inline">Buka Penuh</span>
+                        </a>
+                        <a id="pdfModalDownload" href="#" download class="btn-secondary text-xs py-1.5 px-3 inline-flex items-center gap-1" title="Unduh File">
+                            <i class="ph-bold ph-download-simple"></i>
+                            <span class="hidden sm:inline">Unduh</span>
+                        </a>
+                        <button type="button" onclick="closePdfModal()" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 font-bold transition-colors" aria-label="Tutup Pratinjau PDF">
+                            <i class="ph-bold ph-x text-base"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="pdf-modal-body">
+                    <iframe id="pdfModalIframe" class="w-full h-full border-0" src="" title="PDF Viewer"></iframe>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closePdfModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+                closePdfModal();
+            }
+        });
+    }
+
+    const titleEl = document.getElementById('pdfModalTitle');
+    const openTabEl = document.getElementById('pdfModalOpenTab');
+    const downloadEl = document.getElementById('pdfModalDownload');
+    const iframeEl = document.getElementById('pdfModalIframe');
+
+    if (titleEl) titleEl.textContent = pdfTitle || 'Pratinjau Dokumen PDF';
+    if (openTabEl) openTabEl.href = pdfUrl;
+    if (downloadEl) downloadEl.href = pdfUrl;
+    if (iframeEl) iframeEl.src = pdfUrl;
+
+    modal.classList.add('is-active');
+    document.body.style.overflow = 'hidden';
+    showToast('Membuka PDF: ' + (pdfTitle || 'Dokumen'));
+}
+
+function closePdfModal() {
+    const modal = document.getElementById('globalPdfModal');
+    if (!modal) return;
+    const iframeEl = document.getElementById('pdfModalIframe');
+    if (iframeEl) iframeEl.src = '';
+    modal.classList.remove('is-active');
+    document.body.style.overflow = '';
+}
+
+// 10. TOGGLE INLINE PDF EMBED VIEWER
+function togglePdfEmbed(embedId, triggerBtn) {
+    const box = document.getElementById(embedId);
+    if (!box) return;
+    const isHidden = box.classList.contains('hidden');
+    if (isHidden) {
+        box.classList.remove('hidden');
+        if (triggerBtn) {
+            triggerBtn.innerHTML = '<i class="ph-bold ph-eye-slash"></i> Sembunyikan Pratinjau PDF';
+        }
+        showToast('Menampilkan Pratinjau Dokumen');
+    } else {
+        box.classList.add('hidden');
+        if (triggerBtn) {
+            triggerBtn.innerHTML = '<i class="ph-bold ph-file-pdf"></i> Tampilkan Pratinjau PDF';
+        }
+        showToast('Pratinjau PDF Disembunyikan');
+    }
+}
+
+// 11. HASH-BASED TAB ACTIVATION
+function activateTabFromHash() {
+    const hash = window.location.hash ? window.location.hash.substring(1) : '';
+    if (!hash) return;
+    const targetPane = document.getElementById(hash);
+    if (targetPane && targetPane.classList.contains('cycle-tab-pane')) {
+        switchCycleTab(hash);
+        targetPane.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+window.addEventListener('DOMContentLoaded', activateTabFromHash);
+window.addEventListener('hashchange', activateTabFromHash);
+

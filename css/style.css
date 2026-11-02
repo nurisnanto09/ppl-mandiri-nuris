@@ -1774,3 +1774,143 @@ html.dark .ticker-marquee-wrapper {
     color: #000000;
     opacity: 0.85;
 }
+
+/* ===================================================
+   10. PDF MODAL VIEWER, INLINE EMBED & CYCLE SECTIONS
+   =================================================== */
+.pdf-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.pdf-modal.is-active {
+    display: flex;
+    animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.97); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.pdf-modal-dialog {
+    width: 100%;
+    max-width: 1100px;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5);
+}
+
+.pdf-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+    background-color: var(--bg-card);
+}
+
+.pdf-modal-body {
+    flex: 1;
+    width: 100%;
+    background-color: #1e1e24;
+    position: relative;
+}
+
+.pdf-embed-card {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    background-color: var(--bg-surface);
+    box-shadow: var(--shadow-md);
+}
+
+.pdf-embed-frame {
+    width: 100%;
+    height: 580px;
+    border: none;
+    background-color: #1e1e24;
+}
+
+/* Cycle Subnav Quick Jump */
+.cycle-section-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 0.5rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 1.5rem;
+}
+
+.cycle-section-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.cycle-section-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.cycle-section-nav-link:hover {
+    color: var(--text-main);
+    background-color: var(--bg-card-subtle);
+    border-color: var(--border-subtle);
+}
+
+/* LK Official Document Card */
+.lk-official-card {
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(126, 59, 237, 0.04) 0%, rgba(198, 255, 52, 0.04) 100%);
+    border: 1px solid var(--border-strong);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+html.dark .lk-official-card {
+    background: linear-gradient(135deg, rgba(18, 11, 34, 0.95) 0%, rgba(30, 20, 50, 0.95) 100%);
+    border-color: rgba(126, 59, 237, 0.3);
+}
+
+.lk-qa-box {
+    border-left: 3px solid #7E3BED;
+    padding: 1.15rem 1.35rem;
+    border-radius: 0 16px 16px 0;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+html.dark .lk-qa-box {
+    border-left-color: var(--accent-neon);
+}
+
