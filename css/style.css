@@ -184,7 +184,7 @@ html.dark .badge-blue {
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 2rem);
-    max-width: 1140px;
+    max-width: calc(1280px - 4rem); /* 1216px: Persis sama dengan lebar isi konten/banner */
     z-index: 100;
     background-color: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(20px);
@@ -194,6 +194,20 @@ html.dark .badge-blue {
     box-shadow: 0 12px 36px -6px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     padding: 0 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .top-navbar {
+        width: calc(100% - 3rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .top-navbar {
+        width: calc(100% - 4rem);
+        max-width: calc(1280px - 4rem); /* 1216px - Persis sejajar garis lurus tepi konten */
+        padding: 0 1.5rem;
+    }
 }
 
 html.dark .top-navbar {
