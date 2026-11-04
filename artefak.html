@@ -94,8 +94,6 @@
                 <!-- Desktop Navigation Menu -->
                 <nav class="nav-menu-links">
                     <a href="index.html" class="nav-item">Beranda</a>
-                    <a href="profil.html" class="nav-item">Profil</a>
-                    
                     <!-- Dropdown Pilihan Artefak (Active) -->
                     <div class="nav-dropdown">
                         <button class="nav-dropdown-btn active" aria-haspopup="true">
@@ -141,10 +139,10 @@
                             </a>
                             <div class="nav-dropdown-divider"></div>
                             <a href="non-mengajar.html" class="nav-dropdown-item">
-                                <span class="nav-cycle-badge">05</span>
+                                <span class="nav-cycle-badge"><i class="ph-bold ph-briefcase"></i></span>
                                 <div>
                                     <strong>Non-Mengajar</strong>
-                                    <small>SPACE-IN &amp; Revitalisasi Lab</small>
+                                    <small>Piket, Panitia 17an, Inovasi &amp; Lab TKA</small>
                                 </div>
                             </a>
                         </div>
@@ -180,7 +178,7 @@
                 <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
                 <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3 (Excel)</a>
                 <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4 (Sistem Operasi)</a>
-                <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (SPACE-IN)</a>
+                <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (Piket, 17an &amp; Lab TKA)</a>
                 <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">3. Analisis</a>
                 <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
             </div>
@@ -206,12 +204,39 @@
         <!-- Quick Jump Navigation (Pilihan Artefak) -->
         <div class="cycle-jump-menu">
             <span class="text-xs font-bold text-slate-500 dark:text-slate-400 self-center px-2">Pilihan Artefak:</span>
+            <a href="profil.html" class="cycle-jump-btn"><i class="ph-bold ph-user text-royal-500 dark:text-neon"></i> Profil Pendidik</a>
             <a href="#siklus-1" class="cycle-jump-btn"><i class="ph-fill ph-arrow-circle-right text-royal-500 dark:text-neon"></i> Siklus 1</a>
             <a href="#siklus-2" class="cycle-jump-btn"><i class="ph-fill ph-arrow-circle-right text-royal-500 dark:text-neon"></i> Siklus 2</a>
             <a href="#siklus-3" class="cycle-jump-btn"><i class="ph-fill ph-arrow-circle-right text-royal-500 dark:text-neon"></i> Siklus 3</a>
             <a href="#siklus-4" class="cycle-jump-btn"><i class="ph-fill ph-arrow-circle-right text-royal-500 dark:text-neon"></i> Siklus 4</a>
-            <a href="#non-mengajar" class="cycle-jump-btn"><i class="ph-fill ph-buildings"></i> Non-Mengajar</a>
+            <a href="#non-mengajar" class="cycle-jump-btn"><i class="ph-bold ph-briefcase text-royal-500 dark:text-neon"></i> Non-Mengajar</a>
             <a href="#lk-evaluasi" class="cycle-jump-btn"><i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon"></i> LK 4.1 - 4.4 (Refleksi)</a>
+        </div>
+
+        <!-- Profil Pendidik Quick Access Card -->
+        <div class="mb-10 p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-5">
+            <div class="flex items-center gap-4">
+                <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-royal-500/30 dark:border-neon/30 shrink-0 shadow-md">
+                    <img src="img/nuris.png" alt="Nur Isnanto Nugroho, S.Pd." class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="badge-blue text-[10px]">PROFIL GURU PRAKTIKAN</span>
+                        <span class="badge-slate text-[10px]">PPG UNY GEL. 2 2024</span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white">
+                        Nur Isnanto Nugroho, S.Pd.
+                    </h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">
+                        Guru Informatika &bull; SMA Negeri 4 Yogyakarta &bull; NIM: 24105260275
+                    </p>
+                </div>
+            </div>
+            <a href="profil.html" class="btn-primary-cta text-xs py-2 px-4 shrink-0 inline-flex items-center gap-2">
+                <i class="ph-bold ph-user text-sm"></i>
+                <span>Lihat Profil Lengkap</span>
+                <i class="ph-bold ph-arrow-right text-xs"></i>
+            </a>
         </div>
 
         <!-- ====================================================
@@ -1311,49 +1336,52 @@
                         </div>
                     </details>
                 </article>
-                        </div>
-                    </details>
-                </article>
             </div>
         </div>
 
         <!-- ====================================================
-             SUB-SECTION 5: ARTEFAK NON-MENGAJAR (4 ITEM)
+             SUB-SECTION 5: ARTEFAK NON-MENGAJAR (7 ITEM)
              ==================================================== -->
-        <div id="non-mengajar" class="scroll-mt-24 mb-10">
+        <div id="non-mengajar" class="scroll-mt-24 mb-14">
             <div class="cycle-header-banner">
                 <div>
                     <span class="badge-neon">KATEGORI 2 — ARTEFAK NON-MENGAJAR</span>
-                    <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Inovasi Sistem "SPACE-IN PATBHE", Kajian PTK, &amp; Manajemen Kemitraan</h2>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Kontribusi nyata di luar jam mengajar kelas untuk mendukung digitalisasi sarana dan kultur budaya sekolah di SMAN 4 Yogyakarta.</p>
+                    <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Pengabdian Sekolah, Kepanitiaan 17-an, Inovasi DIY, Lab TKA, Pengawas ASTS &amp; Kepemimpinan</h2>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Dokumentasi 7 kontribusi nyata di luar jam mengajar kelas dalam mendukung manajemen operasional, kesiswaan, prestasi karya inovasi guru tingkat Provinsi DIY, pengawasan asesmen, dan infrastruktur teknologi di SMAN 4 Yogyakarta.</p>
                 </div>
-                <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">4 Karya Utama</span>
+                <div class="flex items-center gap-2 shrink-0">
+                    <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon">7 Kegiatan Lengkap</span>
+                    <a href="non-mengajar.html" class="btn-primary-cta text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
+                        <span>Halaman Penuh</span>
+                        <i class="ph-bold ph-arrow-right text-xs"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="grid-cards-2">
+            <div class="grid grid-cols-1 gap-5">
                 <!-- NM-01 -->
                 <article class="artifact-card artifact-card-highlight">
                     <div class="space-y-2.5">
                         <div class="flex items-center justify-between">
-                            <span class="badge-neon">Inovasi Sistem</span>
+                            <span class="badge-blue">Layanan Sekolah</span>
                             <span class="font-mono text-xs font-extrabold text-slate-400">NM-01</span>
                         </div>
-                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">Aplikasi Web Sarpras</span>
-                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Aplikasi Web "SPACE-IN PATBHE" — Peminjaman Sarpras Sekolah</h3>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">1. Layanan Piket Lobby</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Piket Lobby: Tamu, Perizinan &amp; Presensi</h3>
                         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Aplikasi web terintegrasi mendigitalisasi peminjaman ruangan, inventaris barang, dan sarana operasional di SMAN 4 Yogyakarta tanpa bentrok jadwal.
+                            Pelayanan resepsionis sekolah, penyambutan tamu kedinasan, pengelolaan izin keluar-masuk siswa, dan pencatatan presensi harian secara tertib.
                         </p>
                     </div>
                     <details class="artifact-accordion">
                         <summary class="artifact-summary">
-                            <span>Buka Pratinjau Dokumen</span>
+                            <span>Buka Ringkasan Kegiatan</span>
                             <i class="ph-bold ph-caret-down"></i>
                         </summary>
                         <div class="artifact-drawer">
                             <ul class="space-y-1 text-xs">
-                                <li>✦ <strong>Real-Time Schedule:</strong> Pengecekan ketersediaan ruang dan barang secara terbuka.</li>
-                                <li>✦ <strong>Cloud API:</strong> Web Frontend terhubung Google Sheets API &amp; Apps Script.</li>
-                                <li>✦ <strong>Admin Dashboard:</strong> Panel persetujuan terpusat bagi staf sarpras.</li>
+                                <li>✦ <strong>Penerimaan Tamu:</strong> Standar pelayanan prima 5S bagi tamu dinas dan orang tua/wali murid.</li>
+                                <li>✦ <strong>Perizinan Siswa:</strong> Verifikasi surat tugas &amp; izin dispensasi keluar lingkungan sekolah.</li>
+                                <li>✦ <strong>Presensi:</strong> Rekapitulasi absensi harian berkoordinasi dengan guru piket dan wali kelas.</li>
                             </ul>
                         </div>
                     </details>
@@ -1363,51 +1391,65 @@
                 <article class="artifact-card">
                     <div class="space-y-2.5">
                         <div class="flex items-center justify-between">
-                            <span class="badge-neon">Publikasi &amp; Sosialisasi</span>
+                            <span class="badge-blue">Kepanitiaan</span>
                             <span class="font-mono text-xs font-extrabold text-slate-400">NM-02</span>
                         </div>
-                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">Buku Panduan &amp; Banner</span>
-                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Buku Panduan Pengguna &amp; Standing Banner Sosialisasi SPACE-IN</h3>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">2. Peringatan HUT RI Ke-79</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Kepanitiaan 17-an HUT RI Ke-79</h3>
                         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Pedoman teknis langkah demi langkah berilustrasi dan desain standing banner ber-QR Code untuk sosialisasi kepada seluruh warga sekolah.
+                            Kepanitiaan peringatan HUT RI Ke-79 di SMAN 4 Yogyakarta: memandu aneka lomba kemerdekaan antarkelas, upacara bendera, dan pembinaan karakter sportivitas.
                         </p>
                     </div>
                     <details class="artifact-accordion">
                         <summary class="artifact-summary">
-                            <span>Buka Pratinjau Dokumen</span>
+                            <span>Buka Ringkasan Kegiatan</span>
                             <i class="ph-bold ph-caret-down"></i>
                         </summary>
                         <div class="artifact-drawer">
                             <ul class="space-y-1 text-xs">
-                                <li>✦ <strong>Buku Panduan:</strong> Panduan cetak &amp; PDF lengkap anotasi antarmuka.</li>
-                                <li>✦ <strong>Standing Banner:</strong> Media informasi 60x160 cm di area strategis sekolah.</li>
+                                <li>✦ <strong>Lomba Kemerdekaan:</strong> Mengoordinasi lomba ketangkasan, kekompakan &amp; seni antarkelas.</li>
+                                <li>✦ <strong>Upacara Bendera:</strong> Menjaga kekhidmatan dan kelancaran tata upacara 17 Agustus.</li>
+                                <li>✦ <strong>Nasionalisme:</strong> Menumbuhkan jiwa cinta tanah air, gotong royong, dan kolaborasi siswa.</li>
                             </ul>
                         </div>
                     </details>
                 </article>
 
                 <!-- NM-03 -->
-                <article class="artifact-card">
+                <article class="artifact-card border-royal-500/40 dark:border-neon/40 shadow-sm">
                     <div class="space-y-2.5">
                         <div class="flex items-center justify-between">
-                            <span class="badge-neon">Penelitian Ilmiah</span>
+                            <span class="badge-neon">Tingkat Provinsi DIY</span>
                             <span class="font-mono text-xs font-extrabold text-slate-400">NM-03</span>
                         </div>
-                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">Laporan PTK</span>
-                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Laporan Penelitian Tindakan Kelas (PTK) &amp; Kajian Reflektif</h3>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">3. Kompetisi Karya Inovasi Guru</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Lomba Inovasi Tingkat Provinsi D.I. Yogyakarta</h3>
                         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Dokumentasi kajian ilmiah reflektif peningkatan pemahaman konsep algoritma dan sistem komputer melalui media simulasi web dan Job Sheet bertahap.
+                            Mengikuti kompetisi karya inovasi pembelajaran pendidik tingkat Provinsi DIY: naskah proposal resmi <em>"Patbhe Digital Center"</em> dan video presentasi demonstrasi fitur secara mandiri.
                         </p>
+                    </div>
+                    <div class="pt-2 pb-1 border-t border-slate-100 dark:border-slate-800 space-y-1.5">
+                        <div class="grid grid-cols-2 gap-1.5">
+                            <button type="button" onclick="openPdfModal('pdf/non%20pendidikan/Proposal%20Patbhe%20Digital%20Center.pdf', 'Proposal Inovasi: Patbhe Digital Center (Tingkat Provinsi DIY)')" class="btn-primary-cta text-xs py-1.5 px-2 inline-flex items-center justify-center gap-1">
+                                <i class="ph-bold ph-file-pdf text-neon"></i>
+                                <span>Proposal PDF</span>
+                            </button>
+                            <button type="button" onclick="openDriveVideoModal('cnggKrH9JxI', 'Video Lomba Karya Inovasi Tingkat Provinsi DIY', 'Provinsi DIY')" class="btn-primary-cta text-xs py-1.5 px-2 inline-flex items-center justify-center gap-1">
+                                <i class="ph-fill ph-play text-red-500"></i>
+                                <span>Video YouTube</span>
+                            </button>
+                        </div>
                     </div>
                     <details class="artifact-accordion">
                         <summary class="artifact-summary">
-                            <span>Buka Pratinjau Dokumen</span>
+                            <span>Buka Ringkasan Kegiatan</span>
                             <i class="ph-bold ph-caret-down"></i>
                         </summary>
                         <div class="artifact-drawer">
                             <ul class="space-y-1 text-xs">
-                                <li>✦ <strong>Lintasan Siklus:</strong> Analisis progres ketuntasan belajar dari 78% ke 94%.</li>
-                                <li>✦ <strong>Efektivitas Job Sheet:</strong> Membantu menurunkan beban kognitif translasi sintaks.</li>
+                                <li>✦ <strong>Naskah Proposal:</strong> <em>Proposal Patbhe Digital Center.pdf</em> (445 KB) &ndash; naskah resmi seleksi tingkat Provinsi D.I. Yogyakarta.</li>
+                                <li>✦ <strong>Produksi &amp; Editing:</strong> Storyboarding, rekaman layar, &amp; editing video demonstrasi fitur di YouTube.</li>
+                                <li>✦ <strong>Ajang Provinsi:</strong> Berbagi praktik baik media ajar digital di tingkat Provinsi D.I. Yogyakarta.</li>
                             </ul>
                         </div>
                     </details>
@@ -1417,27 +1459,108 @@
                 <article class="artifact-card">
                     <div class="space-y-2.5">
                         <div class="flex items-center justify-between">
-                            <span class="badge-neon">Kultur Sekolah</span>
+                            <span class="badge-blue">Infrastruktur &amp; Asesmen</span>
                             <span class="font-mono text-xs font-extrabold text-slate-400">NM-04</span>
                         </div>
-                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">Piket &amp; Bela Negara AAU</span>
-                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Layanan Piket Akademik &amp; Pendampingan Bela Negara AAU</h3>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">4. Penataan Lab Komputer</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Penataan Lab Komputer Persiapan TKA</h3>
                         <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Dokumentasi keterlibatan aktif dalam administrasi manajemen sekolah, piket layanan akademik, serta pendampingan pelatihan karakter Bela Negara bersama AAU.
+                            Standardisasi laboratorium komputer menyambut Tes Kemampuan Akademik (TKA): manajemen perapian kabel (cable management) dan uji koneksi 36 unit PC client.
                         </p>
                     </div>
                     <details class="artifact-accordion">
                         <summary class="artifact-summary">
-                            <span>Buka Pratinjau Dokumen</span>
+                            <span>Buka Ringkasan Kegiatan</span>
                             <i class="ph-bold ph-caret-down"></i>
                         </summary>
                         <div class="artifact-drawer">
                             <ul class="space-y-1 text-xs">
-                                <li>✦ <strong>Piket Akademik:</strong> Presensi kehadiran siswa dan koordinasi penugasan kelas.</li>
-                                <li>✦ <strong>Bela Negara AAU:</strong> Pendampingan kedisiplinan dan kepemimpinan siswa.</li>
+                                <li>✦ <strong>Cable Management:</strong> Penataan kabel LAN UTP Cat6 dan kelistrikan 36 meja lab.</li>
+                                <li>✦ <strong>Hardware &amp; Software:</strong> Standardisasi layar, OS, dan browser pengujian TKA.</li>
+                                <li>✦ <strong>Konektivitas Jaringan:</strong> Pengujian koneksi ke server lokal dengan latensi minimal.</li>
                             </ul>
                         </div>
                     </details>
+                </article>
+
+                <!-- NM-05 -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Pengawasan</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">NM-05</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">5. Pengawas Ruang Asesmen</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Pengawas Asesmen ASTS</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Tugas pengawasan ruang Asesmen Sumatif Tengah Semester (ASTS): menjaga integritas ujian, ketertiban ruang, verifikasi presensi, dan asistensi teknis ujian.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Ringkasan Kegiatan</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Integritas Ruang:</strong> Mengawal ketertiban dan kejujuran akademik peserta ujian.</li>
+                                <li>✦ <strong>Asistensi Teknis:</strong> Mendampingi siswa saat terjadi kendala perangkat ujian digital.</li>
+                                <li>✦ <strong>Administrasi:</strong> Penyusunan berita acara pengawasan dan rekapitulasi kehadiran.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- NM-06 -->
+                <article class="artifact-card">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="badge-blue">Kesiswaan</span>
+                            <span class="font-mono text-xs font-extrabold text-slate-400">NM-06</span>
+                        </div>
+                        <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">6. Pembinaan Karakter</span>
+                        <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Proyek Kepemimpinan Siswa</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Mendampingi kelompok siswa merancang dan merealisasikan proyek kepemimpinan yang menumbuhkan dimensi mandiri, gotong royong, dan nalar kritis.
+                        </p>
+                    </div>
+                    <details class="artifact-accordion">
+                        <summary class="artifact-summary">
+                            <span>Buka Ringkasan Kegiatan</span>
+                            <i class="ph-bold ph-caret-down"></i>
+                        </summary>
+                        <div class="artifact-drawer">
+                            <ul class="space-y-1 text-xs">
+                                <li>✦ <strong>Fasilitasi Tim:</strong> Membimbing inisiatif sosial dan pembagian peran kerja tim siswa.</li>
+                                <li>✦ <strong>Profil Pancasila:</strong> Penguatan karakter kepemimpinan, kolaborasi, dan tanggung jawab.</li>
+                                <li>✦ <strong>Refleksi Capaian:</strong> Evaluasi keberhasilan proyek dan pelaporan pertanggungjawaban.</li>
+                            </ul>
+                        </div>
+                    </details>
+                </article>
+
+                <!-- NM-07 -->
+                <article class="artifact-card md:col-span-2 lg:col-span-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <span class="badge-neon">Serial Dokumentasi</span>
+                                <span class="font-mono text-xs font-extrabold text-slate-400">NM-07</span>
+                            </div>
+                            <span class="text-xs font-extrabold text-royal-600 dark:text-neon block">7. Dokumentasi Berkala Sarana &amp; Prasarana</span>
+                            <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Serial 16 Video Laporan Mingguan Revitalisasi Sekolah</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+                                Serial komprehensif 16 episode video mingguan (Minggu Ke-2 s.d. Minggu Ke-17) pembenahan, pemeliharaan fasilitas, dan revitalisasi lingkungan belajar SMAN 4 Yogyakarta yang kini dapat ditonton instan melalui pop-up pemutar video interaktif.
+                            </p>
+                        </div>
+                        <div class="shrink-0">
+                            <a href="non-mengajar.html#video-revitalisasi" class="btn-primary-cta text-xs py-2 px-4 inline-flex items-center gap-1.5">
+                                <i class="ph-bold ph-video-camera"></i>
+                                <span>Buka 16 Video di Halaman Non-Mengajar</span>
+                                <i class="ph-bold ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </article>
             </div>
         </div>
@@ -1473,7 +1596,7 @@
                             Evaluasi kendala jadwal, apersepsi analogi mi instan, dan adaptasi pembelajaran transisi fase E di kelas X.
                         </p>
                         <div class="pt-2 flex flex-wrap items-center gap-2">
-                            <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.1%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.1 Refleksi Praktik Siklus 1')" class="btn-primary-cta text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
+                            <button type="button" onclick="openPdfModal('pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-29-31.pdf', 'LK 4.1 Refleksi Praktik Siklus 1')" class="btn-primary-cta text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
                                 <i class="ph-bold ph-file-pdf"></i>
                                 <span>View PDF</span>
                             </button>
@@ -1498,7 +1621,7 @@
                             Evaluasi implementasi simulasi web, antusiasme diagram alir, dan kendala transisi notasi pseudocode.
                         </p>
                         <div class="pt-2 flex flex-wrap items-center gap-2">
-                            <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.2 Refleksi Praktik Siklus 2')" class="btn-primary-cta text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
+                            <button type="button" onclick="openPdfModal('pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-32-34.pdf', 'LK 4.2 Refleksi Praktik Siklus 2')" class="btn-primary-cta text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
                                 <i class="ph-bold ph-file-pdf"></i>
                                 <span>View PDF</span>
                             </button>
@@ -1523,7 +1646,7 @@
                             Evaluasi penerapan model PjBL, efektivitas jobsheet bertahap, dan pentingnya scaffolding kecepatan demonstrasi.
                         </p>
                         <div class="pt-2 flex flex-wrap items-center gap-2">
-                            <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.3 Refleksi Praktik Siklus 3')" class="btn-primary-cta text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
+                            <button type="button" onclick="openPdfModal('pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-35-37.pdf', 'LK 4.3 Refleksi Praktik Siklus 3')" class="btn-primary-cta text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
                                 <i class="ph-bold ph-file-pdf"></i>
                                 <span>View PDF</span>
                             </button>
@@ -1548,7 +1671,7 @@
                             Evaluasi Discovery Learning pada konsep IPO, media simulasi arsitektur, dan integrasi emosional peserta didik.
                         </p>
                         <div class="pt-2 flex flex-wrap items-center gap-2">
-                            <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.4 Refleksi Praktik Siklus 4')" class="btn-primary-cta text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
+                            <button type="button" onclick="openPdfModal('pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-38-40.pdf', 'LK 4.4 Refleksi Praktik Siklus 4')" class="btn-primary-cta text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
                                 <i class="ph-bold ph-file-pdf"></i>
                                 <span>View PDF</span>
                             </button>
@@ -1567,30 +1690,225 @@
     <!-- ==========================================
          FULL-WIDTH FOOTER
          ========================================== -->
-    <footer class="site-footer">
-        <div class="site-container">
-            <div class="footer-content">
-                <div class="flex items-center gap-3">
-                    <div class="brand-logo" style="width: 2.25rem; height: 2.25rem;">
-                        <img src="img/Icon Logo Putih.png" alt="porto-pplm-nuris">
+    <!-- ==========================================
+         PREMIUM INTERACTIVE FOOTER
+         ========================================== -->
+    <footer class="site-footer bg-slate-950 text-slate-300 dark:bg-[#070314] dark:text-slate-400 border-t border-slate-800/80 pt-14 pb-8 transition-colors">
+        <div class="site-container space-y-12">
+            
+            <!-- Top Callout Card (Identity & Quick Actions) -->
+            <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-royal-900/60 via-purple-950/40 to-slate-900/60 border border-royal-500/30 dark:border-neon/20 shadow-xl backdrop-blur-md flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                <div class="flex items-start sm:items-center gap-4">
+                    <div class="w-14 h-14 rounded-2xl bg-royal-600/30 dark:bg-neon/10 border border-royal-400/40 dark:border-neon/30 p-2.5 flex items-center justify-center shrink-0 shadow-inner">
+                        <img src="img/Icon Logo Putih.png" alt="PORTOFOLIO PPLM" class="w-full h-full object-contain">
                     </div>
-                    <div>
-                        <div class="font-extrabold text-slate-900 dark:text-white font-mono text-sm">porto-pplm-nuris</div>
-                        <div class="text-xs text-slate-500 dark:text-slate-400">Nur Isnanto Nugroho, S.Pd. &bull; PPL SMA Negeri 4 Yogyakarta &bull; PPG UNY</div>
+                    <div class="space-y-1">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase font-mono bg-neon text-black">
+                                REPOSITORI RESMI PPL PPG
+                            </span>
+                            <span class="text-xs font-mono font-bold text-slate-400">
+                                SMAN 4 Yogyakarta &bull; UNY
+                            </span>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-black text-white tracking-tight">
+                            Portofolio Praktik Pengalaman Lapangan Mandiri (PPLM)
+                        </h3>
+                        <p class="text-xs text-slate-300 dark:text-slate-400 leading-relaxed max-w-2xl">
+                            Dokumentasi utuh siklus pembelajaran Informatika Fase E berbasis kurikulum merdeka, asesmen terintegrasi, dan dedikasi aktivitas pengabdian sekolah di SMA Negeri 4 Yogyakarta.
+                        </p>
                     </div>
                 </div>
-                <div class="flex flex-wrap items-center gap-4 text-xs font-bold">
-                    <a href="index.html" class="hover:text-royal-500 dark:hover:text-neon">Beranda</a>
-                    <a href="profil.html" class="hover:text-royal-500 dark:hover:text-neon">Profil</a>
-                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
-                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
-                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 3</a>
-                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 4</a>
-                    <a href="non-mengajar.html" class="hover:text-royal-500 dark:hover:text-neon">Non-Mengajar</a>
-                    <a href="analisis.html" class="hover:text-royal-500 dark:hover:text-neon">Analisis</a>
-                    <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>
+                <div class="flex flex-wrap items-center gap-3 shrink-0">
+                    <a href="artefak.html" class="btn-primary-cta text-xs py-2.5 px-4 inline-flex items-center gap-2 shadow-lg hover:scale-105 active:scale-95 transition-all">
+                        <i class="ph-bold ph-files"></i>
+                        <span>Lihat Semua Artefak</span>
+                    </a>
+                    <button type="button" onclick="scrollToTop()" class="btn-secondary text-xs py-2.5 px-3.5 inline-flex items-center gap-1.5 text-white border-white/20 hover:bg-white/10 transition-all" title="Kembali ke Bagian Atas Halaman">
+                        <i class="ph-bold ph-arrow-up text-sm"></i>
+                        <span>Ke Atas</span>
+                    </button>
                 </div>
             </div>
+
+            <!-- Main 4-Column Directory Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 text-xs">
+                
+                <!-- Col 1: Profil Pendidik & Institusi (4 Cols) -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="space-y-1">
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-neon font-mono">Pendidik &amp; Pembimbing</span>
+                        <h4 class="text-base font-extrabold text-white">Nur Isnanto Nugroho, S.Pd.</h4>
+                        <p class="text-slate-400 leading-relaxed text-[11px]">
+                            Guru Model PPL PPG Informatika &bull; Mahasiswa PPG Guru Tertentu Universitas Negeri Yogyakarta (UNY).
+                        </p>
+                    </div>
+                    <div class="space-y-2 p-3.5 rounded-xl bg-slate-900/80 dark:bg-royal-950/40 border border-slate-800 text-[11px]">
+                        <div class="flex items-start gap-2">
+                            <i class="ph-bold ph-chalkboard-teacher text-royal-400 dark:text-neon mt-0.5 shrink-0"></i>
+                            <div>
+                                <span class="text-slate-400 block">Dosen Pembimbing Lapangan:</span>
+                                <strong class="text-slate-200">Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2 pt-2 border-t border-slate-800/80">
+                            <i class="ph-bold ph-user-check text-royal-400 dark:text-neon mt-0.5 shrink-0"></i>
+                            <div>
+                                <span class="text-slate-400 block">Guru Pamong Informatika:</span>
+                                <strong class="text-slate-200">Titis Widowati, S.T.</strong>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2 pt-2 border-t border-slate-800/80">
+                            <i class="ph-bold ph-buildings text-royal-400 dark:text-neon mt-0.5 shrink-0"></i>
+                            <div>
+                                <span class="text-slate-400 block">Mitra Sekolah:</span>
+                                <strong class="text-slate-200">SMA Negeri 4 Yogyakarta (Patbhe)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Praktik Pembelajaran 4 Siklus (3 Cols) -->
+                <div class="lg:col-span-3 space-y-3">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-neon font-mono">Praktik Pembelajaran</span>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>
+                            <a href="siklus-1.html" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Siklus 1: Struktur Data &amp; Algoritma</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="siklus-2.html" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Siklus 2: Flowchart &amp; Pseudocode</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="siklus-3.html" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Siklus 3: Pengolahan Angka Excel</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="siklus-4.html" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Siklus 4: Sistem Operasi &amp; PSE</span>
+                            </a>
+                        </li>
+                        <li class="pt-2 border-t border-slate-800/80">
+                            <span class="inline-flex items-center gap-1.5 text-[11px] text-slate-500">
+                                <i class="ph-bold ph-map-pin text-neon"></i> S1, S2, S4 di Kelas &bull; S3 di Lab PC
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Pengabdian & Inovasi (3 Cols) -->
+                <div class="lg:col-span-3 space-y-3">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-neon font-mono">Aktivitas Non-Mengajar</span>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>
+                            <a href="non-mengajar.html#section-artefak" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Piket Lobby &amp; Layanan 5S</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="non-mengajar.html#section-artefak" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Kepanitiaan 17-an HUT RI Ke-79</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="non-mengajar.html#section-artefak" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Lomba Inovasi DIY (Patbhe Center)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="non-mengajar.html#section-artefak" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Penataan Lab Komputer TKA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="non-mengajar.html#section-artefak" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Tugas Pengawas Asesmen ASTS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="non-mengajar.html#section-artefak" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Proyek Kepemimpinan Siswa</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="non-mengajar.html#video-revitalisasi" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-caret-right text-royal-400 text-[10px]"></i>
+                                <span>Serial 16 Video Revitalisasi</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Evaluasi & Navigasi (2 Cols) -->
+                <div class="lg:col-span-2 space-y-3">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-neon font-mono">Evaluasi &amp; Tautan</span>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>
+                            <a href="index.html" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-house text-royal-400 text-[10px]"></i>
+                                <span>Beranda Utama</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profil.html" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-user text-royal-400 text-[10px]"></i>
+                                <span>Profil Pendidik</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="artefak.html" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-folder-open text-royal-400 text-[10px]"></i>
+                                <span>24 Artefak Dokumen</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analisis.html" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-chart-bar text-royal-400 text-[10px]"></i>
+                                <span>Analisis Hasil KBM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="refleksi.html" class="hover:text-neon flex items-center gap-2 transition-colors">
+                                <i class="ph-bold ph-arrow-clockwise text-royal-400 text-[10px]"></i>
+                                <span>Refleksi &amp; RTL</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Sub-Footer Bar -->
+            <div class="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+                <div class="flex items-center gap-2 text-center sm:text-left">
+                    <span>&copy; 2026 <strong>Nur Isnanto Nugroho, S.Pd.</strong> &bull; Portofolio PPLM PPG UNY. Seluruh hak cipta dilindungi.</span>
+                </div>
+                <div class="flex flex-wrap items-center gap-4 text-xs font-mono">
+                    <span class="inline-flex items-center gap-1.5 text-slate-400">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>Terverifikasi Guru Pamong &amp; DPL</span>
+                    </span>
+                    <button type="button" onclick="scrollToTop()" class="hover:text-neon flex items-center gap-1 text-slate-400 transition-colors">
+                        <span>Ke Atas</span>
+                        <i class="ph-bold ph-arrow-up text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
         </div>
     </footer>
 

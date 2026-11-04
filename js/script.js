@@ -412,3 +412,203 @@ function activateTabFromHash() {
 window.addEventListener('DOMContentLoaded', activateTabFromHash);
 window.addEventListener('hashchange', activateTabFromHash);
 
+
+
+// ========================================================
+// GLOBAL VIDEO PREVIEW MODAL (POP-UP GOOGLE DRIVE & YOUTUBE PREVIEW)
+// ========================================================
+function openDriveVideoModal(videoSource, videoTitle, weekBadge) {
+    let previewUrl = '';
+    let externalUrl = '';
+    let isYouTube = false;
+
+    // Deteksi YouTube Video (URL / ID)
+    const ytMatch = videoSource.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+    if (ytMatch || videoSource === 'cnggKrH9JxI') {
+        const ytId = ytMatch ? ytMatch[1] : videoSource;
+        previewUrl = 'https://www.youtube-nocookie.com/embed/' + ytId + '?autoplay=1&rel=0';
+        externalUrl = 'https://youtu.be/' + ytId;
+        isYouTube = true;
+    } else {
+        // Google Drive Video
+        let fileId = videoSource;
+        const match = videoSource.match(/\/d\/([a-zA-Z0-9_-]+)/);
+        if (match) fileId = match[1];
+        previewUrl = 'https://drive.google.com/file/d/' + fileId + '/preview';
+        externalUrl = 'https://drive.google.com/file/d/' + fileId + '/view?usp=sharing';
+    }
+
+    let modal = document.getElementById('globalVideoModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'globalVideoModal';
+        modal.className = 'video-modal';
+        modal.innerHTML = `
+            <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+                <div class="video-modal-header">
+                    <div class="flex items-center gap-2 max-w-[70%]">
+                        <span id="videoModalBadge" class="badge-blue text-[11px] font-mono shrink-0">Video</span>
+                        <h3 id="videoModalTitle" class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white truncate">
+                            Pratinjau Video
+                        </h3>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <a id="videoModalDriveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs py-1.5 px-3 inline-flex items-center gap-1.5">
+                            <i id="videoModalLinkIcon" class="ph-bold ph-google-drive-logo text-emerald-500"></i>
+                            <span id="videoModalLinkText" class="hidden sm:inline">Buka Sumber</span>
+                            <i class="ph-bold ph-arrow-square-out text-[10px]"></i>
+                        </a>
+                        <button type="button" onclick="closeDriveVideoModal()" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 font-bold transition-colors" aria-label="Tutup Video">
+                            <i class="ph-bold ph-x text-base"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="video-modal-body">
+                    <iframe id="videoModalIframe" class="w-full h-full border-0" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeDriveVideoModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+                closeDriveVideoModal();
+            }
+        });
+    }
+
+    const titleEl = document.getElementById('videoModalTitle');
+    const badgeEl = document.getElementById('videoModalBadge');
+    const linkEl = document.getElementById('videoModalDriveLink');
+    const linkIcon = document.getElementById('videoModalLinkIcon');
+    const linkText = document.getElementById('videoModalLinkText');
+    const iframeEl = document.getElementById('videoModalIframe');
+
+    if (titleEl) titleEl.textContent = videoTitle || 'Pratinjau Video';
+    if (badgeEl) badgeEl.textContent = weekBadge || (isYouTube ? 'YouTube Video' : 'Google Drive');
+    if (linkEl) {
+        linkEl.href = externalUrl;
+        if (isYouTube) {
+            linkEl.title = 'Buka di YouTube (Tab Baru)';
+            if (linkIcon) linkIcon.className = 'ph-bold ph-youtube-logo text-red-500';
+            if (linkText) linkText.textContent = 'Buka YouTube';
+        } else {
+            linkEl.title = 'Buka di Google Drive (Tab Baru)';
+            if (linkIcon) linkIcon.className = 'ph-bold ph-google-drive-logo text-emerald-500';
+            if (linkText) linkText.textContent = 'Buka di Drive';
+        }
+    }
+    if (iframeEl) iframeEl.src = previewUrl;
+
+    modal.classList.add('is-active');
+    document.body.classList.add('modal-open');
+}
+
+function closeDriveVideoModal() {
+    const modal = document.getElementById('globalVideoModal');
+    if (!modal) return;
+    const iframeEl = document.getElementById('videoModalIframe');
+    if (iframeEl) iframeEl.src = '';
+    modal.classList.remove('is-active');
+    document.body.classList.remove('modal-open');
+}
+
+// ========================================================
+// NON-MENGAJAR PER-ACTIVITY INTERACTIVE PHOTO SLIDERS
+// ========================================================
+const activityGalleries = {
+    nm01: [
+        { src: 'img/dokumentasi/piket-lobby-1.jpg', caption: 'Pelayanan Tamu Kedinasan & Presensi di Meja Resepsionis Lobby' },
+        { src: 'img/dokumentasi/piket-lobby-2.jpg', caption: 'Penerapan Budaya 5S (Senyum, Sapa, Salam, Sopan, Santun) Tamu Sekolah' },
+        { src: 'img/dokumentasi/piket-lobby-3.jpg', caption: 'Pengelolaan Administrasi Perizinan & Rekapitulasi Presensi Siswa' }
+    ],
+    nm02: [
+        { src: 'img/dokumentasi/panitia-17an-1.jpg', caption: 'Upacara Peringatan HUT RI Ke-79 Bersama Tim Paskibra SMAN 4' },
+        { src: 'img/dokumentasi/panitia-17an-2.jpg', caption: 'Koordinasi Dewan Guru & Panitia Perlombaan Kemerdekaan' },
+        { src: 'img/dokumentasi/panitia-17an-3.jpg', caption: 'Pemanduan & Wasit Lomba Ketangkasan Antarkelas yang Sportif' },
+        { src: 'img/dokumentasi/panitia-17an-4.jpg', caption: 'Penyerahan Apresiasi & Hadiah Juara Lomba Kemerdekaan' },
+        { src: 'img/dokumentasi/panitia-17an-5.jpg', caption: 'Dokumentasi Bersama Seluruh Panitia Pendidik & Pengurus OSIS' }
+    ],
+    nm03: [
+        { src: 'img/dokumentasi/lomba-inovasi-1.jpg', caption: 'Penyusunan Proposal Naskah Inovasi: Patbhe Digital Center' },
+        { src: 'img/dokumentasi/lomba-inovasi-2.jpg', caption: 'Produksi & Video Editing Karya Inovasi Tingkat Provinsi DIY' }
+    ],
+    nm04: [
+        { src: 'img/dokumentasi/menata-lab-1.jpg', caption: 'Penataan Ergonomis 36 Unit PC Workstation Lab Komputer' },
+        { src: 'img/dokumentasi/menata-lab-2.jpg', caption: 'Pengujian Stabilitas Jaringan LAN & Server Asesmen TKA' }
+    ],
+    nm05: [
+        { src: 'img/dokumentasi/pengawas-asts-1.jpg', caption: 'Pengawasan Ruang Asesmen Sumatif Tengah Semester (ASTS)' },
+        { src: 'img/dokumentasi/pengawas-asts-2.jpg', caption: 'Pemeriksaan Kehadiran, Kartu Peserta & Kesiapan Perangkat Ujian' },
+        { src: 'img/dokumentasi/pengawas-asts-3.jpg', caption: 'Monitoring Integritas & Kepatuhan Tata Tertib Ujian Berbasis Komputer' },
+        { src: 'img/dokumentasi/pengawas-asts-4.jpg', caption: 'Penandatanganan Berita Acara Pelaksanaan Asesmen Bersama Proktor' }
+    ],
+    nm06: [
+        { src: 'img/dokumentasi/proyek-kepemimpinan-1.jpg', caption: 'Fasilitasi Sesi Curah Pendapat & Ideasi Proyek Kepemimpinan' },
+        { src: 'img/dokumentasi/proyek-kepemimpinan-2.jpg', caption: 'Bimbingan Teknis Penyusunan Rencana Kerja & Anggaran Aksi' },
+        { src: 'img/dokumentasi/proyek-kepemimpinan-3.jpg', caption: 'Simulasi Lapangan & Koordinasi Tim Pelaksana Siswa' },
+        { src: 'img/dokumentasi/proyek-kepemimpinan-4.jpg', caption: 'Monitoring Dinamika Kelompok & Pelatihan Problem Solving' },
+        { src: 'img/dokumentasi/proyek-kepemimpinan-5.jpg', caption: 'Pendampingan Presentasi Progres di Hadapan Audiens Sekolah' },
+        { src: 'img/dokumentasi/proyek-kepemimpinan-6.jpg', caption: 'Refleksi Bersama, Pengukuran Dampak & Evaluasi Pasca Proyek' }
+    ]
+};
+
+const activityCurrentIdx = { nm01: 0, nm02: 0, nm03: 0, nm04: 0, nm05: 0, nm06: 0 };
+
+function setActivitySlide(actId, idx) {
+    const list = activityGalleries[actId];
+    if (!list) return;
+    if (idx < 0) idx = list.length - 1;
+    if (idx >= list.length) idx = 0;
+    activityCurrentIdx[actId] = idx;
+
+    const imgEl = document.getElementById(`slide-img-${actId}`);
+    const capEl = document.getElementById(`slide-cap-${actId}`);
+    const countEl = document.getElementById(`slide-count-${actId}`);
+
+    if (imgEl) {
+        imgEl.style.opacity = '0.3';
+        setTimeout(() => {
+            imgEl.src = list[idx].src;
+            imgEl.alt = list[idx].caption;
+            imgEl.style.opacity = '1';
+        }, 120);
+    }
+    if (capEl) capEl.textContent = list[idx].caption;
+    if (countEl) {
+        const cur = String(idx + 1).padStart(2, '0');
+        const tot = String(list.length).padStart(2, '0');
+        countEl.textContent = `${cur} / ${tot}`;
+    }
+
+    // Update active thumbnail styling
+    const thumbs = document.querySelectorAll(`.thumb-${actId}`);
+    thumbs.forEach((th, i) => {
+        if (i === idx) {
+            th.classList.add('border-royal-500', 'dark:border-neon', 'ring-2', 'ring-royal-500/40', 'opacity-100');
+            th.classList.remove('border-transparent', 'opacity-60');
+        } else {
+            th.classList.remove('border-royal-500', 'dark:border-neon', 'ring-2', 'ring-royal-500/40', 'opacity-100');
+            th.classList.add('border-transparent', 'opacity-60');
+        }
+    });
+}
+
+function nextActivitySlide(actId) {
+    setActivitySlide(actId, (activityCurrentIdx[actId] || 0) + 1);
+}
+
+function prevActivitySlide(actId) {
+    setActivitySlide(actId, (activityCurrentIdx[actId] || 0) - 1);
+}
+
+// ========================================================
+// SMOOTH SCROLL TO TOP HELPER
+// ========================================================
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

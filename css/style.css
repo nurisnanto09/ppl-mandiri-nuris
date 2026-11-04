@@ -1230,26 +1230,9 @@ html.dark .cico-box:hover {
 /* 12. FULL-WIDTH FOOTER */
 .site-footer {
     width: 100%;
-    background-color: var(--bg-surface);
-    border-top: 1px solid var(--border-subtle);
-    padding: 3rem 0;
-    margin-top: 4rem;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8125rem;
-    color: var(--text-muted);
-}
-
-@media (min-width: 640px) {
-    .footer-content {
-        flex-direction: row;
-    }
+    margin-top: 5rem;
+    position: relative;
+    overflow: hidden;
 }
 
 /* 13. TOAST POPUP (Hidden by default) */
@@ -1667,19 +1650,20 @@ html.dark .siklus-browse-section {
 }
 
 .organic-photo-frame {
-    border-radius: 48px 20px 48px 48px;
+    border-radius: 36px;
     overflow: hidden;
     position: relative;
     background: #7E3BED;
-    border: 3px solid rgba(198, 255, 52, 0.35);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    border: 3px solid rgba(198, 255, 52, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
 .organic-photo-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    object-position: center top;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .organic-photo-frame:hover img {
@@ -1994,3 +1978,398 @@ html.dark .lk-qa-box {
     border-left-color: var(--accent-neon);
 }
 
+
+
+/* ========================================================
+   GLOBAL VIDEO PREVIEW MODAL (POP-UP DRIVE PREVIEW)
+   ======================================================== */
+.video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.video-modal.is-active {
+    display: flex;
+    animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.video-modal-dialog {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.6);
+}
+
+.video-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1.25rem;
+    border-bottom: 1px solid var(--border-subtle);
+    background-color: var(--bg-card);
+}
+
+.video-modal-body {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    position: relative;
+}
+
+.slider-thumb-btn {
+    transition: all 0.25s ease;
+}
+.slider-thumb-btn:hover {
+    opacity: 1 !important;
+    transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   17. MEDIA QUERIES RESPONSIVE KHUSUS SMARTPHONE / HP
+   ============================================================ */
+
+@media (max-width: 768px) {
+    /* 1. Pencegahan Scroll Horizontal & Smooth Touch */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* 2. Container & Padding Halaman Mobile */
+    .site-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .page-main {
+        padding-top: 5.5rem !important;
+        padding-bottom: 3.5rem !important;
+    }
+
+    .page-header-top {
+        padding-top: 5.75rem !important;
+        padding-bottom: 2.25rem !important;
+    }
+
+    .section-block {
+        margin-bottom: 3.5rem !important;
+        scroll-margin-top: 4.5rem !important;
+    }
+
+    /* 3. Header Navbar & Menu Mobile */
+    .top-navbar {
+        padding-top: 0.65rem !important;
+        padding-bottom: 0.65rem !important;
+    }
+
+    .mobile-dropdown {
+        padding: 0.85rem !important;
+        border-radius: 20px !important;
+        margin-top: 0.5rem !important;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .mobile-dropdown.show {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+    }
+
+    .mobile-dropdown a {
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0.6rem 0.5rem !important;
+        font-size: 0.725rem !important;
+        line-height: 1.25 !important;
+    }
+
+    /* 4. Signature Hero Section (Beranda) */
+    .hero-signature {
+        padding-top: 5rem !important;
+        padding-bottom: 2.5rem !important;
+        min-height: auto !important;
+    }
+
+    .hero-sub-title {
+        font-size: 0.7rem !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 0.25rem !important;
+        max-width: 95% !important;
+    }
+
+    .hero-huge-title {
+        font-size: clamp(3.2rem, 15vw, 5.5rem) !important;
+        letter-spacing: 1px !important;
+        top: 25% !important;
+        line-height: 0.9 !important;
+    }
+
+    .hero-photo-wrapper {
+        max-width: 330px !important;
+        margin-top: 1rem !important;
+    }
+
+    .hero-tag-guru {
+        top: 20% !important;
+        left: 4% !important;
+        font-size: 0.725rem !important;
+        padding: 6px 14px !important;
+        gap: 4px !important;
+    }
+
+    .hero-tag-role {
+        bottom: 12% !important;
+        right: 4% !important;
+        font-size: 0.7rem !important;
+        padding: 6px 14px !important;
+        gap: 6px !important;
+    }
+
+    .hero-profile-card-glass {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        margin: 1.25rem auto 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 16px 18px !important;
+        border-radius: 18px !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .hero-profile-card-glass h3 {
+        font-size: 0.875rem !important;
+    }
+
+    .hero-profile-card-glass p {
+        font-size: 0.725rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .hero-exp-seal {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        width: 96px !important;
+        height: 96px !important;
+        margin: 1.25rem auto 0 !important;
+    }
+
+    .hero-exp-seal-text {
+        font-size: 1.25rem !important;
+    }
+
+    .hero-exp-seal-svg text {
+        font-size: 14px !important;
+        letter-spacing: 2px !important;
+    }
+
+    .hero-cta-launch {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        margin: 1.25rem auto 0 !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .hero-btn-open {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 10px 20px !important;
+    }
+
+    /* 5. Siklus Browse Section & Frame Foto Profil */
+    .siklus-browse-section {
+        padding: 1.5rem 1rem !important;
+        border-radius: 24px !important;
+    }
+
+    .siklus-browse-section h2 {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .siklus-item-row {
+        padding: 0.85rem 0.75rem !important;
+        border-radius: 14px !important;
+    }
+
+    .siklus-item-row .w-10 {
+        width: 2.25rem !important;
+        height: 2.25rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .siklus-item-row .text-base {
+        font-size: 0.925rem !important;
+    }
+
+    .siklus-item-row .text-xs {
+        font-size: 0.7rem !important;
+    }
+
+    .siklus-arrow-circle {
+        width: 32px !important;
+        height: 32px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .organic-photo-frame {
+        border-radius: 24px !important;
+        min-height: 380px !important;
+        max-height: 480px !important;
+    }
+
+    /* 6. Tabs Navigasi Pembelajaran */
+    .cycle-tab-nav,
+    .cycle-section-nav {
+        display: flex !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        gap: 0.4rem !important;
+        padding: 0.4rem !important;
+        border-radius: 14px !important;
+    }
+
+    .cycle-tab-nav::-webkit-scrollbar,
+    .cycle-section-nav::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .cycle-tab-btn,
+    .cycle-section-nav-link {
+        white-space: nowrap !important;
+        padding: 0.55rem 0.85rem !important;
+        font-size: 0.725rem !important;
+        flex-shrink: 0 !important;
+        border-radius: 10px !important;
+    }
+
+    /* 7. PDF Embed Viewer & Iframes di HP */
+    .pdf-embed-box iframe,
+    .pdf-embed-frame,
+    iframe[title*="RPP"],
+    iframe[title*="LKPD"],
+    iframe[title*="Buku Pegangan"],
+    iframe[title*="Asesmen"] {
+        height: 440px !important;
+        max-height: 65vh !important;
+        border-radius: 12px !important;
+    }
+
+    /* 8. Modals Dialog (PDF & Video Pop-up) */
+    .video-modal,
+    .pdf-modal {
+        padding: 0.5rem !important;
+    }
+
+    .video-modal-dialog,
+    .pdf-modal-dialog {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 18px !important;
+        max-height: 94vh !important;
+    }
+
+    .video-modal-header,
+    .pdf-modal-header {
+        padding: 0.65rem 0.85rem !important;
+    }
+
+    .video-modal-header h4,
+    .pdf-modal-header h4 {
+        font-size: 0.75rem !important;
+        max-width: 68% !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* 9. Tombol Aksi & Kartu Artefak */
+    .artifact-card {
+        padding: 1.25rem 1rem !important;
+        border-radius: 20px !important;
+    }
+
+    .btn-primary-cta,
+    .btn-secondary {
+        min-height: 38px !important;
+        font-size: 0.725rem !important;
+    }
+
+    /* 10. Carousel Thumbnail Foto */
+    .slider-thumb-btn {
+        width: 58px !important;
+        height: 40px !important;
+        flex-shrink: 0 !important;
+    }
+}
+
+/* ============================================================
+   EKSTRA KECIL: HP LAYAR RAMPING (MAX-WIDTH: 480PX)
+   ============================================================ */
+@media (max-width: 480px) {
+    .site-container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+
+    .mobile-dropdown.show {
+        grid-template-columns: 1fr !important;
+        gap: 0.4rem !important;
+    }
+
+    .hero-huge-title {
+        font-size: 2.85rem !important;
+        top: 24% !important;
+    }
+
+    .hero-photo-wrapper {
+        max-width: 280px !important;
+    }
+
+    .hero-tag-guru {
+        top: 19% !important;
+        left: 2% !important;
+        font-size: 0.68rem !important;
+        padding: 5px 10px !important;
+    }
+
+    .hero-tag-role {
+        bottom: 10% !important;
+        right: 2% !important;
+        font-size: 0.65rem !important;
+        padding: 5px 10px !important;
+    }
+
+    .organic-photo-frame {
+        min-height: 340px !important;
+    }
+
+    .siklus-browse-section h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .hero-signature {
+        padding-top: 4.5rem !important;
+    }
+}
