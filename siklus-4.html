@@ -712,68 +712,186 @@ RINGKASAN BUKU PEGANGAN 5 (SISTEM OPERASI):
 
                 <!-- TAB 5: LKPD SIKLUS 4 -->
                 <div id="tab-lkpd-s4" class="cycle-tab-pane hidden">
-                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-8 shadow-md">
+                        <!-- HEADER TAB LKPD S4 -->
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
                                     <span class="badge-blue">KODE: S4-LK</span>
-                                    <span class="badge-slate font-mono text-[11px]">Lembar Kerja Terintegrasi</span>
+                                    <span class="badge-slate font-mono text-[11px]">2 Pertemuan Terstruktur (Atas &amp; Bawah)</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Eksplorasi Mandiri
+                                        <i class="ph-bold ph-browsers"></i> Live Web EduInformatika
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    LKPD Praktik: Eksplorasi Arsitektur Von Neumann &amp; Siklus IPO
+                                    LKPD Praktik Siklus 4: Sistem Operasi &amp; Arsitektur Komputer
                                 </h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Lembar penyelidikan digital yang memadukan pengamatan proses komputasi CPU dan asesmen refleksi emosional siswa.
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl leading-relaxed">
+                                    Lembar Kerja Peserta Didik digital interaktif yang disusun bertingkat atas ke bawah (Pertemuan 1 &amp; Pertemuan 2), memadukan penyelidikan lapisan sistem operasi dengan simulasi langsung siklus mesin Arsitektur Von Neumann dan penguatan Pembelajaran Sosial Emosional (PSE).
                                 </p>
                             </div>
                             <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <a href="artefak.html#lkpd4" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
-                                    <i class="ph-bold ph-file-text"></i>
-                                    <span>Detail LKPD</span>
+                                <a href="#lkpd-s4-p1" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-arrow-down"></i>
+                                    <span>Pertemuan 1</span>
                                 </a>
-                                <button type="button" onclick="copyToClipboard('LKPD Siklus 4 - PPG UNY 2026')" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-copy"></i>
-                                    <span>Salin Info</span>
-                                </button>
+                                <a href="#lkpd-s4-p2" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-down"></i>
+                                    <span>Pertemuan 2</span>
+                                </a>
+                                <a href="artefak.html#lkpd4" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Detail Artefak</span>
+                                </a>
                             </div>
                         </div>
 
+                        <!-- OVERVIEW SPECS -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format Lembar Kerja</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Digital Form &amp; Cetak 2 Sisi</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Struktur LKPD</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">2 Sesi (Atas &amp; Bawah)</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Waktu Praktik</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">30 Menit Eksplorasi Simulator</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Platform Pelaksanaan</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">EduInformatika (Vercel Web App)</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Fokus Pengamatan</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Alamat Memori (Hex) &amp; Register</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Pertemuan 1 (Atas)</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">LKPD Sistem Operasi (Onion)</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Evaluasi Akhir</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Refleksi Roda Emosi (PSE)</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Pertemuan 2 (Bawah)</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">LKPD Arsitektur Von Neumann</strong>
                             </div>
                         </div>
 
-                        <div class="space-y-3">
-                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-detective text-royal-500 dark:text-neon"></i>
-                                Lembar Eksplorasi LKPD Siklus 4:
-                            </h4>
-                            <div class="code-preview-block text-xs leading-relaxed">
-STUDI KASUS LKPD S4: "Menelusuri Perjalanan Tombol Keyboard Hingga Muncul Huruf di Monitor"
-LANGKAH INVESTIGASI:
-1. Buka tautan Simulator Arsitektur Von Neumann pada layar komputer masing-masing.
-2. Masukkan instruksi perhitungan: 25 + 17.
-3. Catat di tabel LKPD:
-   - Ke alamat memori mana angka 25 pertama kali disimpan?
-   - Kapan ALU menyala dan menghasilkan nilai 42?
-4. Jawab pertanyaan refleksi emosional: "Apa yang kamu rasakan saat melihat komputer ternyata bekerja sangat logis dan tidak misterius lagi?"
+                        <!-- ========================================================
+                             BAGIAN 1 (ATAS): LKPD PERTEMUAN 1 — SISTEM OPERASI
+                             ======================================================== -->
+                        <div id="lkpd-s4-p1" class="p-5 sm:p-7 rounded-2xl bg-slate-50 dark:bg-royal-950/50 border border-slate-200/90 dark:border-slate-800 space-y-5 shadow-sm scroll-mt-28">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200/70 dark:border-slate-800">
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2">
+                                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[11px] font-black bg-royal-600 text-white dark:bg-royal-700 font-mono">
+                                            <i class="ph-bold ph-number-circle-one"></i> PERTEMUAN 1
+                                        </span>
+                                        <span class="badge-blue font-mono text-[10px]">Lapisan Onion &amp; Peran Kernel</span>
+                                    </div>
+                                    <h4 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">
+                                        LKPD Pertemuan 1: Sistem Operasi &amp; Lapisan Abstraksi Komputer
+                                    </h4>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+                                        Lembar penyelidikan digital peran Sistem Operasi sebagai jembatan antara Brainware (pengguna), Aplikasi, Shell/GUI, Kernel, dan Perangkat Keras.
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <a href="https://eduinformatika.vercel.app/lkpd_sistem_operasi.html" target="_blank" rel="noopener noreferrer" class="btn-primary-cta text-xs py-2 px-3.5 inline-flex items-center gap-1.5">
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                        <span>Buka Tab Baru</span>
+                                    </a>
+                                    <button type="button" onclick="copyToClipboard('https://eduinformatika.vercel.app/lkpd_sistem_operasi.html')" class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1">
+                                        <i class="ph-bold ph-copy"></i>
+                                        <span>Salin URL</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- LIVE EMBED IFRAME PERTEMUAN 1 -->
+                            <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#120B22] shadow-sm">
+                                <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800 text-xs">
+                                    <span class="font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                        <i class="ph-bold ph-globe text-royal-500 dark:text-neon"></i>
+                                        Live Interaktif: lkpd_sistem_operasi.html
+                                    </span>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">eduinformatika.vercel.app</span>
+                                        <a href="https://eduinformatika.vercel.app/lkpd_sistem_operasi.html" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                            <span>Layar Penuh</span>
+                                            <i class="ph-bold ph-arrow-square-out"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <iframe loading="lazy" src="https://eduinformatika.vercel.app/lkpd_sistem_operasi.html" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="LKPD Pertemuan 1: Sistem Operasi"></iframe>
+                            </div>
+
+                            <div class="space-y-2 pt-1 text-xs">
+                                <h5 class="font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-check-square-offset text-royal-500 dark:text-neon"></i>
+                                    Fokus Penyelidikan Pertemuan 1:
+                                </h5>
+                                <div class="code-preview-block leading-relaxed">
+AKTIVITAS LKPD PERTEMUAN 1 (SISTEM OPERASI):
+1. Apersepsi PSE: Menilai kesiapan belajar dan emosi sebelum materi dimulai.
+2. Onion Model: Menganalisis peran Kernel mengisolasi hardware dari aplikasi pengguna.
+3. Multitasking & Resource Sharing: Menyelidiki alokasi CPU Time dan RAM pada proses aplikasi aktif.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ========================================================
+                             BAGIAN 2 (BAWAH): LKPD PERTEMUAN 2 — ARSITEKTUR VON NEUMANN
+                             ======================================================== -->
+                        <div id="lkpd-s4-p2" class="p-5 sm:p-7 rounded-2xl bg-slate-50 dark:bg-royal-950/50 border border-slate-200/90 dark:border-slate-800 space-y-5 shadow-sm scroll-mt-28">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200/70 dark:border-slate-800">
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2">
+                                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[11px] font-black bg-cyan-600 text-white dark:bg-cyan-700 font-mono">
+                                            <i class="ph-bold ph-number-circle-two"></i> PERTEMUAN 2
+                                        </span>
+                                        <span class="badge-blue font-mono text-[10px]">Von Neumann, ALU &amp; Siklus IPO</span>
+                                    </div>
+                                    <h4 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">
+                                        LKPD Pertemuan 2: Arsitektur Von Neumann &amp; Siklus IPO Mesin
+                                    </h4>
+                                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+                                        Lembar penyelidikan digital interaktif dengan simulator alur bus data, pemodelan instruksi CPU Register, operasi logika ALU, dan siklus Fetch-Decode-Execute.
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <a href="https://eduinformatika.vercel.app/page_von_neumann.html" target="_blank" rel="noopener noreferrer" class="btn-primary-cta text-xs py-2 px-3.5 inline-flex items-center gap-1.5">
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                        <span>Buka Tab Baru</span>
+                                    </a>
+                                    <button type="button" onclick="copyToClipboard('https://eduinformatika.vercel.app/page_von_neumann.html')" class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1">
+                                        <i class="ph-bold ph-copy"></i>
+                                        <span>Salin URL</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- LIVE EMBED IFRAME PERTEMUAN 2 -->
+                            <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#120B22] shadow-sm">
+                                <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800 text-xs">
+                                    <span class="font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-cyan-500 animate-pulse"></span>
+                                        <i class="ph-bold ph-cpu text-royal-500 dark:text-neon"></i>
+                                        Live Interaktif: page_von_neumann.html
+                                    </span>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">eduinformatika.vercel.app</span>
+                                        <a href="https://eduinformatika.vercel.app/page_von_neumann.html" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                            <span>Layar Penuh</span>
+                                            <i class="ph-bold ph-arrow-square-out"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <iframe loading="lazy" src="https://eduinformatika.vercel.app/page_von_neumann.html" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="LKPD Pertemuan 2: Arsitektur Von Neumann"></iframe>
+                            </div>
+
+                            <div class="space-y-2 pt-1 text-xs">
+                                <h5 class="font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-check-square-offset text-royal-500 dark:text-neon"></i>
+                                    Fokus Penyelidikan Pertemuan 2:
+                                </h5>
+                                <div class="code-preview-block leading-relaxed">
+AKTIVITAS LKPD PERTEMUAN 2 (ARSITEKTUR VON NEUMANN):
+1. Input Data Keyboard: Menelusuri konversi keystroke menjadi bilangan biner (Hex) pada Register Input.
+2. Kalkulasi ALU: Mempraktikkan operasi logika (AND, OR, ADD) dan mengamati lampu status aktif.
+3. Siklus IPO Lengkap: Membuktikan bagaimana CPU Fetch instruksi dari RAM hingga memunculkan Output.
+4. Refleksi Emosional PSE: Mengisi formulir evaluasi pemahaman perasaan setelah memahami cara kerja komputer.
+                                </div>
                             </div>
                         </div>
                     </div>
