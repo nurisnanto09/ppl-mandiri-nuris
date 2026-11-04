@@ -208,16 +208,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavDropdowns();
     initNavbarScroll();
     activateTabFromHash();
-    initInlinePdfViewers();
-});
+    });
 
 // Jalankan juga segera jika DOM sudah siap
 if (document.readyState !== 'loading') {
     initLoader();
     initNavDropdowns();
     initNavbarScroll();
-    initInlinePdfViewers();
-}
+    }
 
 
 // 7.1 SWITCHER TAB LEMBAR KERJA (LK) 4 DI HALAMAN ANALISIS
@@ -290,23 +288,10 @@ function playCycleVideo(boxId, videoTitle) {
     showToast('Memutar: ' + (videoTitle || 'Video Praktik Pembelajaran'));
 }
 
-// 9. PDF.JS HTML5 CANVAS ENGINE & ZERO AUTO-DOWNLOAD VIEWER
-if (typeof pdfjsLib !== 'undefined') {
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'js/pdf.worker.min.js';
-}
-
-// 9.1 GLOBAL PDF MODAL CANVAS VIEWER
-let currentModalDoc = null;
-let currentModalPage = 1;
-let currentModalTotalPages = 1;
-let currentModalScale = 1.0;
-let modalRenderTask = null;
-let currentModalUrl = '';
-
+// 9. NATIVE PDF MODAL VIEWER SYSTEM
 function openPdfModal(pdfUrl, pdfTitle) {
     if (!pdfUrl) return;
     const cleanUrl = pdfUrl.split('#')[0];
-    currentModalUrl = cleanUrl;
 
     let modal = document.getElementById('globalPdfModal');
     if (!modal) {
@@ -325,59 +310,30 @@ function openPdfModal(pdfUrl, pdfTitle) {
                         </h3>
                     </div>
                     <div class="flex items-center gap-2 shrink-0">
-                        <a id="pdfModalDownload" href="#" download class="btn-secondary text-xs py-1.5 px-3 inline-flex items-center gap-1" title="Unduh Berkas PDF">
+                        <a id="pdfModalOpenTab" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs py-1.5 px-3 inline-flex items-center gap-1" title="Buka di Tab Baru">
+                            <i class="ph-bold ph-arrow-square-out"></i>
+                            <span class="hidden sm:inline">Buka Tab Baru</span>
+                        </a>
+                        <a id="pdfModalDownload" href="#" download class="btn-secondary text-xs py-1.5 px-3 inline-flex items-center gap-1" title="Unduh File">
                             <i class="ph-bold ph-download-simple"></i>
-                            <span class="hidden sm:inline">Unduh PDF</span>
+                            <span class="hidden sm:inline">Unduh</span>
                         </a>
                         <button type="button" onclick="closePdfModal()" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 font-bold transition-colors" aria-label="Tutup Pratinjau PDF">
                             <i class="ph-bold ph-x text-base"></i>
                         </button>
                     </div>
                 </div>
-
-                <div class="pdf-canvas-toolbar">
-                    <div class="flex items-center gap-1.5 sm:gap-2">
-                        <button type="button" id="modalPdfPrevBtn" class="px-2.5 py-1 rounded bg-royal-600 hover:bg-royal-500 text-white font-bold text-xs inline-flex items-center gap-1 disabled:opacity-40 disabled:cursor-not-allowed transition-all">
-                            <i class="ph-bold ph-caret-left"></i>
-                            <span class="hidden xs:inline">Prev</span>
-                        </button>
-                        <span id="modalPdfPageNum" class="font-mono text-xs px-2.5 py-1 rounded bg-black/40 text-royal-200 font-semibold border border-royal-500/20">
-                            Hal 1 / 1
-                        </span>
-                        <button type="button" id="modalPdfNextBtn" class="px-2.5 py-1 rounded bg-royal-600 hover:bg-royal-500 text-white font-bold text-xs inline-flex items-center gap-1 disabled:opacity-40 disabled:cursor-not-allowed transition-all">
-                            <span class="hidden xs:inline">Next</span>
-                            <i class="ph-bold ph-caret-right"></i>
-                        </button>
-                    </div>
-                    <div class="flex items-center gap-1.5">
-                        <button type="button" id="modalPdfZoomOutBtn" class="w-7 h-7 rounded bg-royal-900/60 hover:bg-royal-800 text-white flex items-center justify-center font-bold text-xs border border-royal-500/30 transition-all" title="Perkecil (-)">
-                            <i class="ph-bold ph-minus"></i>
-                        </button>
-                        <span id="modalPdfZoomVal" class="font-mono text-xs px-2 text-slate-300 font-semibold min-w-[48px] text-center">
-                            100%
-                        </span>
-                        <button type="button" id="modalPdfZoomInBtn" class="w-7 h-7 rounded bg-royal-900/60 hover:bg-royal-800 text-white flex items-center justify-center font-bold text-xs border border-royal-500/30 transition-all" title="Perbesar (+)">
-                            <i class="ph-bold ph-plus"></i>
-                        </button>
-                        <button type="button" id="modalPdfFitBtn" class="px-2 py-1 rounded bg-royal-900/60 hover:bg-royal-800 text-royal-200 hover:text-white text-xs font-semibold border border-royal-500/30 transition-all" title="Sesuaikan Lebar Layar">
-                            Fit Layar
-                        </button>
-                    </div>
-                </div>
-
-                <div id="pdfModalViewerContainer" class="pdf-canvas-viewport">
-                    <div id="modalPdfLoading" class="pdf-canvas-loading">
-                        <div class="w-10 h-10 border-4 border-royal-500 border-t-transparent rounded-full animate-spin"></div>
-                        <span class="text-xs text-slate-400 font-mono">Memuat dokumen PDF...</span>
-                    </div>
-                    <canvas id="pdfModalCanvas" class="pdf-rendered-canvas hidden"></canvas>
+                <div class="pdf-modal-body">
+                    <iframe id="pdfModalIframe" class="w-full h-full border-0" src="" title="PDF Viewer"></iframe>
                 </div>
             </div>
         `;
         document.body.appendChild(modal);
 
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) closePdfModal();
+            if (e.target === modal) {
+                closePdfModal();
+            }
         });
 
         document.addEventListener('keydown', (e) => {
@@ -385,414 +341,32 @@ function openPdfModal(pdfUrl, pdfTitle) {
                 closePdfModal();
             }
         });
-
-        document.getElementById('modalPdfPrevBtn').addEventListener('click', () => {
-            if (currentModalDoc && currentModalPage > 1) {
-                currentModalPage--;
-                renderModalPdfPage();
-            }
-        });
-
-        document.getElementById('modalPdfNextBtn').addEventListener('click', () => {
-            if (currentModalDoc && currentModalPage < currentModalTotalPages) {
-                currentModalPage++;
-                renderModalPdfPage();
-            }
-        });
-
-        document.getElementById('modalPdfZoomInBtn').addEventListener('click', () => {
-            if (!currentModalDoc) return;
-            currentModalScale = Math.min(currentModalScale + 0.25, 3.0);
-            renderModalPdfPage();
-        });
-
-        document.getElementById('modalPdfZoomOutBtn').addEventListener('click', () => {
-            if (!currentModalDoc) return;
-            currentModalScale = Math.max(currentModalScale - 0.25, 0.5);
-            renderModalPdfPage();
-        });
-
-        document.getElementById('modalPdfFitBtn').addEventListener('click', () => {
-            if (!currentModalDoc) return;
-            currentModalScale = 1.0;
-            renderModalPdfPage();
-        });
     }
 
     const titleEl = document.getElementById('pdfModalTitle');
+    const iframeEl = document.getElementById('pdfModalIframe');
+    const openTabEl = document.getElementById('pdfModalOpenTab');
     const downloadEl = document.getElementById('pdfModalDownload');
-    const loadingEl = document.getElementById('modalPdfLoading');
-    const canvasEl = document.getElementById('pdfModalCanvas');
 
-    if (titleEl) titleEl.textContent = pdfTitle || 'Dokumen PDF';
+    if (titleEl) titleEl.textContent = pdfTitle || 'Pratinjau Dokumen PDF';
+    if (openTabEl) openTabEl.href = cleanUrl;
     if (downloadEl) downloadEl.href = cleanUrl;
+    if (iframeEl) {
+        iframeEl.src = cleanUrl + '#toolbar=1&navpanes=1&view=FitH';
+    }
 
     modal.classList.add('is-active');
     document.body.style.overflow = 'hidden';
-
-    if (loadingEl) {
-        loadingEl.classList.remove('hidden');
-        loadingEl.innerHTML = `
-            <div class="w-10 h-10 border-4 border-royal-500 border-t-transparent rounded-full animate-spin"></div>
-            <span class="text-xs text-slate-400 font-mono">Memuat dokumen PDF...</span>
-        `;
-    }
-    if (canvasEl) canvasEl.classList.add('hidden');
-
-    currentModalPage = 1;
-    currentModalScale = 1.0;
-
-    if (typeof pdfjsLib === 'undefined') {
-        if (loadingEl) {
-            loadingEl.innerHTML = `
-                <div class="text-center p-6 text-slate-300">
-                    <p class="mb-3 text-red-400 font-bold">Modul penampil PDF belum siap.</p>
-                    <a href="${cleanUrl}" download class="btn-primary py-2 px-4 text-xs inline-flex items-center gap-1.5">
-                        <i class="ph-bold ph-download-simple"></i> Unduh File PDF
-                    </a>
-                </div>
-            `;
-        }
-        return;
-    }
-
-    if (modalRenderTask) {
-        try { modalRenderTask.cancel(); } catch (e) {}
-        modalRenderTask = null;
-    }
-
-    pdfjsLib.getDocument(cleanUrl).promise.then(doc => {
-        currentModalDoc = doc;
-        currentModalTotalPages = doc.numPages;
-        renderModalPdfPage();
-        showToast('Membuka PDF: ' + (pdfTitle || 'Dokumen'));
-    }).catch(err => {
-        console.error('Error loading PDF modal:', err);
-        if (loadingEl) {
-            loadingEl.innerHTML = `
-                <div class="text-center p-6 text-slate-300">
-                    <i class="ph-bold ph-warning-circle text-3xl text-amber-400 mb-2"></i>
-                    <p class="text-sm font-bold text-white mb-2">Gagal memuat dokumen PDF.</p>
-                    <p class="text-xs text-slate-400 mb-4">${err.message || ''}</p>
-                    <a href="${cleanUrl}" download class="btn-primary py-2 px-4 text-xs inline-flex items-center gap-1.5">
-                        <i class="ph-bold ph-download-simple"></i> Unduh Berkas Langsung
-                    </a>
-                </div>
-            `;
-        }
-    });
-}
-
-function renderModalPdfPage() {
-    if (!currentModalDoc) return;
-    const canvas = document.getElementById('pdfModalCanvas');
-    const loading = document.getElementById('modalPdfLoading');
-    const pageNumEl = document.getElementById('modalPdfPageNum');
-    const zoomValEl = document.getElementById('modalPdfZoomVal');
-    const prevBtn = document.getElementById('modalPdfPrevBtn');
-    const nextBtn = document.getElementById('modalPdfNextBtn');
-    const viewportBox = document.getElementById('pdfModalViewerContainer');
-
-    if (!canvas || !viewportBox) return;
-
-    if (pageNumEl) pageNumEl.textContent = `Hal ${currentModalPage} / ${currentModalTotalPages}`;
-    if (zoomValEl) zoomValEl.textContent = `${Math.round(currentModalScale * 100)}%`;
-    if (prevBtn) prevBtn.disabled = currentModalPage <= 1;
-    if (nextBtn) nextBtn.disabled = currentModalPage >= currentModalTotalPages;
-
-    if (modalRenderTask) {
-        try { modalRenderTask.cancel(); } catch (e) {}
-        modalRenderTask = null;
-    }
-
-    currentModalDoc.getPage(currentModalPage).then(page => {
-        const containerWidth = Math.max(280, (viewportBox.clientWidth || 800) - 32);
-        const unscaledViewport = page.getViewport({ scale: 1.0 });
-        const baseScale = containerWidth / unscaledViewport.width;
-        const finalScale = baseScale * currentModalScale;
-        const viewport = page.getViewport({ scale: finalScale });
-
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = Math.floor(viewport.width * dpr);
-        canvas.height = Math.floor(viewport.height * dpr);
-        canvas.style.width = Math.floor(viewport.width) + 'px';
-        canvas.style.height = Math.floor(viewport.height) + 'px';
-
-        const ctx = canvas.getContext('2d', { alpha: false });
-        ctx.imageSmoothingEnabled = true;
-        ctx.imageSmoothingQuality = 'high';
-
-        const transform = dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null;
-        const renderContext = {
-            canvasContext: ctx,
-            transform: transform,
-            viewport: viewport
-        };
-
-        modalRenderTask = page.render(renderContext);
-        modalRenderTask.promise.then(() => {
-            modalRenderTask = null;
-            if (loading) loading.classList.add('hidden');
-            canvas.classList.remove('hidden');
-        }).catch(err => {
-            if (err && err.name === 'RenderingCancelledException') return;
-            console.error('Render modal page error:', err);
-        });
-    });
+    showToast('Membuka Dokumen: ' + (pdfTitle || 'PDF'));
 }
 
 function closePdfModal() {
     const modal = document.getElementById('globalPdfModal');
     if (!modal) return;
-    if (modalRenderTask) {
-        try { modalRenderTask.cancel(); } catch (e) {}
-        modalRenderTask = null;
-    }
+    const iframeEl = document.getElementById('pdfModalIframe');
+    if (iframeEl) iframeEl.src = '';
     modal.classList.remove('is-active');
     document.body.style.overflow = '';
-}
-
-// 9.2 INLINE PDF CANVAS VIEWER SYSTEM (ZERO AUTO-DOWNLOAD)
-const inlinePdfInstances = new Map();
-
-function initInlinePdfViewers() {
-    if (typeof pdfjsLib === 'undefined') return;
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'js/pdf.worker.min.js';
-
-    const embeds = document.querySelectorAll('.pdf-canvas-embed');
-    embeds.forEach((container, idx) => {
-        if (container.dataset.initialized === 'true') return;
-        container.dataset.initialized = 'true';
-
-        const rawUrl = container.getAttribute('data-pdf') || '';
-        const pdfUrl = rawUrl.split('#')[0];
-        const pdfTitle = container.getAttribute('data-title') || 'Dokumen PDF';
-
-        container.innerHTML = `
-            <div class="pdf-canvas-toolbar">
-                <div class="flex items-center gap-2 overflow-hidden">
-                    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-royal-500/20 text-royal-300 border border-royal-500/30">
-                        <i class="ph-bold ph-file-pdf"></i> PDF
-                    </span>
-                    <span class="text-xs font-bold text-white truncate max-w-[160px] sm:max-w-[300px]" title="${pdfTitle}">
-                        ${pdfTitle}
-                    </span>
-                </div>
-                <div class="flex items-center gap-1.5 sm:gap-2">
-                    <div class="flex items-center gap-1">
-                        <button type="button" class="pdf-prev-btn px-2 py-1 rounded bg-royal-700/80 hover:bg-royal-600 text-white font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed transition-all" title="Halaman Sebelumnya">
-                            <i class="ph-bold ph-caret-left"></i>
-                        </button>
-                        <span class="pdf-page-display font-mono text-[11px] px-2 py-0.5 rounded bg-black/40 text-royal-200 border border-royal-500/20 min-w-[64px] text-center">
-                            Hal 1 / 1
-                        </span>
-                        <button type="button" class="pdf-next-btn px-2 py-1 rounded bg-royal-700/80 hover:bg-royal-600 text-white font-bold text-xs disabled:opacity-40 disabled:cursor-not-allowed transition-all" title="Halaman Berikutnya">
-                            <i class="ph-bold ph-caret-right"></i>
-                        </button>
-                    </div>
-                    <div class="hidden sm:flex items-center gap-1">
-                        <button type="button" class="pdf-zoomout-btn w-6 h-6 rounded bg-royal-900/60 hover:bg-royal-800 text-white flex items-center justify-center text-xs border border-royal-500/30" title="Perkecil">
-                            <i class="ph-bold ph-minus"></i>
-                        </button>
-                        <span class="pdf-zoom-val font-mono text-[11px] text-slate-300 w-9 text-center">100%</span>
-                        <button type="button" class="pdf-zoomin-btn w-6 h-6 rounded bg-royal-900/60 hover:bg-royal-800 text-white flex items-center justify-center text-xs border border-royal-500/30" title="Perbesar">
-                            <i class="ph-bold ph-plus"></i>
-                        </button>
-                    </div>
-                    <button type="button" class="pdf-fullscreen-btn px-2.5 py-1 rounded bg-royal-600 hover:bg-royal-500 text-white text-xs font-semibold inline-flex items-center gap-1 transition-all" title="Buka Pratinjau Layar Penuh">
-                        <i class="ph-bold ph-corners-out"></i>
-                        <span class="hidden md:inline">Layar Penuh</span>
-                    </button>
-                    <a href="${pdfUrl}" download class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold inline-flex items-center gap-1 transition-all" title="Unduh Berkas PDF Resmi">
-                        <i class="ph-bold ph-download-simple"></i>
-                        <span class="hidden lg:inline">Unduh</span>
-                    </a>
-                </div>
-            </div>
-            <div class="pdf-canvas-viewport">
-                <div class="pdf-canvas-loading">
-                    <div class="w-8 h-8 border-3 border-royal-500 border-t-transparent rounded-full animate-spin"></div>
-                    <span class="text-xs text-slate-400 font-mono">Memuat halaman PDF...</span>
-                </div>
-                <canvas class="pdf-rendered-canvas hidden"></canvas>
-            </div>
-        `;
-
-        const state = {
-            container,
-            pdfUrl,
-            pdfTitle,
-            pdfDoc: null,
-            currentPage: 1,
-            totalPages: 1,
-            scale: 1.0,
-            renderTask: null,
-            isLoading: false,
-            isLoaded: false
-        };
-
-        inlinePdfInstances.set(container, state);
-
-        const prevBtn = container.querySelector('.pdf-prev-btn');
-        const nextBtn = container.querySelector('.pdf-next-btn');
-        const zoomInBtn = container.querySelector('.pdf-zoomin-btn');
-        const zoomOutBtn = container.querySelector('.pdf-zoomout-btn');
-        const fsBtn = container.querySelector('.pdf-fullscreen-btn');
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                if (state.pdfDoc && state.currentPage > 1) {
-                    state.currentPage--;
-                    renderInlinePage(state);
-                }
-            });
-        }
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                if (state.pdfDoc && state.currentPage < state.totalPages) {
-                    state.currentPage++;
-                    renderInlinePage(state);
-                }
-            });
-        }
-
-        if (zoomInBtn) {
-            zoomInBtn.addEventListener('click', () => {
-                if (!state.pdfDoc) return;
-                state.scale = Math.min(state.scale + 0.25, 2.5);
-                renderInlinePage(state);
-            });
-        }
-
-        if (zoomOutBtn) {
-            zoomOutBtn.addEventListener('click', () => {
-                if (!state.pdfDoc) return;
-                state.scale = Math.max(state.scale - 0.25, 0.6);
-                renderInlinePage(state);
-            });
-        }
-
-        if (fsBtn) {
-            fsBtn.addEventListener('click', () => {
-                openPdfModal(state.pdfUrl, state.pdfTitle);
-            });
-        }
-
-        // Check if visible
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !state.isLoaded) {
-                        loadInlinePdf(state);
-                    }
-                });
-            }, { rootMargin: '200px' });
-            observer.observe(container);
-        } else {
-            setTimeout(() => loadInlinePdf(state), 500);
-        }
-    });
-}
-
-function loadInlinePdf(state) {
-    if (state.isLoading || state.isLoaded) return;
-    if (state.container.offsetParent === null) {
-        return; // Currently hidden tab
-    }
-
-    state.isLoading = true;
-    pdfjsLib.getDocument(state.pdfUrl).promise.then(doc => {
-        state.pdfDoc = doc;
-        state.totalPages = doc.numPages;
-        state.isLoaded = true;
-        state.isLoading = false;
-        renderInlinePage(state);
-    }).catch(err => {
-        state.isLoading = false;
-        console.error('Error loading inline PDF:', err);
-        const loading = state.container.querySelector('.pdf-canvas-loading');
-        if (loading) {
-            loading.innerHTML = `
-                <div class="text-center p-4 text-slate-300">
-                    <p class="text-xs text-amber-400 font-bold mb-2">Gagal memuat pratinjau PDF.</p>
-                    <a href="${state.pdfUrl}" download class="btn-primary py-1.5 px-3 text-xs inline-flex items-center gap-1">
-                        <i class="ph-bold ph-download-simple"></i> Unduh File
-                    </a>
-                </div>
-            `;
-        }
-    });
-}
-
-function renderInlinePage(state) {
-    if (!state.pdfDoc) return;
-    const canvas = state.container.querySelector('.pdf-rendered-canvas');
-    const loading = state.container.querySelector('.pdf-canvas-loading');
-    const pageDisplay = state.container.querySelector('.pdf-page-display');
-    const zoomVal = state.container.querySelector('.pdf-zoom-val');
-    const prevBtn = state.container.querySelector('.pdf-prev-btn');
-    const nextBtn = state.container.querySelector('.pdf-next-btn');
-    const viewportBox = state.container.querySelector('.pdf-canvas-viewport');
-
-    if (!canvas || !viewportBox) return;
-
-    if (pageDisplay) pageDisplay.textContent = `Hal ${state.currentPage} / ${state.totalPages}`;
-    if (zoomVal) zoomVal.textContent = `${Math.round(state.scale * 100)}%`;
-    if (prevBtn) prevBtn.disabled = state.currentPage <= 1;
-    if (nextBtn) nextBtn.disabled = state.currentPage >= state.totalPages;
-
-    if (state.renderTask) {
-        try { state.renderTask.cancel(); } catch (e) {}
-        state.renderTask = null;
-    }
-
-    state.pdfDoc.getPage(state.currentPage).then(page => {
-        const containerWidth = Math.max(260, (viewportBox.clientWidth || 800) - 24);
-        const unscaledViewport = page.getViewport({ scale: 1.0 });
-        const baseScale = containerWidth / unscaledViewport.width;
-        const finalScale = baseScale * state.scale;
-        const viewport = page.getViewport({ scale: finalScale });
-
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = Math.floor(viewport.width * dpr);
-        canvas.height = Math.floor(viewport.height * dpr);
-        canvas.style.width = Math.floor(viewport.width) + 'px';
-        canvas.style.height = Math.floor(viewport.height) + 'px';
-
-        const ctx = canvas.getContext('2d', { alpha: false });
-        ctx.imageSmoothingEnabled = true;
-        ctx.imageSmoothingQuality = 'high';
-
-        const transform = dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null;
-        const renderContext = {
-            canvasContext: ctx,
-            transform: transform,
-            viewport: viewport
-        };
-
-        state.renderTask = page.render(renderContext);
-        state.renderTask.promise.then(() => {
-            state.renderTask = null;
-            if (loading) loading.classList.add('hidden');
-            canvas.classList.remove('hidden');
-        }).catch(err => {
-            if (err && err.name === 'RenderingCancelledException') return;
-            console.error('Inline render page error:', err);
-        });
-    });
-}
-
-function refreshVisibleInlinePdfs() {
-    inlinePdfInstances.forEach((state) => {
-        if (state.container.offsetParent !== null) {
-            if (!state.isLoaded) {
-                loadInlinePdf(state);
-            } else {
-                renderInlinePage(state);
-            }
-        }
-    });
 }
 
 // 10. TOGGLE INLINE PDF EMBED VIEWER
@@ -806,7 +380,6 @@ function togglePdfEmbed(embedId, triggerBtn) {
             triggerBtn.innerHTML = '<i class="ph-bold ph-eye-slash"></i> Sembunyikan Pratinjau PDF';
         }
         showToast('Menampilkan Pratinjau Dokumen');
-        setTimeout(refreshVisibleInlinePdfs, 100);
     } else {
         box.classList.add('hidden');
         if (triggerBtn) {
@@ -1108,37 +681,42 @@ if (document.readyState === 'loading') {
 }
 
 // ========================================================
-// 9. HIGH-PERFORMANCE SCROLL REVEAL ANIMATIONS
+// 12. HIGH-PERFORMANCE SCROLL REVEAL ANIMATIONS
 // ========================================================
 function initScrollReveal() {
-    // If user prefers reduced motion, skip animations
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         return;
     }
 
-    // Selectors that should reveal on scroll
     const revealSelectors = [
+        'section',
         '.cycle-hero-banner',
-        'main > section',
-        '.artifact-card',
-        '.bento-card',
+        '.hero-signature',
         '.siklus-browse-section',
-        '.ticker-marquee-wrapper',
-        '.cycle-video-card',
-        '.page-nav-dock',
-        '.section-header',
+        '.siklus-item-row',
+        '.bento-card',
+        '.artifact-card',
         '.summary-card',
+        '.cycle-video-card',
+        '.cycle-card',
+        '.feature-card',
+        '.page-nav-dock',
         '.reveal-on-scroll'
     ];
 
-    const elementsToReveal = document.querySelectorAll(revealSelectors.join(', '));
+    const elementsToReveal = Array.from(document.querySelectorAll(revealSelectors.join(', ')))
+        .filter(el => {
+            if (el.closest('.top-navbar') || el.closest('.pdf-modal') || el.closest('#loader') || el.closest('.site-footer')) {
+                return false;
+            }
+            return true;
+        });
+
     if (!elementsToReveal.length) return;
 
-    // Mark HTML as reveal-enabled
     document.documentElement.classList.add('reveal-enabled');
 
     if (!('IntersectionObserver' in window)) {
-        // Fallback for very old browsers without IntersectionObserver
         elementsToReveal.forEach(el => el.classList.add('is-revealed'));
         return;
     }
@@ -1146,7 +724,7 @@ function initScrollReveal() {
     const observerOptions = {
         root: null,
         rootMargin: '0px 0px -40px 0px',
-        threshold: 0.05
+        threshold: 0.08
     };
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -1159,27 +737,20 @@ function initScrollReveal() {
     }, observerOptions);
 
     const vh = window.innerHeight || document.documentElement.clientHeight;
+    let initialCount = 0;
 
-    elementsToReveal.forEach((el) => {
+    elementsToReveal.forEach(el => {
+        el.classList.add('reveal-item');
         const rect = el.getBoundingClientRect();
-        // If element is already in the viewport on initial page load, reveal instantly
-        if (rect.top < vh && rect.bottom > 0) {
-            el.classList.add('reveal-item', 'is-revealed', 'is-revealed-instant');
+        if (rect.top < vh * 0.92 && rect.bottom > 0) {
+            // Animasi masuk dengan stagger halus saat pertama kali dimuat
+            const delay = Math.min(initialCount * 70, 350);
+            initialCount++;
+            setTimeout(() => {
+                el.classList.add('is-revealed');
+            }, delay);
         } else {
-            el.classList.add('reveal-item');
             revealObserver.observe(el);
         }
     });
 }
-
-// Auto resize PDF viewers on screen orientation change
-let resizeTimerPdf;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimerPdf);
-    resizeTimerPdf = setTimeout(() => {
-        refreshVisibleInlinePdfs();
-        if (currentModalDoc && document.getElementById('globalPdfModal')?.classList.contains('is-active')) {
-            renderModalPdfPage();
-        }
-    }, 250);
-});

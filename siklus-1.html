@@ -68,8 +68,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
-    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
-    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -398,7 +396,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%201.pdf" data-title="Modul Ajar Siklus 1"></div>
+                            <iframe loading="lazy" src="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%201.pdf" class="w-full h-[650px] border-0" title="Modul Ajar Siklus 1"></iframe>
                         </div>
                     </div>
                 </div>
@@ -458,7 +456,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/RPP/Pertemuan%20Struktur%20Data%20dan%20Algoritma%20Dasar.pdf#view=FitH" data-title="RPP Siklus 1 - Struktur Data"></div>
+                            <iframe loading="lazy" src="pdf/RPP/Pertemuan%20Struktur%20Data%20dan%20Algoritma%20Dasar.pdf#view=FitH" class="w-full h-[650px] border-0" title="RPP Siklus 1 - Struktur Data"></iframe>
                         </div>
 
                         
@@ -516,7 +514,7 @@
                                     <i class="ph-bold ph-arrow-square-out"></i>
                                 </a>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/Handbook/Buku%20Pegangan-2.%20Stuktur%20Data%20%26%20Algoritma%20Dasar.pdf" data-title="Buku Pegangan 2 Siswa"></div>
+                            <iframe loading="lazy" src="pdf/Handbook/Buku%20Pegangan-2.%20Stuktur%20Data%20%26%20Algoritma%20Dasar.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 2 Siswa"></iframe>
                         </div>
 
                         <!-- Preview -->
@@ -675,7 +673,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pdf-canvas-embed" data-pdf="pdf/LKPD/Siklus%201/LKPD1.pdf#view=FitH" data-title="LKPD Siklus 1: Berpikir Komputasional"></div>
+                                <iframe loading="lazy" src="pdf/LKPD/Siklus%201/LKPD1.pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="LKPD Siklus 1: Berpikir Komputasional"></iframe>
                             </div>
                         </div>
                     </div>
@@ -731,7 +729,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/Assemen/Asesmen%20Struktur%20Data%20dan%20Algoritma%20Dasar%20(1).pdf#view=FitH" data-title="Asesmen Struktur Data dan Algoritma Dasar"></div>
+                            <iframe loading="lazy" src="pdf/Assemen/Asesmen%20Struktur%20Data%20dan%20Algoritma%20Dasar%20(1).pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="Asesmen Struktur Data dan Algoritma Dasar"></iframe>
                         </div>
                     </div>
                 </div>
@@ -825,16 +823,41 @@
             </div>
         </section>
 
-        <!-- Navigation Next / Prev -->
-        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <a href="profil.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
-                <i class="ph-bold ph-arrow-left"></i>
-                <span>Kembali ke Profil</span>
-            </a>
-            <a href="siklus-2.html" class="btn-primary-cta">
-                <span>Lanjut ke Siklus 2 (Algoritma Flowchart &amp; Pseudocode)</span>
-                <i class="ph-bold ph-arrow-right"></i>
-            </a>
+                <!-- Navigation Workflow Dock -->
+        <section class="pt-8 pb-4">
+            <div class="page-nav-dock">
+                <!-- Tombol Kiri: Sebelumnya -->
+                <a href="profil.html" class="nav-dock-card nav-dock-prev group">
+                    <div class="nav-dock-icon">
+                        <i class="ph-bold ph-arrow-left"></i>
+                    </div>
+                    <div class="nav-dock-info">
+                        <span class="nav-dock-label">SEBELUMNYA</span>
+                        <span class="nav-dock-title">Profil Pendidik</span>
+                    </div>
+                </a>
+
+                <!-- Pemisah di Tengah: Hub Katalog Artefak -->
+                <div class="nav-dock-center">
+                    <a href="artefak.html" class="nav-dock-hub group" title="Katalog 24 Artefak Pembelajaran">
+                        <div class="w-9 h-9 rounded-xl bg-royal-500/10 dark:bg-royal-900/40 border border-royal-500/20 dark:border-royal-700/40 flex items-center justify-center text-royal-600 dark:text-neon group-hover:scale-110 group-hover:bg-neon group-hover:text-royal-950 transition-all shadow-sm">
+                            <i class="ph-bold ph-squares-four text-base"></i>
+                        </div>
+                        <span class="nav-dock-hub-text">Katalog Artefak</span>
+                    </a>
+                </div>
+
+                <!-- Tombol Kanan: Selanjutnya -->
+                <a href="siklus-2.html" class="nav-dock-card nav-dock-next group">
+                    <div class="nav-dock-info text-right">
+                        <span class="nav-dock-label text-royal-600 dark:text-neon font-black">SELANJUTNYA</span>
+                        <span class="nav-dock-title">Siklus 2: Representasi Algoritma</span>
+                    </div>
+                    <div class="nav-dock-icon nav-dock-icon-next">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
         </section>
 
     </main>

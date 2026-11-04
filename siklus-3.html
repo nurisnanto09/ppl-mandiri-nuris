@@ -68,8 +68,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
-    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
-    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -399,7 +397,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%203.pdf" data-title="Modul Ajar Siklus 3"></div>
+                            <iframe loading="lazy" src="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%203.pdf" class="w-full h-[650px] border-0" title="Modul Ajar Siklus 3"></iframe>
                         </div>
                     </div>
                 </div>
@@ -459,7 +457,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/RPP/Pertemuan%20Exel.pdf#view=FitH" data-title="RPP Siklus 3: Pertemuan Excel"></div>
+                            <iframe loading="lazy" src="pdf/RPP/Pertemuan%20Exel.pdf#view=FitH" class="w-full h-[650px] border-0" title="RPP Siklus 3: Pertemuan Excel"></iframe>
                         </div>
 
                         <!-- Skenario Pelaksanaan RPP PjBL -->
@@ -599,7 +597,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" data-title="Buku Pegangan 4 Siswa"></div>
+                            <iframe loading="lazy" src="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 4 Siswa"></iframe>
                         </div>
                     </div>
                 </div>
@@ -800,7 +798,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="pdf-canvas-embed" data-pdf="pdf/LKPD/Siklus%203/JOBSHEET-4-MS-EXCEL-docx.pdf#view=FitH" data-title="Jobsheet 4: Rumus Dasar Excel"></div>
+                                <iframe loading="lazy" src="pdf/LKPD/Siklus%203/JOBSHEET-4-MS-EXCEL-docx.pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="Jobsheet 4: Rumus Dasar Excel"></iframe>
                             </div>
                         </div>
                     </div>
@@ -856,7 +854,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/Assemen/Asesmen%20Excel%20(1).pdf#view=FitH" data-title="Asesmen Excel"></div>
+                            <iframe loading="lazy" src="pdf/Assemen/Asesmen%20Excel%20(1).pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="Asesmen Excel"></iframe>
                         </div>
 
                         
@@ -951,16 +949,41 @@
             </div>
         </section>
 
-        <!-- Navigation Next / Prev -->
-        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <a href="siklus-2.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
-                <i class="ph-bold ph-arrow-left"></i>
-                <span>Kembali ke Siklus 2</span>
-            </a>
-            <a href="siklus-4.html" class="btn-primary-cta">
-                <span>Lanjut ke Siklus 4 (Sistem Operasi)</span>
-                <i class="ph-bold ph-arrow-right"></i>
-            </a>
+                <!-- Navigation Workflow Dock -->
+        <section class="pt-8 pb-4">
+            <div class="page-nav-dock">
+                <!-- Tombol Kiri: Sebelumnya -->
+                <a href="siklus-2.html" class="nav-dock-card nav-dock-prev group">
+                    <div class="nav-dock-icon">
+                        <i class="ph-bold ph-arrow-left"></i>
+                    </div>
+                    <div class="nav-dock-info">
+                        <span class="nav-dock-label">SEBELUMNYA</span>
+                        <span class="nav-dock-title">Siklus 2: Representasi Algoritma</span>
+                    </div>
+                </a>
+
+                <!-- Pemisah di Tengah: Hub Katalog Artefak -->
+                <div class="nav-dock-center">
+                    <a href="artefak.html" class="nav-dock-hub group" title="Katalog 24 Artefak Pembelajaran">
+                        <div class="w-9 h-9 rounded-xl bg-royal-500/10 dark:bg-royal-900/40 border border-royal-500/20 dark:border-royal-700/40 flex items-center justify-center text-royal-600 dark:text-neon group-hover:scale-110 group-hover:bg-neon group-hover:text-royal-950 transition-all shadow-sm">
+                            <i class="ph-bold ph-squares-four text-base"></i>
+                        </div>
+                        <span class="nav-dock-hub-text">Katalog Artefak</span>
+                    </a>
+                </div>
+
+                <!-- Tombol Kanan: Selanjutnya -->
+                <a href="siklus-4.html" class="nav-dock-card nav-dock-next group">
+                    <div class="nav-dock-info text-right">
+                        <span class="nav-dock-label text-royal-600 dark:text-neon font-black">SELANJUTNYA</span>
+                        <span class="nav-dock-title">Siklus 4: Sistem Operasi</span>
+                    </div>
+                    <div class="nav-dock-icon nav-dock-icon-next">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
         </section>
 
     </main>

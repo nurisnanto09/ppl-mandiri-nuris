@@ -1339,38 +1339,32 @@ html.dark .nav-dock-hub:hover .nav-dock-hub-text {
    ============================================================ */
 html.reveal-enabled .reveal-item {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(32px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: opacity, transform;
 }
 
 html.reveal-enabled .reveal-item.is-revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-html.reveal-enabled .reveal-item.is-revealed-instant {
     opacity: 1 !important;
     transform: translateY(0) !important;
-    transition: none !important;
 }
 
 /* Stagger animation for sibling cards in grid */
 .grid > .reveal-item:nth-child(2) {
-    transition-delay: 0.08s;
+    transition-delay: 0.07s;
 }
 .grid > .reveal-item:nth-child(3) {
-    transition-delay: 0.16s;
+    transition-delay: 0.14s;
 }
 .grid > .reveal-item:nth-child(4) {
-    transition-delay: 0.24s;
+    transition-delay: 0.21s;
 }
 .grid > .reveal-item:nth-child(5) {
-    transition-delay: 0.32s;
+    transition-delay: 0.28s;
 }
 .grid > .reveal-item:nth-child(6) {
-    transition-delay: 0.40s;
+    transition-delay: 0.35s;
 }
 
 @media (prefers-reduced-motion: reduce) {

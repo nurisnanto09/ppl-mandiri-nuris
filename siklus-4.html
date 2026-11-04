@@ -68,8 +68,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
-    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
-    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -399,7 +397,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%204.pdf" data-title="Modul Ajar Siklus 4"></div>
+                            <iframe loading="lazy" src="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%204.pdf" class="w-full h-[650px] border-0" title="Modul Ajar Siklus 4"></iframe>
                         </div>
                     </div>
                 </div>
@@ -463,7 +461,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/RPP/Pertemuan%20Sistem%20Operasi.pdf#view=FitH" data-title="RPP Siklus 4: Sistem Operasi"></div>
+                            <iframe loading="lazy" src="pdf/RPP/Pertemuan%20Sistem%20Operasi.pdf#view=FitH" class="w-full h-[650px] border-0" title="RPP Siklus 4: Sistem Operasi"></iframe>
                         </div>
 
                         <!-- Skenario Pelaksanaan RPP Tatap Muka & Lab -->
@@ -603,7 +601,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" data-title="Buku Pegangan 5 Siswa"></div>
+                            <iframe loading="lazy" src="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 5 Siswa"></iframe>
                         </div>
                     </div>
                 </div>
@@ -860,7 +858,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="pdf-canvas-embed" data-pdf="pdf/Assemen/Asesmen%20Sistem%20Komputer%20(2).pdf#view=FitH" data-title="Asesmen Sistem Komputer"></div>
+                            <iframe loading="lazy" src="pdf/Assemen/Asesmen%20Sistem%20Komputer%20(2).pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="Asesmen Sistem Komputer"></iframe>
                         </div>
 
                         
@@ -955,16 +953,41 @@
             </div>
         </section>
 
-        <!-- Navigation Next / Prev -->
-        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <a href="siklus-3.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
-                <i class="ph-bold ph-arrow-left"></i>
-                <span>Kembali ke Siklus 3</span>
-            </a>
-            <a href="non-mengajar.html" class="btn-primary-cta">
-                <span>Lanjut ke Non-Mengajar (SPACE-IN)</span>
-                <i class="ph-bold ph-arrow-right"></i>
-            </a>
+                <!-- Navigation Workflow Dock -->
+        <section class="pt-8 pb-4">
+            <div class="page-nav-dock">
+                <!-- Tombol Kiri: Sebelumnya -->
+                <a href="siklus-3.html" class="nav-dock-card nav-dock-prev group">
+                    <div class="nav-dock-icon">
+                        <i class="ph-bold ph-arrow-left"></i>
+                    </div>
+                    <div class="nav-dock-info">
+                        <span class="nav-dock-label">SEBELUMNYA</span>
+                        <span class="nav-dock-title">Siklus 3: Pengelolaan Angka Excel</span>
+                    </div>
+                </a>
+
+                <!-- Pemisah di Tengah: Hub Katalog Artefak -->
+                <div class="nav-dock-center">
+                    <a href="artefak.html" class="nav-dock-hub group" title="Katalog 24 Artefak Pembelajaran">
+                        <div class="w-9 h-9 rounded-xl bg-royal-500/10 dark:bg-royal-900/40 border border-royal-500/20 dark:border-royal-700/40 flex items-center justify-center text-royal-600 dark:text-neon group-hover:scale-110 group-hover:bg-neon group-hover:text-royal-950 transition-all shadow-sm">
+                            <i class="ph-bold ph-squares-four text-base"></i>
+                        </div>
+                        <span class="nav-dock-hub-text">Katalog Artefak</span>
+                    </a>
+                </div>
+
+                <!-- Tombol Kanan: Selanjutnya -->
+                <a href="non-mengajar.html" class="nav-dock-card nav-dock-next group">
+                    <div class="nav-dock-info text-right">
+                        <span class="nav-dock-label text-royal-600 dark:text-neon font-black">SELANJUTNYA</span>
+                        <span class="nav-dock-title">Kegiatan Non-Mengajar</span>
+                    </div>
+                    <div class="nav-dock-icon nav-dock-icon-next">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
         </section>
 
     </main>
