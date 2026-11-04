@@ -583,22 +583,6 @@
                             </div>
                             <iframe src="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 3 Siswa"></iframe>
                         </div>
-
-                        <div class="space-y-3">
-                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-book-bookmark text-royal-500 dark:text-neon"></i>
-                                Rangkuman Materi Pokok Buku Pegangan 3:
-                            </h4>
-                            <div class="code-preview-block text-xs leading-relaxed">
-RINGKASAN BUKU PEGANGAN 3 (NOTASI ALGORITMA):
-- Bab 1: Definisi dan Urgensi Notasi Algoritma Baku dalam Rekayasa Perangkat Lunak.
-- Bab 2: Tiga Bentuk Notasi Algoritma: Kalimat Deskriptif, Bagan Alir (Flowchart), dan Pseudocode.
-- Bab 3: Standarisasi Simbol Flowchart ISO 5807: Terminal, Input/Output, Proses, Decision, dan Konektor.
-- Bab 4: Konstruksi Dasar Algoritma: Runtunan (Sequence), Pemilihan/Percabangan (Selection IF-ELSE), dan Pengulangan (Iteration/Looping).
-- Bab 5: Pedoman Penulisan Pseudocode Baku (Indents, Keyword Kapital, Variabel, Ekspresi Logika).
-- Bab 6: Teknik Verifikasi Logika Menggunakan Tabel Jejak (Trace Table / Dry Run).
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -753,22 +737,6 @@ RINGKASAN BUKU PEGANGAN 3 (NOTASI ALGORITMA):
                                 </div>
                             </div>
                         </div>
-
-                        <div class="space-y-3 pt-2">
-                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-slideshow text-royal-500 dark:text-neon"></i>
-                                Struktur Paparan Media Siklus 2:
-                            </h4>
-                            <div class="code-preview-block text-xs leading-relaxed">
-KONTEN MEDIA PRESENTASI:
-- Slide 01-05: Review 4 Fondasi CT Siklus 1 & Mengapa Kita Butuh Simbol Baku.
-- Slide 06-14: Galeri Simbol ISO 5807 (Kapan Menggunakan Persegi, Jajar Genjang, atau Belah Ketupat).
-- Slide 15-20: Animasi Bergerak: Bola Logika Melintasi Percabangan IF Nilai Belanja >= 100.000.
-- Slide 21-24: Memadankan Gambar Diagram Menjadi Baris Pseudocode Rapi Ber-indentasi.
-- Slide 25-26: Instruksi Pengerjaan LKPD Kolaboratif & QR Code Bahan Ajar Digital.
-- Slide 27-28: Kuis Interaktif Uji Simbol Kilat.
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -882,23 +850,6 @@ KONTEN MEDIA PRESENTASI:
                                 </div>
                                 <iframe loading="lazy" src="pdf/LKPD/Siklus%202/LKPD_Pertemuan_1_Algoritma_dan_Flowchart.pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="LKPD Pertemuan 1: Algoritma dan Flowchart"></iframe>
                             </div>
-
-                            <div class="space-y-2 pt-1 text-xs">
-                                <h5 class="font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
-                                    <i class="ph-bold ph-git-commit text-royal-500 dark:text-neon"></i>
-                                    Kasus Nyata &amp; Ketentuan Diagram Alir:
-                                </h5>
-                                <div class="code-preview-block leading-relaxed">
-STUDI KASUS LKPD S2 - PERTEMUAN 1: "Sistem Logika Kasir Otomatis Koperasi Siswa SMAN 4 Yogyakarta"
-SKENARIO BISNIS:
-- Belanja total &lt; Rp 50.000: Diskon 0%, tidak berhak kupon undian.
-- Belanja total Rp 50.000 s.d Rp 99.999: Diskon 5%, berhak 1 kupon undian.
-- Belanja total &gt;= Rp 100.000: Diskon 10% + Hadiah Buku Tulis, berhak 2 kupon undian.
-TUGAS KELOMPOK:
-1. Identifikasi simbol Terminator (Start/End), Paralelogram (Input/Output Belanja), Diamond (Decision Percabangan).
-2. Hubungkan alur panah logika dengan kondisi True/False tanpa ada alur buntu.
-                                </div>
-                            </div>
                         </div>
 
                         <!-- ========================================================
@@ -929,31 +880,6 @@ TUGAS KELOMPOK:
                                         <i class="ph-bold ph-arrow-square-out"></i>
                                         <span>Tab Baru</span>
                                     </a>
-                                </div>
-                            </div>
-
-                            <div class="space-y-2 pt-1 text-xs">
-                                <h5 class="font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
-                                    <i class="ph-bold ph-table text-royal-500 dark:text-neon"></i>
-                                    Format Penulisan Pseudocode &amp; Nilai Uji Trace Table:
-                                </h5>
-                                <div class="code-preview-block leading-relaxed">
-INSTRUKSI PENGERJAAN PERTEMUAN 2:
-1. PENULISAN NOTASI: Gunakan format huruf kapital pada kata kunci pengendali:
-   ALGORITMA HitungDiskonKoperasi
-   DEKLARASI: totalBelanja, diskon, bayar, kupon (INTEGER)
-   DESKRIPSI:
-     INPUT(totalBelanja)
-     IF totalBelanja &gt;= 100000 THEN
-        diskon &larr; totalBelanja * 0.10; kupon &larr; 2
-     ELSE IF totalBelanja &gt;= 50000 THEN
-        diskon &larr; totalBelanja * 0.05; kupon &larr; 1
-     ELSE
-        diskon &larr; 0; kupon &larr; 0
-     ENDIF
-     bayar &larr; totalBelanja - diskon
-     OUTPUT(bayar, kupon)
-2. TABEL PENGUJIAN (TRACE TABLE): Uji dengan 3 nilai: Rp 35.000, Rp 75.000, dan Rp 150.000, lalu buktikan kesesuaian nilai output akhir.
                                 </div>
                             </div>
                         </div>
@@ -1029,20 +955,6 @@ INSTRUKSI PENGERJAAN PERTEMUAN 2:
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
                                 <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 4: Verifikasi Hasil</span>
                                 <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Hasil Trace Table 100% Cocok</strong>
-                            </div>
-                        </div>
-
-                        <div class="space-y-3">
-                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-check-square-offset text-royal-500 dark:text-neon"></i>
-                                Deskriptor Ketercapaian Rubrik Flowchart:
-                            </h4>
-                            <div class="code-preview-block text-xs leading-relaxed">
-KRITERIA KEBERHASILAN FLOWCHART SIKLUS 2:
-- Sangat Baik (4): Simbol ISO tepat 100%, cabang YES/NO berlabel jelas, tidak ada panah buntu atau ambigu.
-- Baik (3): Simbol tepat, label cabang lengkap, ada sedikit redundansi instruksi yang tidak memengaruhi hasil.
-- Cukup (2): Tertukar antara jajar genjang (I/O) dan persegi panjang (proses), namun alur umum masih terbaca.
-- Perlu Bimbingan (1): Alur panah melompat tanpa pengkondisian logika yang logis.
                             </div>
                         </div>
                     </div>
