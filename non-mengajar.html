@@ -68,6 +68,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
+    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
+    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -188,62 +190,54 @@
     </header>
 
     <!-- ==========================================
-         PAGE HEADER BANNER
-         ========================================== -->
-    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0A0517]">
-        <div class="site-container">
-            <div class="max-w-4xl">
-                <div class="inline-flex items-center gap-2 mb-3">
-                    <span class="badge-primary">KONTRIBUSI, KEPANITIAAN &amp; INOVASI SEKOLAH</span>
-                    <span class="badge-slate">SMAN 4 YOGYAKARTA</span>
-                </div>
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-                    Aktivitas Non-Mengajar: Pengabdian &amp; Inovasi Sekolah
-                </h1>
-                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
-                    Dokumentasi komprehensif 6 kontribusi nyata praktikan di luar jam tatap muka kelas: Layanan Piket Lobby, Kepanitiaan 17-an HUT RI Ke-79, Lomba Karya Inovasi Tingkat Provinsi D.I. Yogyakarta (Proposal &amp; Video), Penataan Lab Komputer Persiapan TKA, Tugas Pengawas Asesmen ASTS, serta Pendampingan Proyek Kepemimpinan Siswa, dilengkapi serial 16 video laporan mingguan revitalisasi sekolah.
-                </p>
-                <div class="flex flex-wrap items-center gap-3.5 mt-6 text-xs text-slate-600 dark:text-slate-400 font-medium">
-                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-royal-950/60 border border-slate-200 dark:border-slate-800">
-                        <i class="ph-bold ph-identification-card text-royal-500 dark:text-neon"></i> Piket Lobby
-                    </span>
-                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-royal-950/60 border border-slate-200 dark:border-slate-800">
-                        <i class="ph-bold ph-flag text-royal-500 dark:text-neon"></i> Panitia 17-an
-                    </span>
-                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-royal-950/60 border border-slate-200 dark:border-slate-800">
-                        <i class="ph-bold ph-lightbulb text-royal-500 dark:text-neon"></i> Inovasi Provinsi DIY (Video)
-                    </span>
-                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-royal-950/60 border border-slate-200 dark:border-slate-800">
-                        <i class="ph-bold ph-desktop text-royal-500 dark:text-neon"></i> Penataan Lab TKA
-                    </span>
-                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-royal-950/60 border border-slate-200 dark:border-slate-800">
-                        <i class="ph-bold ph-clipboard-text text-royal-500 dark:text-neon"></i> Pengawas ASTS
-                    </span>
-                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-royal-950/60 border border-slate-200 dark:border-slate-800">
-                        <i class="ph-bold ph-users-three text-royal-500 dark:text-neon"></i> Proyek Kepemimpinan
-                    </span>
-                    <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-royal-950/60 border border-slate-200 dark:border-slate-800">
-                        <i class="ph-bold ph-video-camera text-royal-500 dark:text-neon"></i> 16 Video Revitalisasi
-                    </span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
          MAIN CONTENT: 6 ARTEFAK & KEGIATAN NON-MENGAJAR
          ========================================== -->
     <main class="page-main site-container space-y-14">
 
-        <!-- Banner Gambaran Umum -->
-        <div class="cycle-header-banner">
-            <div>
-                <span class="badge-blue">KARYA INOVASI &amp; PENGABDIAN</span>
-                <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Dampak Nyata bagi Ekosistem Sekolah &amp; Komunitas Belajar</h2>
-                <p class="text-xs text-slate-500 dark:text-slate-400">Dedikasi praktikan dalam mendukung manajemen operasional, pembinaan kesiswaan, keandalan sarana laboratorium, pengawasan asesmen, dan karya inovasi SMA Negeri 4 Yogyakarta.</p>
+        <!-- 1. BANNER NON-MENGAJAR -->
+        <section class="cycle-hero-banner">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Sisi Kiri: Kata-Kata & Narasi Non-Mengajar (8 Kolom) -->
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
+                            <i class="ph-bold ph-seal-check"></i> NON-MENGAJAR • KARYA INOVASI &amp; PENGABDIAN
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-trophy"></i> 6 Program Pengabdian
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                        Aktivitas Non-Mengajar: Pengabdian &amp; Inovasi Sekolah
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
+                        Dokumentasi komprehensif 6 kontribusi nyata praktikan di luar jam tatap muka kelas: Layanan Piket Lobby, Kepanitiaan 17-an HUT RI Ke-79, Lomba Karya Inovasi Tingkat Provinsi D.I. Yogyakarta (Proposal &amp; Video), Penataan Lab Komputer Persiapan TKA, Tugas Pengawas Asesmen ASTS, serta Pendampingan Proyek Kepemimpinan Siswa, dilengkapi serial 16 video laporan mingguan revitalisasi sekolah.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs text-white/80 font-medium">
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-identification-card text-neon"></i> Piket Lobby</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-flag text-neon"></i> Panitia 17-an</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-lightbulb text-neon"></i> Inovasi DIY</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-desktop text-neon"></i> Lab 36 PC</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-clipboard-text text-neon"></i> Pengawas ASTS</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-users-three text-neon"></i> Kepemimpinan</span>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Icon 3D Banner (4 Kolom) -->
+                <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-neon/20 rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+                        <img src="img/icon 3d banner/non-mengajar.png" alt="Ilustrasi 3D Aktivitas Non-Mengajar" class="relative z-10 w-52 sm:w-60 lg:w-72 max-h-60 lg:max-h-72 object-contain banner-3d-icon">
+                    </div>
+                </div>
             </div>
-            <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">6 Kegiatan Pengabdian</span>
-        </div>
+        </section>
 
         <!-- Grid 6 Artefak Pokok Non-Mengajar (1 Kolom Card Sendiri) -->
         <div class="grid grid-cols-1 gap-6">
@@ -1571,16 +1565,41 @@
             </div>
         </section>
 
-        <!-- Navigation Next / Prev -->
-        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <a href="siklus-4.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
-                <i class="ph-bold ph-arrow-left"></i>
-                <span>Kembali ke Siklus 4</span>
-            </a>
-            <a href="analisis.html" class="btn-primary-cta">
-                <span>Lanjut ke Analisis Komparatif</span>
-                <i class="ph-bold ph-arrow-right"></i>
-            </a>
+        <!-- Navigation Workflow Dock -->
+        <section class="pt-8 pb-4">
+            <div class="page-nav-dock">
+                <!-- Tombol Kiri: Siklus 4 -->
+                <a href="siklus-4.html" class="nav-dock-card nav-dock-prev group">
+                    <div class="nav-dock-icon">
+                        <i class="ph-bold ph-arrow-left"></i>
+                    </div>
+                    <div class="nav-dock-info">
+                        <span class="nav-dock-label">SEBELUMNYA</span>
+                        <span class="nav-dock-title">Siklus 4: Sistem Operasi</span>
+                    </div>
+                </a>
+
+                <!-- Pemisah di Tengah: Hub Katalog Artefak -->
+                <div class="nav-dock-center">
+                    <a href="artefak.html" class="nav-dock-hub group" title="Katalog 24 Artefak Pembelajaran">
+                        <div class="w-9 h-9 rounded-xl bg-royal-500/10 dark:bg-royal-900/40 border border-royal-500/20 dark:border-royal-700/40 flex items-center justify-center text-royal-600 dark:text-neon group-hover:scale-110 group-hover:bg-neon group-hover:text-royal-950 transition-all shadow-sm">
+                            <i class="ph-bold ph-squares-four text-base"></i>
+                        </div>
+                        <span class="nav-dock-hub-text">Katalog Artefak</span>
+                    </a>
+                </div>
+
+                <!-- Tombol Kanan: Lanjut ke Analisis -->
+                <a href="analisis.html" class="nav-dock-card nav-dock-next group">
+                    <div class="nav-dock-info text-right">
+                        <span class="nav-dock-label text-royal-600 dark:text-neon font-black">SELANJUTNYA</span>
+                        <span class="nav-dock-title">Analisis Komparatif 4 Siklus</span>
+                    </div>
+                    <div class="nav-dock-icon nav-dock-icon-next">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
         </section>
 
     </main>

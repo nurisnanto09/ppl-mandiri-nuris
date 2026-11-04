@@ -66,6 +66,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
+    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
+    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -186,34 +188,51 @@
     </header>
 
     <!-- ==========================================
-         PAGE HEADER BANNER
-         ========================================== -->
-    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0A0517]">
-        <div class="site-container">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 mb-3">
-                    <span class="badge-primary">REFLEKSI KOMPREHENSIF &amp; TINDAK LANJUT</span>
-                    <span class="badge-slate">PPG PRAJABATAN 2026</span>
-                </div>
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-                    Refleksi Kritis Filosofis, Kekuatan-Kelemahan &amp; RTL
-                </h1>
-                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
-                    Sintesis jati diri pendidik informatika profesional: perwujudan filosofi Ki Hadjar Dewantara, evaluasi terbuka atas praktik mengajar di SMA Negeri 4 Yogyakarta, serta peta jalan pengembangan kompetensi berkelanjutan.
-                </p>
-                <div class="flex flex-wrap items-center gap-4 mt-6 text-xs text-slate-500 dark:text-slate-400">
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-compass text-royal-500 dark:text-neon"></i> Model Guru Transformatif</span>
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-plant text-emerald-500"></i> Sistem Among KHD</span>
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-chart-line-up text-amber-500"></i> 3 Fase Peta Jalan RTL</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
          MAIN CONTENT CONTAINER
          ========================================== -->
-    <main class="site-container py-12 space-y-16">
+    <main class="page-main site-container space-y-16">
+
+        <!-- 1. BANNER REFLEKSI DIRI -->
+        <section class="cycle-hero-banner">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Sisi Kiri: Kata-Kata & Narasi Refleksi (8 Kolom) -->
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
+                            <i class="ph-bold ph-seal-check"></i> REFLEKSI KOMPREHENSIF &amp; TINDAK LANJUT
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-compass"></i> PPG Prajabatan UNY 2026
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                        Refleksi Kritis Filosofis, Kekuatan-Kelemahan &amp; RTL
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
+                        Sintesis jati diri pendidik informatika profesional: perwujudan filosofi Ki Hadjar Dewantara, evaluasi terbuka atas praktik mengajar di SMA Negeri 4 Yogyakarta, serta peta jalan pengembangan kompetensi berkelanjutan.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs text-white/80 font-medium">
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-compass text-neon"></i> Model Guru Transformatif</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-plant text-neon"></i> Sistem Among KHD</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-chart-line-up text-neon"></i> 3 Fase Peta Jalan RTL</span>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Icon 3D Banner (4 Kolom) -->
+                <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-neon/20 rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+                        <img src="img/icon 3d banner/banner icon rtl.png" alt="Ilustrasi 3D Refleksi & RTL" class="relative z-10 w-48 sm:w-56 lg:w-64 max-h-56 lg:max-h-64 object-contain banner-3d-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ==========================================
              SECTION 1: MODEL GURU & FILOSOFI MENGAJAR
@@ -375,7 +394,7 @@
                                 </h4>
                             </div>
                             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pl-6">
-                                Cepat mengadaptasi strategi instruksional sesuai karakteristik spesifik tiap rombel (misal: memberikan tantangan coding lanjutan untuk XE3, menyisipkan energizer untuk XE5 pasca-olahraga, dan penataan peer-scaffolding di XE7).
+                                Cepat mengadaptasi strategi instruksional sesuai dinamika spesifik kelas X-E7 (misal: memberikan tantangan berpikir lanjutan untuk peserta didik cepat tanggap, menyisipkan energizer saat jam siang pasca-olahraga, serta penataan peer-scaffolding terstruktur antar-rekan sebaya).
                             </p>
                         </div>
                     </div>
@@ -563,15 +582,40 @@
         <!-- ==========================================
              BOTTOM NAVIGATION TO NEXT CHAPTER
              ========================================== -->
-        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <a href="analisis.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
-                <i class="ph-bold ph-arrow-left"></i>
-                <span>Kembali ke Analisis Evaluasi</span>
-            </a>
-            <a href="index.html" class="btn-primary-cta">
-                <span>Kembali ke Beranda</span>
-                <i class="ph-bold ph-house"></i>
-            </a>
+        <section class="pt-8 pb-4">
+            <div class="page-nav-dock">
+                <!-- Tombol Kiri: Analisis Evaluasi -->
+                <a href="analisis.html" class="nav-dock-card nav-dock-prev group">
+                    <div class="nav-dock-icon">
+                        <i class="ph-bold ph-arrow-left"></i>
+                    </div>
+                    <div class="nav-dock-info">
+                        <span class="nav-dock-label">SEBELUMNYA</span>
+                        <span class="nav-dock-title">Analisis Komparatif</span>
+                    </div>
+                </a>
+
+                <!-- Pemisah di Tengah: Hub Katalog Artefak -->
+                <div class="nav-dock-center">
+                    <a href="artefak.html" class="nav-dock-hub group" title="Katalog 24 Artefak Pembelajaran">
+                        <div class="w-9 h-9 rounded-xl bg-royal-500/10 dark:bg-royal-900/40 border border-royal-500/20 dark:border-royal-700/40 flex items-center justify-center text-royal-600 dark:text-neon group-hover:scale-110 group-hover:bg-neon group-hover:text-royal-950 transition-all shadow-sm">
+                            <i class="ph-bold ph-squares-four text-base"></i>
+                        </div>
+                        <span class="nav-dock-hub-text">Katalog Artefak</span>
+                    </a>
+                </div>
+
+                <!-- Tombol Kanan: Selesai ke Beranda -->
+                <a href="index.html" class="nav-dock-card nav-dock-next group">
+                    <div class="nav-dock-info text-right">
+                        <span class="nav-dock-label text-royal-600 dark:text-neon font-black">SELESAI</span>
+                        <span class="nav-dock-title">Kembali ke Beranda</span>
+                    </div>
+                    <div class="nav-dock-icon nav-dock-icon-next">
+                        <i class="ph-bold ph-house"></i>
+                    </div>
+                </a>
+            </div>
         </section>
 
     </main>

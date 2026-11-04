@@ -68,6 +68,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
+    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
+    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -188,34 +190,51 @@
     </header>
 
     <!-- ==========================================
-         PAGE HEADER BANNER
-         ========================================== -->
-    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0A0517]">
-        <div class="site-container">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 mb-3">
-                    <span class="badge-primary">BIODATA &amp; JEJAK LANGKAH</span>
-                    <span class="badge-slate">PPG PRAJABATAN UNY 2026</span>
-                </div>
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-                    Profil &amp; Jejak Langkah Pendidik
-                </h1>
-                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
-                    Mengenal lebih dekat sosok calon guru informatika di balik portofolio Praktik Pengalaman Lapangan Mandiri (PPLM) di SMA Negeri 4 Yogyakarta.
-                </p>
-                <div class="flex flex-wrap items-center gap-4 mt-6 text-xs text-slate-500 dark:text-slate-400">
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-map-pin text-royal-500 dark:text-neon"></i> Sleman, D.I. Yogyakarta</span>
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-buildings text-royal-500 dark:text-neon"></i> SMAN 4 Yogyakarta (Patbhe)</span>
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-graduation-cap text-royal-500 dark:text-neon"></i> LPTK Universitas Negeri Yogyakarta</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
          MAIN CONTENT: PROFIL DETAIL
          ========================================== -->
     <main class="page-main site-container space-y-16">
+
+        <!-- 1. BANNER PROFIL PENDIDIK -->
+        <section class="cycle-hero-banner">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Sisi Kiri: Kata-Kata & Narasi Profil (8 Kolom) -->
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
+                            <i class="ph-bold ph-seal-check"></i> PROFIL PENDIDIK • JEJAK LANGKAH
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-graduation-cap"></i> PPG Prajabatan UNY 2026
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                        Profil &amp; Jejak Langkah Pendidik
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
+                        Mengenal lebih dekat sosok calon guru informatika di balik portofolio Praktik Pengalaman Lapangan Mandiri (PPLM) di SMA Negeri 4 Yogyakarta. Dedikasi dalam memadukan keahlian desain, teknologi instruksional, dan pedagogi humanis untuk peserta didik Kurikulum Merdeka.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs text-white/80 font-medium">
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-map-pin text-neon"></i> Sleman, D.I. Yogyakarta</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-buildings text-neon"></i> SMAN 4 Yogyakarta (Patbhe)</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-code text-neon"></i> Calon Guru Informatika</span>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Icon 3D Banner (4 Kolom) -->
+                <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-neon/20 rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+                        <img src="img/icon 3d banner/profil.png" alt="Ilustrasi 3D Profil Pendidik" class="relative z-10 w-48 sm:w-56 lg:w-64 max-h-56 lg:max-h-64 object-contain banner-3d-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- 1. KARTU PROFIL UTAMA (HERO STYLE FROM PPL 1) -->
         <section class="p-8 sm:p-12 rounded-3xl bg-royal-500 dark:bg-[#120B22] border border-transparent dark:border-[#2B184A] text-white relative overflow-hidden shadow-2xl">
@@ -223,7 +242,7 @@
                 <!-- Sisi Kiri: Foto Cutout dengan Floating Badges -->
                 <div class="lg:col-span-5 flex flex-col items-center relative">
                     <div class="w-64 sm:w-72 aspect-[4/5] rounded-3xl overflow-hidden bg-white/10 backdrop-blur-md border-2 border-white/20 p-2 shadow-2xl relative">
-                        <img src="img/nuris.png" alt="Nur Isnanto Nugroho, S.Pd." class="w-full h-full object-cover rounded-2xl">
+                        <img src="img/profil.png" alt="Nur Isnanto Nugroho, S.Pd." class="w-full h-full object-cover rounded-2xl" style="object-position: center top;">
                     </div>
                     <!-- Badges -->
                     <div class="absolute -bottom-3 left-4 bg-neon text-royal-900 px-3.5 py-1.5 rounded-full font-bold text-xs shadow-lg flex items-center gap-1.5">
@@ -452,41 +471,43 @@
             </div>
         </section>
 
-        <!-- 5. KONTEKS PENUGASAN PPL SMA NEGERI 4 YOGYAKARTA -->
-        <section class="p-6 sm:p-8 rounded-2xl bg-slate-50 dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-4">
-            <h3 class="font-extrabold text-lg text-slate-900 dark:text-white flex items-center gap-2">
-                <i class="ph-bold ph-buildings text-royal-500 dark:text-neon text-xl"></i>
-                Konteks Praktik Lapangan Mandiri (PPLM)
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                Praktik Pengalaman Lapangan Mandiri dilaksanakan di <strong>SMA Negeri 4 Yogyakarta</strong> (Jl. Magelang, Karangwaru, Tegalrejo, Kota Yogyakarta) di bawah bimbingan Guru Pamong <strong>Titis Widowati, S.T.</strong> (NIP 19780313 202221 2 006) dan Kepala Sekolah <strong>Dra. Jumiati, M.Pd.</strong>
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
-                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-                    <span class="text-slate-500 dark:text-slate-400 block text-[11px]">Rombel Sasaran:</span>
-                    <strong class="text-slate-900 dark:text-white text-sm">X-E3, X-E5, &amp; X-E7</strong>
-                </div>
-                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-                    <span class="text-slate-500 dark:text-slate-400 block text-[11px]">Total Peserta Didik:</span>
-                    <strong class="text-royal-600 dark:text-neon text-sm">108 Siswa</strong>
-                </div>
-                <div class="p-3.5 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-                    <span class="text-slate-500 dark:text-slate-400 block text-[11px]">Fasilitas Praktik:</span>
-                    <strong class="text-slate-900 dark:text-white text-sm">Lab Komputer Terpadu</strong>
-                </div>
-            </div>
-        </section>
 
-        <!-- Navigation Next -->
-        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <a href="index.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
-                <i class="ph-bold ph-arrow-left"></i>
-                <span>Kembali ke Beranda</span>
-            </a>
-            <a href="siklus-1.html" class="btn-primary-cta">
-                <span>Lanjut ke Siklus 1 (Informatika)</span>
-                <i class="ph-bold ph-arrow-right"></i>
-            </a>
+
+        <!-- Navigation Workflow Dock -->
+        <section class="pt-8 pb-4">
+            <div class="page-nav-dock">
+                <!-- Tombol Kiri: Kembali ke Beranda -->
+                <a href="index.html" class="nav-dock-card nav-dock-prev group">
+                    <div class="nav-dock-icon">
+                        <i class="ph-bold ph-arrow-left"></i>
+                    </div>
+                    <div class="nav-dock-info">
+                        <span class="nav-dock-label">SEBELUMNYA</span>
+                        <span class="nav-dock-title">Kembali ke Beranda</span>
+                    </div>
+                </a>
+
+                <!-- Pemisah di Tengah: Hub Katalog Artefak -->
+                <div class="nav-dock-center">
+                    <a href="artefak.html" class="nav-dock-hub group" title="Katalog 24 Artefak Pembelajaran">
+                        <div class="w-9 h-9 rounded-xl bg-royal-500/10 dark:bg-royal-900/40 border border-royal-500/20 dark:border-royal-700/40 flex items-center justify-center text-royal-600 dark:text-neon group-hover:scale-110 group-hover:bg-neon group-hover:text-royal-950 transition-all shadow-sm">
+                            <i class="ph-bold ph-squares-four text-base"></i>
+                        </div>
+                        <span class="nav-dock-hub-text">Katalog Artefak</span>
+                    </a>
+                </div>
+
+                <!-- Tombol Kanan: Lanjut ke Siklus 1 -->
+                <a href="siklus-1.html" class="nav-dock-card nav-dock-next group">
+                    <div class="nav-dock-info text-right">
+                        <span class="nav-dock-label text-royal-600 dark:text-neon font-black">SELANJUTNYA</span>
+                        <span class="nav-dock-title">Siklus 1: Struktur Data</span>
+                    </div>
+                    <div class="nav-dock-icon nav-dock-icon-next">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
         </section>
 
     </main>

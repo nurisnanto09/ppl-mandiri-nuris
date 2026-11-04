@@ -68,6 +68,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
+    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
+    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -200,26 +202,37 @@
 
         <!-- 1. BANNER SIKLUS 1 -->
         <section class="cycle-hero-banner">
-            <div class="relative z-10 max-w-4xl space-y-4">
-                <div class="flex flex-wrap items-center gap-2">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
-                        <i class="ph-bold ph-seal-check"></i> SIKLUS 1 • PRAKTIK PEMBELAJARAN
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
-                        <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
-                        <i class="ph-bold ph-calendar"></i> Fase E / Kelas X
-                    </span>
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Sisi Kiri: Narasi Siklus 1 (8 Kolom) -->
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
+                            <i class="ph-bold ph-seal-check"></i> SIKLUS 1 • PRAKTIK PEMBELAJARAN
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-calendar"></i> Fase E / Kelas X-E7
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                        Siklus 1: Struktur Data dan Algoritma Dasar
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
+                        Perangkat pembelajaran lengkap berbasis <em>Experiential Learning</em> (Siklus Kolb) untuk menanamkan pemahaman struktur data linier (Array, List, Stack, Queue) dan 4 fondasi Berpikir Komputasional (Dekomposisi, Pengenalan Pola, Abstraksi, Algoritma) pada peserta didik Fase E.
+                    </p>
                 </div>
 
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-                    Siklus 1: Struktur Data dan Algoritma Dasar
-                </h1>
-
-                <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
-                    Perangkat pembelajaran lengkap berbasis <em>Experiential Learning</em> (Siklus Kolb) untuk menanamkan pemahaman struktur data linier (Array, List, Stack, Queue) dan 4 fondasi Berpikir Komputasional (Dekomposisi, Pengenalan Pola, Abstraksi, Algoritma) pada peserta didik Fase E.
-                </p>
+                <!-- Sisi Kanan: Icon 3D Banner (4 Kolom) -->
+                <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-neon/20 rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+                        <img src="img/icon 3d banner/artefak siklus 1 baru.png" alt="Ilustrasi 3D Artefak Siklus 1" class="relative z-10 w-48 sm:w-56 lg:w-64 max-h-56 lg:max-h-64 object-contain banner-3d-icon">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -385,7 +398,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <iframe src="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%201.pdf" class="w-full h-[650px] border-0" title="Modul Ajar Siklus 1"></iframe>
+                            <div class="pdf-canvas-embed" data-pdf="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%201.pdf" data-title="Modul Ajar Siklus 1"></div>
                         </div>
                     </div>
                 </div>
@@ -445,7 +458,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <iframe src="pdf/RPP/Pertemuan%20Struktur%20Data%20dan%20Algoritma%20Dasar.pdf#view=FitH" class="w-full h-[650px] border-0" title="RPP Siklus 1 - Struktur Data"></iframe>
+                            <div class="pdf-canvas-embed" data-pdf="pdf/RPP/Pertemuan%20Struktur%20Data%20dan%20Algoritma%20Dasar.pdf#view=FitH" data-title="RPP Siklus 1 - Struktur Data"></div>
                         </div>
 
                         
@@ -503,7 +516,7 @@
                                     <i class="ph-bold ph-arrow-square-out"></i>
                                 </a>
                             </div>
-                            <iframe src="pdf/Handbook/Buku%20Pegangan-2.%20Stuktur%20Data%20%26%20Algoritma%20Dasar.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 2 Siswa"></iframe>
+                            <div class="pdf-canvas-embed" data-pdf="pdf/Handbook/Buku%20Pegangan-2.%20Stuktur%20Data%20%26%20Algoritma%20Dasar.pdf" data-title="Buku Pegangan 2 Siswa"></div>
                         </div>
 
                         <!-- Preview -->
@@ -662,7 +675,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <iframe loading="lazy" src="pdf/LKPD/Siklus%201/LKPD1.pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="LKPD Siklus 1: Berpikir Komputasional"></iframe>
+                                <div class="pdf-canvas-embed" data-pdf="pdf/LKPD/Siklus%201/LKPD1.pdf#view=FitH" data-title="LKPD Siklus 1: Berpikir Komputasional"></div>
                             </div>
                         </div>
                     </div>
@@ -718,7 +731,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <iframe loading="lazy" src="pdf/Assemen/Asesmen%20Struktur%20Data%20dan%20Algoritma%20Dasar%20(1).pdf#view=FitH" class="w-full h-[650px] border-0 bg-white dark:bg-[#140D26]" title="Asesmen Struktur Data dan Algoritma Dasar"></iframe>
+                            <div class="pdf-canvas-embed" data-pdf="pdf/Assemen/Asesmen%20Struktur%20Data%20dan%20Algoritma%20Dasar%20(1).pdf#view=FitH" data-title="Asesmen Struktur Data dan Algoritma Dasar"></div>
                         </div>
                     </div>
                 </div>

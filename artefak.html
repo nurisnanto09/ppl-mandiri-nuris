@@ -66,6 +66,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
+    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
+    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -191,15 +193,46 @@
     <main class="page-main site-container">
 
         <!-- Page Header Banner -->
-        <div class="section-header">
-            <span class="section-eyebrow">
-                <i class="ph-fill ph-folders"></i> REPOSITORI LENGKAP 4 SIKLUS PPL
-            </span>
-            <h1 class="section-title">Katalog 24 Artefak Pembelajaran &amp; Non-Mengajar</h1>
-            <p class="section-desc">
-                Halaman ini menyajikan seluruh dokumentasi perangkat pembelajaran <strong>Siklus 1 (Computational Thinking)</strong>, <strong>Siklus 2 (Algoritma Dasar)</strong>, <strong>Siklus 3 (Microsoft Excel)</strong>, dan <strong>Siklus 4 (Sistem Operasi)</strong>, yang masing-masing terdiri atas 5 komponen wajib: <em>Modul Ajar, Asesmen, Materi Ajar, LKPD, dan Media Pembelajaran</em>, serta 4 karya inovasi non-mengajar.
-            </p>
-        </div>
+        <section class="cycle-hero-banner">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Sisi Kiri: Kata-Kata & Narasi Katalog Artefak (8 Kolom) -->
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
+                            <i class="ph-bold ph-seal-check"></i> REPOSITORI ARTEFAK LENGKAP
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-files"></i> 24 Dokumen Lengkap
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                        Katalog 24 Artefak Pembelajaran &amp; Non-Mengajar
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
+                        Repositori komprehensif seluruh dokumentasi perangkat pembelajaran <strong>Siklus 1 (Computational Thinking)</strong>, <strong>Siklus 2 (Algoritma Pemrograman)</strong>, <strong>Siklus 3 (Pengelolaan Angka Excel)</strong>, dan <strong>Siklus 4 (Sistem Operasi)</strong>, yang masing-masing terdiri atas 5 komponen wajib: <em>Modul Ajar, Asesmen, Materi Ajar, LKPD, dan Media Pembelajaran</em>, ditambah karya inovasi non-mengajar serta refleksi LK 4.1 – LK 4.4.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs text-white/80 font-medium">
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-folder-notch-open text-neon"></i> 20 Dokumen Inti Mengajar</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-file-pdf text-neon"></i> LK 4.1 - 4.4 Refleksi</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-eye text-neon"></i> PDF Modal Preview</span>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Icon 3D Banner (4 Kolom) -->
+                <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-neon/20 rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+                        <img src="img/icon 3d banner/banner icon artefak.png" alt="Ilustrasi 3D Katalog 24 Artefak Pembelajaran" class="relative z-10 w-48 sm:w-56 lg:w-64 max-h-56 lg:max-h-64 object-contain banner-3d-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Quick Jump Navigation (Pilihan Artefak) -->
         <div class="cycle-jump-menu">
@@ -217,7 +250,7 @@
         <div class="mb-10 p-5 sm:p-6 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-5">
             <div class="flex items-center gap-4">
                 <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-royal-500/30 dark:border-neon/30 shrink-0 shadow-md">
-                    <img src="img/nuris.png" alt="Nur Isnanto Nugroho, S.Pd." class="w-full h-full object-cover">
+                    <img src="img/profil.png" alt="Nur Isnanto Nugroho, S.Pd." class="w-full h-full object-cover" style="object-position: center top;">
                 </div>
                 <div>
                     <div class="flex items-center gap-2 mb-1">
@@ -247,7 +280,7 @@
                 <div>
                     <span class="badge-blue">SIKLUS 1 — STRUKTUR DATA &amp; ALGORITMA DASAR</span>
                     <h2 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">Struktur Data dan Algoritma Dasar (4 Fondasi CT, Stack &amp; Queue)</h2>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">Memfasilitasi siswa kelas X (XE3, XE5, XE7) memecahkan persoalan nyata sehari-hari menggunakan struktur data dan algoritma dasar.</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Memfasilitasi siswa kelas X-E7 memecahkan persoalan nyata sehari-hari menggunakan struktur data dan algoritma dasar.</p>
                 </div>
                 <span class="text-xs font-bold font-mono text-royal-500 dark:text-neon shrink-0">6 Perangkat Lengkap</span>
             </div>
@@ -556,7 +589,7 @@
                             <ul class="space-y-1 text-xs">
                                 <li>✦ <strong>Dokumen:</strong> Modul Ajar-Siklus 2.pdf (23.27 MB Lengkap).</li>
                                 <li>✦ <strong>Visual-to-Text:</strong> Scaffolding translasi diagram alir ke teks semu.</li>
-                                <li>✦ <strong>Scaffolding:</strong> Pendampingan bimbingan khusus kelas XE5.</li>
+                                <li>✦ <strong>Scaffolding:</strong> Pendampingan bimbingan bertahap bagi kelompok peserta didik di kelas X-E7.</li>
                                 <li>✦ <strong>Struktur:</strong> Algoritma sekuensial dan percabangan (if-else).</li>
                             </ul>
                         </div>
@@ -1684,6 +1717,43 @@
                 </article>
             </div>
         </div>
+
+        <!-- Navigation Workflow Dock -->
+        <section class="pt-10 pb-6 border-t border-slate-200 dark:border-slate-800">
+            <div class="page-nav-dock">
+                <!-- Tombol Kiri: Profil Pendidik -->
+                <a href="profil.html" class="nav-dock-card nav-dock-prev group">
+                    <div class="nav-dock-icon">
+                        <i class="ph-bold ph-arrow-left"></i>
+                    </div>
+                    <div class="nav-dock-info">
+                        <span class="nav-dock-label">SEBELUMNYA</span>
+                        <span class="nav-dock-title">Profil Pendidik</span>
+                    </div>
+                </a>
+
+                <!-- Pemisah di Tengah: Hub Menu Siklus -->
+                <div class="nav-dock-center">
+                    <a href="index.html#menu-siklus" class="nav-dock-hub group" title="Daftar Menu 4 Siklus Pembelajaran">
+                        <div class="w-9 h-9 rounded-xl bg-royal-500/10 dark:bg-royal-900/40 border border-royal-500/20 dark:border-royal-700/40 flex items-center justify-center text-royal-600 dark:text-neon group-hover:scale-110 group-hover:bg-neon group-hover:text-royal-950 transition-all shadow-sm">
+                            <i class="ph-bold ph-list-dashes text-base"></i>
+                        </div>
+                        <span class="nav-dock-hub-text">Menu Siklus</span>
+                    </a>
+                </div>
+
+                <!-- Tombol Kanan: Mulai Siklus 1 -->
+                <a href="siklus-1.html" class="nav-dock-card nav-dock-next group">
+                    <div class="nav-dock-info text-right">
+                        <span class="nav-dock-label text-royal-600 dark:text-neon font-black">MULAI EKSPLORASI</span>
+                        <span class="nav-dock-title">Siklus 1: Struktur Data</span>
+                    </div>
+                    <div class="nav-dock-icon nav-dock-icon-next">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
 
     </main>
 

@@ -896,10 +896,10 @@ html.dark .btn-hero-white {
 
 /* 9. CYCLE TABS & ARTIFACT REPOSITORY */
 .cycle-hero-banner {
-    background-color: #7E3BED;
+    background: linear-gradient(135deg, #7E3BED 0%, #682cd1 100%);
     color: #FFFFFF;
     border-radius: 28px;
-    padding: 2.5rem 2rem;
+    padding: 2.75rem 2.25rem;
     box-shadow: 0 16px 36px -8px rgba(126, 59, 237, 0.35);
     margin-bottom: 2rem;
     position: relative;
@@ -907,9 +907,79 @@ html.dark .btn-hero-white {
 }
 
 html.dark .cycle-hero-banner {
-    background-color: #120B22;
-    border: 1px solid rgba(126, 59, 237, 0.4);
-    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.75);
+    background: linear-gradient(135deg, #160D2B 0%, #0E071D 100%);
+    border: 1px solid rgba(126, 59, 237, 0.45);
+    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.8), 0 0 40px -10px rgba(126, 59, 237, 0.25);
+}
+
+/* 3D Floating Banner Icon - Dynamic & Lively Continuous Motion */
+@keyframes float3DIcon {
+    0% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+        filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.42));
+    }
+    25% {
+        transform: translateY(-13px) rotate(2.5deg) scale(1.025);
+        filter: drop-shadow(0 24px 26px rgba(0, 0, 0, 0.35));
+    }
+    50% {
+        transform: translateY(-24px) rotate(-2deg) scale(1.045);
+        filter: drop-shadow(0 36px 36px rgba(0, 0, 0, 0.28));
+    }
+    75% {
+        transform: translateY(-10px) rotate(1.5deg) scale(1.02);
+        filter: drop-shadow(0 22px 24px rgba(0, 0, 0, 0.38));
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg) scale(1);
+        filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.42));
+    }
+}
+
+@keyframes bannerGlowPulse {
+    0%, 100% {
+        transform: scale(0.92);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.85;
+    }
+}
+
+.banner-3d-icon {
+    display: inline-block;
+    will-change: transform, filter;
+    animation: float3DIcon 3.2s ease-in-out infinite;
+    user-select: none;
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.25s ease;
+    transform-origin: center center;
+    cursor: pointer;
+}
+
+.banner-3d-icon:hover {
+    transform: translateY(-28px) scale(1.1) rotate(4deg);
+    filter: drop-shadow(0 40px 45px rgba(0, 0, 0, 0.5));
+}
+
+.banner-3d-icon:active {
+    transform: translateY(-10px) scale(0.96) rotate(-2deg);
+    transition: transform 0.1s ease;
+}
+
+.banner-3d-glow,
+.cycle-hero-banner .group > div:first-child {
+    animation: bannerGlowPulse 3.2s ease-in-out infinite;
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .banner-3d-icon,
+    .banner-3d-glow,
+    .cycle-hero-banner .group > div:first-child {
+        animation: none;
+    }
 }
 
 .cycle-tabs-nav {
@@ -1017,6 +1087,363 @@ html.dark .cycle-tab-btn.active {
     aspect-ratio: 16 / 9;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-subtle);
+}
+
+/* ============================================================
+   WORKFLOW NAVIGATION DOCK (BOTTOM NEXT / PREV)
+   ============================================================ */
+.page-nav-dock {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.85rem 1.25rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 26px;
+    box-shadow: 0 10px 30px -10px rgba(126, 59, 237, 0.12);
+}
+
+html.dark .page-nav-dock {
+    background: rgba(18, 11, 34, 0.75);
+    border: 1px solid rgba(126, 59, 237, 0.35);
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7), 0 0 24px -6px rgba(126, 59, 237, 0.2);
+}
+
+.nav-dock-card {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.75rem 1.15rem;
+    border-radius: 18px;
+    background: transparent;
+    border: 1px solid transparent;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.nav-dock-prev {
+    justify-content: flex-start;
+}
+
+.nav-dock-next {
+    justify-content: flex-end;
+}
+
+.nav-dock-card:hover {
+    background: rgba(126, 59, 237, 0.06);
+    border-color: rgba(126, 59, 237, 0.2);
+    transform: translateY(-2px);
+}
+
+html.dark .nav-dock-card:hover {
+    background: rgba(126, 59, 237, 0.15);
+    border-color: rgba(126, 59, 237, 0.4);
+}
+
+/* Next Card Highlight (Neon Accent CTA) */
+.nav-dock-next {
+    background: linear-gradient(135deg, rgba(126, 59, 237, 0.08) 0%, rgba(198, 255, 52, 0.08) 100%);
+    border: 1px solid rgba(126, 59, 237, 0.2);
+}
+
+html.dark .nav-dock-next {
+    background: linear-gradient(135deg, rgba(126, 59, 237, 0.25) 0%, rgba(18, 11, 34, 0.6) 100%);
+    border: 1px solid rgba(198, 255, 52, 0.35);
+}
+
+.nav-dock-next:hover {
+    background: linear-gradient(135deg, rgba(126, 59, 237, 0.18) 0%, rgba(198, 255, 52, 0.18) 100%);
+    border-color: var(--accent-neon);
+    box-shadow: 0 8px 24px -6px rgba(198, 255, 52, 0.3);
+}
+
+/* Icon Badges */
+.nav-dock-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--color-royal-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+html.dark .nav-dock-icon {
+    background: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+}
+
+.nav-dock-card:hover .nav-dock-icon {
+    transform: translateX(-3px);
+    background: var(--color-royal-500);
+    color: #FFFFFF;
+}
+
+.nav-dock-icon-next {
+    background: var(--accent-neon);
+    color: #0F0920;
+    box-shadow: 0 4px 14px rgba(198, 255, 52, 0.4);
+}
+
+html.dark .nav-dock-icon-next {
+    background: var(--accent-neon);
+    color: #0F0920;
+}
+
+.nav-dock-next:hover .nav-dock-icon-next {
+    transform: translateX(4px);
+    background: #FFFFFF;
+    color: var(--color-royal-600);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.3);
+}
+
+/* Info Labels */
+.nav-dock-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-dock-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    letter-spacing: 0.08em;
+    color: var(--color-slate-500);
+    margin-bottom: 0.15rem;
+}
+
+html.dark .nav-dock-label {
+    color: var(--color-slate-400);
+}
+
+.nav-dock-title {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--color-slate-900);
+    line-height: 1.25;
+    transition: color 0.2s ease;
+}
+
+html.dark .nav-dock-title {
+    color: #FFFFFF;
+}
+
+.nav-dock-card:hover .nav-dock-title {
+    color: var(--color-royal-500);
+}
+
+html.dark .nav-dock-card:hover .nav-dock-title {
+    color: var(--accent-neon);
+}
+
+/* Center Hub */
+.nav-dock-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 0.75rem;
+}
+
+.nav-dock-center::before,
+.nav-dock-center::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 32px;
+    background: rgba(226, 232, 240, 0.8);
+}
+
+html.dark .nav-dock-center::before,
+html.dark .nav-dock-center::after {
+    background: rgba(126, 59, 237, 0.3);
+}
+
+.nav-dock-center::before { left: 0; }
+.nav-dock-center::after { right: 0; }
+
+.nav-dock-hub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 14px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.nav-dock-hub:hover {
+    transform: scale(1.05);
+}
+
+.nav-dock-hub-text {
+    font-size: 0.65rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    color: var(--color-slate-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+html.dark .nav-dock-hub-text {
+    color: var(--color-slate-400);
+}
+
+.nav-dock-hub:hover .nav-dock-hub-text {
+    color: var(--color-royal-500);
+}
+
+html.dark .nav-dock-hub:hover .nav-dock-hub-text {
+    color: var(--accent-neon);
+}
+
+@media (max-width: 768px) {
+    .page-nav-dock {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+        padding: 0.85rem;
+    }
+    .nav-dock-center {
+        order: -1;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+    }
+    html.dark .nav-dock-center {
+        border-color: rgba(126, 59, 237, 0.25);
+    }
+    .nav-dock-center::before,
+    .nav-dock-center::after {
+        display: none;
+    }
+    .nav-dock-card {
+        padding: 0.75rem 0.9rem;
+        width: 100%;
+    }
+    .nav-dock-title {
+        font-size: 0.825rem;
+    }
+}
+
+/* ============================================================
+   10. SCROLL REVEAL ANIMATIONS (PROGRESSIVE ENHANCEMENT)
+   ============================================================ */
+html.reveal-enabled .reveal-item {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+html.reveal-enabled .reveal-item.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html.reveal-enabled .reveal-item.is-revealed-instant {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+}
+
+/* Stagger animation for sibling cards in grid */
+.grid > .reveal-item:nth-child(2) {
+    transition-delay: 0.08s;
+}
+.grid > .reveal-item:nth-child(3) {
+    transition-delay: 0.16s;
+}
+.grid > .reveal-item:nth-child(4) {
+    transition-delay: 0.24s;
+}
+.grid > .reveal-item:nth-child(5) {
+    transition-delay: 0.32s;
+}
+.grid > .reveal-item:nth-child(6) {
+    transition-delay: 0.40s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.reveal-enabled .reveal-item {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* ============================================================
+   HTML5 CANVAS PDF VIEWER (MOBILE & DESKTOP ZERO AUTO-DOWNLOAD)
+   ============================================================ */
+.pdf-canvas-embed {
+    width: 100%;
+    min-height: 540px;
+    background-color: #0d081a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+}
+
+.pdf-canvas-toolbar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    background: #180f2e;
+    border-bottom: 1px solid rgba(126, 59, 237, 0.3);
+    color: #ffffff;
+    font-size: 0.75rem;
+    z-index: 10;
+}
+
+.pdf-canvas-viewport {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem 0.75rem;
+    background-color: #0b0616;
+}
+
+.pdf-rendered-canvas {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.pdf-canvas-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    gap: 0.75rem;
+    color: #ffffff;
+}
+
+#pdfModalViewerContainer {
+    min-height: 65vh;
+    max-height: 85vh;
 }
 
 .video-play-btn {
@@ -2322,6 +2749,49 @@ html.dark .lk-qa-box {
         height: 40px !important;
         flex-shrink: 0 !important;
     }
+
+    /* 11. Cycle Hero Banner & 3D Icon Mobile */
+    .cycle-hero-banner {
+        padding: 1.75rem 1.25rem !important;
+        border-radius: 22px !important;
+    }
+    .banner-3d-icon {
+        max-width: 190px !important;
+        max-height: 190px !important;
+        margin: 0.75rem auto 0 auto !important;
+    }
+
+    /* 12. Mobile Responsive PDF Canvas Viewer & Modal */
+    .pdf-modal {
+        padding: 0.5rem !important;
+    }
+
+    .pdf-modal-dialog {
+        height: 94vh !important;
+        border-radius: 16px !important;
+    }
+
+    .pdf-modal-header {
+        padding: 0.75rem 1rem !important;
+    }
+
+    .pdf-canvas-embed {
+        min-height: 440px !important;
+    }
+
+    .pdf-canvas-toolbar {
+        padding: 0.5rem 0.75rem !important;
+        gap: 0.4rem !important;
+    }
+
+    .pdf-canvas-viewport {
+        padding: 0.75rem 0.5rem !important;
+    }
+
+    .pdf-rendered-canvas {
+        max-width: 100% !important;
+        height: auto !important;
+    }
 }
 
 /* ============================================================
@@ -2331,6 +2801,11 @@ html.dark .lk-qa-box {
     .site-container {
         padding-left: 0.75rem !important;
         padding-right: 0.75rem !important;
+    }
+
+    .banner-3d-icon {
+        max-width: 150px !important;
+        max-height: 150px !important;
     }
 
     .mobile-dropdown.show {

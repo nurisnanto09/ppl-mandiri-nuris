@@ -68,6 +68,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
+    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
+    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -200,26 +202,37 @@
 
         <!-- 1. BANNER SIKLUS 2 -->
         <section class="cycle-hero-banner">
-            <div class="relative z-10 max-w-4xl space-y-4">
-                <div class="flex flex-wrap items-center gap-2">
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
-                        <i class="ph-bold ph-seal-check"></i> SIKLUS 2 • PRAKTIK PEMBELAJARAN
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
-                        <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
-                    </span>
-                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
-                        <i class="ph-bold ph-calendar"></i> Fase E / Kelas X
-                    </span>
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Sisi Kiri: Kata-Kata & Narasi Siklus 2 (8 Kolom) -->
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
+                            <i class="ph-bold ph-seal-check"></i> SIKLUS 2 • PRAKTIK PEMBELAJARAN
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-calendar"></i> Fase E / Kelas X-E7
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                        Siklus 2: Algoritma Pemrograman, Flowchart &amp; Pseudocode
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
+                        Perangkat pembelajaran interaktif berbasis <em>Problem-Based Learning (PBL)</em> untuk mengasah kemampuan logika notasi algoritmik, penerjemahan persoalan nyata ke bagan alir (Flowchart), penyusunan Pseudocode terstruktur, hingga pengujian kebenaran logika algoritma melalui <em>Trace Table</em> di Fase E.
+                    </p>
                 </div>
 
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-                    Siklus 2: Algoritma Flowchart &amp; Pseudocode
-                </h1>
-
-                <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
-                    Perangkat pembelajaran interaktif berbasis <em>Problem-Based Learning (PBL)</em> untuk mengasah logika prosedural, perancangan diagram alir terstandar ISO 5807, notasi pseudocode terstruktur, percabangan IF-ELSE kondisional, dan simulasi pengujian logika (<em>dry run table</em>).
-                </p>
+                <!-- Sisi Kanan: Icon 3D Banner (4 Kolom) -->
+                <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-neon/20 rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+                        <img src="img/icon 3d banner/Ilustrasi 3D Flowchart dan Pseudocode.png" alt="Ilustrasi 3D Algoritma Flowchart" class="relative z-10 w-48 sm:w-56 lg:w-64 max-h-56 lg:max-h-64 object-contain banner-3d-icon">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -382,7 +395,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <iframe src="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%202.pdf" class="w-full h-[650px] border-0" title="Modul Ajar Siklus 2: Algoritma"></iframe>
+                            <div class="pdf-canvas-embed" data-pdf="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%202.pdf" data-title="Modul Ajar Siklus 2: Algoritma"></div>
                         </div>
 
                         
@@ -442,7 +455,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <iframe src="pdf/RPP/Pertemuan%20FLowcart.pdf#view=FitH" class="w-full h-[650px] border-0" title="RPP Siklus 2 - Flowchart"></iframe>
+                            <div class="pdf-canvas-embed" data-pdf="pdf/RPP/Pertemuan%20FLowcart.pdf#view=FitH" data-title="RPP Siklus 2 - Flowchart"></div>
                         </div>
                     </div>
                 </div>
@@ -502,7 +515,7 @@
                                     <i class="ph-bold ph-arrow-square-out"></i>
                                 </a>
                             </div>
-                            <iframe src="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 3 Siswa"></iframe>
+                            <div class="pdf-canvas-embed" data-pdf="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" data-title="Buku Pegangan 3 Siswa"></div>
                         </div>
                     </div>
                 </div>
@@ -732,7 +745,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <iframe loading="lazy" src="pdf/LKPD/Siklus%202/LKPD_Pertemuan_1_Algoritma_dan_Flowchart.pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="LKPD Pertemuan 1: Algoritma dan Flowchart"></iframe>
+                                <div class="pdf-canvas-embed" data-pdf="pdf/LKPD/Siklus%202/LKPD_Pertemuan_1_Algoritma_dan_Flowchart.pdf#view=FitH" data-title="LKPD Pertemuan 1: Algoritma dan Flowchart"></div>
                             </div>
                         </div>
 
@@ -787,7 +800,7 @@
                                         <i class="ph-bold ph-arrow-square-out"></i>
                                     </a>
                                 </div>
-                                <iframe loading="lazy" src="pdf/LKPD/Siklus%202/LKPD%20Informatika%20-%20Pseudocode%20(7)%20(2).pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="LKPD Pertemuan 2: Pseudocode & Trace Table"></iframe>
+                                <div class="pdf-canvas-embed" data-pdf="pdf/LKPD/Siklus%202/LKPD%20Informatika%20-%20Pseudocode%20(7)%20(2).pdf#view=FitH" data-title="LKPD Pertemuan 2: Pseudocode & Trace Table"></div>
                             </div>
                         </div>
                     </div>
@@ -843,7 +856,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <iframe loading="lazy" src="pdf/Assemen/Asesmen%20Notasi%20Algoritma.pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="Asesmen Notasi Algoritma"></iframe>
+                            <div class="pdf-canvas-embed" data-pdf="pdf/Assemen/Asesmen%20Notasi%20Algoritma.pdf#view=FitH" data-title="Asesmen Notasi Algoritma"></div>
                         </div>
 
                         

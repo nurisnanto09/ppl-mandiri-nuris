@@ -66,6 +66,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- External JavaScript -->
+    <!-- PDF.js Engine for Mobile Canvas Rendering (Zero Auto-Download) -->
+    <script src="js/pdf.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body class="selection:bg-neon selection:text-royal-900">
@@ -186,34 +188,51 @@
     </header>
 
     <!-- ==========================================
-         PAGE HEADER BANNER
-         ========================================== -->
-    <section class="page-header-top border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0A0517]">
-        <div class="site-container">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 mb-3">
-                    <span class="badge-primary">EVALUASI PEMBELAJARAN &amp; PSE</span>
-                    <span class="badge-slate">SMAN 4 YOGYAKARTA</span>
-                </div>
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-                    Analisis Komparatif 4 Siklus &amp; Pembelajaran Sosial Emosional
-                </h1>
-                <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
-                    Evaluasi kuantitatif ketuntasan belajar dari Siklus 1 hingga Siklus 4, analisis kualitatif dinamika kelas X Fase E (XE3, XE5, XE7), serta penerapan <em>Pembelajaran Sosial Emosional (PSE)</em> untuk menghapus bias apersepsi klasikal.
-                </p>
-                <div class="flex flex-wrap items-center gap-4 mt-6 text-xs text-slate-500 dark:text-slate-400">
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-trend-up text-emerald-500"></i> Progres Ketuntasan: 78% &rarr; 94%</span>
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-users-three text-royal-500 dark:text-neon"></i> Sampel: 108 Peserta Didik</span>
-                    <span class="flex items-center gap-1.5"><i class="ph-bold ph-heart-straight text-rose-500"></i> Integrasi PSE Mandiri</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==========================================
          MAIN CONTENT CONTAINER
          ========================================== -->
-    <main class="site-container py-12 space-y-16">
+    <main class="page-main site-container space-y-16">
+
+        <!-- BANNER HERO ANALISIS -->
+        <section class="cycle-hero-banner">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Sisi Kiri: Kata-Kata & Narasi Analisis (8 Kolom) -->
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
+                            <i class="ph-bold ph-chart-line-up"></i> ANALISIS &amp; EVALUASI
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
+                            <i class="ph-bold ph-users-three"></i> 36 Peserta Didik (Kelas X-E7)
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+                        Analisis Komparatif 4 Siklus &amp; PSE
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
+                        Evaluasi kuantitatif ketuntasan belajar dari Siklus 1 hingga Siklus 4, analisis kualitatif dinamika kelas X Fase E (Kelas X-E7), serta penerapan <em>Pembelajaran Sosial Emosional (PSE)</em> untuk menghapus bias apersepsi klasikal di SMA Negeri 4 Yogyakarta.
+                    </p>
+
+                    <div class="flex flex-wrap items-center gap-2.5 pt-1 text-xs text-white/80 font-medium">
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-trend-up text-neon"></i> Ketuntasan: 78% &rarr; 94%</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-file-pdf text-neon"></i> Lembar Kerja LK 4.1 – 4.4</span>
+                        <span class="flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full"><i class="ph-bold ph-heart-straight text-neon"></i> Refleksi &amp; RTL</span>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Icon 3D Banner (4 Kolom) -->
+                <div class="lg:col-span-4 flex justify-center lg:justify-end">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-neon/20 rounded-full blur-2xl opacity-60 pointer-events-none"></div>
+                        <img src="img/icon 3d banner/analisis.png" alt="Ilustrasi 3D Analisis Komparatif" class="relative z-10 w-48 sm:w-56 lg:w-64 max-h-56 lg:max-h-64 object-contain banner-3d-icon">
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- ==========================================
              SECTION 1: DATA KUANTITATIF 4 SIKLUS
@@ -228,7 +247,7 @@
                         Perkembangan Ketuntasan Belajar Kognitif &amp; Praktik
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                        Data agregat hasil asesmen formatif dan sumatif lintas 4 siklus mengajar di SMA Negeri 4 Yogyakarta.
+                        Data agregat hasil asesmen formatif dan sumatif lintas 4 siklus mengajar di kelas X-E7 SMA Negeri 4 Yogyakarta.
                     </p>
                 </div>
                 <div class="inline-flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 px-3.5 py-1.5 rounded-full text-xs font-bold">
@@ -424,7 +443,7 @@
                         <i class="ph-bold ph-arrow-square-out"></i>
                     </a>
                 </div>
-                <iframe src="pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-29-31.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.1"></iframe>
+                <div class="pdf-canvas-embed" data-pdf="pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-29-31.pdf" data-title="PDF Pratinjau LK 4.1"></div>
             </div>
 
             <!-- OFFICIAL LK 4.1 TRANSCRIPT DOCUMENT CARD -->
@@ -572,7 +591,7 @@
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">88.9%</span>
                     <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">96 dari 108 Siswa Tuntas KKTP</span>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">32 dari 36 Siswa Tuntas KKTP</span>
                 </div>
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">84.5</span>
@@ -673,7 +692,7 @@
                         <i class="ph-bold ph-arrow-square-out"></i>
                     </a>
                 </div>
-                <iframe src="pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-32-34.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.2"></iframe>
+                <div class="pdf-canvas-embed" data-pdf="pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-32-34.pdf" data-title="PDF Pratinjau LK 4.2"></div>
             </div>
 
             <!-- OFFICIAL LK 4.2 TRANSCRIPT DOCUMENT CARD -->
@@ -821,7 +840,7 @@
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">91.7%</span>
                     <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">99 dari 108 Siswa Tuntas KKTP</span>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">33 dari 36 Siswa Tuntas KKTP</span>
                 </div>
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">86.8</span>
@@ -919,7 +938,7 @@
                         <i class="ph-bold ph-arrow-square-out"></i>
                     </a>
                 </div>
-                <iframe src="pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-35-37.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.3"></iframe>
+                <div class="pdf-canvas-embed" data-pdf="pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-35-37.pdf" data-title="PDF Pratinjau LK 4.3"></div>
             </div>
 
             <!-- OFFICIAL LK 4.3 TRANSCRIPT DOCUMENT CARD -->
@@ -1067,7 +1086,7 @@
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">93.5%</span>
                     <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Proyek</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">101 dari 108 Siswa Berhasil Olah Data</span>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">34 dari 36 Siswa Berhasil Olah Data</span>
                 </div>
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">88.2</span>
@@ -1165,7 +1184,7 @@
                         <i class="ph-bold ph-arrow-square-out"></i>
                     </a>
                 </div>
-                <iframe src="pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-38-40.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.4"></iframe>
+                <div class="pdf-canvas-embed" data-pdf="pdf/LK/LK-PPLM-Nur%20Isnanto%20Nugroho%20(1)-38-40.pdf" data-title="PDF Pratinjau LK 4.4"></div>
             </div>
 
             <!-- OFFICIAL LK 4.4 TRANSCRIPT DOCUMENT CARD -->
@@ -1313,7 +1332,7 @@
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">94.4%</span>
                     <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">102 dari 108 Siswa Tuntas KKTP</span>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">34 dari 36 Siswa Tuntas KKTP</span>
                 </div>
                 <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
                     <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">89.6</span>
@@ -1403,7 +1422,7 @@
                             Dampak Negatif Bias Klasikal:
                         </div>
                         <ul class="list-disc pl-4 space-y-1">
-                            <li>Menyamarkan kondisi peserta didik yang lelah fisik setelah jam olahraga (kasus kelas XE5).</li>
+                            <li>Menyamarkan kondisi peserta didik yang lelah fisik setelah jam olahraga (kondisi jam siang / pasca-olahraga).</li>
                             <li>Siswa yang belum menguasai materi prasyarat merasa malu untuk mengangkat tangan di depan teman-temannya.</li>
                             <li>Guru mengasumsikan seluruh kelas berada pada baseline kesiapan yang sama, sehingga ritme mengajar menjadi terlalu cepat bagi kelompok rentan.</li>
                         </ul>
@@ -1513,7 +1532,7 @@
                         <div>
                             <span class="font-bold text-slate-700 dark:text-slate-300 block mb-1">Karakteristik Siswa:</span>
                             <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                Kerap dijumpai pada jam pelajaran siang setelah olahraga (XE5) atau setelah ujian blok. Motivasi kognitif ada, namun konsentrasi mata dan tubuh menurun.
+                                Kerap dijumpai pada jam pelajaran siang setelah olahraga atau setelah ujian blok. Motivasi kognitif ada, namun konsentrasi mata dan tubuh menurun.
                             </p>
                         </div>
                         <div class="p-3.5 rounded-xl bg-amber-50/60 dark:bg-amber-950/20 border border-amber-100 dark:border-amber-900/30">
@@ -1613,7 +1632,7 @@
                     Transformasi Suasana Laboratorium Komputer SMAN 4 Yogyakarta
                 </h3>
                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-                    Pengalaman mengajar di kelas XE3, XE5, dan XE7 membuktikan bahwa pencapaian kognitif informatika berbanding lurus dengan rasa aman psikologis (*psychological safety*). Ketika peserta didik menyadari bahwa guru peduli terhadap kondisi mereka sebelum instruksi dimulai, kecemasan terhadap materi abstrak menurun drastis dan kemauan bereksplorasi meningkat secara mandiri.
+                    Pengalaman mengajar di kelas X-E7 membuktikan bahwa pencapaian kognitif informatika berbanding lurus dengan rasa aman psikologis (*psychological safety*). Ketika peserta didik menyadari bahwa guru peduli terhadap kondisi mereka sebelum instruksi dimulai, kecemasan terhadap materi abstrak menurun drastis dan kemauan bereksplorasi meningkat secara mandiri.
                 </p>
             </div>
 
@@ -1636,18 +1655,40 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             BOTTOM NAVIGATION TO NEXT CHAPTER
-             ========================================== -->
-        <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <a href="artefak.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
-                <i class="ph-bold ph-arrow-left"></i>
-                <span>Kembali ke Pilihan Artefak</span>
-            </a>
-            <a href="refleksi.html" class="btn-primary-cta">
-                <span>Lanjut ke Refleksi &amp; RTL</span>
-                <i class="ph-bold ph-arrow-right"></i>
-            </a>
+        <section class="pt-10 pb-6 border-t border-slate-200 dark:border-slate-800">
+            <div class="page-nav-dock">
+                <!-- Tombol Kiri: Kembali ke Non-Mengajar -->
+                <a href="non-mengajar.html" class="nav-dock-card nav-dock-prev group">
+                    <div class="nav-dock-icon">
+                        <i class="ph-bold ph-arrow-left"></i>
+                    </div>
+                    <div class="nav-dock-info">
+                        <span class="nav-dock-label">SEBELUMNYA</span>
+                        <span class="nav-dock-title">Non-Mengajar</span>
+                    </div>
+                </a>
+
+                <!-- Pemisah di Tengah: Hub Menu Siklus -->
+                <div class="nav-dock-center">
+                    <a href="index.html#menu-siklus" class="nav-dock-hub group" title="Daftar Menu 4 Siklus Pembelajaran">
+                        <div class="w-9 h-9 rounded-xl bg-royal-500/10 dark:bg-royal-900/40 border border-royal-500/20 dark:border-royal-700/40 flex items-center justify-center text-royal-600 dark:text-neon group-hover:scale-110 group-hover:bg-neon group-hover:text-royal-950 transition-all shadow-sm">
+                            <i class="ph-bold ph-list-dashes text-base"></i>
+                        </div>
+                        <span class="nav-dock-hub-text">Menu Siklus</span>
+                    </a>
+                </div>
+
+                <!-- Tombol Kanan: Lanjut ke Refleksi Akhir -->
+                <a href="refleksi.html" class="nav-dock-card nav-dock-next group">
+                    <div class="nav-dock-info">
+                        <span class="nav-dock-label">SELANJUTNYA</span>
+                        <span class="nav-dock-title">Refleksi Akhir</span>
+                    </div>
+                    <div class="nav-dock-icon">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
         </section>
 
     </main>
