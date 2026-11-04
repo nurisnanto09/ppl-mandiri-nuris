@@ -128,6 +128,32 @@ function initNavDropdowns() {
     });
 }
 
+// 4.2 NAVBAR SCROLL EFFECT (ATTACHED PRE-SCROLL -> FLOATING CAPSULE ON SCROLL)
+function initNavbarScroll() {
+    const navbar = document.querySelector('.top-navbar');
+    if (!navbar) return;
+
+    let ticking = false;
+    const updateNavbar = () => {
+        if (window.scrollY > 20) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateNavbar);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Cek status scroll awal saat halaman pertama dimuat
+    updateNavbar();
+}
+
 // 5. LOADING SCREEN (ROTATING 3D TEXT RING & BOUNCING BOX)
 function initLoader() {
     const ring = document.getElementById('loaderRing');
@@ -145,24 +171,25 @@ function initLoader() {
 
     const loader = document.getElementById('loader');
     if (loader) {
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                loader.classList.add('loader--hidden');
-                setTimeout(() => {
-                    try { loader.remove(); } catch (e) {}
-                }, 600);
-            }, 1200);
-        });
-
-        // Fallback otomatis jika aset sudah selesai di-cache
-        setTimeout(() => {
-            if (loader && !loader.classList.contains('loader--hidden')) {
+        const hideLoader = () => {
+            if (!loader.classList.contains('loader--hidden')) {
                 loader.classList.add('loader--hidden');
                 setTimeout(() => {
                     try { loader.remove(); } catch (e) {}
                 }, 600);
             }
-        }, 2800);
+        };
+
+        if (document.readyState === 'complete') {
+            setTimeout(hideLoader, 600);
+        } else {
+            window.addEventListener('load', () => {
+                setTimeout(hideLoader, 600);
+            });
+        }
+
+        // Fallback pengaman otomatis jika aset eksternal lambat
+        setTimeout(hideLoader, 2000);
     }
 }
 
@@ -179,11 +206,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initLoader();
     initNavDropdowns();
+    initNavbarScroll();
+    activateTabFromHash();
 });
 
 // Jalankan juga segera jika DOM sudah siap
 if (document.readyState !== 'loading') {
+    initLoader();
     initNavDropdowns();
+    initNavbarScroll();
+}
+
+
+// 7.1 SWITCHER TAB LEMBAR KERJA (LK) 4 DI HALAMAN ANALISIS
+function switchAnalisisLkTab(tabId) {
+    const btns = document.querySelectorAll('.lk-tab-btn');
+    const panes = document.querySelectorAll('.lk-tab-pane');
+    if (!btns.length || !panes.length) return;
+
+    btns.forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabId) {
+            btn.classList.add('active');
+            btn.setAttribute('aria-selected', 'true');
+        } else {
+            btn.classList.remove('active');
+            btn.setAttribute('aria-selected', 'false');
+        }
+    });
+
+    panes.forEach(pane => {
+        if (pane.id === tabId) {
+            pane.classList.remove('hidden');
+        } else {
+            pane.classList.add('hidden');
+        }
+    });
 }
 
 // 7. SIKLUS TAB SWITCHER
@@ -329,6 +386,23 @@ function togglePdfEmbed(embedId, triggerBtn) {
 function activateTabFromHash() {
     const hash = window.location.hash ? window.location.hash.substring(1) : '';
     if (!hash) return;
+    
+    // Cek jika hash mengarah ke tab LK 4 di analisis
+    if (hash.startsWith('lk-pane-') || hash.startsWith('section-evaluasi-s')) {
+        let lkId = hash;
+        if (lkId === 'section-evaluasi-s1') lkId = 'lk-pane-s1';
+        if (lkId === 'section-evaluasi-s2') lkId = 'lk-pane-s2';
+        if (lkId === 'section-evaluasi-s3') lkId = 'lk-pane-s3';
+        if (lkId === 'section-evaluasi-s4') lkId = 'lk-pane-s4';
+        
+        if (document.querySelector(`.lk-tab-btn[data-tab="${lkId}"]`)) {
+            switchAnalisisLkTab(lkId);
+            const targetEl = document.getElementById(lkId) || document.getElementById('section-dokumen-lk4');
+            if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
+        }
+    }
+
     const targetPane = document.getElementById(hash);
     if (targetPane && targetPane.classList.contains('cycle-tab-pane')) {
         switchCycleTab(hash);

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>porto-pplm-nuris | Siklus 3: Analisis Data &amp; Excel — PPG UNY</title>
-    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    <title>porto-pplm-nuris | Siklus Ketiga: Analisis Data &amp; Excel — PPG UNY</title>
+    <link rel="icon" type="image/png" href="img/Icon Logo.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +57,11 @@
                 }
             }
         }
+        try {
+            if (localStorage.getItem('theme_preference') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
     </script>
 
     <!-- External Stylesheet CSS -->
@@ -111,29 +116,29 @@
                             <a href="siklus-1.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">01</span>
                                 <div>
-                                    <strong>Siklus 1</strong>
-                                    <small>Pengantar Informatika &amp; PPP</small>
+                                    <strong>Siklus Pertama</strong>
+                                    <small>Struktur Data &amp; Algoritma Dasar</small>
                                 </div>
                             </a>
                             <a href="siklus-2.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">02</span>
                                 <div>
-                                    <strong>Siklus 2</strong>
-                                    <small>Algoritma &amp; Pemrograman</small>
+                                    <strong>Siklus Kedua</strong>
+                                    <small>Algoritma Flowchart &amp; Pseudocode</small>
                                 </div>
                             </a>
                             <a href="siklus-3.html" class="nav-dropdown-item active bg-royal-50 dark:bg-royal-950/40 text-royal-600 dark:text-neon">
                                 <span class="nav-cycle-badge bg-neon text-royal-900 font-extrabold">03</span>
                                 <div>
-                                    <strong>Siklus 3 (Aktif)</strong>
-                                    <small>Analisis Data Excel</small>
+                                    <strong>Siklus Ketiga (Aktif)</strong>
+                                    <small>Pengelolaan Angka Excel</small>
                                 </div>
                             </a>
                             <a href="siklus-4.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">04</span>
                                 <div>
-                                    <strong>Siklus 4</strong>
-                                    <small>Sistem Komputer &amp; OS</small>
+                                    <strong>Siklus Keempat</strong>
+                                    <small>Sistem Operasi</small>
                                 </div>
                             </a>
                             <div class="nav-dropdown-divider"></div>
@@ -173,10 +178,10 @@
             <div id="mobileMenu" class="mobile-dropdown">
                 <a href="index.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">1. Beranda</a>
                 <a href="profil.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">2. Profil Pendidik</a>
-                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1 (Informatika)</a>
-                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
-                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">✦ Siklus 3 (Excel)</a>
-                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4 (Sistem Operasi)</a>
+                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1: Struktur Data &amp; Algoritma</a>
+                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2: Flowchart &amp; Pseudocode</a>
+                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">✦ Siklus 3: Pengelolaan Angka Excel</a>
+                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4: Sistem Operasi</a>
                 <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (SPACE-IN)</a>
                 <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">3. Analisis</a>
                 <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
@@ -200,7 +205,7 @@
             <div class="relative z-10 max-w-4xl space-y-4">
                 <div class="flex flex-wrap items-center gap-2">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
-                        <i class="ph-bold ph-seal-check"></i> SIKLUS 3 • PRAKTIK PEMBELAJARAN
+                        <i class="ph-bold ph-seal-check"></i> SIKLUS KETIGA • PRAKTIK PEMBELAJARAN
                     </span>
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
                         <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
@@ -211,7 +216,7 @@
                 </div>
 
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-                    Siklus 3: Mengolah Data Angka dengan Microsoft Excel
+                    Siklus Ketiga: Mengolah Data Angka dengan Microsoft Excel
                 </h1>
 
                 <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
@@ -247,7 +252,7 @@
                 <div>
                     <span class="badge-primary">REKAMAN PEMBELAJARAN NYATA</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-                        Video Praktik Pembelajaran Siklus 3
+                        Video Praktik Pembelajaran Siklus Ketiga
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
                         Rekaman video pembelajaran model PjBL pengolahan data terpadu di Lab Komputer SMAN 4 Yogyakarta:
@@ -272,7 +277,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                     
                     <div class="relative z-20 flex flex-col items-center space-y-4 max-w-lg">
-                        <button type="button" onclick="playCycleVideo('videoBoxS3', 'Praktik Siklus 3 - Olah Data Excel')" class="video-play-btn" aria-label="Putar Video Siklus 3">
+                        <button type="button" onclick="playCycleVideo('videoBoxS3', 'Praktik Siklus 3 - Olah Data Excel')" class="video-play-btn" aria-label="Putar Video Siklus Ketiga">
                             <i class="ph-fill ph-play"></i>
                         </button>
                         <div>
@@ -344,21 +349,25 @@
             </div>
 
             <!-- TAB BAR NAVIGATION -->
-            <div class="cycle-tabs-nav" role="tablist" aria-label="Tab Artefak Siklus 3">
+            <div class="cycle-tabs-nav" role="tablist" aria-label="Tab Artefak Siklus Ketiga">
                 <button type="button" class="cycle-tab-btn active" data-tab="tab-modul-s3" onclick="switchCycleTab('tab-modul-s3')" role="tab" aria-selected="true">
                     <i class="ph-bold ph-book-open"></i>
                     <span>Modul Ajar</span>
                 </button>
+                <button type="button" class="cycle-tab-btn" data-tab="tab-rpp-s3" onclick="switchCycleTab('tab-rpp-s3')" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-article"></i>
+                    <span>RPP</span>
+                </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-handbook-s3" onclick="switchCycleTab('tab-handbook-s3')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-book-bookmark"></i>
-                    <span>Handbook (Buku Pegangan 4)</span>
+                    <span>Handbook</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-media-s3" onclick="switchCycleTab('tab-media-s3')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-presentation"></i>
                     <span>Media</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-lkpd-s3" onclick="switchCycleTab('tab-lkpd-s3')" role="tab" aria-selected="false">
-                    <i class="ph-bold ph-file-text"></i>
+                    <i class="ph-bold ph-notebook"></i>
                     <span>LKPD</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-asesmen-s3" onclick="switchCycleTab('tab-asesmen-s3')" role="tab" aria-selected="false">
@@ -369,9 +378,8 @@
 
             <!-- TAB PANELS CONTAINER -->
             <div class="cycle-tab-content-area">
-
-                <!-- TAB 1: MODUL AJAR SIKLUS 3 -->
-                <div id="tab-modul-s3" class="cycle-tab-pane block">
+<!-- TAB 1: MODUL AJAR SIKLUS KETIGA -->
+<div id="tab-modul-s3" class="cycle-tab-pane block">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
@@ -379,24 +387,28 @@
                                     <span class="badge-blue">KODE: S3-MA</span>
                                     <span class="badge-slate font-mono text-[11px]">Kurikulum Merdeka</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong
+                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong &amp; DPL
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Modul Ajar Siklus 3: Analisis Data &amp; Pemodelan Formula Excel
+                                    Modul Ajar Siklus Ketiga: Analisis Data &amp; Visualisasi Microsoft Excel
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
                                     Penerapan Project-Based Learning (PjBL) untuk memandu siswa mengolah dataset nilai sekolah menjadi dashboard visual terpadu.
                                 </p>
                             </div>
                             <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'Dokumen Pembelajaran Siklus 3 - Modul & Refleksi')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                <button type="button" onclick="openPdfModal('pdf/Modul%20Ajar/Modul%20Ajar-Siklus%203.pdf', 'Modul Ajar Siklus 3 - Analisis Data & Excel')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
                                     <i class="ph-bold ph-file-pdf"></i>
-                                    <span>View PDF</span>
+                                    <span>Buka Modal PDF</span>
                                 </button>
-                                <a href="artefak.html#modul3" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                <a href="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%203.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
                                     <i class="ph-bold ph-arrow-square-out"></i>
-                                    <span>Detail Modul</span>
+                                    <span>Tab Baru</span>
+                                </a>
+                                <a href="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%203.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Modul Ajar Siklus 3">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
                                 </a>
                             </div>
                         </div>
@@ -406,92 +418,278 @@
                             <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
                                 <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
                                     <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon"></i>
-                                    Pratinjau Dokumen: LK 4.3 Refleksi Praktek Mengajar Mandiri PPLM.pdf
+                                    Pratinjau Dokumen: Modul Ajar-Siklus 3.pdf
                                 </span>
                                 <div class="flex items-center gap-2">
-                                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                    <a href="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%203.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
                                         <span>Layar Penuh</span>
                                         <i class="ph-bold ph-arrow-square-out"></i>
                                     </a>
-                                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                    <a href="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%203.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
                                         <span>Unduh</span>
                                         <i class="ph-bold ph-download-simple"></i>
                                     </a>
                                 </div>
                             </div>
-                            <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="w-full h-[650px] border-0" title="Dokumen Pembelajaran Siklus 3"></iframe>
+                            <iframe src="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%203.pdf" class="w-full h-[650px] border-0" title="Modul Ajar Siklus 3"></iframe>
                         </div>
                     </div>
                 </div>
 
                 <!-- TAB 2: ASESMEN SIKLUS 3 -->
-                <div id="tab-asesmen-s3" class="cycle-tab-pane hidden">
+
+<!-- TAB 2: RPP SIKLUS KETIGA -->
+                <div id="tab-rpp-s3" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="badge-blue">KODE: S3-AS</span>
-                                    <span class="badge-slate font-mono text-[11px]">Asesmen Proyek</span>
+                                    <span class="badge-blue">KODE: S3-RPP</span>
+                                    <span class="badge-slate font-mono text-[11px]">Rencana Pelaksanaan Pembelajaran</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Rubrik Analisis Data
+                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong &amp; DPL
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Instrumen Asesmen Siklus 3: Rubrik Produk Spreadsheet &amp; Ketepatan Rumus
+                                    RPP Siklus Ketiga: Analisis Data Cepat &amp; Visualisasi Microsoft Excel
                                 </h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Instrumen evaluasi keterampilan autentik pengolahan data numerik, konsistensi formula dinamis, dan estetika visualisasi chart.
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl leading-relaxed">
+                                    Rencana Pelaksanaan Pembelajaran praktik laboratorium komputer berbasis Project-Based Learning (PjBL) untuk membimbing peserta didik mengolah dataset nilai secara otomatis, memodelkan logika IF bertingkat, dan menghasilkan infografis grafik analitik.
                                 </p>
                             </div>
                             <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'Instrumen & Evaluasi Siklus 3')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                <button type="button" onclick="openPdfModal('pdf/RPP/Pertemuan%20Exel.pdf', 'RPP Siklus 3 - Pertemuan Excel')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
                                     <i class="ph-bold ph-file-pdf"></i>
-                                    <span>View PDF</span>
+                                    <span>Buka PDF RPP</span>
                                 </button>
-                                <a href="artefak.html#asesmen3" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                <a href="pdf/RPP/Pertemuan%20Exel.docx" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas RPP DOCX">
+                                    <i class="ph-bold ph-file-doc"></i>
+                                    <span>Unduh DOCX</span>
+                                </a>
+                                <a href="pdf/RPP/Pertemuan%20Exel.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
                                     <i class="ph-bold ph-arrow-square-out"></i>
-                                    <span>Detail Asesmen</span>
+                                    <span>Tab Baru</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Direct Inline PDF Viewer -->
+                        <div class="pdf-embed-box mt-2">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon"></i>
+                                    Pratinjau Dokumen: Pertemuan Exel.pdf
+                                </span>
+                                <div class="flex items-center gap-2">
+                                    <a href="pdf/RPP/Pertemuan%20Exel.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Layar Penuh</span>
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                    </a>
+                                    <a href="pdf/RPP/Pertemuan%20Exel.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Unduh PDF</span>
+                                        <i class="ph-bold ph-download-simple"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <iframe src="pdf/RPP/Pertemuan%20Exel.pdf#view=FitH" class="w-full h-[650px] border-0" title="RPP Siklus 3: Pertemuan Excel"></iframe>
+                        </div>
+
+                        <!-- Skenario Pelaksanaan RPP PjBL -->
+                        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-50 dark:bg-royal-950/40 p-5 sm:p-6 space-y-5">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-slate-800">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-lg bg-royal-500/10 dark:bg-neon/10 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
+                                        <i class="ph-bold ph-chalkboard-teacher"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-extrabold text-sm text-slate-900 dark:text-white">Skenario Pembelajaran Project-Based Learning (PjBL) Lab Komputer</h4>
+                                        <p class="text-[11px] text-slate-500 dark:text-slate-400">Tahapan terstruktur 2 pertemuan praktikum spreadsheet SMA Negeri 4 Yogyakarta</p>
+                                    </div>
+                                </div>
+                                <span class="badge-blue text-[11px] font-mono">Format Sintaks: Project-Based Learning (PjBL)</span>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">1</span>
+                                        <span>Penentuan Pertanyaan Mendasar</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Siswa disajikan data mentah nilai ulangan acak, lalu ditantang cara mengolah 100+ entri dalam hitungan detik tanpa kalkulasi manual.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">2</span>
+                                        <span>Perancangan Desain Proyek</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Menyusun layout tabel standar, menentukan range formula (SUM, AVERAGE, MIN, MAX), dan membuat skema kriteria kelulusan KKM.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">3</span>
+                                        <span>Penyusunan Jadwal Praktikum</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Pertemuan 1 dialokasikan untuk otomasi formula dasar dan logika IF; Pertemuan 2 difokuskan pada perancangan visualisasi diagram kolom/lingkaran.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">4</span>
+                                        <span>Monitoring &amp; Pendampingan</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Guru memfasilitasi scaffolding saat siswa mengalami kendala sintaks absolut ($), kesalahan kurung tutup formula bertingkat, dan error #NAME? / #REF!.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">5</span>
+                                        <span>Pengujian Hasil Lembar Kerja</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Verifikasi otomatis lembar kerja melalui trace formula audit dan uji validitas hasil grafik batang terhadap sebaran frekuensi nilai kelas.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">6</span>
+                                        <span>Evaluasi Pengalaman Praktik</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Refleksi bersama atas efisiensi otomasi Excel dibanding kalkulasi manual serta penguatan ketelitian analisis data kuantitatif.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format RPP</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Project-Based Learning (PjBL)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Alokasi Waktu</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">2 Pertemuan Lab Komputer</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Fokus Praktikum</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Formula IF, Statistik &amp; Grafik</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Dokumen Sumber</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Pertemuan Exel.docx (Terlampir)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- TAB 3: HANDBOOK SIKLUS KETIGA -->
+<div id="tab-handbook-s3" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S3-HB</span>
+                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Handbook</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Dokumen Resmi PDF
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    Buku Pegangan 4: Mengolah Data Angka dengan Microsoft Excel
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Buku pegangan belajar peserta didik Fase E / Kelas X untuk penguasaan pemodelan formula spreadsheet, analisis data, sel absolut ($), logika IF bersyarat, dan pembuatan grafik.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf', 'Buku Pegangan 4: Mengolah Data Angka dengan Microsoft Excel - Siklus 3')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>View PDF Modal</span>
+                                </button>
+                                <a href="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Buka Tab Baru</span>
+                                </a>
+                                <a href="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
                                 </a>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Kriteria 1</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Sintaks Formula Matematika (25%)</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Nama Dokumen</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Pegangan 4 Siswa</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Kriteria 2</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Logika Rumus IF &amp; Status (25%)</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Materi Pokok</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Pengolahan Data Angka Excel</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Kriteria 3</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Penguncian Sel Absolut ($) (25%)</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Fokus Formula</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">SUM, AVERAGE, IF, Absolut ($)</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Kriteria 4</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Keterbacaan Visual Chart (25%)</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Pembelajaran</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Siklus 3 Analisis Data PjBL</strong>
                             </div>
+                        </div>
+
+                        <!-- INLINE PDF EMBED VIEWER SIKLUS 3 (Tampil Langsung) -->
+                        <div id="embed-hb-s3" class="pdf-embed-box">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-book-open text-royal-500 dark:text-neon"></i>
+                                    Pratinjau Dokumen: Buku Pegangan-4. Mengolah Data Angka dengan Microsoft Excel.pdf
+                                </span>
+                                <div class="flex items-center gap-2">
+                                    <a href="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Layar Penuh</span>
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                    </a>
+                                    <a href="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Unduh</span>
+                                        <i class="ph-bold ph-download-simple"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <iframe src="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 4 Siswa"></iframe>
                         </div>
 
                         <div class="space-y-3">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-scales text-royal-500 dark:text-neon"></i>
-                                Pedoman Penilaian Rubrik Excel:
+                                <i class="ph-bold ph-bookmarks text-royal-500 dark:text-neon"></i>
+                                Rangkuman Materi Pokok Buku Pegangan 4:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
-SKALA RUBRIK PRODUK:
-- Skor 4 (Sangat Mahir): Semua rumus ditulis mandiri tanpa error (#VALUE!, #REF!), chart diberi judul, label sumbu, dan persentase yang jelas.
-- Skor 3 (Mahir): Rumus tepat, ada sedikit kesalahan penulisan rentang referensi namun segera diperbaiki lewat auto-fill.
-- Skor 2 (Cukup): Rumus SUM/AVERAGE benar, namun rumus IF masih membutuhkan bimbingan langsung guru.
-- Skor 1 (Kurang): Mengetik angka hasil perhitungan manual ke dalam sel tanpa menggunakan formula (=).
+RINGKASAN BUKU PEGANGAN 4 (MENGOLAH DATA ANGKA DENGAN EXCEL):
+- Bab 1: Anatomi Lembar Kerja Spreadsheet: Sel, Rentang (Range), Baris, Kolom, dan Tipe Data.
+- Bab 2: Operator Aritmatika Dasar dan Kaidah Penulisan Formula Otomatis.
+- Bab 3: Penggunaan Fungsi Statistik: SUM, AVERAGE, MIN, MAX, COUNT, dan COUNTIF.
+- Bab 4: Konsep Penguncian Sel (Referensi Relatif, Semi-Absolut, dan Absolut Menggunakan Simbol $).
+- Bab 5: Fungsi Logika Bersyarat IF Tunggal dan IF Bertingkat untuk Evaluasi Kelulusan Siswa.
+- Bab 6: Perancangan Grafik Data yang Komunikatif (Bar Chart, Line Chart, Pie Chart) dan Tips Format Laporan.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- TAB 3: MEDIA SIKLUS 3 -->
-                <div id="tab-media-s3" class="cycle-tab-pane hidden">
+                <!-- TAB 5: LKPD SIKLUS 3 (2 PERTEMUAN: ATAS KE BAWAH) -->
+
+<!-- TAB 4: MEDIA SIKLUS KETIGA -->
+<div id="tab-media-s3" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
@@ -625,100 +823,9 @@ SUSUNAN SLIDE:
                 </div>
 
                 <!-- TAB 4: HANDBOOK SIKLUS 3 -->
-                <div id="tab-handbook-s3" class="cycle-tab-pane hidden">
-                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="badge-blue">KODE: S3-HB</span>
-                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Handbook</span>
-                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Dokumen Resmi PDF
-                                    </span>
-                                </div>
-                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Buku Pegangan 4: Mengolah Data Angka dengan Microsoft Excel
-                                </h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Buku pegangan belajar peserta didik Fase E / Kelas X untuk penguasaan pemodelan formula spreadsheet, analisis data, sel absolut ($), logika IF bersyarat, dan pembuatan grafik.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf', 'Buku Pegangan 4: Mengolah Data Angka dengan Microsoft Excel - Siklus 3')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
-                                    <i class="ph-bold ph-file-pdf"></i>
-                                    <span>View PDF Modal</span>
-                                </button>
-                                <a href="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-arrow-square-out"></i>
-                                    <span>Buka Tab Baru</span>
-                                </a>
-                                <a href="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-download-simple"></i>
-                                    <span>Unduh</span>
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Nama Dokumen</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Pegangan 4 Siswa</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Materi Pokok</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Pengolahan Data Angka Excel</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Fokus Formula</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">SUM, AVERAGE, IF, Absolut ($)</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Pembelajaran</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Siklus 3 Analisis Data PjBL</strong>
-                            </div>
-                        </div>
-
-                        <!-- INLINE PDF EMBED VIEWER SIKLUS 3 (Tampil Langsung) -->
-                        <div id="embed-hb-s3" class="pdf-embed-box">
-                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
-                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
-                                    <i class="ph-bold ph-book-open text-royal-500 dark:text-neon"></i>
-                                    Pratinjau Dokumen: Buku Pegangan-4. Mengolah Data Angka dengan Microsoft Excel.pdf
-                                </span>
-                                <div class="flex items-center gap-2">
-                                    <a href="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
-                                        <span>Layar Penuh</span>
-                                        <i class="ph-bold ph-arrow-square-out"></i>
-                                    </a>
-                                    <a href="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
-                                        <span>Unduh</span>
-                                        <i class="ph-bold ph-download-simple"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <iframe src="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 4 Siswa"></iframe>
-                        </div>
-
-                        <div class="space-y-3">
-                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-bookmarks text-royal-500 dark:text-neon"></i>
-                                Rangkuman Materi Pokok Buku Pegangan 4:
-                            </h4>
-                            <div class="code-preview-block text-xs leading-relaxed">
-RINGKASAN BUKU PEGANGAN 4 (MENGOLAH DATA ANGKA DENGAN EXCEL):
-- Bab 1: Anatomi Lembar Kerja Spreadsheet: Sel, Rentang (Range), Baris, Kolom, dan Tipe Data.
-- Bab 2: Operator Aritmatika Dasar dan Kaidah Penulisan Formula Otomatis.
-- Bab 3: Penggunaan Fungsi Statistik: SUM, AVERAGE, MIN, MAX, COUNT, dan COUNTIF.
-- Bab 4: Konsep Penguncian Sel (Referensi Relatif, Semi-Absolut, dan Absolut Menggunakan Simbol $).
-- Bab 5: Fungsi Logika Bersyarat IF Tunggal dan IF Bertingkat untuk Evaluasi Kelulusan Siswa.
-- Bab 6: Perancangan Grafik Data yang Komunikatif (Bar Chart, Line Chart, Pie Chart) dan Tips Format Laporan.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 5: LKPD SIKLUS 3 (2 PERTEMUAN: ATAS KE BAWAH) -->
-                <div id="tab-lkpd-s3" class="cycle-tab-pane hidden">
+<!-- TAB 5: LKPD SIKLUS KETIGA -->
+<div id="tab-lkpd-s3" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-8 shadow-md">
                         <!-- HEADER KARTU LKPD SIKLUS 3 -->
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
@@ -731,7 +838,7 @@ RINGKASAN BUKU PEGANGAN 4 (MENGOLAH DATA ANGKA DENGAN EXCEL):
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    LKPD Praktik Siklus 3: Pengolahan Data Angka &amp; Visualisasi Microsoft Excel
+                                    LKPD Praktik Siklus Ketiga: Pengolahan Data Angka &amp; Visualisasi Microsoft Excel
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl leading-relaxed">
                                     Lembar Kerja Peserta Didik dan panduan jobsheet laboratorium terstruktur vertikal atas ke bawah (Pertemuan 1 &amp; Pertemuan 2), menuntun siswa menguasai formula dasar dan fungsi logika IF pada pertemuan 1, serta manipulasi dataset nilai dan pembuatan grafik pada pertemuan 2.
@@ -851,47 +958,25 @@ INSTRUKSI JOBSHEET 4 (PERTEMUAN 1):
                                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[11px] font-black bg-cyan-600 text-white dark:bg-cyan-700 font-mono">
                                             <i class="ph-bold ph-number-circle-two"></i> PERTEMUAN 2
                                         </span>
-                                        <span class="badge-blue font-mono text-[10px]">Jobsheet 5 • Analisis Dataset &amp; Grafik</span>
+                                        <span class="badge-blue font-mono text-[10px]">Aktivitas Lanjutan • Dataset &amp; Grafik</span>
                                     </div>
                                     <h4 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">
-                                        LKPD Pertemuan 2 (Jobsheet 5): Analisis Dataset Lengkap &amp; Pembuatan Grafik Visual
+                                        Aktivitas Lanjutan: Analisis Dataset Lengkap &amp; Pembuatan Grafik Visual
                                     </h4>
                                     <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
-                                        Jobsheet manipulasi dataset nilai berskala penuh, pengurutan data bertingkat, penerapan conditional formatting, dan visualisasi diagram batang/kolom 3D.
+                                        Panduan praktikum manipulasi dataset nilai berskala penuh, pengurutan data bertingkat, penerapan conditional formatting, dan visualisasi diagram batang/kolom 3D berpedoman pada Buku Pegangan Excel.
                                     </p>
                                 </div>
                                 <div class="flex items-center gap-2 shrink-0">
-                                    <button type="button" onclick="openPdfModal('pdf/LKPD/Siklus%203/JOBSHEET-5-MS-EXCEL-Grafik.pdf', 'Jobsheet 5: Pengolahan Data Lanjut & Grafik Excel - Pertemuan 2')" class="btn-primary-cta text-xs py-2 px-3.5 inline-flex items-center gap-1.5">
-                                        <i class="ph-bold ph-file-pdf"></i>
-                                        <span>Buka Modal PDF</span>
+                                    <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf', 'Buku Pegangan 4: Mengolah Data Angka dengan Microsoft Excel')" class="btn-primary-cta text-xs py-2 px-3.5 inline-flex items-center gap-1.5">
+                                        <i class="ph-bold ph-book-open"></i>
+                                        <span>Buku Pegangan Excel</span>
                                     </button>
-                                    <a href="pdf/LKPD/Siklus%203/JOBSHEET-5-MS-EXCEL-Grafik.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1">
+                                    <a href="pdf/Handbook/Buku%20Pegangan-4.%20Mengolah%20Data%20Angka%20dengan%20Microsoft%20Excel.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1">
                                         <i class="ph-bold ph-arrow-square-out"></i>
                                         <span>Tab Baru</span>
                                     </a>
-                                    <a href="pdf/LKPD/Siklus%203/JOBSHEET-5-MS-EXCEL-Grafik.pdf" download class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1" title="Unduh PDF Jobsheet 5">
-                                        <i class="ph-bold ph-download-simple"></i>
-                                        <span>Unduh</span>
-                                    </a>
                                 </div>
-                            </div>
-
-                            <!-- PDF VIEWER EMBED PERTEMUAN 2 -->
-                            <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#120B22] shadow-sm">
-                                <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800 text-xs">
-                                    <span class="font-bold text-slate-800 dark:text-white flex items-center gap-2">
-                                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
-                                        <span>JOBSHEET-5-MS-EXCEL-Grafik.pdf</span>
-                                    </span>
-                                    <div class="flex items-center gap-2">
-                                        <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">pdf/LKPD/Siklus 3/</span>
-                                        <a href="pdf/LKPD/Siklus%203/JOBSHEET-5-MS-EXCEL-Grafik.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
-                                            <span>Layar Penuh</span>
-                                            <i class="ph-bold ph-arrow-square-out"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <iframe loading="lazy" src="pdf/LKPD/Siklus%203/JOBSHEET-5-MS-EXCEL-Grafik.pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="Jobsheet 5: Visualisasi Grafik Excel"></iframe>
                             </div>
 
                             <div class="space-y-2 pt-1 text-xs">
@@ -912,253 +997,155 @@ INSTRUKSI JOBSHEET 5 (PERTEMUAN 2):
                     </div>
                 </div>
 
+<!-- TAB 6: ASESMEN SIKLUS KETIGA -->
+<div id="tab-asesmen-s3" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S3-AS</span>
+                                    <span class="badge-slate font-mono text-[11px]">Asesmen Proyek</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Rubrik Analisis Data
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    Instrumen Asesmen Siklus Ketiga: Rubrik Produk Spreadsheet &amp; Ketepatan Rumus
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Instrumen evaluasi keterampilan autentik pengolahan data numerik, konsistensi formula dinamis, dan estetika visualisasi chart.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <button type="button" onclick="openPdfModal('pdf/Assemen/Asesmen%20Excel%20(1).pdf', 'Instrumen Asesmen Siklus 3 - Microsoft Excel')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>Buka Modal PDF</span>
+                                </button>
+                                <a href="pdf/Assemen/Asesmen%20Excel%20(1).pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Tab Baru</span>
+                                </a>
+                                <a href="pdf/Assemen/Asesmen%20Excel%20(1).pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Asesmen Excel">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- PDF VIEWER ASESMEN SIKLUS 3 -->
+                        <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#120B22] shadow-sm">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800 text-xs">
+                                <span class="font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                                    <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
+                                    <span>Asesmen Excel (1).pdf</span>
+                                </span>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">pdf/Assemen/</span>
+                                    <a href="pdf/Assemen/Asesmen%20Excel%20(1).pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Layar Penuh</span>
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <iframe loading="lazy" src="pdf/Assemen/Asesmen%20Excel%20(1).pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="Asesmen Excel"></iframe>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Kriteria 1</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Sintaks Formula Matematika (25%)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Kriteria 2</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Logika Rumus IF &amp; Status (25%)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Kriteria 3</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Penguncian Sel Absolut ($) (25%)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Kriteria 4</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Keterbacaan Visual Chart (25%)</strong>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                <i class="ph-bold ph-scales text-royal-500 dark:text-neon"></i>
+                                Pedoman Penilaian Rubrik Excel:
+                            </h4>
+                            <div class="code-preview-block text-xs leading-relaxed">
+SKALA RUBRIK PRODUK:
+- Skor 4 (Sangat Mahir): Semua rumus ditulis mandiri tanpa error (#VALUE!, #REF!), chart diberi judul, label sumbu, dan persentase yang jelas.
+- Skor 3 (Mahir): Rumus tepat, ada sedikit kesalahan penulisan rentang referensi namun segera diperbaiki lewat auto-fill.
+- Skor 2 (Cukup): Rumus SUM/AVERAGE benar, namun rumus IF masih membutuhkan bimbingan langsung guru.
+- Skor 1 (Kurang): Mengetik angka hasil perhitungan manual ke dalam sel tanpa menggunakan formula (=).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: MEDIA SIKLUS 3 -->
             </div>
         </section>
 
         <!-- ==========================================
              4. EVALUASI HASIL BELAJAR & LK 4.3 RESMI
              ========================================== -->
-        <section id="section-evaluasi" class="space-y-8 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                    <div class="inline-flex items-center gap-2 mb-1.5">
-                        <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
-                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                            <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
-                        </span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
-                        Evaluasi &amp; Refleksi Siklus 3 (LK 4.3)
-                    </h2>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
-                        Dokumentasi utuh evaluasi mandiri dan refleksi pelaksanaan pembelajaran analisis data Excel berbasis Project-Based Learning di SMA Negeri 4 Yogyakarta.
-                    </p>
-                </div>
-                <div class="flex flex-wrap items-center gap-2">
-                    <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.3 Refleksi Praktik Pembelajaran Mandiri - Siklus 3')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
-                        <i class="ph-bold ph-file-pdf"></i>
-                        <span>View PDF LK 4.3</span>
-                    </button>
-                    <button type="button" onclick="togglePdfEmbed('embedPdfS3', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                        <i class="ph-bold ph-eye"></i>
-                        <span>Pratinjau di Halaman</span>
-                    </button>
-                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF Resmi">
-                        <i class="ph-bold ph-download-simple"></i>
-                        <span>Unduh File</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- INLINE PDF VIEWER (Tampil Langsung Tanpa Perlu Klik) -->
-            <div id="embedPdfS3" class="pdf-embed-card">
-                <div class="p-3 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold">
-                    <span class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
-                        <span>Nur Isnanto Nugroho_25105260411_LK4.3 Refleksi Praktek Mengajar Mandiri PPLM.pdf</span>
-                    </span>
-                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" class="text-royal-500 dark:text-neon hover:underline inline-flex items-center gap-1">
-                        <span>Layar Penuh</span>
-                        <i class="ph-bold ph-arrow-square-out"></i>
-                    </a>
-                </div>
-                <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.3"></iframe>
-            </div>
-
-            <!-- OFFICIAL LK 4.3 TRANSCRIPT DOCUMENT CARD -->
-            <div class="lk-official-card space-y-8">
-                <!-- Header Dokumen Resmi -->
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+                <!-- ==========================================
+             4. EVALUASI HASIL BELAJAR & LK 4.3 RESMI (TERHUBUNG KE HALAMAN ANALISIS)
+             ========================================== -->
+        <section id="section-evaluasi" class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
+            <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-royal-900/10 via-purple-500/5 to-transparent dark:from-royal-950/60 dark:via-[#120B22] dark:to-transparent border border-royal-200 dark:border-purple-800/50 space-y-6 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <span class="px-2.5 py-0.5 rounded-full bg-royal-100 dark:bg-royal-950 text-royal-700 dark:text-purple-300 font-mono text-[11px] font-extrabold uppercase">
-                                LEMBAR KERJA (LK) 4
+                        <div class="inline-flex items-center gap-2 mb-2">
+                            <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
+                            <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
                             </span>
-                            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Refleksi Praktik Pembelajaran Mandiri</span>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-                            Refleksi Ke : Tiga (Siklus 3)
-                        </h3>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                            Evaluasi &amp; Refleksi Siklus Ketiga (LK 4.3)
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 max-w-2xl leading-relaxed">
+                            Dokumentasi utuh evaluasi mandiri, refleksi pengolahan data angka Excel, respon siswa, umpan balik Pamong, serta tindak lanjut pedagogis Siklus Ketiga kini telah dirangkum lengkap dalam menu Analisis Komparatif.
+                        </p>
                     </div>
-                    <div class="p-3 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-xs space-y-1">
-                        <div><strong>Mahasiswa:</strong> Nur Isnanto Nugroho (NIM 25105260411)</div>
-                        <div><strong>Bidang Studi:</strong> Informatika &bull; <strong>Sekolah:</strong> SMA Negeri 4 Yogyakarta</div>
-                    </div>
-                </div>
-
-                <!-- Bagian A: Refleksi Kegiatan Pembelajaran Mandiri -->
-                <div class="space-y-5">
-                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
-                        <i class="ph-bold ph-chats-circle text-lg"></i>
-                        <span>A. Refleksi Kegiatan Praktik Pembelajaran Mandiri</span>
-                    </div>
-
-                    <div class="space-y-4 text-xs sm:text-sm">
-                        <!-- Q1 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">1.</span>
-                                <span>Bagaimana kegiatan apersepsi dapat membantu murid memahami tujuan pembelajaran yang akan dicapai?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Pada siklus ketiga, apersepsi dilakukan dengan menanyakan pengalaman peserta didik dalam menggunakan Microsoft Excel ketika masih di SMP serta mengingat kembali materi yang pernah dipelajari sebelumnya. Kegiatan ini membantu saya mengetahui pengetahuan awal peserta didik sebelum masuk ke materi yang akan dipelajari. Dengan menghubungkan pengalaman sebelumnya dengan materi baru, peserta didik diharapkan lebih mudah memahami penggunaan Excel, terutama dalam mengolah data dan menyajikannya dalam bentuk diagram.
-                            </p>
-                        </div>
-
-                        <!-- Q2 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">2.</span>
-                                <span>Kegiatan apa saja yang berhasil dan belum berhasil dilaksanakan dalam kegiatan inti?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Pada siklus ketiga, pembelajaran menggunakan model Project Based Learning (PjBL) dengan produk akhir berupa file Excel yang berisi diagram untuk menyajikan data. Secara umum, kegiatan pembelajaran berjalan dengan baik, mulai dari demonstrasi, pengerjaan proyek, hingga pelaksanaan pretest dan posttest. Peserta didik yang sudah mahir menggunakan Excel juga diberi kesempatan untuk maju ke depan dan membantu menunjukkan praktik. Namun, demonstrasi yang saya lakukan masih terlalu cepat sehingga beberapa peserta didik yang membutuhkan pendampingan mengalami kesulitan mengikuti langkah-langkahnya. Hal ini menjadi bahan evaluasi bagi saya agar kecepatan demonstrasi dan pendampingan dapat disesuaikan dengan kemampuan peserta didik.
-                            </p>
-                        </div>
-
-                        <!-- Q3 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">3.</span>
-                                <span>Seberapa efektif penggunaan media pembelajaran untuk melibatkan partisipasi aktif di kelas?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Media pembelajaran yang digunakan berupa jobsheet dengan materi dan langkah-langkah pengerjaan yang cukup lengkap. Jobsheet tersebut membantu peserta didik memiliki panduan ketika mengerjakan proyek Excel. Namun, karena materi yang disajikan cukup banyak, beberapa peserta didik cenderung tidak membaca keseluruhan petunjuk dan lebih memilih bertanya secara langsung ketika mengalami kesulitan. Dari pengalaman ini, saya menyadari bahwa jobsheet yang lengkap belum tentu membuat peserta didik memanfaatkan seluruh informasi yang tersedia. Oleh karena itu, media perlu disusun dengan lebih terarah dan mudah digunakan, disertai pendampingan yang membantu peserta didik mengikuti langkah pengerjaan secara mandiri.
-                            </p>
-                        </div>
-
-                        <!-- Q4 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">4.</span>
-                                <span>Bagaimana reaksi/respon murid dalam setiap kegiatan dari pembukaan hingga penutupan pembelajaran?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Peserta didik memberikan respons yang cukup baik selama pembelajaran. Pada kegiatan pembukaan, mereka diajak mengingat kembali pengalaman menggunakan Excel saat SMP. Ketika masuk ke kegiatan inti, peserta didik mulai mengerjakan proyek untuk menghasilkan file Excel yang berisi diagram. Beberapa peserta didik yang sudah mahir terlihat mampu mengikuti kegiatan dengan baik, bahkan bersedia maju ke depan untuk melakukan demonstrasi. Sementara itu, peserta didik yang masih mengalami kesulitan membutuhkan pendampingan lebih lanjut, terutama ketika mengikuti demonstrasi yang berlangsung cukup cepat. Meskipun demikian, pelaksanaan proyek serta pretest dan posttest dapat berjalan dengan baik. Pengalaman ini menunjukkan bahwa kemampuan awal peserta didik perlu diperhatikan agar seluruh peserta didik dapat mengikuti pembelajaran dengan baik.
-                            </p>
-                        </div>
+                    <div class="flex flex-wrap items-center gap-2 shrink-0">
+                        <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.3 Refleksi Praktik Pembelajaran Mandiri - Siklus 3')" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                            <i class="ph-bold ph-file-pdf"></i>
+                            <span>View PDF LK 4.3</span>
+                        </button>
+                        <a href="analisis.html#lk-pane-s3" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-4 shadow-md">
+                            <span>Buka di Halaman Analisis</span>
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Bagian B: Refleksi Pengalaman Belajar -->
-                <div class="space-y-5 pt-4 border-t border-slate-200 dark:border-slate-800">
-                    <div class="flex items-center gap-2 text-emerald-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
-                        <i class="ph-bold ph-graduation-cap text-lg"></i>
-                        <span>B. Refleksi Pengalaman Belajar</span>
+                <!-- Metric Summary 4 Mini Cards -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-2 border-t border-slate-200/60 dark:border-slate-800">
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-royal-600 dark:text-neon">93.5%</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Proyek</strong>
+                        <span class="text-[10px] text-slate-500 dark:text-slate-400 block">101 dari 108 Siswa Berhasil Olah Data</span>
                     </div>
-
-                    <div class="space-y-4 text-xs sm:text-sm">
-                        <!-- Q1 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-emerald-600 dark:text-neon">1.</span>
-                                <span>Apakah umpan balik dari Guru Pamong untuk praktik pembelajaran mandiri yang lebih baik?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Dalam pelaksanaan PPL, pembahasan bersama guru pamong lebih banyak berkaitan dengan materi yang akan diajarkan. Oleh karena itu, saya melakukan evaluasi terhadap pelaksanaan pembelajaran berdasarkan pengalaman selama mengajar di kelas. Pada siklus ketiga, saya mendapatkan pengalaman dalam menerapkan PjBL melalui proyek Excel yang menghasilkan produk nyata. Dari pelaksanaan tersebut, saya menyadari pentingnya memperhatikan kecepatan demonstrasi, kejelasan petunjuk dalam jobsheet, dan kebutuhan pendampingan peserta didik agar kegiatan proyek dapat berjalan lebih efektif.
-                            </p>
-                        </div>
-
-                        <!-- Q2 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-emerald-600 dark:text-neon">2.</span>
-                                <span>Apabila Anda akan melakukan perubahan terhadap metode pembelajaran, unsur apa yang akan Anda ubah untuk metode pembelajaran yang lebih baik?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Apabila melakukan perbaikan pada pembelajaran berikutnya, saya akan memperlambat demonstrasi dan membaginya menjadi beberapa tahapan agar peserta didik dapat mengikuti setiap langkah dengan baik. Saya juga akan menyederhanakan penyajian jobsheet dengan menonjolkan langkah-langkah penting, sehingga peserta didik lebih mudah menemukan informasi yang dibutuhkan tanpa harus membaca terlalu banyak sekaligus. Selain itu, saya akan memberikan kesempatan kepada peserta didik untuk mencoba setiap langkah sebelum melanjutkan ke tahap berikutnya. Dengan cara tersebut, peserta didik diharapkan lebih mandiri dalam mengerjakan proyek dan peserta didik yang membutuhkan bantuan tetap dapat mengikuti pembelajaran sesuai kemampuannya.
-                            </p>
-                        </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-slate-900 dark:text-white">88.2</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Akhir</strong>
+                        <span class="text-[10px] text-emerald-600 dark:text-neon block">+1.4 Poin dibanding Siklus 2</span>
                     </div>
-                </div>
-
-                <!-- Tanda Tangan & Pengesahan Resmi -->
-                <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
-                    <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-                        <div class="space-y-1">
-                            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Status Pengesahan Dokumen</span>
-                            <div class="text-xs font-bold text-slate-800 dark:text-slate-200">
-                                Ditetapkan pada: <span class="font-mono text-royal-600 dark:text-neon">Tanggal, 12 Oktober 2026</span>
-                            </div>
-                            <div class="text-[11px] text-slate-500 dark:text-slate-400">
-                                Terverifikasi dalam sistem e-Portofolio PPL PPG Prajabatan Universitas Negeri Yogyakarta
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
-                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[140px]">
-                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Guru Pamong</span>
-                                <strong class="block text-slate-900 dark:text-white mt-1">Titis Widowati, S.T.</strong>
-                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
-                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
-                                </span>
-                            </div>
-                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[160px]">
-                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Dosen Pembimbing Lapangan</span>
-                                <strong class="block text-slate-900 dark:text-white mt-1">Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong>
-                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
-                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
-                                </span>
-                            </div>
-                        </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-royal-600 dark:text-neon">96%</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Penyelesaian Chart</strong>
+                        <span class="text-[10px] text-slate-500 dark:text-slate-400 block">Grafik Batang &amp; Kolom Lengkap</span>
                     </div>
-                </div>
-            </div>
-
-            <!-- METRIC STATS 4 CARDS -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">93.5%</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Proyek</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">101 dari 108 Siswa Berhasil Olah Data</span>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">88.2</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Akhir</strong>
-                    <span class="text-[11px] text-emerald-600 dark:text-neon block">+1.4 Poin dibanding Siklus 2</span>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">96%</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Penyelesaian Chart</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Grafik Batang &amp; Kolom Lengkap</span>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">100%</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Project-Based Learning</span>
-                </div>
-            </div>
-
-            <!-- 3 EVALUATION CARDS -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-emerald-200 dark:border-emerald-950/60 space-y-3">
-                    <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
-                        <i class="ph-bold ph-thumbs-up"></i>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-emerald-600 dark:text-neon">100%</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
+                        <span class="text-[10px] text-slate-500 dark:text-slate-400 block">Project-Based Learning</span>
                     </div>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">1. Kekuatan Pembelajaran</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Strategi <em>Peer Tutoring</em> (tutor sebaya) berjalan sangat efektif di laboratorium komputer. Siswa yang lebih mahir sigap mendampingi rekannya memahami formula kondisional =IF, memangkas antrean bertanya pada guru.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-amber-200 dark:border-amber-950/60 space-y-3">
-                    <div class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
-                        <i class="ph-bold ph-warning"></i>
-                    </div>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">2. Kendala / Tantangan</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Demonstrasi guru di awal sempat terlalu cepat untuk siswa yang belum terbiasa dengan antarmuka Excel saat SMP, serta beberapa jobsheet dibaca setengah-setengah karena terlalu padat narasi teks.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-200 dark:border-royal-950/60 space-y-3">
-                    <div class="w-9 h-9 rounded-xl bg-royal-100 dark:bg-royal-950/80 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
-                        <i class="ph-bold ph-arrow-circle-right"></i>
-                    </div>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">3. Rencana Tindak Lanjut</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Pada <strong>Siklus 4 (Sistem Komputer &amp; OS)</strong>, penyampaian modul dipecah menjadi mikro-langkah bertahap (*micro-scaffolding*) berbantuan aplikasi simulasi interaktif SPACE-IN agar siswa mengeksplorasi secara visual mandiri.
-                    </p>
                 </div>
             </div>
         </section>
@@ -1171,7 +1158,7 @@ INSTRUKSI JOBSHEET 5 (PERTEMUAN 2):
                 <div>
                     <span class="badge-primary">GALERI PRAKTIK LAPANGAN</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-                        Dokumentasi Kegiatan Siklus 3
+                        Dokumentasi Kegiatan Siklus Ketiga
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
                         Suasana praktikum pengolahan data spreadsheet peserta didik di laboratorium komputer SMA Negeri 4 Yogyakarta:
@@ -1251,10 +1238,10 @@ INSTRUKSI JOBSHEET 5 (PERTEMUAN 2):
         <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
             <a href="siklus-2.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
                 <i class="ph-bold ph-arrow-left"></i>
-                <span>Kembali ke Siklus 2</span>
+                <span>Kembali ke Siklus Kedua</span>
             </a>
             <a href="siklus-4.html" class="btn-primary-cta">
-                <span>Lanjut ke Siklus 4 (Sistem Operasi)</span>
+                <span>Lanjut ke Siklus Keempat (Sistem Operasi)</span>
                 <i class="ph-bold ph-arrow-right"></i>
             </a>
         </section>
@@ -1279,10 +1266,10 @@ INSTRUKSI JOBSHEET 5 (PERTEMUAN 2):
                 <div class="flex flex-wrap items-center gap-5 text-xs font-bold">
                     <a href="index.html" class="hover:text-royal-500 dark:hover:text-neon">Beranda</a>
                     <a href="profil.html" class="hover:text-royal-500 dark:hover:text-neon">Profil</a>
-                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
-                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
-                    <a href="siklus-3.html" class="text-royal-500 dark:text-neon">Siklus 3</a>
-                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 4</a>
+                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Pertama</a>
+                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Kedua</a>
+                    <a href="siklus-3.html" class="text-royal-500 dark:text-neon">Siklus Ketiga</a>
+                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Keempat</a>
                     <a href="non-mengajar.html" class="hover:text-royal-500 dark:hover:text-neon">Non-Mengajar</a>
                     <a href="analisis.html" class="hover:text-royal-500 dark:hover:text-neon">Analisis</a>
                     <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>

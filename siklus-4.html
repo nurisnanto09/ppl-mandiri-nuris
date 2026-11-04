@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>porto-pplm-nuris | Siklus 4: Sistem Komputer &amp; OS — PPG UNY</title>
-    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    <title>porto-pplm-nuris | Siklus Keempat: Sistem Komputer &amp; OS — PPG UNY</title>
+    <link rel="icon" type="image/png" href="img/Icon Logo.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +57,11 @@
                 }
             }
         }
+        try {
+            if (localStorage.getItem('theme_preference') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
     </script>
 
     <!-- External Stylesheet CSS -->
@@ -111,29 +116,29 @@
                             <a href="siklus-1.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">01</span>
                                 <div>
-                                    <strong>Siklus 1</strong>
-                                    <small>Pengantar Informatika &amp; PPP</small>
+                                    <strong>Siklus Pertama</strong>
+                                    <small>Struktur Data &amp; Algoritma Dasar</small>
                                 </div>
                             </a>
                             <a href="siklus-2.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">02</span>
                                 <div>
-                                    <strong>Siklus 2</strong>
-                                    <small>Algoritma &amp; Pemrograman</small>
+                                    <strong>Siklus Kedua</strong>
+                                    <small>Algoritma Flowchart &amp; Pseudocode</small>
                                 </div>
                             </a>
                             <a href="siklus-3.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">03</span>
                                 <div>
-                                    <strong>Siklus 3</strong>
-                                    <small>Analisis Data Excel</small>
+                                    <strong>Siklus Ketiga</strong>
+                                    <small>Pengelolaan Angka Excel</small>
                                 </div>
                             </a>
                             <a href="siklus-4.html" class="nav-dropdown-item active bg-royal-50 dark:bg-royal-950/40 text-royal-600 dark:text-neon">
                                 <span class="nav-cycle-badge bg-neon text-royal-900 font-extrabold">04</span>
                                 <div>
-                                    <strong>Siklus 4 (Aktif)</strong>
-                                    <small>Sistem Komputer &amp; OS</small>
+                                    <strong>Siklus Keempat (Aktif)</strong>
+                                    <small>Sistem Operasi</small>
                                 </div>
                             </a>
                             <div class="nav-dropdown-divider"></div>
@@ -173,10 +178,10 @@
             <div id="mobileMenu" class="mobile-dropdown">
                 <a href="index.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">1. Beranda</a>
                 <a href="profil.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">2. Profil Pendidik</a>
-                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1 (Informatika)</a>
-                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
-                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3 (Excel)</a>
-                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">✦ Siklus 4 (Sistem Operasi)</a>
+                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1: Struktur Data &amp; Algoritma</a>
+                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2: Flowchart &amp; Pseudocode</a>
+                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3: Pengelolaan Angka Excel</a>
+                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">✦ Siklus 4: Sistem Operasi</a>
                 <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (SPACE-IN)</a>
                 <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">3. Analisis</a>
                 <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
@@ -200,7 +205,7 @@
             <div class="relative z-10 max-w-4xl space-y-4">
                 <div class="flex flex-wrap items-center gap-2">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-neon text-black uppercase tracking-wider font-mono">
-                        <i class="ph-bold ph-seal-check"></i> SIKLUS 4 • PRAKTIK PEMBELAJARAN
+                        <i class="ph-bold ph-seal-check"></i> SIKLUS KEEMPAT • PRAKTIK PEMBELAJARAN
                     </span>
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/15 text-white backdrop-blur-sm">
                         <i class="ph-bold ph-buildings"></i> SMA Negeri 4 Yogyakarta
@@ -211,7 +216,7 @@
                 </div>
 
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
-                    Siklus 4: Sistem Operasi &amp; Arsitektur Komputer (PSE Terintegrasi)
+                    Siklus Keempat: Sistem Operasi &amp; Arsitektur Komputer (PSE Terintegrasi)
                 </h1>
 
                 <p class="text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl">
@@ -247,7 +252,7 @@
                 <div>
                     <span class="badge-primary">REKAMAN PEMBELAJARAN NYATA</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-                        Video Praktik Pembelajaran Siklus 4
+                        Video Praktik Pembelajaran Siklus Keempat
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
                         Rekaman video pembelajaran terpadu simulasi arsitektur komputer dan penerapan PSE di SMA Negeri 4 Yogyakarta:
@@ -272,7 +277,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
                     
                     <div class="relative z-20 flex flex-col items-center space-y-4 max-w-lg">
-                        <button type="button" onclick="playCycleVideo('videoBoxS4', 'Praktik Siklus 4 - Sistem Komputer')" class="video-play-btn" aria-label="Putar Video Siklus 4">
+                        <button type="button" onclick="playCycleVideo('videoBoxS4', 'Praktik Siklus 4 - Sistem Komputer')" class="video-play-btn" aria-label="Putar Video Siklus Keempat">
                             <i class="ph-fill ph-play"></i>
                         </button>
                         <div>
@@ -344,21 +349,25 @@
             </div>
 
             <!-- TAB BAR NAVIGATION -->
-            <div class="cycle-tabs-nav" role="tablist" aria-label="Tab Artefak Siklus 4">
+            <div class="cycle-tabs-nav" role="tablist" aria-label="Tab Artefak Siklus Keempat">
                 <button type="button" class="cycle-tab-btn active" data-tab="tab-modul-s4" onclick="switchCycleTab('tab-modul-s4')" role="tab" aria-selected="true">
                     <i class="ph-bold ph-book-open"></i>
                     <span>Modul Ajar</span>
                 </button>
+                <button type="button" class="cycle-tab-btn" data-tab="tab-rpp-s4" onclick="switchCycleTab('tab-rpp-s4')" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-article"></i>
+                    <span>RPP</span>
+                </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-handbook-s4" onclick="switchCycleTab('tab-handbook-s4')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-book-bookmark"></i>
-                    <span>Handbook (Buku Pegangan 5)</span>
+                    <span>Handbook</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-media-s4" onclick="switchCycleTab('tab-media-s4')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-presentation"></i>
                     <span>Media</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-lkpd-s4" onclick="switchCycleTab('tab-lkpd-s4')" role="tab" aria-selected="false">
-                    <i class="ph-bold ph-file-text"></i>
+                    <i class="ph-bold ph-notebook"></i>
                     <span>LKPD</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-asesmen-s4" onclick="switchCycleTab('tab-asesmen-s4')" role="tab" aria-selected="false">
@@ -369,9 +378,8 @@
 
             <!-- TAB PANELS CONTAINER -->
             <div class="cycle-tab-content-area">
-
-                <!-- TAB 1: MODUL AJAR SIKLUS 4 -->
-                <div id="tab-modul-s4" class="cycle-tab-pane block">
+<!-- TAB 1: MODUL AJAR SIKLUS KEEMPAT -->
+<div id="tab-modul-s4" class="cycle-tab-pane block">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
@@ -379,24 +387,28 @@
                                     <span class="badge-blue">KODE: S4-MA</span>
                                     <span class="badge-slate font-mono text-[11px]">Kurikulum Merdeka</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong
+                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong &amp; DPL
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Modul Ajar Siklus 4: Arsitektur Von Neumann &amp; Siklus IPO
+                                    Modul Ajar Siklus Keempat: Arsitektur Von Neumann &amp; Siklus IPO
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
                                     Desain rencana pembelajaran mendalam yang menggabungkan simulasi perangkat keras CPU/RAM dengan asesmen diagnostik sosial emosional (PSE).
                                 </p>
                             </div>
                             <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'Dokumen Pembelajaran Siklus 4 - Modul & Refleksi')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                <button type="button" onclick="openPdfModal('pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%204.pdf', 'Modul Ajar Siklus 4 - Arsitektur Von Neumann & Sistem Operasi')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
                                     <i class="ph-bold ph-file-pdf"></i>
-                                    <span>View PDF</span>
+                                    <span>Buka Modal PDF</span>
                                 </button>
-                                <a href="artefak.html#modul4" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                <a href="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%204.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
                                     <i class="ph-bold ph-arrow-square-out"></i>
-                                    <span>Detail Modul</span>
+                                    <span>Tab Baru</span>
+                                </a>
+                                <a href="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%204.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Modul Ajar Siklus 4">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
                                 </a>
                             </div>
                         </div>
@@ -406,91 +418,282 @@
                             <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
                                 <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
                                     <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon"></i>
-                                    Pratinjau Dokumen: LK 4.4 Refleksi Praktek Mengajar Mandiri PPLM.pdf
+                                    Pratinjau Dokumen: Modul Ajar Siklus 4.pdf
                                 </span>
                                 <div class="flex items-center gap-2">
-                                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                    <a href="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%204.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
                                         <span>Layar Penuh</span>
                                         <i class="ph-bold ph-arrow-square-out"></i>
                                     </a>
-                                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                    <a href="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%204.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
                                         <span>Unduh</span>
                                         <i class="ph-bold ph-download-simple"></i>
                                     </a>
                                 </div>
                             </div>
-                            <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="w-full h-[650px] border-0" title="Dokumen Pembelajaran Siklus 4"></iframe>
+                            <iframe src="pdf/Modul%20Ajar/Modul%20Ajar%20Siklus%204.pdf" class="w-full h-[650px] border-0" title="Modul Ajar Siklus 4"></iframe>
                         </div>
                     </div>
                 </div>
 
                 <!-- TAB 2: ASESMEN SIKLUS 4 -->
-                <div id="tab-asesmen-s4" class="cycle-tab-pane hidden">
+
+<!-- TAB 2: RPP SIKLUS KEEMPAT -->
+                <div id="tab-rpp-s4" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="badge-blue">KODE: S4-AS</span>
-                                    <span class="badge-slate font-mono text-[11px]">Asesmen Ganda</span>
+                                    <span class="badge-blue">KODE: S4-RPP</span>
+                                    <span class="badge-slate font-mono text-[11px]">Rencana Pelaksanaan Pembelajaran</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Kognitif + Afektif PSE
+                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong &amp; DPL
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Instrumen Asesmen Siklus 4: Rubrik Siklus Mesin &amp; Lembar Refleksi Emosional
+                                    RPP Siklus Keempat: Sistem Operasi &amp; Arsitektur Komputer Modern
                                 </h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Kombinasi penilaian pemahaman arsitektur komputer internal dan evaluasi kesadaran diri (self-awareness) peserta didik selama jam praktikum.
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl leading-relaxed">
+                                    Rencana Pelaksanaan Pembelajaran mendalam berbasis Problem-Based Learning (PBL) dan simulasi virtual untuk memandu eksplorasi arsitektur Von Neumann, interaksi bus data/alamat, dan hierarki proses sistem operasi modern.
                                 </p>
                             </div>
                             <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'Instrumen & Evaluasi Siklus 4')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                <button type="button" onclick="openPdfModal('pdf/RPP/Pertemuan%20Sistem%20Operasi.pdf', 'RPP Siklus 4 - Sistem Operasi')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
                                     <i class="ph-bold ph-file-pdf"></i>
-                                    <span>View PDF</span>
+                                    <span>Buka PDF RPP</span>
                                 </button>
-                                <a href="artefak.html#asesmen4" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                <a href="pdf/RPP/Pertemuan%20Sistem%20Operasi.docx" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas RPP DOCX">
+                                    <i class="ph-bold ph-file-doc"></i>
+                                    <span>Unduh DOCX</span>
+                                </a>
+                                <a href="pdf/RPP/Pertemuan%20Sistem%20Operasi.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
                                     <i class="ph-bold ph-arrow-square-out"></i>
-                                    <span>Detail Asesmen</span>
+                                    <span>Tab Baru</span>
+                                </a>
+                                <a href="https://eduinformatika.vercel.app/lkpd_sistem_operasi.html" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-browsers"></i>
+                                    <span>Simulasi Web</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Direct Inline PDF Viewer -->
+                        <div class="pdf-embed-box mt-2">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon"></i>
+                                    Pratinjau Dokumen: Pertemuan Sistem Operasi.pdf
+                                </span>
+                                <div class="flex items-center gap-2">
+                                    <a href="pdf/RPP/Pertemuan%20Sistem%20Operasi.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Layar Penuh</span>
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                    </a>
+                                    <a href="pdf/RPP/Pertemuan%20Sistem%20Operasi.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Unduh PDF</span>
+                                        <i class="ph-bold ph-download-simple"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <iframe src="pdf/RPP/Pertemuan%20Sistem%20Operasi.pdf#view=FitH" class="w-full h-[650px] border-0" title="RPP Siklus 4: Sistem Operasi"></iframe>
+                        </div>
+
+                        <!-- Skenario Pelaksanaan RPP Tatap Muka & Lab -->
+                        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-50 dark:bg-royal-950/40 p-5 sm:p-6 space-y-5">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-200 dark:border-slate-800">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-lg bg-royal-500/10 dark:bg-neon/10 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
+                                        <i class="ph-bold ph-cpu"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-extrabold text-sm text-slate-900 dark:text-white">Skenario Rencana Pelaksanaan Pembelajaran (PBL &amp; PSE)</h4>
+                                        <p class="text-[11px] text-slate-500 dark:text-slate-400">Tahapan tatap muka dan eksplorasi laboratorium komputer terintegrasi sosial emosional</p>
+                                    </div>
+                                </div>
+                                <span class="badge-blue text-[11px] font-mono">Fase E — Kelas X Informatika</span>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">1</span>
+                                        <span>Orientasi &amp; Check-In PSE</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Membuka sesi dengan roda emosi Plutchik (kesiapan belajar) lalu memantik studi kasus: mengapa smartphone terasa lambat saat membuka terlalu banyak aplikasi background.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">2</span>
+                                        <span>Pengorganisasian Belajar</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Membagi peserta didik dalam kelompok kolaboratif untuk membedah perbedaan lapisan Kernel, System Call, Shell, dan Aplikasi User Space.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">3</span>
+                                        <span>Penyelidikan Virtual Interaktif</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Siswa mengakses portal simulasi EduInformatika untuk menjalankan siklus Fetch-Decode-Execute arsitektur Von Neumann secara visual langkah demi langkah.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">4</span>
+                                        <span>Pengembangan Solusi Kelompok</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Menganalisis hasil simulasi alokasi RAM dan proses CPU ke dalam LKPD digital (Pertemuan 1 Sistem Operasi &amp; Pertemuan 2 Von Neumann).
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">5</span>
+                                        <span>Penyajian &amp; Diskusi Panel</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Perwakilan kelompok mendemonstrasikan jalur bus alamat saat data dibaca dari register memori ke ALU (Arithmetic Logic Unit).
+                                    </p>
+                                </div>
+
+                                <div class="p-4 rounded-xl bg-white dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-2">
+                                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-bold text-xs">
+                                        <span class="w-5 h-5 rounded-full bg-royal-100 dark:bg-royal-950 flex items-center justify-center text-[11px]">6</span>
+                                        <span>Evaluasi &amp; Penguatan Konsep</span>
+                                    </div>
+                                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-[11px]">
+                                        Konfirmasi pamong dan DPL, post-test formatif sistem operasi, serta penutupan sesi dengan apresiasi pencapaian belajar peserta didik.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Format RPP</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Problem-Based Learning (PBL)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Alokasi Waktu</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">2 Pertemuan Tatap Muka &amp; Lab</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Khusus</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Simulasi Web + PSE (Sosial Emosional)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Status Validasi</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Terverifikasi Guru Pamong &amp; DPL</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- TAB 3: HANDBOOK SIKLUS KEEMPAT -->
+<div id="tab-handbook-s4" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S4-HB</span>
+                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Handbook</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Dokumen Resmi PDF
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    Buku Pegangan 5: Sistem Operasi
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Buku pegangan belajar peserta didik Fase E / Kelas X untuk penguasaan arsitektur perangkat keras, Arsitektur Von Neumann, fungsi dasar sistem operasi, hierarki abstraksi kernel, dan tata kelola proses komputasi.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf', 'Buku Pegangan 5: Sistem Operasi - Siklus 4')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>View PDF Modal</span>
+                                </button>
+                                <a href="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Buka Tab Baru</span>
+                                </a>
+                                <a href="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
                                 </a>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Komponen 1</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Penalaran Arsitektur Komputer</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Nama Dokumen</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Pegangan 5 Siswa</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Komponen 2</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Penjelasan Lapisan Bawang OS</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Materi Pokok</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Sistem Operasi &amp; Komputer</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Komponen 3 (PSE)</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Identifikasi Regulasi Emosi</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Arsitektur</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Von Neumann &amp; Onion OS</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Komponen 4 (PSE)</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Refleksi Kesiapan &amp; Minat Belajar</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Pembelajaran</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Siklus 4 Discovery Learning + PSE</strong>
                             </div>
+                        </div>
+
+                        <!-- INLINE PDF EMBED VIEWER SIKLUS 4 (Tampil Langsung) -->
+                        <div id="embed-hb-s4" class="pdf-embed-box">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-book-open text-royal-500 dark:text-neon"></i>
+                                    Pratinjau Dokumen: Buku Pegangan-5. Sistem Operasi.pdf
+                                </span>
+                                <div class="flex items-center gap-2">
+                                    <a href="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Layar Penuh</span>
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                    </a>
+                                    <a href="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Unduh</span>
+                                        <i class="ph-bold ph-download-simple"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <iframe src="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 5 Siswa"></iframe>
                         </div>
 
                         <div class="space-y-3">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-heart-half text-royal-500 dark:text-neon"></i>
-                                Butir Pertanyaan Refleksi Sosial Emosional (PSE):
+                                <i class="ph-bold ph-article text-royal-500 dark:text-neon"></i>
+                                Rangkuman Materi Pokok Buku Pegangan 5:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
-INSTRUMEN CHECK-IN & REFLEKSI PSE:
-1. "Lingkari satu emotikon pada Roda Emosi yang paling mewakili energimu sebelum praktikum dimulai!"
-2. "Saat komputer mengalami delay / loading lambat pada simulator, tindakan apa yang kamu ambil untuk menenangkan diri?"
-3. "Seberapa percaya diri kamu setelah berhasil membuktikan sendiri bahwa angka biner di RAM berpindah ke ALU?"
+RINGKASAN BUKU PEGANGAN 5 (SISTEM OPERASI):
+- Bab 1: Pengantar Sistem Komputer dan Peran Vital Sistem Operasi Sebagai Manajer Sumber Daya.
+- Bab 2: Arsitektur Von Neumann: Komponen Pemroses (CPU, ALU, CU, Register), Memori Utama (RAM/ROM), dan Perangkat I/O.
+- Bab 3: Siklus Mesin (Machine Cycle): Mekanisme Fetch, Decode, Execute, dan Store.
+- Bab 4: Lapisan Abstraksi Sistem Komputer (Onion Model): Hubungan Perangkat Keras, Kernel OS, Shell/GUI, Aplikasi, dan Pengguna (Brainware).
+- Bab 5: Manajemen Memori, Multitasking, dan Penjadwalan Proses pada Sistem Operasi Modern.
+- Bab 6: Interaksi Antarmuka Pengguna (CLI vs GUI) serta Prinsip Keamanan & Proteksi Sistem Komputer.
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- TAB 3: MEDIA SIKLUS 4 -->
-                <div id="tab-media-s4" class="cycle-tab-pane hidden">
+                <!-- TAB 5: LKPD SIKLUS 4 -->
+
+<!-- TAB 4: MEDIA SIKLUS KEEMPAT -->
+<div id="tab-media-s4" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
@@ -605,7 +808,7 @@ INSTRUMEN CHECK-IN & REFLEKSI PSE:
                         <div class="space-y-3 pt-2">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
                                 <i class="ph-bold ph-cpu text-royal-500 dark:text-neon"></i>
-                                Kemampuan Simulator Siklus 4:
+                                Kemampuan Simulator Siklus Keempat:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
 FITUR SIMULATOR INTERAKTIF:
@@ -618,100 +821,9 @@ FITUR SIMULATOR INTERAKTIF:
                 </div>
 
                 <!-- TAB 4: HANDBOOK SIKLUS 4 -->
-                <div id="tab-handbook-s4" class="cycle-tab-pane hidden">
-                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="badge-blue">KODE: S4-HB</span>
-                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Handbook</span>
-                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Dokumen Resmi PDF
-                                    </span>
-                                </div>
-                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Buku Pegangan 5: Sistem Operasi
-                                </h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Buku pegangan belajar peserta didik Fase E / Kelas X untuk penguasaan arsitektur perangkat keras, Arsitektur Von Neumann, fungsi dasar sistem operasi, hierarki abstraksi kernel, dan tata kelola proses komputasi.
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf', 'Buku Pegangan 5: Sistem Operasi - Siklus 4')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
-                                    <i class="ph-bold ph-file-pdf"></i>
-                                    <span>View PDF Modal</span>
-                                </button>
-                                <a href="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-arrow-square-out"></i>
-                                    <span>Buka Tab Baru</span>
-                                </a>
-                                <a href="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-download-simple"></i>
-                                    <span>Unduh</span>
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Nama Dokumen</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Pegangan 5 Siswa</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Materi Pokok</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Sistem Operasi &amp; Komputer</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Arsitektur</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Von Neumann &amp; Onion OS</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Pembelajaran</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Siklus 4 Discovery Learning + PSE</strong>
-                            </div>
-                        </div>
-
-                        <!-- INLINE PDF EMBED VIEWER SIKLUS 4 (Tampil Langsung) -->
-                        <div id="embed-hb-s4" class="pdf-embed-box">
-                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
-                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
-                                    <i class="ph-bold ph-book-open text-royal-500 dark:text-neon"></i>
-                                    Pratinjau Dokumen: Buku Pegangan-5. Sistem Operasi.pdf
-                                </span>
-                                <div class="flex items-center gap-2">
-                                    <a href="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
-                                        <span>Layar Penuh</span>
-                                        <i class="ph-bold ph-arrow-square-out"></i>
-                                    </a>
-                                    <a href="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
-                                        <span>Unduh</span>
-                                        <i class="ph-bold ph-download-simple"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <iframe src="pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 5 Siswa"></iframe>
-                        </div>
-
-                        <div class="space-y-3">
-                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-article text-royal-500 dark:text-neon"></i>
-                                Rangkuman Materi Pokok Buku Pegangan 5:
-                            </h4>
-                            <div class="code-preview-block text-xs leading-relaxed">
-RINGKASAN BUKU PEGANGAN 5 (SISTEM OPERASI):
-- Bab 1: Pengantar Sistem Komputer dan Peran Vital Sistem Operasi Sebagai Manajer Sumber Daya.
-- Bab 2: Arsitektur Von Neumann: Komponen Pemroses (CPU, ALU, CU, Register), Memori Utama (RAM/ROM), dan Perangkat I/O.
-- Bab 3: Siklus Mesin (Machine Cycle): Mekanisme Fetch, Decode, Execute, dan Store.
-- Bab 4: Lapisan Abstraksi Sistem Komputer (Onion Model): Hubungan Perangkat Keras, Kernel OS, Shell/GUI, Aplikasi, dan Pengguna (Brainware).
-- Bab 5: Manajemen Memori, Multitasking, dan Penjadwalan Proses pada Sistem Operasi Modern.
-- Bab 6: Interaksi Antarmuka Pengguna (CLI vs GUI) serta Prinsip Keamanan & Proteksi Sistem Komputer.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 5: LKPD SIKLUS 4 -->
-                <div id="tab-lkpd-s4" class="cycle-tab-pane hidden">
+<!-- TAB 5: LKPD SIKLUS KEEMPAT -->
+<div id="tab-lkpd-s4" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-8 shadow-md">
                         <!-- HEADER TAB LKPD S4 -->
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
@@ -724,7 +836,7 @@ RINGKASAN BUKU PEGANGAN 5 (SISTEM OPERASI):
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    LKPD Praktik Siklus 4: Sistem Operasi &amp; Arsitektur Komputer
+                                    LKPD Praktik Siklus Keempat: Sistem Operasi &amp; Arsitektur Komputer
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl leading-relaxed">
                                     Lembar Kerja Peserta Didik digital interaktif yang disusun bertingkat atas ke bawah (Pertemuan 1 &amp; Pertemuan 2), memadukan penyelidikan lapisan sistem operasi dengan simulasi langsung siklus mesin Arsitektur Von Neumann dan penguatan Pembelajaran Sosial Emosional (PSE).
@@ -861,16 +973,13 @@ AKTIVITAS LKPD PERTEMUAN 1 (SISTEM OPERASI):
                                         <i class="ph-bold ph-globe"></i>
                                         <span>Buka Web Live</span>
                                     </a>
-                                    <button type="button" onclick="openPdfModal('pdf/LKPD/Siklus%204/LKPD_Pertemuan_2_Arsitektur_Von_Neumann.pdf', 'LKPD Pertemuan 2 - Arsitektur Von Neumann')" class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1">
-                                        <i class="ph-bold ph-file-pdf"></i>
-                                        <span>View PDF</span>
+                                    <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-5.%20Sistem%20Operasi.pdf', 'Handbook & Panduan Sistem Operasi')" class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1">
+                                        <i class="ph-bold ph-book-open"></i>
+                                        <span>Bahan Ajar Pendukung</span>
                                     </button>
-                                    <a href="pdf/LKPD/Siklus%204/LKPD_Pertemuan_2_Arsitektur_Von_Neumann.pdf" download class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1" title="Unduh PDF Resmi LKPD 2">
-                                        <i class="ph-bold ph-download-simple"></i>
-                                        <span>Unduh</span>
-                                    </a>
                                     <button type="button" onclick="copyToClipboard('https://eduinformatika.vercel.app/page_von_neumann.html')" class="btn-secondary text-xs py-2 px-2.5 inline-flex items-center gap-1" title="Salin URL">
                                         <i class="ph-bold ph-copy"></i>
+                                        <span>Salin URL</span>
                                     </button>
                                 </div>
                             </div>
@@ -911,253 +1020,154 @@ AKTIVITAS LKPD PERTEMUAN 2 (ARSITEKTUR VON NEUMANN):
                     </div>
                 </div>
 
+<!-- TAB 6: ASESMEN SIKLUS KEEMPAT -->
+<div id="tab-asesmen-s4" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S4-AS</span>
+                                    <span class="badge-slate font-mono text-[11px]">Asesmen Ganda</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Kognitif + Afektif PSE
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    Instrumen Asesmen Siklus Keempat: Rubrik Siklus Mesin &amp; Lembar Refleksi Emosional
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Kombinasi penilaian pemahaman arsitektur komputer internal dan evaluasi kesadaran diri (self-awareness) peserta didik selama jam praktikum.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <button type="button" onclick="openPdfModal('pdf/Assemen/Asesmen%20Sistem%20Komputer%20(2).pdf', 'Instrumen Asesmen Siklus 4 - Sistem Komputer')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>Buka Modal PDF</span>
+                                </button>
+                                <a href="pdf/Assemen/Asesmen%20Sistem%20Komputer%20(2).pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Tab Baru</span>
+                                </a>
+                                <a href="pdf/Assemen/Asesmen%20Sistem%20Komputer%20(2).pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Asesmen Sistem Komputer">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- PDF VIEWER ASESMEN SIKLUS 4 -->
+                        <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#120B22] shadow-sm">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800 text-xs">
+                                <span class="font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                                    <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
+                                    <span>Asesmen Sistem Komputer (2).pdf</span>
+                                </span>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">pdf/Assemen/</span>
+                                    <a href="pdf/Assemen/Asesmen%20Sistem%20Komputer%20(2).pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Layar Penuh</span>
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <iframe loading="lazy" src="pdf/Assemen/Asesmen%20Sistem%20Komputer%20(2).pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="Asesmen Sistem Komputer"></iframe>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Komponen 1</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Penalaran Arsitektur Komputer</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Komponen 2</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Penjelasan Lapisan Bawang OS</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Komponen 3 (PSE)</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Identifikasi Regulasi Emosi</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Komponen 4 (PSE)</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Refleksi Kesiapan &amp; Minat Belajar</strong>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                <i class="ph-bold ph-heart-half text-royal-500 dark:text-neon"></i>
+                                Butir Pertanyaan Refleksi Sosial Emosional (PSE):
+                            </h4>
+                            <div class="code-preview-block text-xs leading-relaxed">
+INSTRUMEN CHECK-IN & REFLEKSI PSE:
+1. "Lingkari satu emotikon pada Roda Emosi yang paling mewakili energimu sebelum praktikum dimulai!"
+2. "Saat komputer mengalami delay / loading lambat pada simulator, tindakan apa yang kamu ambil untuk menenangkan diri?"
+3. "Seberapa percaya diri kamu setelah berhasil membuktikan sendiri bahwa angka biner di RAM berpindah ke ALU?"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: MEDIA SIKLUS 4 -->
             </div>
         </section>
 
         <!-- ==========================================
              4. EVALUASI HASIL BELAJAR & LK 4.4 RESMI
              ========================================== -->
-        <section id="section-evaluasi" class="space-y-8 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                    <div class="inline-flex items-center gap-2 mb-1.5">
-                        <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
-                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                            <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
-                        </span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
-                        Evaluasi &amp; Refleksi Siklus 4 (LK 4.4)
-                    </h2>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
-                        Dokumentasi utuh evaluasi mandiri dan refleksi pelaksanaan pembelajaran Sistem Operasi dan integrasi PSE di SMA Negeri 4 Yogyakarta.
-                    </p>
-                </div>
-                <div class="flex flex-wrap items-center gap-2">
-                    <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.4 Refleksi Praktik Pembelajaran Mandiri - Siklus 4')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
-                        <i class="ph-bold ph-file-pdf"></i>
-                        <span>View PDF LK 4.4</span>
-                    </button>
-                    <button type="button" onclick="togglePdfEmbed('embedPdfS4', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                        <i class="ph-bold ph-eye"></i>
-                        <span>Pratinjau di Halaman</span>
-                    </button>
-                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF Resmi">
-                        <i class="ph-bold ph-download-simple"></i>
-                        <span>Unduh File</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- INLINE PDF VIEWER (Tampil Langsung Tanpa Perlu Klik) -->
-            <div id="embedPdfS4" class="pdf-embed-card">
-                <div class="p-3 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold">
-                    <span class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
-                        <span>Nur Isnanto Nugroho_25105260411_LK4.4 Refleksi Praktek Mengajar Mandiri PPLM.pdf</span>
-                    </span>
-                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" class="text-royal-500 dark:text-neon hover:underline inline-flex items-center gap-1">
-                        <span>Layar Penuh</span>
-                        <i class="ph-bold ph-arrow-square-out"></i>
-                    </a>
-                </div>
-                <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.4"></iframe>
-            </div>
-
-            <!-- OFFICIAL LK 4.4 TRANSCRIPT DOCUMENT CARD -->
-            <div class="lk-official-card space-y-8">
-                <!-- Header Dokumen Resmi -->
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+                <!-- ==========================================
+             4. EVALUASI HASIL BELAJAR & LK 4.4 RESMI (TERHUBUNG KE HALAMAN ANALISIS)
+             ========================================== -->
+        <section id="section-evaluasi" class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
+            <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-royal-900/10 via-purple-500/5 to-transparent dark:from-royal-950/60 dark:via-[#120B22] dark:to-transparent border border-royal-200 dark:border-purple-800/50 space-y-6 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <span class="px-2.5 py-0.5 rounded-full bg-royal-100 dark:bg-royal-950 text-royal-700 dark:text-purple-300 font-mono text-[11px] font-extrabold uppercase">
-                                LEMBAR KERJA (LK) 4
+                        <div class="inline-flex items-center gap-2 mb-2">
+                            <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
+                            <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
                             </span>
-                            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Refleksi Praktik Pembelajaran Mandiri</span>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-                            Refleksi Ke : Empat (Siklus 4)
-                        </h3>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                            Evaluasi &amp; Refleksi Siklus Keempat (LK 4.4)
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 max-w-2xl leading-relaxed">
+                            Dokumentasi utuh evaluasi mandiri, refleksi simulasi Sistem Operasi &amp; arsitektur Von Neumann terintegrasi PSE, respon siswa, umpan balik Pamong, serta tindak lanjut pedagogis Siklus Keempat kini telah dirangkum lengkap dalam menu Analisis Komparatif.
+                        </p>
                     </div>
-                    <div class="p-3 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-xs space-y-1">
-                        <div><strong>Mahasiswa:</strong> Nur Isnanto Nugroho (NIM 25105260411)</div>
-                        <div><strong>Bidang Studi:</strong> Informatika &bull; <strong>Sekolah:</strong> SMA Negeri 4 Yogyakarta</div>
-                    </div>
-                </div>
-
-                <!-- Bagian A: Refleksi Kegiatan Pembelajaran Mandiri -->
-                <div class="space-y-5">
-                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
-                        <i class="ph-bold ph-chats-circle text-lg"></i>
-                        <span>A. Refleksi Kegiatan Praktik Pembelajaran Mandiri</span>
-                    </div>
-
-                    <div class="space-y-4 text-xs sm:text-sm">
-                        <!-- Q1 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">1.</span>
-                                <span>Bagaimana kegiatan apersepsi dapat membantu murid memahami tujuan pembelajaran yang akan dicapai?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Pada siklus keempat, pembelajaran membahas materi Sistem Operasi dengan menggunakan model Discovery Learning. Pada kegiatan apersepsi, saya mengajak peserta didik memikirkan komponen komputer dan apa saja yang bekerja ketika komputer digunakan. Selanjutnya, saya menghubungkan pertanyaan tersebut dengan konsep Input–Process–Output (IPO) yang sebelumnya telah dikenal dalam pembelajaran Informatika. Melalui kegiatan ini, peserta didik diajak mengingat kembali pengetahuan sebelumnya sebagai dasar untuk memahami peran sistem operasi dalam proses kerja komputer.
-                            </p>
-                        </div>
-
-                        <!-- Q2 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">2.</span>
-                                <span>Kegiatan apa saja yang berhasil dan belum berhasil dilaksanakan dalam kegiatan inti?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Pada siklus ini, pembelajaran menggunakan model Discovery Learning dengan materi Sistem Operasi. Kegiatan pembelajaran dirancang agar peserta didik dapat menemukan pemahaman mengenai peran sistem operasi melalui proses pengamatan dan kegiatan belajar yang telah disiapkan. Materi juga dikaitkan dengan konsep IPO agar peserta didik dapat memahami hubungan antara proses kerja komputer dan peran sistem operasi. Evaluasi terhadap kegiatan yang berhasil maupun yang belum berhasil perlu disesuaikan dengan pelaksanaan pembelajaran di kelas.
-                            </p>
-                        </div>
-
-                        <!-- Q3 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">3.</span>
-                                <span>Seberapa efektif penggunaan media pembelajaran untuk melibatkan partisipasi aktif di kelas?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Penggunaan media pembelajaran pada siklus ini diarahkan untuk membantu peserta didik memahami konsep sistem operasi yang berkaitan dengan proses kerja komputer. Pengaitan materi dengan konsep IPO diharapkan dapat memberikan gambaran yang lebih konkret mengenai hubungan antara input, proses, dan output. Efektivitas media dalam meningkatkan partisipasi peserta didik perlu dilihat dari keterlibatan mereka selama kegiatan pengamatan, diskusi, dan pengerjaan tugas.
-                            </p>
-                        </div>
-
-                        <!-- Q4 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">4.</span>
-                                <span>Bagaimana reaksi/respon murid dalam setiap kegiatan dari pembukaan hingga penutupan pembelajaran?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Pada kegiatan pembukaan, peserta didik diajak mengamati dan memikirkan komponen komputer yang bekerja ketika komputer digunakan. Pertanyaan tersebut menjadi pengantar untuk menghubungkan pengetahuan sebelumnya tentang IPO dengan materi Sistem Operasi. Respons peserta didik pada kegiatan inti hingga penutupan perlu disesuaikan dengan kondisi yang benar-benar terjadi selama pembelajaran.
-                            </p>
-                        </div>
+                    <div class="flex flex-wrap items-center gap-2 shrink-0">
+                        <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.4 Refleksi Praktik Pembelajaran Mandiri - Siklus 4')" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                            <i class="ph-bold ph-file-pdf"></i>
+                            <span>View PDF LK 4.4</span>
+                        </button>
+                        <a href="analisis.html#lk-pane-s4" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-4 shadow-md">
+                            <span>Buka di Halaman Analisis</span>
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Bagian B: Refleksi Pengalaman Belajar -->
-                <div class="space-y-5 pt-4 border-t border-slate-200 dark:border-slate-800">
-                    <div class="flex items-center gap-2 text-emerald-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
-                        <i class="ph-bold ph-graduation-cap text-lg"></i>
-                        <span>B. Refleksi Pengalaman Belajar</span>
+                <!-- Metric Summary 4 Mini Cards -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-2 border-t border-slate-200/60 dark:border-slate-800">
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-royal-600 dark:text-neon">94.4%</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
+                        <span class="text-[10px] text-slate-500 dark:text-slate-400 block">102 dari 108 Siswa Tuntas KKTP</span>
                     </div>
-
-                    <div class="space-y-4 text-xs sm:text-sm">
-                        <!-- Q1 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-emerald-600 dark:text-neon">1.</span>
-                                <span>Apakah umpan balik dari Guru Pamong untuk praktik pembelajaran mandiri yang lebih baik?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Dalam pelaksanaan PPL, pembahasan bersama guru pamong lebih banyak berkaitan dengan materi yang akan diajarkan. Oleh karena itu, saya melakukan evaluasi terhadap pelaksanaan pembelajaran berdasarkan pengalaman selama mengajar. Pada siklus keempat, saya berusaha menghubungkan materi baru dengan pengetahuan yang telah dimiliki peserta didik agar proses pembelajaran lebih mudah dipahami.
-                            </p>
-                        </div>
-
-                        <!-- Q2 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-emerald-600 dark:text-neon">2.</span>
-                                <span>Apabila Anda akan melakukan perubahan terhadap metode pembelajaran, unsur apa yang akan Anda ubah untuk metode pembelajaran yang lebih baik?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Apabila melakukan perbaikan pada pembelajaran berikutnya, saya akan lebih memperhatikan tahapan kegiatan Discovery Learning agar peserta didik memperoleh kesempatan untuk mengamati, mengolah informasi, dan menemukan pemahaman secara mandiri. Saya juga akan memberikan contoh yang lebih konkret mengenai hubungan antara IPO dan peran sistem operasi. Dengan demikian, peserta didik diharapkan tidak hanya memahami pengertian sistem operasi, tetapi juga mampu menjelaskan perannya dalam mendukung proses kerja komputer.
-                            </p>
-                        </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-slate-900 dark:text-white">89.6</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Akhir</strong>
+                        <span class="text-[10px] text-emerald-600 dark:text-neon block">Puncak Optimal Siklus PPL</span>
                     </div>
-                </div>
-
-                <!-- Tanda Tangan & Pengesahan Resmi -->
-                <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
-                    <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-                        <div class="space-y-1">
-                            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Status Pengesahan Dokumen</span>
-                            <div class="text-xs font-bold text-slate-800 dark:text-slate-200">
-                                Ditetapkan pada: <span class="font-mono text-royal-600 dark:text-neon">Tanggal, 12 Oktober 2026</span>
-                            </div>
-                            <div class="text-[11px] text-slate-500 dark:text-slate-400">
-                                Terverifikasi dalam sistem e-Portofolio PPL PPG Prajabatan Universitas Negeri Yogyakarta
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
-                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[140px]">
-                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Guru Pamong</span>
-                                <strong class="block text-slate-900 dark:text-white mt-1">Titis Widowati, S.T.</strong>
-                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
-                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
-                                </span>
-                            </div>
-                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[160px]">
-                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Dosen Pembimbing Lapangan</span>
-                                <strong class="block text-slate-900 dark:text-white mt-1">Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong>
-                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
-                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
-                                </span>
-                            </div>
-                        </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-royal-600 dark:text-neon">97%</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Keterlibatan Emosional</strong>
+                        <span class="text-[10px] text-slate-500 dark:text-slate-400 block">Pengisian Roda Emosi Lengkap</span>
                     </div>
-                </div>
-            </div>
-
-            <!-- METRIC STATS 4 CARDS -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">94.4%</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">102 dari 108 Siswa Tuntas KKTP</span>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">89.6</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Akhir</strong>
-                    <span class="text-[11px] text-emerald-600 dark:text-neon block">Puncak Optimal Siklus PPL</span>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">97%</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlibatan Emosional</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Pengisian Roda Emosi Lengkap</span>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">100%</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Discovery Learning &amp; PSE</span>
-                </div>
-            </div>
-
-            <!-- 3 EVALUATION CARDS -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-emerald-200 dark:border-emerald-950/60 space-y-3">
-                    <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
-                        <i class="ph-bold ph-thumbs-up"></i>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-emerald-600 dark:text-neon">100%</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
+                        <span class="text-[10px] text-slate-500 dark:text-slate-400 block">Discovery Learning &amp; PSE</span>
                     </div>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">1. Kekuatan Pembelajaran</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Integrasi <strong>Pembelajaran Sosial Emosional (PSE)</strong> melalui teknik check-in emosi dan latihan mindfulness terbukti ampuh meredakan kecemasan siswa saat mempelajari konsep abstrak mikroskopis arsitektur komputer.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-amber-200 dark:border-amber-950/60 space-y-3">
-                    <div class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
-                        <i class="ph-bold ph-warning"></i>
-                    </div>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">2. Kendala / Tantangan</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Instrumen asesmen refleksi emosional PSE masih menyatu di kertas LKPD fisik, sehingga butuh waktu tambahan bagi guru untuk mengagregasi data emosional secara manual pasca pembelajaran usai.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-200 dark:border-royal-950/60 space-y-3">
-                    <div class="w-9 h-9 rounded-xl bg-royal-100 dark:bg-royal-950/80 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
-                        <i class="ph-bold ph-arrow-circle-right"></i>
-                    </div>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">3. Rencana Tindak Lanjut</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Mengembangkan platform web mandiri terpisah khusus untuk pencatatan refleksi emosional peserta didik (Web PSE Tracker) yang terintegrasi basis data cloud agar bisa dipantau secara longitudinal berkelanjutan.
-                    </p>
                 </div>
             </div>
         </section>
@@ -1170,7 +1180,7 @@ AKTIVITAS LKPD PERTEMUAN 2 (ARSITEKTUR VON NEUMANN):
                 <div>
                     <span class="badge-primary">GALERI PRAKTIK LAPANGAN</span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
-                        Dokumentasi Kegiatan Siklus 4
+                        Dokumentasi Kegiatan Siklus Keempat
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
                         Momen-momen bermakna pembelajaran sistem komputer dan penguatan emosional di SMA Negeri 4 Yogyakarta:
@@ -1250,7 +1260,7 @@ AKTIVITAS LKPD PERTEMUAN 2 (ARSITEKTUR VON NEUMANN):
         <section class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
             <a href="siklus-3.html" class="inline-flex items-center gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300 hover:text-royal-500 dark:hover:text-neon transition-colors">
                 <i class="ph-bold ph-arrow-left"></i>
-                <span>Kembali ke Siklus 3</span>
+                <span>Kembali ke Siklus Ketiga</span>
             </a>
             <a href="non-mengajar.html" class="btn-primary-cta">
                 <span>Lanjut ke Non-Mengajar (SPACE-IN)</span>
@@ -1278,10 +1288,10 @@ AKTIVITAS LKPD PERTEMUAN 2 (ARSITEKTUR VON NEUMANN):
                 <div class="flex flex-wrap items-center gap-5 text-xs font-bold">
                     <a href="index.html" class="hover:text-royal-500 dark:hover:text-neon">Beranda</a>
                     <a href="profil.html" class="hover:text-royal-500 dark:hover:text-neon">Profil</a>
-                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
-                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
-                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 3</a>
-                    <a href="siklus-4.html" class="text-royal-500 dark:text-neon">Siklus 4</a>
+                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Pertama</a>
+                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Kedua</a>
+                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Ketiga</a>
+                    <a href="siklus-4.html" class="text-royal-500 dark:text-neon">Siklus Keempat</a>
                     <a href="non-mengajar.html" class="hover:text-royal-500 dark:hover:text-neon">Non-Mengajar</a>
                     <a href="analisis.html" class="hover:text-royal-500 dark:hover:text-neon">Analisis</a>
                     <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>

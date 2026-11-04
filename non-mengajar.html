@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>porto-pplm-nuris | Aktivitas Non-Mengajar — PPG UNY</title>
-    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    <link rel="icon" type="image/png" href="img/Icon Logo.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +57,11 @@
                 }
             }
         }
+        try {
+            if (localStorage.getItem('theme_preference') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
     </script>
 
     <!-- External Stylesheet CSS -->
@@ -111,29 +116,29 @@
                             <a href="siklus-1.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">01</span>
                                 <div>
-                                    <strong>Siklus 1</strong>
-                                    <small>Pengantar Informatika &amp; PPP</small>
+                                    <strong>Siklus Pertama</strong>
+                                    <small>Struktur Data &amp; Algoritma Dasar</small>
                                 </div>
                             </a>
                             <a href="siklus-2.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">02</span>
                                 <div>
-                                    <strong>Siklus 2</strong>
-                                    <small>Algoritma &amp; Pemrograman</small>
+                                    <strong>Siklus Kedua</strong>
+                                    <small>Algoritma Flowchart &amp; Pseudocode</small>
                                 </div>
                             </a>
                             <a href="siklus-3.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">03</span>
                                 <div>
-                                    <strong>Siklus 3</strong>
-                                    <small>Analisis Data Excel</small>
+                                    <strong>Siklus Ketiga</strong>
+                                    <small>Pengelolaan Angka Excel</small>
                                 </div>
                             </a>
                             <a href="siklus-4.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">04</span>
                                 <div>
-                                    <strong>Siklus 4</strong>
-                                    <small>Sistem Komputer &amp; OS</small>
+                                    <strong>Siklus Keempat</strong>
+                                    <small>Sistem Operasi</small>
                                 </div>
                             </a>
                             <div class="nav-dropdown-divider"></div>
@@ -173,10 +178,10 @@
             <div id="mobileMenu" class="mobile-dropdown">
                 <a href="index.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">1. Beranda</a>
                 <a href="profil.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">2. Profil Pendidik</a>
-                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1 (Informatika)</a>
-                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
-                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3 (Excel)</a>
-                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4 (Sistem Operasi)</a>
+                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1: Struktur Data &amp; Algoritma</a>
+                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2: Flowchart &amp; Pseudocode</a>
+                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3: Pengelolaan Angka Excel</a>
+                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4: Sistem Operasi</a>
                 <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">✦ Non-Mengajar (SPACE-IN)</a>
                 <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">3. Analisis</a>
                 <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
@@ -422,10 +427,10 @@ Komitmen: Menjadi pendidik berintegritas dan berjiwa nasionalis.
                 <div class="flex flex-wrap items-center gap-5 text-xs font-bold">
                     <a href="index.html" class="hover:text-royal-500 dark:hover:text-neon">Beranda</a>
                     <a href="profil.html" class="hover:text-royal-500 dark:hover:text-neon">Profil</a>
-                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
-                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
-                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 3</a>
-                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 4</a>
+                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Pertama</a>
+                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Kedua</a>
+                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Ketiga</a>
+                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Keempat</a>
                     <a href="non-mengajar.html" class="text-royal-500 dark:text-neon">Non-Mengajar</a>
                     <a href="analisis.html" class="hover:text-royal-500 dark:hover:text-neon">Analisis</a>
                     <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>

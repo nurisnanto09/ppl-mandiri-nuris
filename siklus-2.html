@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>porto-pplm-nuris | Siklus 2: Algoritma &amp; Pemrograman — PPG UNY</title>
-    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    <link rel="icon" type="image/png" href="img/Icon Logo.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,6 +57,11 @@
                 }
             }
         }
+        try {
+            if (localStorage.getItem('theme_preference') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
     </script>
 
     <!-- External Stylesheet CSS -->
@@ -112,28 +117,28 @@
                                 <span class="nav-cycle-badge">01</span>
                                 <div>
                                     <strong>Siklus 1</strong>
-                                    <small>Pengantar Informatika &amp; PPP</small>
+                                    <small>Struktur Data &amp; Algoritma Dasar</small>
                                 </div>
                             </a>
                             <a href="siklus-2.html" class="nav-dropdown-item active bg-royal-50 dark:bg-royal-950/40 text-royal-600 dark:text-neon">
                                 <span class="nav-cycle-badge bg-neon text-royal-900 font-extrabold">02</span>
                                 <div>
                                     <strong>Siklus 2 (Aktif)</strong>
-                                    <small>Algoritma &amp; Pemrograman</small>
+                                    <small>Algoritma Flowchart &amp; Pseudocode</small>
                                 </div>
                             </a>
                             <a href="siklus-3.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">03</span>
                                 <div>
                                     <strong>Siklus 3</strong>
-                                    <small>Analisis Data Excel</small>
+                                    <small>Pengelolaan Angka Excel</small>
                                 </div>
                             </a>
                             <a href="siklus-4.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">04</span>
                                 <div>
                                     <strong>Siklus 4</strong>
-                                    <small>Sistem Komputer &amp; OS</small>
+                                    <small>Sistem Operasi</small>
                                 </div>
                             </a>
                             <div class="nav-dropdown-divider"></div>
@@ -344,21 +349,25 @@
             </div>
 
             <!-- TAB BAR NAVIGATION -->
-            <div class="cycle-tabs-nav" role="tablist" aria-label="Tab Artefak Siklus 2">
+            <div class="cycle-tabs-nav" role="tablist" aria-label="Tab Artefak Siklus Kedua">
                 <button type="button" class="cycle-tab-btn active" data-tab="tab-modul-s2" onclick="switchCycleTab('tab-modul-s2')" role="tab" aria-selected="true">
                     <i class="ph-bold ph-book-open"></i>
                     <span>Modul Ajar</span>
                 </button>
+                <button type="button" class="cycle-tab-btn" data-tab="tab-rpp-s2" onclick="switchCycleTab('tab-rpp-s2')" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-article"></i>
+                    <span>RPP</span>
+                </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-handbook-s2" onclick="switchCycleTab('tab-handbook-s2')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-book-bookmark"></i>
-                    <span>Handbook (Buku Pegangan 3)</span>
+                    <span>Handbook</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-media-s2" onclick="switchCycleTab('tab-media-s2')" role="tab" aria-selected="false">
                     <i class="ph-bold ph-presentation"></i>
                     <span>Media</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-lkpd-s2" onclick="switchCycleTab('tab-lkpd-s2')" role="tab" aria-selected="false">
-                    <i class="ph-bold ph-file-text"></i>
+                    <i class="ph-bold ph-notebook"></i>
                     <span>LKPD</span>
                 </button>
                 <button type="button" class="cycle-tab-btn" data-tab="tab-asesmen-s2" onclick="switchCycleTab('tab-asesmen-s2')" role="tab" aria-selected="false">
@@ -369,8 +378,7 @@
 
             <!-- TAB PANELS CONTAINER -->
             <div class="cycle-tab-content-area">
-
-                <!-- TAB 1: MODUL AJAR SIKLUS 2 -->
+<!-- TAB 1: MODUL AJAR SIKLUS KEDUA -->
                 <div id="tab-modul-s2" class="cycle-tab-pane block">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
@@ -379,119 +387,225 @@
                                     <span class="badge-blue">KODE: S2-MA</span>
                                     <span class="badge-slate font-mono text-[11px]">Kurikulum Merdeka</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong
+                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong &amp; DPL
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Modul Ajar Siklus 2: Algoritma, Flowchart &amp; Pseudocode
+                                    Modul Ajar Siklus Kedua: Algoritma, Flowchart &amp; Pseudocode
                                 </h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Penerapan model Problem-Based Learning (PBL) untuk memecahkan kasus percabangan multi-kondisi melalui representasi grafis dan tekstual.
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl leading-relaxed">
+                                    Modul Ajar Kurikulum Merdeka berbasis Problem-Based Learning (PBL) untuk memandu pemodelan algoritma percabangan multi-kondisi, perancangan diagram alir standar ISO, dan translasi ke bentuk notasi pseudocode terstruktur beserta trace table verifikasi.
                                 </p>
                             </div>
                             <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'Dokumen Pembelajaran Siklus 2 - Modul & Refleksi')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                <button type="button" onclick="openPdfModal('pdf/Modul%20Ajar/Modul%20Ajar-Siklus%202.pdf', 'Modul Ajar Siklus 2: Algoritma (Flowchart & Pseudocode)')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
                                     <i class="ph-bold ph-file-pdf"></i>
-                                    <span>View PDF</span>
+                                    <span>View PDF Modul</span>
                                 </button>
-                                <a href="artefak.html#modul2" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-arrow-square-out"></i>
-                                    <span>Detail Modul</span>
+                                <a href="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%202.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF Modul Ajar">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh PDF</span>
                                 </a>
                             </div>
                         </div>
 
-                        <!-- Direct Inline PDF Viewer (Tanpa Perlu Klik) -->
+                        <!-- Direct Inline PDF Viewer Modul Ajar -->
                         <div class="pdf-embed-box mt-2">
                             <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
                                 <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
                                     <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon"></i>
-                                    Pratinjau Dokumen: LK 4.2 Refleksi Praktek Mengajar Mandiri PPLM.pdf
+                                    Pratinjau Dokumen: Modul Ajar-Siklus 2.pdf
                                 </span>
                                 <div class="flex items-center gap-2">
-                                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                    <a href="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%202.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
                                         <span>Layar Penuh</span>
                                         <i class="ph-bold ph-arrow-square-out"></i>
                                     </a>
-                                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                    <a href="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%202.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
                                         <span>Unduh</span>
                                         <i class="ph-bold ph-download-simple"></i>
                                     </a>
                                 </div>
                             </div>
-                            <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="w-full h-[650px] border-0" title="Dokumen Pembelajaran Siklus 2"></iframe>
+                            <iframe src="pdf/Modul%20Ajar/Modul%20Ajar-Siklus%202.pdf" class="w-full h-[650px] border-0" title="Modul Ajar Siklus 2: Algoritma"></iframe>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Alokasi Waktu</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">2 Pertemuan (4 JP @ 45 Menit)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Model Pembelajaran</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Problem-Based Learning (PBL)</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Sasaran Fase</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Fase E — Kelas X SMA</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Dimensi</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Bernalar Kritis &amp; Mandiri</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- TAB 2: RPP SIKLUS KEDUA -->
+<div id="tab-rpp-s2" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S2-RPP</span>
+                                    <span class="badge-slate font-mono text-[11px]">Rencana Pelaksanaan Pembelajaran</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Terverifikasi Pamong &amp; DPL
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    RPP Siklus Kedua: Algoritma Dasar &amp; Diagram Alir (Flowchart)
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Rencana Pelaksanaan Pembelajaran mendalam berbasis Problem-Based Learning (PBL) untuk memandu pemodelan algoritma percabangan dan diagram alir ISO.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <button type="button" onclick="openPdfModal('pdf/RPP/Pertemuan%20FLowcart.pdf', 'RPP Siklus 2: Algoritma dan Flowchart')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>View PDF RPP</span>
+                                </button>
+                                <a href="pdf/RPP/Pertemuan%20FLowcart.docx" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas DOCX RPP">
+                                    <i class="ph-bold ph-file-doc"></i>
+                                    <span>DOCX</span>
+                                </a>
+                                <a href="pdf/RPP/Pertemuan%20FLowcart.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF RPP">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh PDF</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Direct Inline PDF Viewer RPP -->
+                        <div class="pdf-embed-box mt-2">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon"></i>
+                                    Pratinjau Dokumen: Pertemuan FLowcart.pdf
+                                </span>
+                                <div class="flex items-center gap-2">
+                                    <a href="pdf/RPP/Pertemuan%20FLowcart.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Layar Penuh</span>
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                    </a>
+                                    <a href="pdf/RPP/Pertemuan%20FLowcart.pdf" download class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Unduh</span>
+                                        <i class="ph-bold ph-download-simple"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <iframe src="pdf/RPP/Pertemuan%20FLowcart.pdf#view=FitH" class="w-full h-[650px] border-0" title="RPP Siklus Kedua - Flowchart"></iframe>
                         </div>
                     </div>
                 </div>
 
                 <!-- TAB 2: ASESMEN SIKLUS 2 -->
-                <div id="tab-asesmen-s2" class="cycle-tab-pane hidden">
+
+<!-- TAB 3: HANDBOOK SIKLUS KEDUA -->
+<div id="tab-handbook-s2" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
                                 <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="badge-blue">KODE: S2-AS</span>
-                                    <span class="badge-slate font-mono text-[11px]">Asesmen Praktik</span>
+                                    <span class="badge-blue">KODE: S2-HB</span>
+                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Handbook</span>
                                     <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Rubrik ISO 5807
+                                        <i class="ph-bold ph-check-circle"></i> Dokumen Resmi PDF
                                     </span>
                                 </div>
                                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Instrumen Asesmen Siklus 2: Rubrik Validitas Diagram &amp; Trace Table
+                                    Buku Pegangan 3: Notasi Algoritma
                                 </h3>
                                 <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Alat ukur presisi untuk menilai kesesuaian simbol, alur logika tidak berulang, dan konsistensi tabel jejak eksekusi.
+                                    Buku pegangan belajar peserta didik Fase E / Kelas X untuk penguasaan notasi deskriptif, perancangan diagram alir terstandar ISO 5807, dan sintaks kode semu (Pseudocode).
                                 </p>
                             </div>
                             <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'Instrumen & Evaluasi Siklus 2')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf', 'Buku Pegangan 3: Notasi Algoritma - Siklus 2')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
                                     <i class="ph-bold ph-file-pdf"></i>
-                                    <span>View PDF</span>
+                                    <span>View PDF Modal</span>
                                 </button>
-                                <a href="artefak.html#asesmen2" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                <button type="button" onclick="togglePdfEmbed('embed-hb-s2', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-eye"></i>
+                                    <span>Pratinjau Tersemat</span>
+                                </button>
+                                <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
                                     <i class="ph-bold ph-arrow-square-out"></i>
-                                    <span>Detail Asesmen</span>
+                                    <span>Buka Tab Baru</span>
+                                </a>
+                                <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
                                 </a>
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 1: Sintaks Simbol</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Terminator, Decision, I/O</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Nama Dokumen</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Pegangan 3 Siswa</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 2: Logika Alur</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Arah Panah &amp; Titik Temu</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Ukuran File</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">20.9 MB (Buku Lengkap)</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 3: Ketepatan Notasi</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Pseudocode Keyword Baku</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Materi Pokok</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Notasi Algoritma &amp; Flowchart</strong>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 4: Verifikasi Hasil</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Hasil Trace Table 100% Cocok</strong>
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Pembelajaran</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Siklus 2 Algoritma Pemrograman</strong>
                             </div>
+                        </div>
+
+                        <!-- INLINE PDF EMBED VIEWER SIKLUS 2 (Tampil Langsung) -->
+                        <div id="embed-hb-s2" class="pdf-embed-box">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
+                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
+                                    <i class="ph-bold ph-book-open text-royal-500 dark:text-neon"></i>
+                                    Pratinjau Dokumen: Buku Pegangan-3. Notasi Algoritma.pdf
+                                </span>
+                                <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                    <span>Layar Penuh</span>
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                </a>
+                            </div>
+                            <iframe src="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 3 Siswa"></iframe>
                         </div>
 
                         <div class="space-y-3">
                             <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-check-square-offset text-royal-500 dark:text-neon"></i>
-                                Deskriptor Ketercapaian Rubrik Flowchart:
+                                <i class="ph-bold ph-book-bookmark text-royal-500 dark:text-neon"></i>
+                                Rangkuman Materi Pokok Buku Pegangan 3:
                             </h4>
                             <div class="code-preview-block text-xs leading-relaxed">
-KRITERIA KEBERHASILAN FLOWCHART SIKLUS 2:
-- Sangat Baik (4): Simbol ISO tepat 100%, cabang YES/NO berlabel jelas, tidak ada panah buntu atau ambigu.
-- Baik (3): Simbol tepat, label cabang lengkap, ada sedikit redundansi instruksi yang tidak memengaruhi hasil.
-- Cukup (2): Tertukar antara jajar genjang (I/O) dan persegi panjang (proses), namun alur umum masih terbaca.
-- Perlu Bimbingan (1): Alur panah melompat tanpa pengkondisian logika yang logis.
+RINGKASAN BUKU PEGANGAN 3 (NOTASI ALGORITMA):
+- Bab 1: Definisi dan Urgensi Notasi Algoritma Baku dalam Rekayasa Perangkat Lunak.
+- Bab 2: Tiga Bentuk Notasi Algoritma: Kalimat Deskriptif, Bagan Alir (Flowchart), dan Pseudocode.
+- Bab 3: Standarisasi Simbol Flowchart ISO 5807: Terminal, Input/Output, Proses, Decision, dan Konektor.
+- Bab 4: Konstruksi Dasar Algoritma: Runtunan (Sequence), Pemilihan/Percabangan (Selection IF-ELSE), dan Pengulangan (Iteration/Looping).
+- Bab 5: Pedoman Penulisan Pseudocode Baku (Indents, Keyword Kapital, Variabel, Ekspresi Logika).
+- Bab 6: Teknik Verifikasi Logika Menggunakan Tabel Jejak (Trace Table / Dry Run).
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- TAB 3: MEDIA SIKLUS 2 -->
-                <div id="tab-media-s2" class="cycle-tab-pane hidden">
+                <!-- TAB 5: LKPD SIKLUS 2 (2 PERTEMUAN: ATAS KE BAWAH) -->
+
+<!-- TAB 4: MEDIA SIKLUS KEDUA -->
+<div id="tab-media-s2" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
                             <div>
@@ -659,98 +773,9 @@ KONTEN MEDIA PRESENTASI:
                 </div>
 
                 <!-- TAB 4: HANDBOOK (BUKU PEGANGAN 3) -->
-                <div id="tab-handbook-s2" class="cycle-tab-pane hidden">
-                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
-                            <div>
-                                <div class="flex items-center gap-2 mb-1.5">
-                                    <span class="badge-blue">KODE: S2-HB</span>
-                                    <span class="badge-slate font-mono text-[11px]">Bahan Ajar / Handbook</span>
-                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                                        <i class="ph-bold ph-check-circle"></i> Dokumen Resmi PDF
-                                    </span>
-                                </div>
-                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                                    Buku Pegangan 3: Notasi Algoritma
-                                </h3>
-                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    Buku pegangan belajar peserta didik Fase E / Kelas X untuk penguasaan notasi deskriptif, perancangan diagram alir terstandar ISO 5807, dan sintaks kode semu (Pseudocode).
-                                </p>
-                            </div>
-                            <div class="flex flex-wrap items-center gap-2 shrink-0">
-                                <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf', 'Buku Pegangan 3: Notasi Algoritma - Siklus 2')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
-                                    <i class="ph-bold ph-file-pdf"></i>
-                                    <span>View PDF Modal</span>
-                                </button>
-                                <button type="button" onclick="togglePdfEmbed('embed-hb-s2', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-eye"></i>
-                                    <span>Pratinjau Tersemat</span>
-                                </button>
-                                <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-arrow-square-out"></i>
-                                    <span>Buka Tab Baru</span>
-                                </a>
-                                <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                                    <i class="ph-bold ph-download-simple"></i>
-                                    <span>Unduh</span>
-                                </a>
-                            </div>
-                        </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Nama Dokumen</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Buku Pegangan 3 Siswa</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Ukuran File</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">20.9 MB (Buku Lengkap)</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Materi Pokok</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Notasi Algoritma &amp; Flowchart</strong>
-                            </div>
-                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
-                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Integrasi Pembelajaran</span>
-                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Siklus 2 Algoritma Pemrograman</strong>
-                            </div>
-                        </div>
-
-                        <!-- INLINE PDF EMBED VIEWER SIKLUS 2 (Tampil Langsung) -->
-                        <div id="embed-hb-s2" class="pdf-embed-box">
-                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800">
-                                <span class="text-xs font-bold text-slate-800 dark:text-white flex items-center gap-1.5">
-                                    <i class="ph-bold ph-book-open text-royal-500 dark:text-neon"></i>
-                                    Pratinjau Dokumen: Buku Pegangan-3. Notasi Algoritma.pdf
-                                </span>
-                                <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
-                                    <span>Layar Penuh</span>
-                                    <i class="ph-bold ph-arrow-square-out"></i>
-                                </a>
-                            </div>
-                            <iframe src="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" class="w-full h-[600px] border-0" title="Buku Pegangan 3 Siswa"></iframe>
-                        </div>
-
-                        <div class="space-y-3">
-                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
-                                <i class="ph-bold ph-book-bookmark text-royal-500 dark:text-neon"></i>
-                                Rangkuman Materi Pokok Buku Pegangan 3:
-                            </h4>
-                            <div class="code-preview-block text-xs leading-relaxed">
-RINGKASAN BUKU PEGANGAN 3 (NOTASI ALGORITMA):
-- Bab 1: Definisi dan Urgensi Notasi Algoritma Baku dalam Rekayasa Perangkat Lunak.
-- Bab 2: Tiga Bentuk Notasi Algoritma: Kalimat Deskriptif, Bagan Alir (Flowchart), dan Pseudocode.
-- Bab 3: Standarisasi Simbol Flowchart ISO 5807: Terminal, Input/Output, Proses, Decision, dan Konektor.
-- Bab 4: Konstruksi Dasar Algoritma: Runtunan (Sequence), Pemilihan/Percabangan (Selection IF-ELSE), dan Pengulangan (Iteration/Looping).
-- Bab 5: Pedoman Penulisan Pseudocode Baku (Indents, Keyword Kapital, Variabel, Ekspresi Logika).
-- Bab 6: Teknik Verifikasi Logika Menggunakan Tabel Jejak (Trace Table / Dry Run).
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- TAB 5: LKPD SIKLUS 2 (2 PERTEMUAN: ATAS KE BAWAH) -->
-                <div id="tab-lkpd-s2" class="cycle-tab-pane hidden">
+<!-- TAB 5: LKPD SIKLUS KEDUA -->
+<div id="tab-lkpd-s2" class="cycle-tab-pane hidden">
                     <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-8 shadow-md">
                         <!-- HEADER KARTU LKPD SIKLUS 2 -->
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
@@ -889,44 +914,22 @@ TUGAS KELOMPOK:
                                         <span class="badge-blue font-mono text-[10px]">Pseudocode Baku &amp; Trace Table</span>
                                     </div>
                                     <h4 class="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">
-                                        LKPD Pertemuan 2: Penulisan Pseudocode Terstruktur &amp; Pengujian Trace Table
+                                        Aktivitas Lanjutan: Penulisan Pseudocode Terstruktur &amp; Pengujian Trace Table
                                     </h4>
                                     <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
-                                        Lembar tugas siswa mengonversi diagram alir ke dalam teks pseudocode terstruktur serta membuktikan kebenaran output menggunakan tabel uji nilai riil.
+                                        Lembar tugas siswa mengonversi diagram alir ke dalam teks pseudocode terstruktur serta membuktikan kebenaran output menggunakan tabel uji nilai riil berpedoman pada Buku Pegangan Notasi Algoritma.
                                     </p>
                                 </div>
                                 <div class="flex items-center gap-2 shrink-0">
-                                    <button type="button" onclick="openPdfModal('pdf/LKPD/Siklus%202/LKPD_Pertemuan_2_Pseudocode.pdf', 'LKPD Pertemuan 2 - Pseudocode')" class="btn-primary-cta text-xs py-2 px-3.5 inline-flex items-center gap-1.5">
-                                        <i class="ph-bold ph-file-pdf"></i>
-                                        <span>Buka Modal PDF</span>
+                                    <button type="button" onclick="openPdfModal('pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf', 'Handbook & Panduan Notasi Algoritma')" class="btn-primary-cta text-xs py-2 px-3.5 inline-flex items-center gap-1.5">
+                                        <i class="ph-bold ph-book-open"></i>
+                                        <span>Bahan Ajar Notasi Algoritma</span>
                                     </button>
-                                    <a href="pdf/LKPD/Siklus%202/LKPD_Pertemuan_2_Pseudocode.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1">
+                                    <a href="pdf/Handbook/Buku%20Pegangan-3.%20Notasi%20Algoritma.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1">
                                         <i class="ph-bold ph-arrow-square-out"></i>
                                         <span>Tab Baru</span>
                                     </a>
-                                    <a href="pdf/LKPD/Siklus%202/LKPD_Pertemuan_2_Pseudocode.pdf" download class="btn-secondary text-xs py-2 px-3 inline-flex items-center gap-1" title="Unduh PDF LKPD Pertemuan 2">
-                                        <i class="ph-bold ph-download-simple"></i>
-                                        <span>Unduh</span>
-                                    </a>
                                 </div>
-                            </div>
-
-                            <!-- PDF VIEWER EMBED PERTEMUAN 2 -->
-                            <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#120B22] shadow-sm">
-                                <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800 text-xs">
-                                    <span class="font-bold text-slate-800 dark:text-white flex items-center gap-2">
-                                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
-                                        <span>LKPD_Pertemuan_2_Pseudocode.pdf</span>
-                                    </span>
-                                    <div class="flex items-center gap-2">
-                                        <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">pdf/LKPD/Siklus 2/</span>
-                                        <a href="pdf/LKPD/Siklus%202/LKPD_Pertemuan_2_Pseudocode.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
-                                            <span>Layar Penuh</span>
-                                            <i class="ph-bold ph-arrow-square-out"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <iframe loading="lazy" src="pdf/LKPD/Siklus%202/LKPD_Pertemuan_2_Pseudocode.pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="LKPD Pertemuan 2: Pseudocode"></iframe>
                             </div>
 
                             <div class="space-y-2 pt-1 text-xs">
@@ -957,253 +960,155 @@ INSTRUKSI PENGERJAAN PERTEMUAN 2:
                     </div>
                 </div>
 
+<!-- TAB 6: ASESMEN SIKLUS KEDUA -->
+<div id="tab-asesmen-s2" class="cycle-tab-pane hidden">
+                    <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6 shadow-md">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div>
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="badge-blue">KODE: S2-AS</span>
+                                    <span class="badge-slate font-mono text-[11px]">Asesmen Praktik</span>
+                                    <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                        <i class="ph-bold ph-check-circle"></i> Rubrik ISO 5807
+                                    </span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+                                    Instrumen Asesmen Siklus 2: Rubrik Validitas Diagram &amp; Trace Table
+                                </h3>
+                                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                    Alat ukur presisi untuk menilai kesesuaian simbol, alur logika tidak berulang, dan konsistensi tabel jejak eksekusi.
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap items-center gap-2 shrink-0">
+                                <button type="button" onclick="openPdfModal('pdf/Assemen/Asesmen%20Notasi%20Algoritma.pdf', 'Instrumen Asesmen Siklus 2 - Notasi Algoritma')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                                    <i class="ph-bold ph-file-pdf"></i>
+                                    <span>Buka Modal PDF</span>
+                                </button>
+                                <a href="pdf/Assemen/Asesmen%20Notasi%20Algoritma.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                                    <i class="ph-bold ph-arrow-square-out"></i>
+                                    <span>Tab Baru</span>
+                                </a>
+                                <a href="pdf/Assemen/Asesmen%20Notasi%20Algoritma.pdf" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Asesmen Notasi Algoritma">
+                                    <i class="ph-bold ph-download-simple"></i>
+                                    <span>Unduh</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- PDF VIEWER ASESMEN SIKLUS 2 -->
+                        <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#120B22] shadow-sm">
+                            <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-royal-950/80 border-b border-slate-200 dark:border-slate-800 text-xs">
+                                <span class="font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                                    <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
+                                    <span>Asesmen Notasi Algoritma.pdf</span>
+                                </span>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-[11px] font-mono text-slate-400 hidden sm:inline">pdf/Assemen/</span>
+                                    <a href="pdf/Assemen/Asesmen%20Notasi%20Algoritma.pdf" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-royal-600 dark:text-neon hover:underline inline-flex items-center gap-1">
+                                        <span>Layar Penuh</span>
+                                        <i class="ph-bold ph-arrow-square-out"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <iframe loading="lazy" src="pdf/Assemen/Asesmen%20Notasi%20Algoritma.pdf#view=FitH" class="w-full h-[620px] border-0 bg-white dark:bg-[#140D26]" title="Asesmen Notasi Algoritma"></iframe>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 1: Sintaks Simbol</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Terminator, Decision, I/O</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 2: Logika Alur</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Arah Panah &amp; Titik Temu</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 3: Ketepatan Notasi</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Pseudocode Keyword Baku</strong>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200/80 dark:border-slate-800">
+                                <span class="text-slate-400 block font-mono text-[10px] uppercase">Aspek 4: Verifikasi Hasil</span>
+                                <strong class="text-slate-800 dark:text-white text-xs block mt-0.5">Hasil Trace Table 100% Cocok</strong>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3">
+                            <h4 class="font-extrabold text-sm text-slate-800 dark:text-slate-200 flex items-center gap-2">
+                                <i class="ph-bold ph-check-square-offset text-royal-500 dark:text-neon"></i>
+                                Deskriptor Ketercapaian Rubrik Flowchart:
+                            </h4>
+                            <div class="code-preview-block text-xs leading-relaxed">
+KRITERIA KEBERHASILAN FLOWCHART SIKLUS 2:
+- Sangat Baik (4): Simbol ISO tepat 100%, cabang YES/NO berlabel jelas, tidak ada panah buntu atau ambigu.
+- Baik (3): Simbol tepat, label cabang lengkap, ada sedikit redundansi instruksi yang tidak memengaruhi hasil.
+- Cukup (2): Tertukar antara jajar genjang (I/O) dan persegi panjang (proses), namun alur umum masih terbaca.
+- Perlu Bimbingan (1): Alur panah melompat tanpa pengkondisian logika yang logis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: MEDIA SIKLUS 2 -->
             </div>
         </section>
 
         <!-- ==========================================
              4. EVALUASI HASIL BELAJAR & LK 4.2 RESMI
              ========================================== -->
-        <section id="section-evaluasi" class="space-y-8 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                    <div class="inline-flex items-center gap-2 mb-1.5">
-                        <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
-                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
-                            <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
-                        </span>
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
-                        Evaluasi &amp; Refleksi Siklus 2 (LK 4.2)
-                    </h2>
-                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
-                        Dokumentasi utuh evaluasi mandiri dan refleksi pelaksanaan pembelajaran algoritma, diagram alir, dan pseudocode di SMA Negeri 4 Yogyakarta.
-                    </p>
-                </div>
-                <div class="flex flex-wrap items-center gap-2">
-                    <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.2 Refleksi Praktik Pembelajaran Mandiri - Siklus 2')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
-                        <i class="ph-bold ph-file-pdf"></i>
-                        <span>View PDF LK 4.2</span>
-                    </button>
-                    <button type="button" onclick="togglePdfEmbed('embedPdfS2', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
-                        <i class="ph-bold ph-eye"></i>
-                        <span>Pratinjau di Halaman</span>
-                    </button>
-                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF Resmi">
-                        <i class="ph-bold ph-download-simple"></i>
-                        <span>Unduh File</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- INLINE PDF VIEWER (Tampil Langsung Tanpa Perlu Klik) -->
-            <div id="embedPdfS2" class="pdf-embed-card">
-                <div class="p-3 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold">
-                    <span class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
-                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
-                        <span>Nur Isnanto Nugroho_25105260411_LK4.2 Refleksi Praktek Mengajar Mandiri PPLM.pdf</span>
-                    </span>
-                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" class="text-royal-500 dark:text-neon hover:underline inline-flex items-center gap-1">
-                        <span>Layar Penuh</span>
-                        <i class="ph-bold ph-arrow-square-out"></i>
-                    </a>
-                </div>
-                <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.2"></iframe>
-            </div>
-
-            <!-- OFFICIAL LK 4.2 TRANSCRIPT DOCUMENT CARD -->
-            <div class="lk-official-card space-y-8">
-                <!-- Header Dokumen Resmi -->
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+                <!-- ==========================================
+             4. EVALUASI HASIL BELAJAR & LK 4.2 RESMI (TERHUBUNG KE HALAMAN ANALISIS)
+             ========================================== -->
+        <section id="section-evaluasi" class="space-y-6 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
+            <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-royal-900/10 via-purple-500/5 to-transparent dark:from-royal-950/60 dark:via-[#120B22] dark:to-transparent border border-royal-200 dark:border-purple-800/50 space-y-6 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                     <div>
-                        <div class="flex items-center gap-2 mb-1">
-                            <span class="px-2.5 py-0.5 rounded-full bg-royal-100 dark:bg-royal-950 text-royal-700 dark:text-purple-300 font-mono text-[11px] font-extrabold uppercase">
-                                LEMBAR KERJA (LK) 4
+                        <div class="inline-flex items-center gap-2 mb-2">
+                            <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
+                            <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                                <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
                             </span>
-                            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Refleksi Praktik Pembelajaran Mandiri</span>
                         </div>
-                        <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-                            Refleksi Ke : Dua (Siklus 2)
-                        </h3>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                            Evaluasi &amp; Refleksi Siklus Kedua (LK 4.2)
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-1 max-w-2xl leading-relaxed">
+                            Dokumentasi utuh evaluasi mandiri, refleksi diagram alir dan pseudocode, respon siswa, umpan balik Pamong, serta tindak lanjut pedagogis Siklus Kedua kini telah dirangkum lengkap dalam menu Analisis Komparatif.
+                        </p>
                     </div>
-                    <div class="p-3 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-xs space-y-1">
-                        <div><strong>Mahasiswa:</strong> Nur Isnanto Nugroho (NIM 25105260411)</div>
-                        <div><strong>Bidang Studi:</strong> Informatika &bull; <strong>Sekolah:</strong> SMA Negeri 4 Yogyakarta</div>
-                    </div>
-                </div>
-
-                <!-- Bagian A: Refleksi Kegiatan Pembelajaran Mandiri -->
-                <div class="space-y-5">
-                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
-                        <i class="ph-bold ph-chats-circle text-lg"></i>
-                        <span>A. Refleksi Kegiatan Praktik Pembelajaran Mandiri</span>
-                    </div>
-
-                    <div class="space-y-4 text-xs sm:text-sm">
-                        <!-- Q1 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">1.</span>
-                                <span>Bagaimana kegiatan apersepsi dapat membantu murid memahami tujuan pembelajaran yang akan dicapai?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Pada siklus kedua, apersepsi dilakukan dengan menghubungkan materi algoritma dengan kegiatan yang sering dijumpai dalam kehidupan sehari-hari. Melalui pendekatan ini, peserta didik diajak memahami bahwa suatu kegiatan memiliki urutan langkah yang dapat disusun secara sistematis. Cara ini membantu peserta didik memperoleh gambaran awal mengenai materi flowchart dan pseudocode sebelum masuk ke penjelasan yang lebih mendalam.
-                            </p>
-                        </div>
-
-                        <!-- Q2 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">2.</span>
-                                <span>Kegiatan apa saja yang berhasil dan belum berhasil dilaksanakan dalam kegiatan inti?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Pada siklus kedua, pembelajaran menggunakan model Problem Based Learning (PBL) dengan materi algoritma, khususnya flowchart dan pseudocode. Pada pertemuan pertama, kegiatan pembelajaran berjalan cukup baik. Peserta didik dapat memahami materi flowchart, menyelesaikan LKPD, dan melakukan pengujian terhadap hasil pekerjaan mereka. Namun, ketika memasuki materi pseudocode, peserta didik mulai mengalami kebingungan. Waktu pembelajaran juga banyak digunakan untuk memberikan penjelasan lebih lanjut mengenai pengerjaan LKPD, sehingga kegiatan pada materi pseudocode belum dapat diselesaikan sesuai rencana. Dari pengalaman ini, saya menyadari bahwa alokasi waktu dan tingkat kesulitan materi perlu lebih diperhatikan agar seluruh tahapan pembelajaran dapat terlaksana dengan baik.
-                            </p>
-                        </div>
-
-                        <!-- Q3 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">3.</span>
-                                <span>Seberapa efektif penggunaan media pembelajaran untuk melibatkan partisipasi aktif di kelas?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Penggunaan media pembelajaran pada siklus kedua cukup membantu proses pembelajaran. Saya menggabungkan LKPD konvensional dengan simulasi melalui website agar peserta didik mendapatkan gambaran yang lebih jelas mengenai aktivitas yang harus dilakukan. Penggunaan media ini membantu peserta didik memahami materi flowchart dan mendorong mereka untuk terlibat dalam kegiatan praktik. Hal tersebut terlihat dari antusiasme beberapa peserta didik yang ingin maju ke depan untuk mencoba praktik. Namun, pada materi pseudocode, peserta didik masih mengalami kesulitan sehingga diperlukan penjelasan dan pendampingan lebih lanjut agar media yang digunakan dapat membantu pemahaman mereka secara optimal.
-                            </p>
-                        </div>
-
-                        <!-- Q4 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-royal-600 dark:text-neon">4.</span>
-                                <span>Bagaimana reaksi/respon murid dalam setiap kegiatan dari pembukaan hingga penutupan pembelajaran?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Peserta didik menunjukkan respons yang cukup positif, terutama ketika mempelajari flowchart. Mereka terlihat aktif dan antusias untuk mencoba praktik di depan kelas. Penggunaan contoh dari kehidupan sehari-hari serta simulasi website juga membantu memberikan gambaran mengenai materi yang dipelajari. Namun, ketika memasuki materi pseudocode, beberapa peserta didik mulai mengalami kebingungan dan membutuhkan penjelasan tambahan. Kondisi ini menjadi bahan refleksi bagi saya bahwa peserta didik dapat memberikan respons yang berbeda terhadap setiap materi, sehingga cara penyampaian dan pendampingan perlu disesuaikan dengan tingkat pemahaman mereka.
-                            </p>
-                        </div>
+                    <div class="flex flex-wrap items-center gap-2 shrink-0">
+                        <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.2 Refleksi Praktik Pembelajaran Mandiri - Siklus 2')" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                            <i class="ph-bold ph-file-pdf"></i>
+                            <span>View PDF LK 4.2</span>
+                        </button>
+                        <a href="analisis.html#lk-pane-s2" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-4 shadow-md">
+                            <span>Buka di Halaman Analisis</span>
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Bagian B: Refleksi Pengalaman Belajar -->
-                <div class="space-y-5 pt-4 border-t border-slate-200 dark:border-slate-800">
-                    <div class="flex items-center gap-2 text-emerald-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
-                        <i class="ph-bold ph-graduation-cap text-lg"></i>
-                        <span>B. Refleksi Pengalaman Belajar</span>
+                <!-- Metric Summary 4 Mini Cards -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-2 border-t border-slate-200/60 dark:border-slate-800">
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-royal-600 dark:text-neon">91.7%</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
+                        <span class="text-[10px] text-slate-500 dark:text-slate-400 block">99 dari 108 Siswa Tuntas KKTP</span>
                     </div>
-
-                    <div class="space-y-4 text-xs sm:text-sm">
-                        <!-- Q1 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-emerald-600 dark:text-neon">1.</span>
-                                <span>Apakah umpan balik dari Guru Pamong untuk praktik pembelajaran mandiri yang lebih baik?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Umpan balik dari guru pamong sudah cukup membantu pelaksanaan pembelajaran. Salah satu hal yang menjadi pengalaman positif adalah media pembelajaran yang saya gunakan juga dimanfaatkan oleh guru pamong untuk mencoba pembelajaran berbasis PBL. Hal ini memberikan pengalaman bagi saya bahwa media yang dikembangkan dapat digunakan sebagai alternatif pendukung pembelajaran. Selain itu, saya menyadari pentingnya terus mengevaluasi penggunaan media dan LKPD agar keduanya sesuai dengan kebutuhan serta kemampuan peserta didik.
-                            </p>
-                        </div>
-
-                        <!-- Q2 -->
-                        <div class="lk-qa-box space-y-2">
-                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
-                                <span class="font-mono text-emerald-600 dark:text-neon">2.</span>
-                                <span>Apabila Anda akan melakukan perubahan terhadap metode pembelajaran, unsur apa yang akan Anda ubah untuk metode pembelajaran yang lebih baik?</span>
-                            </h4>
-                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
-                                Apabila melakukan perbaikan pada pembelajaran berikutnya, saya akan lebih memperhatikan tingkat kesulitan LKPD yang diberikan kepada peserta didik. Instruksi dan tahapan pengerjaan perlu disusun secara lebih jelas, bertahap, dan disesuaikan dengan kemampuan peserta didik. Saya juga akan memperhitungkan waktu yang dibutuhkan untuk menjelaskan LKPD, memberikan kesempatan bertanya, dan melakukan praktik. Khusus untuk materi yang masih sulit dipahami, seperti pseudocode, saya akan menambahkan contoh sederhana dan memberikan pendampingan secara bertahap. Dengan demikian, peserta didik diharapkan dapat memahami materi dengan lebih baik dan menyelesaikan kegiatan pembelajaran sesuai dengan waktu yang tersedia.
-                            </p>
-                        </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-slate-900 dark:text-white">86.8</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Formatif</strong>
+                        <span class="text-[10px] text-emerald-600 dark:text-neon block">+2.3 Poin dibanding Siklus 1</span>
                     </div>
-                </div>
-
-                <!-- Tanda Tangan & Pengesahan Resmi -->
-                <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
-                    <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-                        <div class="space-y-1">
-                            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Status Pengesahan Dokumen</span>
-                            <div class="text-xs font-bold text-slate-800 dark:text-slate-200">
-                                Ditetapkan pada: <span class="font-mono text-royal-600 dark:text-neon">Tanggal, 12 Oktober 2026</span>
-                            </div>
-                            <div class="text-[11px] text-slate-500 dark:text-slate-400">
-                                Terverifikasi dalam sistem e-Portofolio PPL PPG Prajabatan Universitas Negeri Yogyakarta
-                            </div>
-                        </div>
-
-                        <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
-                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[140px]">
-                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Guru Pamong</span>
-                                <strong class="block text-slate-900 dark:text-white mt-1">Titis Widowati, S.T.</strong>
-                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
-                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
-                                </span>
-                            </div>
-                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[160px]">
-                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Dosen Pembimbing Lapangan</span>
-                                <strong class="block text-slate-900 dark:text-white mt-1">Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong>
-                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
-                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
-                                </span>
-                            </div>
-                        </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-royal-600 dark:text-neon">94%</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Kemandirian Praktikum</strong>
+                        <span class="text-[10px] text-slate-500 dark:text-slate-400 block">Siswa Menyelesaikan Trace Table</span>
                     </div>
-                </div>
-            </div>
-
-            <!-- METRIC STATS 4 CARDS -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">91.7%</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">99 dari 108 Siswa Tuntas KKTP</span>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">86.8</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Formatif</strong>
-                    <span class="text-[11px] text-emerald-600 dark:text-neon block">+2.3 Poin dibanding Siklus 1</span>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">94%</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Kemandirian Praktikum</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Siswa Menyelesaikan Trace Table</span>
-                </div>
-                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
-                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">100%</span>
-                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
-                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Model Problem-Based Learning</span>
-                </div>
-            </div>
-
-            <!-- 3 EVALUATION CARDS -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-emerald-200 dark:border-emerald-950/60 space-y-3">
-                    <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
-                        <i class="ph-bold ph-thumbs-up"></i>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                        <span class="font-mono text-2xl font-black text-emerald-600 dark:text-neon">100%</span>
+                        <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
+                        <span class="text-[10px] text-slate-500 dark:text-slate-400 block">Model Problem-Based Learning</span>
                     </div>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">1. Kekuatan Pembelajaran</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Penggunaan metode <em>Dry Run (Trace Table)</em> terbukti sangat manjur membantu siswa menemukan sendiri kesalahan logika (*self-debugging*) sebelum diagram dipresentasikan, meningkatkan ketuntasan belajar hingga 91.7%.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-amber-200 dark:border-amber-950/60 space-y-3">
-                    <div class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
-                        <i class="ph-bold ph-warning"></i>
-                    </div>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">2. Kendala / Tantangan</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Beberapa siswa masih tertukar antara simbol <strong>Proses (Persegi Panjang)</strong> dan <strong>Input/Output (Jajar Genjang)</strong> serta mengalami kebingungan aturan sintaks saat memasuki notasi pseudocode.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-200 dark:border-royal-950/60 space-y-3">
-                    <div class="w-9 h-9 rounded-xl bg-royal-100 dark:bg-royal-950/80 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
-                        <i class="ph-bold ph-arrow-circle-right"></i>
-                    </div>
-                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">3. Rencana Tindak Lanjut</h3>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Melanjutkan ke <strong>Siklus 3 (Analisis Data &amp; Excel)</strong> dengan memanfaatkan logika formula IF dan LOOKUP langsung ke tabel spreadsheet riil agar pemahaman logika komputasional siswa terimplementasikan secara praktis.
-                    </p>
                 </div>
             </div>
         </section>

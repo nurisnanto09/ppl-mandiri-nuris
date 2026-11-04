@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>porto-pplm-nuris | Analisis &amp; Evaluasi Pembelajaran — PPG UNY</title>
-    <link rel="icon" type="image/png" href="img/Icon atas.png">
+    <link rel="icon" type="image/png" href="img/Icon Logo.png">
     
     <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +55,11 @@
                 }
             }
         }
+        try {
+            if (localStorage.getItem('theme_preference') === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
     </script>
 
     <!-- External Stylesheet CSS -->
@@ -109,29 +114,29 @@
                             <a href="siklus-1.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">01</span>
                                 <div>
-                                    <strong>Siklus 1</strong>
-                                    <small>Pengantar Informatika &amp; PPP</small>
+                                    <strong>Siklus Pertama</strong>
+                                    <small>Struktur Data &amp; Algoritma Dasar</small>
                                 </div>
                             </a>
                             <a href="siklus-2.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">02</span>
                                 <div>
-                                    <strong>Siklus 2</strong>
-                                    <small>Algoritma &amp; Pemrograman</small>
+                                    <strong>Siklus Kedua</strong>
+                                    <small>Algoritma Flowchart &amp; Pseudocode</small>
                                 </div>
                             </a>
                             <a href="siklus-3.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">03</span>
                                 <div>
-                                    <strong>Siklus 3</strong>
-                                    <small>Analisis Data Excel</small>
+                                    <strong>Siklus Ketiga</strong>
+                                    <small>Pengelolaan Angka Excel</small>
                                 </div>
                             </a>
                             <a href="siklus-4.html" class="nav-dropdown-item">
                                 <span class="nav-cycle-badge">04</span>
                                 <div>
-                                    <strong>Siklus 4</strong>
-                                    <small>Sistem Komputer &amp; OS</small>
+                                    <strong>Siklus Keempat</strong>
+                                    <small>Sistem Operasi</small>
                                 </div>
                             </a>
                             <div class="nav-dropdown-divider"></div>
@@ -171,10 +176,10 @@
             <div id="mobileMenu" class="mobile-dropdown">
                 <a href="index.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">1. Beranda</a>
                 <a href="profil.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">2. Profil Pendidik</a>
-                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1 (Informatika)</a>
-                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2 (Algoritma)</a>
-                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3 (Excel)</a>
-                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4 (Sistem Operasi)</a>
+                <a href="siklus-1.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 1: Struktur Data &amp; Algoritma</a>
+                <a href="siklus-2.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 2: Flowchart &amp; Pseudocode</a>
+                <a href="siklus-3.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 3: Pengelolaan Angka Excel</a>
+                <a href="siklus-4.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Siklus 4: Sistem Operasi</a>
                 <a href="non-mengajar.html" onclick="toggleMobileMenu()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-semibold text-center">✦ Non-Mengajar (SPACE-IN)</a>
                 <a href="analisis.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-royal-500 text-white text-xs font-bold text-center">3. Analisis</a>
                 <a href="refleksi.html" onclick="toggleMobileMenu()" class="p-2.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-xs font-bold text-center">4. Refleksi &amp; RTL</a>
@@ -333,12 +338,1045 @@
         </section>
 
         <!-- ==========================================
-             SECTION 2: ANALISIS KUALITATIF & URGENSI PSE
+             SECTION 2: DOKUMEN RESMI LEMBAR KERJA (LK) 4 REFLEKSI PEMBELAJARAN
+             ========================================== -->
+        <section id="section-dokumen-lk4" class="space-y-8 pt-4 border-t border-slate-200 dark:border-slate-800 scroll-mt-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
+                        02. DOKUMEN RESMI LEMBAR KERJA (LK) 4 LINTAS SIKLUS
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                        Evaluasi &amp; Refleksi Resmi Siklus 1 s.d. 4 (LK 4.1 &ndash; 4.4)
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl leading-relaxed">
+                        Dokumentasi utuh evaluasi mandiri, refleksi apersepsi, respon peserta didik, umpan balik Guru Pamong, serta pengesahan resmi Dosen Pembimbing Lapangan (DPL) Universitas Negeri Yogyakarta untuk setiap siklus pembelajaran di SMA Negeri 4 Yogyakarta.
+                    </p>
+                </div>
+                <div class="inline-flex items-center gap-2 bg-royal-50 dark:bg-royal-950/40 text-royal-700 dark:text-purple-300 border border-royal-200 dark:border-purple-800/60 px-3.5 py-1.5 rounded-full text-xs font-bold shrink-0">
+                    <i class="ph-bold ph-certificate text-base text-royal-500 dark:text-neon"></i>
+                    <span>4 Dokumen LK 4 Terverifikasi Pamong &amp; DPL</span>
+                </div>
+            </div>
+
+            <!-- Tab Navigation Switcher (Siklus 1 - 4) -->
+            <div class="cycle-tabs-nav" role="tablist">
+                <button type="button" onclick="switchAnalisisLkTab('lk-pane-s1')" class="cycle-tab-btn lk-tab-btn active" data-tab="lk-pane-s1" role="tab" aria-selected="true">
+                    <i class="ph-bold ph-code"></i>
+                    <span>Siklus 1 (LK 4.1)</span>
+                </button>
+                <button type="button" onclick="switchAnalisisLkTab('lk-pane-s2')" class="cycle-tab-btn lk-tab-btn" data-tab="lk-pane-s2" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-tree-structure"></i>
+                    <span>Siklus 2 (LK 4.2)</span>
+                </button>
+                <button type="button" onclick="switchAnalisisLkTab('lk-pane-s3')" class="cycle-tab-btn lk-tab-btn" data-tab="lk-pane-s3" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-microsoft-excel-logo"></i>
+                    <span>Siklus 3 (LK 4.3)</span>
+                </button>
+                <button type="button" onclick="switchAnalisisLkTab('lk-pane-s4')" class="cycle-tab-btn lk-tab-btn" data-tab="lk-pane-s4" role="tab" aria-selected="false">
+                    <i class="ph-bold ph-cpu"></i>
+                    <span>Siklus 4 (LK 4.4)</span>
+                </button>
+            </div>
+
+            <!-- Tab Panes Container -->
+            <div class="space-y-8">
+                <!-- PANE SIKLUS 1 -->
+                <div id="lk-pane-s1" class="lk-tab-pane space-y-8">
+                    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                    <div class="inline-flex items-center gap-2 mb-1.5">
+                        <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                            <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
+                        </span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                        Evaluasi &amp; Refleksi Siklus Pertama (LK 4.1)
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
+                        Dokumentasi utuh evaluasi diri dan refleksi pelaksanaan praktik pembelajaran mandiri Siklus 1, dilengkapi tinjauan berkas PDF asli, capaian kuantitatif, serta rencana perbaikan.
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.1%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.1 Refleksi Praktik Pembelajaran Mandiri - Siklus 1')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                        <i class="ph-bold ph-file-pdf"></i>
+                        <span>View PDF LK 4.1</span>
+                    </button>
+                    <button type="button" onclick="togglePdfEmbed('embedPdfS1', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                        <i class="ph-bold ph-eye"></i>
+                        <span>Pratinjau di Halaman</span>
+                    </button>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.1%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF Resmi">
+                        <i class="ph-bold ph-download-simple"></i>
+                        <span>Unduh File</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- INLINE PDF VIEWER (Tampil Langsung Tanpa Perlu Klik) -->
+            <div id="embedPdfS1" class="pdf-embed-card">
+                <div class="p-3 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold">
+                    <span class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
+                        <span>Nur Isnanto Nugroho_25105260411_LK4.1 Refleksi Praktek Mengajar Mandiri PPLM.pdf</span>
+                    </span>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.1%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" class="text-royal-500 dark:text-neon hover:underline inline-flex items-center gap-1">
+                        <span>Layar Penuh</span>
+                        <i class="ph-bold ph-arrow-square-out"></i>
+                    </a>
+                </div>
+                <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.1%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.1"></iframe>
+            </div>
+
+            <!-- OFFICIAL LK 4.1 TRANSCRIPT DOCUMENT CARD -->
+            <div class="lk-official-card space-y-8">
+                <!-- Header Dokumen Resmi -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="px-2.5 py-0.5 rounded-full bg-royal-100 dark:bg-royal-950 text-royal-700 dark:text-purple-300 font-mono text-[11px] font-extrabold uppercase">
+                                LEMBAR KERJA (LK) 4
+                            </span>
+                            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Refleksi Praktik Pembelajaran Mandiri</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                            Refleksi Ke : Satu (Siklus 1)
+                        </h3>
+                    </div>
+                    <div class="p-3 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                        <div><strong>Mahasiswa:</strong> Nur Isnanto Nugroho (NIM 25105260411)</div>
+                        <div><strong>Bidang Studi:</strong> Informatika &bull; <strong>Sekolah:</strong> SMA Negeri 4 Yogyakarta</div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Refleksi Kegiatan Pembelajaran Mandiri -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-chats-circle text-lg"></i>
+                        <span>A. Refleksi Kegiatan Praktik Pembelajaran Mandiri</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">1.</span>
+                                <span>Bagaimana kegiatan apersepsi dapat membantu murid memahami tujuan pembelajaran yang akan dicapai?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Kegiatan apersepsi dilakukan dengan mengaitkan materi Informatika dengan aktivitas yang dekat dengan kehidupan sehari-hari, seperti proses pembuatan mi untuk menjelaskan konsep algoritma dan pentingnya urutan langkah dalam menyelesaikan suatu pekerjaan. Melalui contoh tersebut, peserta didik dapat memahami bahwa konsep berpikir komputasional sebenarnya sering dijumpai dalam kehidupan sehari-hari. Menurut saya, penggunaan contoh konkret dapat membantu peserta didik memahami materi sebelum masuk ke pembahasan yang lebih mendalam. Namun, karena waktu pembelajaran pada siklus pertama cukup terbatas, kegiatan apersepsi perlu diikuti dengan penjelasan dan latihan yang cukup agar pemahaman peserta didik terhadap materi dapat berkembang dengan baik.
+                            </p>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">2.</span>
+                                <span>Kegiatan apa saja yang berhasil dan belum berhasil dilaksanakan dalam kegiatan inti?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada siklus pertama, materi yang diajarkan meliputi Berpikir Komputasional, khususnya algoritma, serta Struktur Data dan Algoritma Standar. Pembelajaran yang seharusnya dilaksanakan dalam empat pertemuan mengalami kendala karena dua pertemuan tidak terlaksana akibat adanya kegiatan sekolah, seperti peringatan 17 Agustus dan Maulid Nabi. Selain itu, pada pertemuan pertama pembelajaran masih diisi oleh guru pamong karena awalnya praktik direncanakan untuk kelas XII, kemudian pada minggu berikutnya dialihkan ke kelas X. Akibatnya, materi yang belum tersampaikan harus dikejar dalam waktu yang terbatas. Kegiatan praktik di depan kelas tetap dilakukan, tetapi hanya diikuti oleh peserta didik yang bersedia maju secara sukarela. Sementara itu, pengerjaan LKPD belum dapat dilaksanakan sesuai rencana dan dialihkan menjadi pekerjaan rumah. Dengan kondisi tersebut, kegiatan inti belum berjalan secara optimal karena waktu untuk praktik, diskusi, dan pendalaman materi menjadi terbatas.
+                            </p>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">3.</span>
+                                <span>Seberapa efektif penggunaan media pembelajaran untuk melibatkan partisipasi aktif di kelas?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Penggunaan media pembelajaran belum sepenuhnya efektif dalam mendorong partisipasi aktif seluruh peserta didik. Keterbatasan waktu membuat pembelajaran lebih berfokus pada penyampaian materi, sehingga kesempatan untuk mengeksplorasi media dan melakukan praktik secara langsung menjadi terbatas. Hal ini terlihat ketika praktik di depan kelas hanya diikuti oleh beberapa peserta didik yang bersedia maju secara sukarela. Dari pengalaman tersebut, saya menyadari bahwa penggunaan media perlu disertai kegiatan yang melibatkan seluruh peserta didik agar mereka tidak hanya menerima penjelasan, tetapi juga memperoleh kesempatan untuk mencoba dan memahami materi secara langsung.
+                            </p>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">4.</span>
+                                <span>Bagaimana reaksi/respon murid dalam setiap kegiatan dari pembukaan hingga penutupan pembelajaran?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Respons peserta didik selama pembelajaran cukup beragam. Pada kegiatan pembukaan, contoh yang dekat dengan kehidupan sehari-hari digunakan untuk membantu peserta didik memahami materi yang akan dipelajari. Namun, ketika masuk ke kegiatan inti, masih terdapat peserta didik yang belum terlibat secara aktif, terutama dalam kegiatan praktik di depan kelas. Selain itu, beberapa materi yang disampaikan belum langsung dipahami oleh peserta didik sehingga perlu dijelaskan kembali menggunakan bahasa yang lebih sederhana atau contoh tambahan. Kondisi ini membuat saya menyadari bahwa penyampaian materi perlu disesuaikan dengan pemahaman peserta didik dan kegiatan pembelajaran perlu memberikan kesempatan yang lebih luas bagi mereka untuk berpartisipasi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Refleksi Pengalaman Belajar -->
+                <div class="space-y-5 pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center gap-2 text-emerald-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-graduation-cap text-lg"></i>
+                        <span>B. Refleksi Pengalaman Belajar</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">1.</span>
+                                <span>Apakah umpan balik dari Guru Pamong untuk praktik pembelajaran mandiri yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Selama pelaksanaan PPL, pembahasan bersama guru pamong lebih banyak berkaitan dengan materi yang akan diajarkan. Oleh karena itu, saya masih perlu melakukan evaluasi secara mandiri terhadap pelaksanaan pembelajaran, terutama dalam menyesuaikan penyampaian materi dengan kondisi peserta didik dan waktu yang tersedia. Pengalaman pada siklus pertama memberikan pemahaman kepada saya bahwa rancangan pembelajaran perlu disiapkan dengan mempertimbangkan kemungkinan perubahan jadwal agar tujuan pembelajaran tetap dapat dicapai secara optimal.
+                            </p>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">2.</span>
+                                <span>Apabila Anda akan melakukan perubahan terhadap metode pembelajaran, unsur apa yang akan Anda ubah untuk metode pembelajaran yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Apabila menghadapi kondisi serupa, saya akan lebih memperhatikan prioritas materi, alokasi waktu, dan kegiatan yang dapat melibatkan seluruh peserta didik. Saya juga akan memberikan lebih banyak contoh konkret yang dekat dengan kehidupan sehari-hari, menyampaikan materi secara bertahap, serta menyediakan latihan singkat untuk mengetahui pemahaman peserta didik sebelum melanjutkan ke materi berikutnya. Selain itu, saya akan menyiapkan alternatif kegiatan apabila waktu pembelajaran berubah, tanpa menghilangkan kesempatan peserta didik untuk melakukan praktik secara langsung. Dengan demikian, pembelajaran tidak hanya berfokus pada penyelesaian materi, tetapi juga pada pemahaman dan keterlibatan peserta didik selama proses pembelajaran.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tanda Tangan & Pengesahan Resmi -->
+                <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Status Pengesahan Dokumen</span>
+                            <div class="text-xs font-bold text-slate-800 dark:text-slate-200">
+                                Ditetapkan pada: <span class="font-mono text-royal-600 dark:text-neon">Tanggal, 12 Oktober 2026</span>
+                            </div>
+                            <div class="text-[11px] text-slate-500 dark:text-slate-400">
+                                Terverifikasi dalam sistem e-Portofolio PPL PPG Prajabatan Universitas Negeri Yogyakarta
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[140px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Guru Pamong</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Titis Widowati, S.T.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[160px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Dosen Pembimbing Lapangan</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- METRIC STATS 4 CARDS -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">88.9%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">96 dari 108 Siswa Tuntas KKTP</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">84.5</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Formatif</strong>
+                    <span class="text-[11px] text-emerald-600 dark:text-neon block">Melampaui Target (75.0)</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">92%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Keaktifan Kolaboratif</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Observasi Diskusi 4 Pilar</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">100%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Model Experiential Learning</span>
+                </div>
+            </div>
+
+            <!-- 3 EVALUATION CARDS: KEKUATAN, TANTANGAN, TINDAK LANJUT -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 1. Kekuatan -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-emerald-200 dark:border-emerald-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-thumbs-up"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">1. Kekuatan Pembelajaran</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pemberian analogi nyata antrean kantin sekolah terbukti sangat efektif memecah keengganan siswa kelas X yang sedang dalam fase transisi. Interaksi polling Mentimeter memicu 100% siswa merespon secara aktif pada 10 menit pertama.
+                    </p>
+                </div>
+
+                <!-- 2. Tantangan -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-amber-200 dark:border-amber-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-warning"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">2. Kendala / Tantangan</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pada pilar <strong>Abstraksi</strong>, 12 siswa (11.1%) masih kesulitan membedakan antara informasi esensial dan data pengganggu. Akibatnya, alur algoritma awal yang disusun sempat terlalu panjang dan kurang efisien.
+                    </p>
+                </div>
+
+                <!-- 3. Tindak Lanjut -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-200 dark:border-royal-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-royal-100 dark:bg-royal-950/80 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-arrow-circle-right"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">3. Rencana Tindak Lanjut</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pada <strong>Siklus 2 (Algoritma &amp; Flowchart)</strong>, guru merancang <em>guided scaffolding</em> berupa lembar pemandu kata kunci logika untuk menyeleksi variabel sebelum siswa menuangkan ide ke diagram alir resmi ISO.
+                    </p>
+                </div>
+            </div>
+                </div>
+
+                <!-- PANE SIKLUS 2 -->
+                <div id="lk-pane-s2" class="lk-tab-pane space-y-8 hidden">
+                    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                    <div class="inline-flex items-center gap-2 mb-1.5">
+                        <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                            <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
+                        </span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                        Evaluasi &amp; Refleksi Siklus 2 (LK 4.2)
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
+                        Dokumentasi utuh evaluasi mandiri dan refleksi pelaksanaan pembelajaran algoritma, diagram alir, dan pseudocode di SMA Negeri 4 Yogyakarta.
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.2 Refleksi Praktik Pembelajaran Mandiri - Siklus 2')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                        <i class="ph-bold ph-file-pdf"></i>
+                        <span>View PDF LK 4.2</span>
+                    </button>
+                    <button type="button" onclick="togglePdfEmbed('embedPdfS2', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                        <i class="ph-bold ph-eye"></i>
+                        <span>Pratinjau di Halaman</span>
+                    </button>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF Resmi">
+                        <i class="ph-bold ph-download-simple"></i>
+                        <span>Unduh File</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- INLINE PDF VIEWER (Tampil Langsung Tanpa Perlu Klik) -->
+            <div id="embedPdfS2" class="pdf-embed-card">
+                <div class="p-3 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold">
+                    <span class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
+                        <span>Nur Isnanto Nugroho_25105260411_LK4.2 Refleksi Praktek Mengajar Mandiri PPLM.pdf</span>
+                    </span>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" class="text-royal-500 dark:text-neon hover:underline inline-flex items-center gap-1">
+                        <span>Layar Penuh</span>
+                        <i class="ph-bold ph-arrow-square-out"></i>
+                    </a>
+                </div>
+                <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.2%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.2"></iframe>
+            </div>
+
+            <!-- OFFICIAL LK 4.2 TRANSCRIPT DOCUMENT CARD -->
+            <div class="lk-official-card space-y-8">
+                <!-- Header Dokumen Resmi -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="px-2.5 py-0.5 rounded-full bg-royal-100 dark:bg-royal-950 text-royal-700 dark:text-purple-300 font-mono text-[11px] font-extrabold uppercase">
+                                LEMBAR KERJA (LK) 4
+                            </span>
+                            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Refleksi Praktik Pembelajaran Mandiri</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                            Refleksi Ke : Dua (Siklus 2)
+                        </h3>
+                    </div>
+                    <div class="p-3 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                        <div><strong>Mahasiswa:</strong> Nur Isnanto Nugroho (NIM 25105260411)</div>
+                        <div><strong>Bidang Studi:</strong> Informatika &bull; <strong>Sekolah:</strong> SMA Negeri 4 Yogyakarta</div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Refleksi Kegiatan Pembelajaran Mandiri -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-chats-circle text-lg"></i>
+                        <span>A. Refleksi Kegiatan Praktik Pembelajaran Mandiri</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">1.</span>
+                                <span>Bagaimana kegiatan apersepsi dapat membantu murid memahami tujuan pembelajaran yang akan dicapai?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada siklus kedua, apersepsi dilakukan dengan menghubungkan materi algoritma dengan kegiatan yang sering dijumpai dalam kehidupan sehari-hari. Melalui pendekatan ini, peserta didik diajak memahami bahwa suatu kegiatan memiliki urutan langkah yang dapat disusun secara sistematis. Cara ini membantu peserta didik memperoleh gambaran awal mengenai materi flowchart dan pseudocode sebelum masuk ke penjelasan yang lebih mendalam.
+                            </p>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">2.</span>
+                                <span>Kegiatan apa saja yang berhasil dan belum berhasil dilaksanakan dalam kegiatan inti?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada siklus kedua, pembelajaran menggunakan model Problem Based Learning (PBL) dengan materi algoritma, khususnya flowchart dan pseudocode. Pada pertemuan pertama, kegiatan pembelajaran berjalan cukup baik. Peserta didik dapat memahami materi flowchart, menyelesaikan LKPD, dan melakukan pengujian terhadap hasil pekerjaan mereka. Namun, ketika memasuki materi pseudocode, peserta didik mulai mengalami kebingungan. Waktu pembelajaran juga banyak digunakan untuk memberikan penjelasan lebih lanjut mengenai pengerjaan LKPD, sehingga kegiatan pada materi pseudocode belum dapat diselesaikan sesuai rencana. Dari pengalaman ini, saya menyadari bahwa alokasi waktu dan tingkat kesulitan materi perlu lebih diperhatikan agar seluruh tahapan pembelajaran dapat terlaksana dengan baik.
+                            </p>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">3.</span>
+                                <span>Seberapa efektif penggunaan media pembelajaran untuk melibatkan partisipasi aktif di kelas?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Penggunaan media pembelajaran pada siklus kedua cukup membantu proses pembelajaran. Saya menggabungkan LKPD konvensional dengan simulasi melalui website agar peserta didik mendapatkan gambaran yang lebih jelas mengenai aktivitas yang harus dilakukan. Penggunaan media ini membantu peserta didik memahami materi flowchart dan mendorong mereka untuk terlibat dalam kegiatan praktik. Hal tersebut terlihat dari antusiasme beberapa peserta didik yang ingin maju ke depan untuk mencoba praktik. Namun, pada materi pseudocode, peserta didik masih mengalami kesulitan sehingga diperlukan penjelasan dan pendampingan lebih lanjut agar media yang digunakan dapat membantu pemahaman mereka secara optimal.
+                            </p>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">4.</span>
+                                <span>Bagaimana reaksi/respon murid dalam setiap kegiatan dari pembukaan hingga penutupan pembelajaran?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Peserta didik menunjukkan respons yang cukup positif, terutama ketika mempelajari flowchart. Mereka terlihat aktif dan antusias untuk mencoba praktik di depan kelas. Penggunaan contoh dari kehidupan sehari-hari serta simulasi website juga membantu memberikan gambaran mengenai materi yang dipelajari. Namun, ketika memasuki materi pseudocode, beberapa peserta didik mulai mengalami kebingungan dan membutuhkan penjelasan tambahan. Kondisi ini menjadi bahan refleksi bagi saya bahwa peserta didik dapat memberikan respons yang berbeda terhadap setiap materi, sehingga cara penyampaian dan pendampingan perlu disesuaikan dengan tingkat pemahaman mereka.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Refleksi Pengalaman Belajar -->
+                <div class="space-y-5 pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center gap-2 text-emerald-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-graduation-cap text-lg"></i>
+                        <span>B. Refleksi Pengalaman Belajar</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">1.</span>
+                                <span>Apakah umpan balik dari Guru Pamong untuk praktik pembelajaran mandiri yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Umpan balik dari guru pamong sudah cukup membantu pelaksanaan pembelajaran. Salah satu hal yang menjadi pengalaman positif adalah media pembelajaran yang saya gunakan juga dimanfaatkan oleh guru pamong untuk mencoba pembelajaran berbasis PBL. Hal ini memberikan pengalaman bagi saya bahwa media yang dikembangkan dapat digunakan sebagai alternatif pendukung pembelajaran. Selain itu, saya menyadari pentingnya terus mengevaluasi penggunaan media dan LKPD agar keduanya sesuai dengan kebutuhan serta kemampuan peserta didik.
+                            </p>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">2.</span>
+                                <span>Apabila Anda akan melakukan perubahan terhadap metode pembelajaran, unsur apa yang akan Anda ubah untuk metode pembelajaran yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Apabila melakukan perbaikan pada pembelajaran berikutnya, saya akan lebih memperhatikan tingkat kesulitan LKPD yang diberikan kepada peserta didik. Instruksi dan tahapan pengerjaan perlu disusun secara lebih jelas, bertahap, dan disesuaikan dengan kemampuan peserta didik. Saya juga akan memperhitungkan waktu yang dibutuhkan untuk menjelaskan LKPD, memberikan kesempatan bertanya, dan melakukan praktik. Khusus untuk materi yang masih sulit dipahami, seperti pseudocode, saya akan menambahkan contoh sederhana dan memberikan pendampingan secara bertahap. Dengan demikian, peserta didik diharapkan dapat memahami materi dengan lebih baik dan menyelesaikan kegiatan pembelajaran sesuai dengan waktu yang tersedia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tanda Tangan & Pengesahan Resmi -->
+                <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Status Pengesahan Dokumen</span>
+                            <div class="text-xs font-bold text-slate-800 dark:text-slate-200">
+                                Ditetapkan pada: <span class="font-mono text-royal-600 dark:text-neon">Tanggal, 12 Oktober 2026</span>
+                            </div>
+                            <div class="text-[11px] text-slate-500 dark:text-slate-400">
+                                Terverifikasi dalam sistem e-Portofolio PPL PPG Prajabatan Universitas Negeri Yogyakarta
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[140px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Guru Pamong</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Titis Widowati, S.T.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[160px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Dosen Pembimbing Lapangan</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- METRIC STATS 4 CARDS -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">91.7%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">99 dari 108 Siswa Tuntas KKTP</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">86.8</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Formatif</strong>
+                    <span class="text-[11px] text-emerald-600 dark:text-neon block">+2.3 Poin dibanding Siklus 1</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">94%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Kemandirian Praktikum</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Siswa Menyelesaikan Trace Table</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">100%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Model Problem-Based Learning</span>
+                </div>
+            </div>
+
+            <!-- 3 EVALUATION CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-emerald-200 dark:border-emerald-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-thumbs-up"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">1. Kekuatan Pembelajaran</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Penggunaan metode <em>Dry Run (Trace Table)</em> terbukti sangat manjur membantu siswa menemukan sendiri kesalahan logika (*self-debugging*) sebelum diagram dipresentasikan, meningkatkan ketuntasan belajar hingga 91.7%.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-amber-200 dark:border-amber-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-warning"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">2. Kendala / Tantangan</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Beberapa siswa masih tertukar antara simbol <strong>Proses (Persegi Panjang)</strong> dan <strong>Input/Output (Jajar Genjang)</strong> serta mengalami kebingungan aturan sintaks saat memasuki notasi pseudocode.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-200 dark:border-royal-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-royal-100 dark:bg-royal-950/80 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-arrow-circle-right"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">3. Rencana Tindak Lanjut</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Melanjutkan ke <strong>Siklus 3 (Analisis Data &amp; Excel)</strong> dengan memanfaatkan logika formula IF dan LOOKUP langsung ke tabel spreadsheet riil agar pemahaman logika komputasional siswa terimplementasikan secara praktis.
+                    </p>
+                </div>
+            </div>
+                </div>
+
+                <!-- PANE SIKLUS 3 -->
+                <div id="lk-pane-s3" class="lk-tab-pane space-y-8 hidden">
+                    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                    <div class="inline-flex items-center gap-2 mb-1.5">
+                        <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                            <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
+                        </span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                        Evaluasi &amp; Refleksi Siklus Ketiga (LK 4.3)
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
+                        Dokumentasi utuh evaluasi mandiri dan refleksi pelaksanaan pembelajaran analisis data Excel berbasis Project-Based Learning di SMA Negeri 4 Yogyakarta.
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.3 Refleksi Praktik Pembelajaran Mandiri - Siklus 3')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                        <i class="ph-bold ph-file-pdf"></i>
+                        <span>View PDF LK 4.3</span>
+                    </button>
+                    <button type="button" onclick="togglePdfEmbed('embedPdfS3', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                        <i class="ph-bold ph-eye"></i>
+                        <span>Pratinjau di Halaman</span>
+                    </button>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF Resmi">
+                        <i class="ph-bold ph-download-simple"></i>
+                        <span>Unduh File</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- INLINE PDF VIEWER (Tampil Langsung Tanpa Perlu Klik) -->
+            <div id="embedPdfS3" class="pdf-embed-card">
+                <div class="p-3 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold">
+                    <span class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
+                        <span>Nur Isnanto Nugroho_25105260411_LK4.3 Refleksi Praktek Mengajar Mandiri PPLM.pdf</span>
+                    </span>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" class="text-royal-500 dark:text-neon hover:underline inline-flex items-center gap-1">
+                        <span>Layar Penuh</span>
+                        <i class="ph-bold ph-arrow-square-out"></i>
+                    </a>
+                </div>
+                <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.3%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.3"></iframe>
+            </div>
+
+            <!-- OFFICIAL LK 4.3 TRANSCRIPT DOCUMENT CARD -->
+            <div class="lk-official-card space-y-8">
+                <!-- Header Dokumen Resmi -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="px-2.5 py-0.5 rounded-full bg-royal-100 dark:bg-royal-950 text-royal-700 dark:text-purple-300 font-mono text-[11px] font-extrabold uppercase">
+                                LEMBAR KERJA (LK) 4
+                            </span>
+                            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Refleksi Praktik Pembelajaran Mandiri</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                            Refleksi Ke : Tiga (Siklus 3)
+                        </h3>
+                    </div>
+                    <div class="p-3 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                        <div><strong>Mahasiswa:</strong> Nur Isnanto Nugroho (NIM 25105260411)</div>
+                        <div><strong>Bidang Studi:</strong> Informatika &bull; <strong>Sekolah:</strong> SMA Negeri 4 Yogyakarta</div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Refleksi Kegiatan Pembelajaran Mandiri -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-chats-circle text-lg"></i>
+                        <span>A. Refleksi Kegiatan Praktik Pembelajaran Mandiri</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">1.</span>
+                                <span>Bagaimana kegiatan apersepsi dapat membantu murid memahami tujuan pembelajaran yang akan dicapai?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada siklus ketiga, apersepsi dilakukan dengan menanyakan pengalaman peserta didik dalam menggunakan Microsoft Excel ketika masih di SMP serta mengingat kembali materi yang pernah dipelajari sebelumnya. Kegiatan ini membantu saya mengetahui pengetahuan awal peserta didik sebelum masuk ke materi yang akan dipelajari. Dengan menghubungkan pengalaman sebelumnya dengan materi baru, peserta didik diharapkan lebih mudah memahami penggunaan Excel, terutama dalam mengolah data dan menyajikannya dalam bentuk diagram.
+                            </p>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">2.</span>
+                                <span>Kegiatan apa saja yang berhasil dan belum berhasil dilaksanakan dalam kegiatan inti?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada siklus ketiga, pembelajaran menggunakan model Project Based Learning (PjBL) dengan produk akhir berupa file Excel yang berisi diagram untuk menyajikan data. Secara umum, kegiatan pembelajaran berjalan dengan baik, mulai dari demonstrasi, pengerjaan proyek, hingga pelaksanaan pretest dan posttest. Peserta didik yang sudah mahir menggunakan Excel juga diberi kesempatan untuk maju ke depan dan membantu menunjukkan praktik. Namun, demonstrasi yang saya lakukan masih terlalu cepat sehingga beberapa peserta didik yang membutuhkan pendampingan mengalami kesulitan mengikuti langkah-langkahnya. Hal ini menjadi bahan evaluasi bagi saya agar kecepatan demonstrasi dan pendampingan dapat disesuaikan dengan kemampuan peserta didik.
+                            </p>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">3.</span>
+                                <span>Seberapa efektif penggunaan media pembelajaran untuk melibatkan partisipasi aktif di kelas?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Media pembelajaran yang digunakan berupa jobsheet dengan materi dan langkah-langkah pengerjaan yang cukup lengkap. Jobsheet tersebut membantu peserta didik memiliki panduan ketika mengerjakan proyek Excel. Namun, karena materi yang disajikan cukup banyak, beberapa peserta didik cenderung tidak membaca keseluruhan petunjuk dan lebih memilih bertanya secara langsung ketika mengalami kesulitan. Dari pengalaman ini, saya menyadari bahwa jobsheet yang lengkap belum tentu membuat peserta didik memanfaatkan seluruh informasi yang tersedia. Oleh karena itu, media perlu disusun dengan lebih terarah dan mudah digunakan, disertai pendampingan yang membantu peserta didik mengikuti langkah pengerjaan secara mandiri.
+                            </p>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">4.</span>
+                                <span>Bagaimana reaksi/respon murid dalam setiap kegiatan dari pembukaan hingga penutupan pembelajaran?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Peserta didik memberikan respons yang cukup baik selama pembelajaran. Pada kegiatan pembukaan, mereka diajak mengingat kembali pengalaman menggunakan Excel saat SMP. Ketika masuk ke kegiatan inti, peserta didik mulai mengerjakan proyek untuk menghasilkan file Excel yang berisi diagram. Beberapa peserta didik yang sudah mahir terlihat mampu mengikuti kegiatan dengan baik, bahkan bersedia maju ke depan untuk melakukan demonstrasi. Sementara itu, peserta didik yang masih mengalami kesulitan membutuhkan pendampingan lebih lanjut, terutama ketika mengikuti demonstrasi yang berlangsung cukup cepat. Meskipun demikian, pelaksanaan proyek serta pretest dan posttest dapat berjalan dengan baik. Pengalaman ini menunjukkan bahwa kemampuan awal peserta didik perlu diperhatikan agar seluruh peserta didik dapat mengikuti pembelajaran dengan baik.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Refleksi Pengalaman Belajar -->
+                <div class="space-y-5 pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center gap-2 text-emerald-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-graduation-cap text-lg"></i>
+                        <span>B. Refleksi Pengalaman Belajar</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">1.</span>
+                                <span>Apakah umpan balik dari Guru Pamong untuk praktik pembelajaran mandiri yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Dalam pelaksanaan PPL, pembahasan bersama guru pamong lebih banyak berkaitan dengan materi yang akan diajarkan. Oleh karena itu, saya melakukan evaluasi terhadap pelaksanaan pembelajaran berdasarkan pengalaman selama mengajar di kelas. Pada siklus ketiga, saya mendapatkan pengalaman dalam menerapkan PjBL melalui proyek Excel yang menghasilkan produk nyata. Dari pelaksanaan tersebut, saya menyadari pentingnya memperhatikan kecepatan demonstrasi, kejelasan petunjuk dalam jobsheet, dan kebutuhan pendampingan peserta didik agar kegiatan proyek dapat berjalan lebih efektif.
+                            </p>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">2.</span>
+                                <span>Apabila Anda akan melakukan perubahan terhadap metode pembelajaran, unsur apa yang akan Anda ubah untuk metode pembelajaran yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Apabila melakukan perbaikan pada pembelajaran berikutnya, saya akan memperlambat demonstrasi dan membaginya menjadi beberapa tahapan agar peserta didik dapat mengikuti setiap langkah dengan baik. Saya juga akan menyederhanakan penyajian jobsheet dengan menonjolkan langkah-langkah penting, sehingga peserta didik lebih mudah menemukan informasi yang dibutuhkan tanpa harus membaca terlalu banyak sekaligus. Selain itu, saya akan memberikan kesempatan kepada peserta didik untuk mencoba setiap langkah sebelum melanjutkan ke tahap berikutnya. Dengan cara tersebut, peserta didik diharapkan lebih mandiri dalam mengerjakan proyek dan peserta didik yang membutuhkan bantuan tetap dapat mengikuti pembelajaran sesuai kemampuannya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tanda Tangan & Pengesahan Resmi -->
+                <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Status Pengesahan Dokumen</span>
+                            <div class="text-xs font-bold text-slate-800 dark:text-slate-200">
+                                Ditetapkan pada: <span class="font-mono text-royal-600 dark:text-neon">Tanggal, 12 Oktober 2026</span>
+                            </div>
+                            <div class="text-[11px] text-slate-500 dark:text-slate-400">
+                                Terverifikasi dalam sistem e-Portofolio PPL PPG Prajabatan Universitas Negeri Yogyakarta
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[140px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Guru Pamong</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Titis Widowati, S.T.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[160px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Dosen Pembimbing Lapangan</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- METRIC STATS 4 CARDS -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">93.5%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Proyek</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">101 dari 108 Siswa Berhasil Olah Data</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">88.2</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Akhir</strong>
+                    <span class="text-[11px] text-emerald-600 dark:text-neon block">+1.4 Poin dibanding Siklus 2</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">96%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Penyelesaian Chart</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Grafik Batang &amp; Kolom Lengkap</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">100%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Project-Based Learning</span>
+                </div>
+            </div>
+
+            <!-- 3 EVALUATION CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-emerald-200 dark:border-emerald-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-thumbs-up"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">1. Kekuatan Pembelajaran</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Strategi <em>Peer Tutoring</em> (tutor sebaya) berjalan sangat efektif di laboratorium komputer. Siswa yang lebih mahir sigap mendampingi rekannya memahami formula kondisional =IF, memangkas antrean bertanya pada guru.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-amber-200 dark:border-amber-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-warning"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">2. Kendala / Tantangan</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Demonstrasi guru di awal sempat terlalu cepat untuk siswa yang belum terbiasa dengan antarmuka Excel saat SMP, serta beberapa jobsheet dibaca setengah-setengah karena terlalu padat narasi teks.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-200 dark:border-royal-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-royal-100 dark:bg-royal-950/80 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-arrow-circle-right"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">3. Rencana Tindak Lanjut</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Pada <strong>Siklus 4 (Sistem Komputer &amp; OS)</strong>, penyampaian modul dipecah menjadi mikro-langkah bertahap (*micro-scaffolding*) berbantuan aplikasi simulasi interaktif SPACE-IN agar siswa mengeksplorasi secara visual mandiri.
+                    </p>
+                </div>
+            </div>
+                </div>
+
+                <!-- PANE SIKLUS 4 -->
+                <div id="lk-pane-s4" class="lk-tab-pane space-y-8 hidden">
+                    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                    <div class="inline-flex items-center gap-2 mb-1.5">
+                        <span class="badge-primary">LEMBAR KERJA (LK) 4 RESMI PPG</span>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-neon">
+                            <i class="ph-bold ph-seal-check"></i> Teresahkan Pamong &amp; DPL
+                        </span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                        Evaluasi &amp; Refleksi Siklus Keempat (LK 4.4)
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
+                        Dokumentasi utuh evaluasi mandiri dan refleksi pelaksanaan pembelajaran Sistem Operasi dan integrasi PSE di SMA Negeri 4 Yogyakarta.
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <button type="button" onclick="openPdfModal('pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf', 'LK 4.4 Refleksi Praktik Pembelajaran Mandiri - Siklus 4')" class="btn-primary-cta text-xs inline-flex items-center gap-1.5 py-2 px-3.5">
+                        <i class="ph-bold ph-file-pdf"></i>
+                        <span>View PDF LK 4.4</span>
+                    </button>
+                    <button type="button" onclick="togglePdfEmbed('embedPdfS4', this)" class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3">
+                        <i class="ph-bold ph-eye"></i>
+                        <span>Pratinjau di Halaman</span>
+                    </button>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" download class="btn-secondary text-xs inline-flex items-center gap-1.5 py-2 px-3" title="Unduh Berkas PDF Resmi">
+                        <i class="ph-bold ph-download-simple"></i>
+                        <span>Unduh File</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- INLINE PDF VIEWER (Tampil Langsung Tanpa Perlu Klik) -->
+            <div id="embedPdfS4" class="pdf-embed-card">
+                <div class="p-3 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-mono font-bold">
+                    <span class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                        <i class="ph-bold ph-file-pdf text-royal-500 dark:text-neon text-base"></i>
+                        <span>Nur Isnanto Nugroho_25105260411_LK4.4 Refleksi Praktek Mengajar Mandiri PPLM.pdf</span>
+                    </span>
+                    <a href="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" target="_blank" class="text-royal-500 dark:text-neon hover:underline inline-flex items-center gap-1">
+                        <span>Layar Penuh</span>
+                        <i class="ph-bold ph-arrow-square-out"></i>
+                    </a>
+                </div>
+                <iframe src="pdf/LK/Nur%20Isnanto%20Nugroho_25105260411_LK4.4%20Refleksi%20Praktek%20Mengajar%20Mandiri%20PPLM.pdf" class="pdf-embed-frame" title="PDF Pratinjau LK 4.4"></iframe>
+            </div>
+
+            <!-- OFFICIAL LK 4.4 TRANSCRIPT DOCUMENT CARD -->
+            <div class="lk-official-card space-y-8">
+                <!-- Header Dokumen Resmi -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="px-2.5 py-0.5 rounded-full bg-royal-100 dark:bg-royal-950 text-royal-700 dark:text-purple-300 font-mono text-[11px] font-extrabold uppercase">
+                                LEMBAR KERJA (LK) 4
+                            </span>
+                            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Refleksi Praktik Pembelajaran Mandiri</span>
+                        </div>
+                        <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                            Refleksi Ke : Empat (Siklus 4)
+                        </h3>
+                    </div>
+                    <div class="p-3 rounded-xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-xs space-y-1">
+                        <div><strong>Mahasiswa:</strong> Nur Isnanto Nugroho (NIM 25105260411)</div>
+                        <div><strong>Bidang Studi:</strong> Informatika &bull; <strong>Sekolah:</strong> SMA Negeri 4 Yogyakarta</div>
+                    </div>
+                </div>
+
+                <!-- Bagian A: Refleksi Kegiatan Pembelajaran Mandiri -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-2 text-royal-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-chats-circle text-lg"></i>
+                        <span>A. Refleksi Kegiatan Praktik Pembelajaran Mandiri</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">1.</span>
+                                <span>Bagaimana kegiatan apersepsi dapat membantu murid memahami tujuan pembelajaran yang akan dicapai?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada siklus keempat, pembelajaran membahas materi Sistem Operasi dengan menggunakan model Discovery Learning. Pada kegiatan apersepsi, saya mengajak peserta didik memikirkan komponen komputer dan apa saja yang bekerja ketika komputer digunakan. Selanjutnya, saya menghubungkan pertanyaan tersebut dengan konsep Input–Process–Output (IPO) yang sebelumnya telah dikenal dalam pembelajaran Informatika. Melalui kegiatan ini, peserta didik diajak mengingat kembali pengetahuan sebelumnya sebagai dasar untuk memahami peran sistem operasi dalam proses kerja komputer.
+                            </p>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">2.</span>
+                                <span>Kegiatan apa saja yang berhasil dan belum berhasil dilaksanakan dalam kegiatan inti?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada siklus ini, pembelajaran menggunakan model Discovery Learning dengan materi Sistem Operasi. Kegiatan pembelajaran dirancang agar peserta didik dapat menemukan pemahaman mengenai peran sistem operasi melalui proses pengamatan dan kegiatan belajar yang telah disiapkan. Materi juga dikaitkan dengan konsep IPO agar peserta didik dapat memahami hubungan antara proses kerja komputer dan peran sistem operasi. Evaluasi terhadap kegiatan yang berhasil maupun yang belum berhasil perlu disesuaikan dengan pelaksanaan pembelajaran di kelas.
+                            </p>
+                        </div>
+
+                        <!-- Q3 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">3.</span>
+                                <span>Seberapa efektif penggunaan media pembelajaran untuk melibatkan partisipasi aktif di kelas?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Penggunaan media pembelajaran pada siklus ini diarahkan untuk membantu peserta didik memahami konsep sistem operasi yang berkaitan dengan proses kerja komputer. Pengaitan materi dengan konsep IPO diharapkan dapat memberikan gambaran yang lebih konkret mengenai hubungan antara input, proses, dan output. Efektivitas media dalam meningkatkan partisipasi peserta didik perlu dilihat dari keterlibatan mereka selama kegiatan pengamatan, diskusi, dan pengerjaan tugas.
+                            </p>
+                        </div>
+
+                        <!-- Q4 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-royal-600 dark:text-neon">4.</span>
+                                <span>Bagaimana reaksi/respon murid dalam setiap kegiatan dari pembukaan hingga penutupan pembelajaran?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Pada kegiatan pembukaan, peserta didik diajak mengamati dan memikirkan komponen komputer yang bekerja ketika komputer digunakan. Pertanyaan tersebut menjadi pengantar untuk menghubungkan pengetahuan sebelumnya tentang IPO dengan materi Sistem Operasi. Respons peserta didik pada kegiatan inti hingga penutupan perlu disesuaikan dengan kondisi yang benar-benar terjadi selama pembelajaran.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian B: Refleksi Pengalaman Belajar -->
+                <div class="space-y-5 pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center gap-2 text-emerald-600 dark:text-neon font-extrabold text-sm uppercase tracking-wider">
+                        <i class="ph-bold ph-graduation-cap text-lg"></i>
+                        <span>B. Refleksi Pengalaman Belajar</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs sm:text-sm">
+                        <!-- Q1 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">1.</span>
+                                <span>Apakah umpan balik dari Guru Pamong untuk praktik pembelajaran mandiri yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Dalam pelaksanaan PPL, pembahasan bersama guru pamong lebih banyak berkaitan dengan materi yang akan diajarkan. Oleh karena itu, saya melakukan evaluasi terhadap pelaksanaan pembelajaran berdasarkan pengalaman selama mengajar. Pada siklus keempat, saya berusaha menghubungkan materi baru dengan pengetahuan yang telah dimiliki peserta didik agar proses pembelajaran lebih mudah dipahami.
+                            </p>
+                        </div>
+
+                        <!-- Q2 -->
+                        <div class="lk-qa-box space-y-2">
+                            <h4 class="font-bold text-slate-900 dark:text-white flex items-start gap-2">
+                                <span class="font-mono text-emerald-600 dark:text-neon">2.</span>
+                                <span>Apabila Anda akan melakukan perubahan terhadap metode pembelajaran, unsur apa yang akan Anda ubah untuk metode pembelajaran yang lebih baik?</span>
+                            </h4>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                                Apabila melakukan perbaikan pada pembelajaran berikutnya, saya akan lebih memperhatikan tahapan kegiatan Discovery Learning agar peserta didik memperoleh kesempatan untuk mengamati, mengolah informasi, dan menemukan pemahaman secara mandiri. Saya juga akan memberikan contoh yang lebih konkret mengenai hubungan antara IPO dan peran sistem operasi. Dengan demikian, peserta didik diharapkan tidak hanya memahami pengertian sistem operasi, tetapi juga mampu menjelaskan perannya dalam mendukung proses kerja komputer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tanda Tangan & Pengesahan Resmi -->
+                <div class="pt-6 border-t border-slate-200 dark:border-slate-800">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">Status Pengesahan Dokumen</span>
+                            <div class="text-xs font-bold text-slate-800 dark:text-slate-200">
+                                Ditetapkan pada: <span class="font-mono text-royal-600 dark:text-neon">Tanggal, 12 Oktober 2026</span>
+                            </div>
+                            <div class="text-[11px] text-slate-500 dark:text-slate-400">
+                                Terverifikasi dalam sistem e-Portofolio PPL PPG Prajabatan Universitas Negeri Yogyakarta
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap items-center justify-center gap-6 text-xs">
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[140px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Guru Pamong</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Titis Widowati, S.T.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-royal-950/40 border border-slate-200 dark:border-slate-800 text-center min-w-[160px]">
+                                <span class="text-[10px] text-slate-400 uppercase font-mono block">Dosen Pembimbing Lapangan</span>
+                                <strong class="block text-slate-900 dark:text-white mt-1">Dr. Nuryake Fajaryati, S.Pd.T., M.Pd.</strong>
+                                <span class="inline-block mt-1 text-[10px] font-bold text-emerald-600 dark:text-neon">
+                                    <i class="ph-bold ph-check-circle"></i> Menyetujui
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- METRIC STATS 4 CARDS -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">94.4%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Ketuntasan Klasikal</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">102 dari 108 Siswa Tuntas KKTP</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">89.6</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Rata-Rata Nilai Akhir</strong>
+                    <span class="text-[11px] text-emerald-600 dark:text-neon block">Puncak Optimal Siklus PPL</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-royal-600 dark:text-neon">97%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlibatan Emosional</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Pengisian Roda Emosi Lengkap</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 text-center space-y-1 shadow-sm">
+                    <span class="font-mono text-3xl font-black text-slate-900 dark:text-white">100%</span>
+                    <strong class="block text-xs text-slate-800 dark:text-white">Keterlaksanaan Sintaks</strong>
+                    <span class="text-[11px] text-slate-500 dark:text-slate-400 block">Discovery Learning &amp; PSE</span>
+                </div>
+            </div>
+
+            <!-- 3 EVALUATION CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-emerald-200 dark:border-emerald-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-thumbs-up"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">1. Kekuatan Pembelajaran</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Integrasi <strong>Pembelajaran Sosial Emosional (PSE)</strong> melalui teknik check-in emosi dan latihan mindfulness terbukti ampuh meredakan kecemasan siswa saat mempelajari konsep abstrak mikroskopis arsitektur komputer.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-amber-200 dark:border-amber-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-warning"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">2. Kendala / Tantangan</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Instrumen asesmen refleksi emosional PSE masih menyatu di kertas LKPD fisik, sehingga butuh waktu tambahan bagi guru untuk mengagregasi data emosional secara manual pasca pembelajaran usai.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white dark:bg-[#120B22] border border-royal-200 dark:border-royal-950/60 space-y-3">
+                    <div class="w-9 h-9 rounded-xl bg-royal-100 dark:bg-royal-950/80 text-royal-600 dark:text-neon flex items-center justify-center font-bold">
+                        <i class="ph-bold ph-arrow-circle-right"></i>
+                    </div>
+                    <h3 class="font-extrabold text-base text-slate-900 dark:text-white">3. Rencana Tindak Lanjut</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Mengembangkan platform web mandiri terpisah khusus untuk pencatatan refleksi emosional peserta didik (Web PSE Tracker) yang terintegrasi basis data cloud agar bisa dipantau secara longitudinal berkelanjutan.
+                    </p>
+                </div>
+            </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 3: ANALISIS KUALITATIF & URGENSI PSE
              ========================================== -->
         <section class="space-y-8">
             <div>
                 <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
-                    02. ANALISIS PEDAGOGIS KUALITATIF
+                    03. ANALISIS PEDAGOGIS KUALITATIF
                 </span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                     Mengapa Perlu Integrasi Pembelajaran Sosial Emosional (PSE)?
@@ -402,13 +1440,13 @@
         </section>
 
         <!-- ==========================================
-             SECTION 3: MATRIKS 4 SKENARIO RESPON PSE
+             SECTION 4: MATRIKS 4 SKENARIO RESPON PSE
              ========================================== -->
         <section class="space-y-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
-                        03. PANDUAN DIFERENSIASI RESPON GURU
+                        04. PANDUAN DIFERENSIASI RESPON GURU
                     </span>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                         Matriks 4 Skenario Emosional Siswa &amp; Tindakan Guru
@@ -566,12 +1604,12 @@
         </section>
 
         <!-- ==========================================
-             SECTION 4: DAMPAK TERHADAP IKLIM BELAJAR KELAS
+             SECTION 5: DAMPAK TERHADAP IKLIM BELAJAR KELAS
              ========================================== -->
         <section class="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#120B22] border border-slate-200 dark:border-slate-800 space-y-6">
             <div class="max-w-3xl">
                 <span class="text-xs font-bold uppercase tracking-wider text-royal-500 dark:text-neon block mb-1">
-                    04. HASIL REFLEKTIF PSE
+                    05. HASIL REFLEKTIF PSE
                 </span>
                 <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
                     Transformasi Suasana Laboratorium Komputer SMAN 4 Yogyakarta
@@ -634,10 +1672,10 @@
                 <div class="flex flex-wrap items-center gap-4 text-xs font-bold">
                     <a href="index.html" class="hover:text-royal-500 dark:hover:text-neon">Beranda</a>
                     <a href="profil.html" class="hover:text-royal-500 dark:hover:text-neon">Profil</a>
-                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 1</a>
-                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 2</a>
-                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 3</a>
-                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus 4</a>
+                    <a href="siklus-1.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Pertama</a>
+                    <a href="siklus-2.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Kedua</a>
+                    <a href="siklus-3.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Ketiga</a>
+                    <a href="siklus-4.html" class="hover:text-royal-500 dark:hover:text-neon">Siklus Keempat</a>
                     <a href="non-mengajar.html" class="hover:text-royal-500 dark:hover:text-neon">Non-Mengajar</a>
                     <a href="analisis.html" class="text-royal-500 dark:text-neon">Analisis</a>
                     <a href="refleksi.html" class="hover:text-royal-500 dark:hover:text-neon">Refleksi &amp; RTL</a>
