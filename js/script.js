@@ -176,7 +176,8 @@ function initLoader() {
                 loader.classList.add('loader--hidden');
                 setTimeout(() => {
                     try { loader.remove(); } catch (e) {}
-                }, 600);
+                    initScrollReveal();
+                }, 350);
             }
         };
 
@@ -534,7 +535,7 @@ const activityGalleries = {
         { src: 'img/dokumentasi/piket-lobby-3.jpg', caption: 'Pengelolaan Administrasi Perizinan & Rekapitulasi Presensi Siswa' }
     ],
     nm02: [
-        { src: 'img/dokumentasi/panitia-17an-1.jpg', caption: 'Upacara Peringatan HUT RI Ke-79 Bersama Tim Paskibra SMAN 4' },
+        { src: 'img/dokumentasi/panitia-17an-1.jpg', caption: 'Upacara Peringatan HUT RI Ke-81 Bersama Tim Paskibra SMAN 4' },
         { src: 'img/dokumentasi/panitia-17an-2.jpg', caption: 'Koordinasi Dewan Guru & Panitia Perlombaan Kemerdekaan' },
         { src: 'img/dokumentasi/panitia-17an-3.jpg', caption: 'Pemanduan & Wasit Lomba Ketangkasan Antarkelas yang Sportif' },
         { src: 'img/dokumentasi/panitia-17an-4.jpg', caption: 'Penyerahan Apresiasi & Hadiah Juara Lomba Kemerdekaan' },
@@ -673,84 +674,141 @@ function initBanner3DInteraction() {
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         initBanner3DInteraction();
-        initScrollReveal();
+        if (!document.getElementById('loader')) {
+            initScrollReveal();
+        }
     });
 } else {
     initBanner3DInteraction();
-    initScrollReveal();
+    if (!document.getElementById('loader')) {
+        initScrollReveal();
+    }
 }
 
 // ========================================================
 // 12. HIGH-PERFORMANCE SCROLL REVEAL ANIMATIONS
 // ========================================================
+let isScrollRevealInitialized = false;
+
 function initScrollReveal() {
+    if (isScrollRevealInitialized) return;
+    isScrollRevealInitialized = true;
+
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         return;
     }
 
-    const revealSelectors = [
-        'section',
+    // Comprehensive target selectors for individual cards, banners, rows, and docks
+    const selectors = [
+        // Top banners & heroes
         '.cycle-hero-banner',
         '.hero-signature',
-        '.siklus-browse-section',
+        '.hero-profile-card-glass',
+        '.hero-photo-wrapper',
+
+        // Cycle list items & organic photo frame on index
         '.siklus-item-row',
-        '.bento-card',
+        '.organic-photo-frame',
+
+        // All artifact cards
         '.artifact-card',
-        '.summary-card',
+
+        // Video card & PDF embed cards
         '.cycle-video-card',
-        '.cycle-card',
-        '.feature-card',
-        '.page-nav-dock',
-        '.reveal-on-scroll'
+        '.pdf-embed-card',
+        '.lk-official-card',
+
+        // Grid cards (Bento cards, skill cards, dimension cards, photo cards, KPI cards)
+        '.grid > div',
+        '.grid > a',
+
+        // Direct cards inside sections (like the 6 artefak cards in siklus-1 to 4)
+        'section > div[class*="rounded-2xl"]',
+        'section > div[class*="rounded-3xl"]',
+        'section[class*="rounded-2xl"]',
+        'section[class*="rounded-3xl"]',
+
+        // Timeline items
+        '.space-y-4 > div[class*="rounded-2xl"]',
+        '.space-y-4 > div[class*="rounded-3xl"]',
+
+        // Section intro headers (the text group above grids)
+        'main > section > div:first-child:not([class*="rounded-"]):not(.grid):not(.cycle-hero-banner):not(.page-nav-dock)',
+        'body > section > div:first-child:not([class*="rounded-"]):not(.grid):not(.cycle-hero-banner):not(.page-nav-dock)',
+
+        // Bottom navigation dock
+        '.page-nav-dock'
     ];
 
-    const elementsToReveal = Array.from(document.querySelectorAll(revealSelectors.join(', ')))
-        .filter(el => {
-            if (el.closest('.top-navbar') || el.closest('.pdf-modal') || el.closest('#loader') || el.closest('.site-footer')) {
-                return false;
-            }
-            return true;
-        });
+    const rawElements = Array.from(document.querySelectorAll(selectors.join(', ')));
+    const elementsToReveal = rawElements.filter(el => {
+        // Exclude navbar, loader, modal, footer
+        if (el.closest('.top-navbar') || el.closest('#loader') || el.closest('.pdf-modal') || el.closest('.video-modal') || el.closest('.site-footer')) {
+            return false;
+        }
+        return true;
+    });
 
     if (!elementsToReveal.length) return;
 
     document.documentElement.classList.add('reveal-enabled');
 
-    if (!('IntersectionObserver' in window)) {
-        elementsToReveal.forEach(el => el.classList.add('is-revealed'));
-        return;
-    }
-
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -40px 0px',
-        threshold: 0.08
-    };
-
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-revealed');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    const vh = window.innerHeight || document.documentElement.clientHeight;
-    let initialCount = 0;
-
     elementsToReveal.forEach(el => {
         el.classList.add('reveal-item');
+    });
+
+    // Check function to reveal items currently in viewport
+    const checkAndReveal = () => {
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        elementsToReveal.forEach(el => {
+            if (el.classList.contains('is-revealed')) return;
+            const rect = el.getBoundingClientRect();
+            if (rect.top < vh * 0.90 && rect.bottom > 10) {
+                el.classList.add('is-revealed');
+            }
+        });
+    };
+
+    // Use IntersectionObserver for high performance
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '0px 0px -40px 0px',
+            threshold: 0.04
+        });
+
+        elementsToReveal.forEach(el => observer.observe(el));
+    }
+
+    // Scroll listener fallback for instant reaction during rapid scrolling
+    let scrollThrottle;
+    window.addEventListener('scroll', () => {
+        if (!scrollThrottle) {
+            scrollThrottle = setTimeout(() => {
+                checkAndReveal();
+                scrollThrottle = null;
+            }, 50);
+        }
+    }, { passive: true });
+
+    // Initial staggered reveal for visible items right now
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    let initialCount = 0;
+    elementsToReveal.forEach(el => {
         const rect = el.getBoundingClientRect();
-        if (rect.top < vh * 0.92 && rect.bottom > 0) {
-            // Animasi masuk dengan stagger halus saat pertama kali dimuat
-            const delay = Math.min(initialCount * 70, 350);
+        if (rect.top < vh * 0.88 && rect.bottom > 0) {
+            const delay = Math.min(initialCount * 70, 420);
             initialCount++;
             setTimeout(() => {
                 el.classList.add('is-revealed');
             }, delay);
-        } else {
-            revealObserver.observe(el);
         }
     });
 }
